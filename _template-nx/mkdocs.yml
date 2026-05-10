@@ -1,0 +1,128 @@
+# Template MkDocs per i manuali GeoStru NX.
+# Quando crei un nuovo prodotto: copia questa cartella, rinominala (es. liquiter/),
+# e aggiorna i campi marcati [CAMBIA] qui sotto.
+
+site_name: "[CAMBIA] Nome Prodotto NX"               # es. "GMS NX — Geomechanical Survey"
+site_url: "https://help.nx.geostru.ai/[CAMBIA]/"   # es. https://help.nx.geostru.ai/gms/
+site_author: GeoStru
+site_description: "[CAMBIA] Manuale utente di [Prodotto] NX, suite GeoStru."
+copyright: "© GeoStru — <a href='https://www.geostru.eu' target='_blank' rel='noopener'>www.geostru.eu</a>"
+
+repo_name: "EngSoft-Geostru/geostru-help-nx"
+repo_url: "https://github.com/EngSoft-Geostru/geostru-help-nx"
+edit_uri: "edit/main/[CAMBIA]/docs/"                 # es. edit/main/gms/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  logo: img/logo.svg
+  favicon: img/favicon.ico
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang:
+        - it
+        - en
+  # Decommenta quando i contenuti EN/ES/RO sono pronti.
+  # - i18n:
+  #     docs_structure: folder
+  #     languages:
+  #       - locale: it
+  #         name: Italiano
+  #         build: true
+  #         default: true
+  #       - locale: en
+  #         name: English
+  #         build: true
+  #       - locale: es
+  #         name: Español
+  #         build: false
+  #       - locale: ro
+  #         name: Română
+  #         build: false
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.snippets
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  generator: false  # nasconde "Made with Material for MkDocs" in footer
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.eu
+      name: GeoStru
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@GeoStruSoftware
+      name: YouTube
+  alternate:
+    - name: Italiano
+      link: /[CAMBIA]/it/
+      lang: it
+    - name: English
+      link: /[CAMBIA]/en/
+      lang: en
+
+# nav: lo definisci nel mkdocs.yml del singolo prodotto, esempio:
+# nav:
+#   - Home: index.md
+#   - Quickstart: quickstart.md
+#   - Workflow completo: workflow.md
+#   - Capitoli specifici:
+#     - Stereonet: stereonet.md
+#     - Markland: markland.md
+#   - Glossario: glossario.md
+#   - Formati file: formati.md
+#   - FAQ: faq.md

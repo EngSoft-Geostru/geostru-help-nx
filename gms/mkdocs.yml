@@ -1,0 +1,104 @@
+site_name: "GMS NX — Geomechanical Survey"
+site_url: "https://help.nx.geostru.ai/gms/"
+site_author: GeoStru
+site_description: "Manuale utente di GMS NX, software web per il rilievo geomeccanico di ammassi rocciosi: stereonet 2D/3D, statistica Fisher, verifica cinematica di Markland, import nuvole di punti 3D, AI Import."
+copyright: "© GeoStru — <a href='https://www.geostru.eu' target='_blank' rel='noopener'>www.geostru.eu</a>"
+
+repo_name: "EngSoft-Geostru/geostru-help-nx"
+repo_url: "https://github.com/EngSoft-Geostru/geostru-help-nx"
+edit_uri: "edit/main/gms/docs/"
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: [it, en]
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
+  - pymdownx.snippets
+  - pymdownx.arithmatex: { generic: true }
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.inlinehilite
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.eu
+      name: GeoStru
+    - icon: fontawesome/brands/github
+      link: https://github.com/EngSoft-Geostru
+      name: GitHub
+  alternate:
+    - name: Italiano
+      link: /gms/it/
+      lang: it
+    - name: English
+      link: /gms/en/
+      lang: en
+
+nav:
+  - Home: it/index.md
+  - Quickstart: it/quickstart.md
+  - Workflow completo: it/workflow.md
+  - Rilievo:
+    - Cosa si misura: it/rilievo.md
+    - GMS Compass (tablet): it/compass.md
+    - Trasferimento al PC: it/trasferimento.md
+  - Analisi:
+    - Stereonet (glossario grafico): it/stereonet.md
+    - Famiglie di discontinuità: it/famiglie.md
+    - Test di Markland: it/markland.md
+  - Import avanzato:
+    - AI Import (foto/PDF/testo): it/ai-import.md
+    - Nuvola di punti 3D: it/nuvola-3d.md
+  - Esportazioni: it/esportazioni.md
+  - Glossario: it/glossario.md
+  - Formati file: it/formati.md
+  - FAQ: it/faq.md
