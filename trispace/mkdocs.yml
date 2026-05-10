@@ -68,3 +68,19 @@ extra:
 
 nav:
   - Home: it/index.md
+  - Quickstart: it/quickstart.md
+  - Workflow completo: it/workflow.md
+  - Importazione:
+    - Importa file: it/importa.md
+  - Modellazione:
+    - Modellazione 2D: it/modellazione-2d.md
+    - Mesh + curve di livello: it/mesh-triangolazione.md
+    - Sezioni e vista 3D: it/sezioni-3d.md
+  - Workflow:
+    - AI assistant: it/ai.md
+    - Drone → GEOROCK3D: it/drone-georock3d.md
+  - Output:
+    - Esportazioni: it/esportazioni.md
+  - Riferimento:
+    - Scorciatoie: it/scorciatoie.md
+    - FAQ: it/faq.md
