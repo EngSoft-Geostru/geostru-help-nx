@@ -68,3 +68,12 @@ extra:
 
 nav:
   - Home: it/index.md
+  - Quickstart: it/quickstart.md
+  - Workflow completo: it/workflow.md
+  - Input:
+    - Dati di input: it/dati-input.md
+  - Calcolo:
+    - Metodo lineare equivalente: it/metodo.md
+  - Output:
+    - Fattori di amplificazione (ICMS): it/icms.md
+  - FAQ: it/faq.md
