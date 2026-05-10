@@ -1,43 +1,70 @@
-# LiquiTer NX
+# LiquiTer NX — Analisi della liquefazione
 
-**LiquiTer NX** — Analisi della liquefazione dei terreni.
+**LiquiTer NX** è il software web GeoStru per l'**analisi della liquefazione**
+dei terreni saturi sotto sollecitazione sismica. Inserisci la stratigrafia,
+i parametri sismici e scegli un metodo (Seed, Tokimatsu, Boulanger-Idriss,
+Andrus-Stokoe) per ottenere il **fattore di sicurezza FSL** per ogni profondità,
+l'indice del potenziale di liquefazione (IPL) e i cedimenti post-sismici.
+Conforme NTC 2018 e Eurocodice 8.
 
-[**Apri l'app**](https://nx.geostru.ai/liquiter/){ .md-button .md-button--primary }
-
----
-
-## Manuale in costruzione
-
-Stiamo scrivendo il manuale completo di LiquiTer NX. Nel frattempo:
-
-- **Hai bisogno di aiuto subito?** Scrivici a
-  [info@geostru.ai](mailto:info@geostru.ai?subject=Help%20LiquiTer NX) — rispondiamo
-  in giornata.
-- **Vuoi proporre un argomento da documentare?** Stesso indirizzo, oggetto
-  *"Manuale LiquiTer NX — proposta argomento"*.
-
-## Capitoli previsti
-
-Le pagine in arrivo (in ordine di pubblicazione):
-
-1. **Quickstart** — primo accesso, dati di esempio, primo calcolo
-2. **Workflow completo** — flusso input → calcolo → export
-3. **Dati di input** — descrizione di ogni campo
-4. **Metodi di calcolo** — riferimenti normativi e formule
-5. **Esportazioni** — Word, CSV (e DXF dove applicabile)
-6. **FAQ** — domande frequenti
-
-Quando una pagina sarà online, comparirà in questo elenco con il link.
+[**Apri LiquiTer NX**](https://nx.geostru.ai/liquiter/){ .md-button .md-button--primary }
+[Quickstart in 5 minuti](quickstart.md){ .md-button }
 
 ---
 
-## Su LiquiTer NX
+## Cosa fa, in sintesi
 
-Analisi della liquefazione dei terreni. Parte della suite **GeoStru NX** — applicazioni web professionali
-per geologia, geotecnica, idrologia.
+- **Input**: stratigrafia (γ, N-SPT, qc, frazione argillosa, Vs), parametri sismici
+  (a_g, Mw), profondità falda, normativa (NTC 2018 / EC8).
+- **Metodi di calcolo**: Seed (1971), Tokimatsu (1983), Boulanger-Idriss (2014),
+  Andrus-Stokoe (Vs), Ishihara-Yoshimine (cedimenti post-sismici).
+- **Output**: fattore di sicurezza FSL per profondità, indice IPL,
+  cedimenti, report Word `.docx`, export CSV.
 
-[Apri l'app LiquiTer NX](https://nx.geostru.ai/liquiter/) · [Scopri tutti i prodotti NX](https://help.nx.geostru.ai/) · [Sito GeoStru](https://www.geostru.eu/)
+## Per chi
+
+- **Geologi e ingegneri geotecnici** che valutano la suscettibilità di
+  liquefazione di un sito in conformità NTC 2018 (cap. 7.11.3.4) o EC8 (EN 1998-5).
+- **Studi di consulenza** che producono pareri tecnici per progettazione di
+  fondazioni, opere di sostegno, edilizia in zona sismica.
+
+## Come iniziare
+
+1. Apri [`nx.geostru.ai/liquiter/`](https://nx.geostru.ai/liquiter/)
+2. Carica un dataset di esempio o inserisci la stratigrafia
+3. Imposta parametri sismici (a_g · Mw · normativa)
+4. Scegli il metodo di calcolo
+5. Premi **Esegui calcolo** → FSL per profondità + IPL + cedimenti
+6. Esporta in Word / CSV
+
+[Vedi il workflow completo →](workflow.md)
+
+## Capitoli del manuale
+
+### Iniziare
+
+- [**Quickstart**](quickstart.md) — 5 minuti dal primo accesso al primo report
+- [**Workflow completo**](workflow.md) — sequenza dettagliata input → calcolo → export
+
+### Input
+
+- [**Dati di input**](dati-input.md) — descrizione di ogni campo (sito, falda,
+  sismica, stratigrafia)
+
+### Calcolo
+
+- [**Metodi di calcolo**](metodi.md) — Seed · Tokimatsu · Boulanger-Idriss ·
+  Andrus-Stokoe · Ishihara-Yoshimine. Quando usare quale, formule, riferimenti.
+
+### Output
+
+- [**Esportazioni**](esportazioni.md) — Report Word, CSV, interpretazione FSL/IPL
+
+### Riferimento
+
+- [**FAQ**](faq.md) — domande frequenti
 
 ---
 
-*Hai trovato un errore o vuoi suggerire un contenuto? [Scrivici](mailto:info@geostru.ai?subject=Help%20LiquiTer NX) — grazie!*
+*Hai trovato un errore o vuoi suggerire un contenuto?
+[Scrivici](mailto:info@geostru.ai?subject=Help%20LiquiTer%20NX) — grazie!*

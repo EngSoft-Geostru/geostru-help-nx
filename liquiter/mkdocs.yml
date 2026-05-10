@@ -68,3 +68,12 @@ extra:
 
 nav:
   - Home: it/index.md
+  - Quickstart: it/quickstart.md
+  - Workflow completo: it/workflow.md
+  - Input:
+    - Dati di input: it/dati-input.md
+  - Calcolo:
+    - Metodi di calcolo: it/metodi.md
+  - Output:
+    - Esportazioni: it/esportazioni.md
+  - FAQ: it/faq.md
