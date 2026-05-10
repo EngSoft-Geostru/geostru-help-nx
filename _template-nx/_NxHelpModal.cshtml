@@ -1,0 +1,189 @@
+@*
+    Template canonico del modal info NX. Replica fedelmente il pattern di GMS NX
+    (sezione 2 del modal "?" — tab Versione · Help · Risorse · Feedback).
+
+    Per applicarlo a un nuovo prodotto:
+      1. Copia questo file come <NomeApp>/Pages/Shared/_NxHelpModal.cshtml
+      2. Personalizza i 5 segnaposti [CAMBIA-…] qui sotto
+      3. Nel _Layout.cshtml dell'app sostituisci il vecchio modal con:
+             <partial name="_NxHelpModal" />
+      4. Il pulsante "?" in navbar deve avere:
+             data-bs-toggle="modal" data-bs-target="#nxHelpModal"
+
+    Variabili Razor richieste dal layout chiamante:
+      • lang        — codice lingua corrente ("it", "en", …)
+      • appVersion  — string, es. "2026.1.129"
+
+    Se l'app non ha "appVersion", aggiungi in cima al layout:
+      @{
+          var appVersion = System.Reflection.Assembly.GetExecutingAssembly()
+              .GetCustomAttribute<System.Reflection.AssemblyInformationalVersionAttribute>()
+              ?.InformationalVersion?.Split('+')[0] ?? "1.0.0";
+      }
+*@
+@{
+    // ────────────── PARAMETRI DA PERSONALIZZARE PER OGNI PRODOTTO ──────────────
+    var nxAppSlug = "[CAMBIA-SLUG]";              // es. "gms", "liquiter", "rsl"
+    var nxAppName = "[CAMBIA-NOMEAPP]";           // es. "GMS NX", "LiquiTer NX", "RSL III"
+    var nxAppTagline = "[CAMBIA-TAGLINE]";        // es. "Geomechanical Survey · suite GeoStru NX"
+    var nxAppOneLiner = "[CAMBIA-ONELINER]";      // 1-2 frasi che spiegano cosa fa l'app
+    var nxAppHomeUrl = $"https://nx.geostru.ai/{nxAppSlug}/";
+
+    // 5-7 link rapidi alle pagine più consultate del manuale esterno.
+    // Tieni la lista corta — il pulsante CTA in alto è già il punto di accesso primario.
+    var nxQuickLinks = new[] {
+        new { Slug = "quickstart",  Label = "Quickstart in 5 minuti" },
+        new { Slug = "workflow",    Label = "Workflow completo" },
+        new { Slug = "dati-input",  Label = "[CAMBIA-LINK-3]" },
+        new { Slug = "metodi",      Label = "[CAMBIA-LINK-4]" },
+        new { Slug = "esportazioni",Label = "Esportazioni · Word / DXF / CSV" },
+        new { Slug = "faq",         Label = "FAQ" }
+    };
+
+    // (Opzionale) elenco delle funzionalità chiave da mostrare nel tab "Risorse".
+    // Lascia vuoto se non vuoi mostrarlo.
+    var nxFeatures = new[] {
+        "[CAMBIA-FEAT-1]",
+        "[CAMBIA-FEAT-2]",
+        "[CAMBIA-FEAT-3]"
+    };
+
+    var lang = ViewBag.Lang as string ?? "it";
+}
+
+<div class="modal fade" id="nxHelpModal" tabindex="-1" aria-labelledby="nxHelpModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header" style="background:#1a3a52;color:#fff;">
+                <h5 class="modal-title" id="nxHelpModalLabel">
+                    <i class="bi bi-info-circle me-2"></i>@nxAppName
+                </h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body p-0">
+                <ul class="nav nav-tabs px-3 pt-2" role="tablist">
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#nxtab-versione" type="button">
+                            <i class="bi bi-tag"></i> Versione
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nxtab-help" type="button">
+                            <i class="bi bi-book"></i> Help
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nxtab-risorse" type="button">
+                            <i class="bi bi-bookmark-star"></i> Risorse
+                        </button>
+                    </li>
+                    <li class="nav-item" role="presentation">
+                        <button class="nav-link" data-bs-toggle="tab" data-bs-target="#nxtab-feedback" type="button">
+                            <i class="bi bi-envelope-heart"></i> Feedback
+                        </button>
+                    </li>
+                </ul>
+                <div class="tab-content p-3">
+
+                    @* ─── 1. VERSIONE ─── *@
+                    <div class="tab-pane fade show active" id="nxtab-versione">
+                        <div class="text-center my-3">
+                            <img src="@Url.Content("~/images/logoGeostru.png")" alt="GeoStru" style="height:48px;" onerror="this.style.display='none'" />
+                            <h4 class="mt-3 mb-1" style="color:#1a3a52;">@nxAppName</h4>
+                            <p class="text-muted small mb-2">@nxAppTagline</p>
+                            <div class="d-inline-block px-3 py-2" style="background:#f1f5f9;border-radius:8px;">
+                                <div class="small text-muted">Versione</div>
+                                <div class="fw-bold" style="font-family:ui-monospace,monospace;font-size:1.1rem;color:#1a3a52;">@appVersion</div>
+                            </div>
+                        </div>
+                        <hr />
+                        <p class="small text-muted text-center mb-0">
+                            &copy; @DateTime.Now.Year GeoStru Software · Tutti i diritti riservati
+                        </p>
+                    </div>
+
+                    @* ─── 2. HELP ─── *@
+                    <div class="tab-pane fade" id="nxtab-help">
+                        <a class="btn btn-primary w-100 mb-3 py-2 d-flex align-items-center justify-content-center"
+                           href="https://help.nx.geostru.ai/@nxAppSlug/@(lang)/"
+                           target="_blank" rel="noopener"
+                           style="background:#1a3a52;border-color:#1a3a52;">
+                            <i class="bi bi-book me-2" style="font-size:1.1rem;"></i>
+                            <span>
+                                <strong>Apri il manuale completo</strong>
+                                <span class="d-block small fw-normal" style="opacity:.85;">
+                                    help.nx.geostru.ai/@nxAppSlug/
+                                </span>
+                            </span>
+                            <i class="bi bi-box-arrow-up-right ms-2"></i>
+                        </a>
+
+                        <h6 class="mb-2"><i class="bi bi-info-circle me-1"></i>Cos'è @nxAppName</h6>
+                        <p class="small mb-3">@nxAppOneLiner</p>
+
+                        @if (nxQuickLinks.Length > 0)
+                        {
+                            <h6 class="mb-2"><i class="bi bi-bookmark me-1"></i>Link rapidi al manuale</h6>
+                            <div class="d-grid gap-1 mb-3">
+                                @foreach (var ql in nxQuickLinks)
+                                {
+                                    <a class="small" href="https://help.nx.geostru.ai/@nxAppSlug/@(lang)/@(ql.Slug)/" target="_blank" rel="noopener">
+                                        <i class="bi bi-arrow-right-short"></i> @ql.Label
+                                    </a>
+                                }
+                            </div>
+                        }
+                    </div>
+
+                    @* ─── 3. RISORSE ─── *@
+                    <div class="tab-pane fade" id="nxtab-risorse">
+                        @if (nxFeatures.Length > 0)
+                        {
+                            <h6 class="mb-2"><i class="bi bi-check2-square me-1"></i>Funzionalità chiave</h6>
+                            <ul class="small text-muted mb-3">
+                                @foreach (var f in nxFeatures)
+                                {
+                                    <li><i class="bi bi-check2 text-success me-1"></i>@f</li>
+                                }
+                            </ul>
+                        }
+                        <h6 class="mb-2"><i class="bi bi-globe me-1"></i>Risorse online</h6>
+                        <div class="d-grid gap-1 small">
+                            <a href="@nxAppHomeUrl" target="_blank" rel="noopener">
+                                <i class="bi bi-box-arrow-up-right"></i> Apri @nxAppName su nx.geostru.ai
+                            </a>
+                            <a href="https://www.geostru.eu/" target="_blank" rel="noopener">
+                                <i class="bi bi-box-arrow-up-right"></i> Sito GeoStru
+                            </a>
+                            <a href="https://help.nx.geostru.ai/" target="_blank" rel="noopener">
+                                <i class="bi bi-collection"></i> Tutti i manuali NX
+                            </a>
+                        </div>
+                    </div>
+
+                    @* ─── 4. FEEDBACK ─── *@
+                    <div class="tab-pane fade" id="nxtab-feedback">
+                        <h6 class="mb-2"><i class="bi bi-chat-dots me-1"></i>Suggerimenti / segnalazioni</h6>
+                        <p class="small text-muted mb-2">
+                            Hai un problema, un'idea o un commento su @nxAppName?
+                            Faccelo sapere — i tuoi suggerimenti guidano lo sviluppo.
+                        </p>
+                        <textarea id="nxFeedbackText" class="form-control form-control-sm mb-2" rows="4"
+                                  placeholder="Scrivi qui il tuo suggerimento o feedback…"></textarea>
+                        <button type="button" class="btn btn-sm btn-primary w-100" onclick="window.nxSendFeedback && window.nxSendFeedback('@nxAppName')">
+                            <i class="bi bi-send me-1"></i> Invia suggerimento
+                        </button>
+                        <div id="nxFeedbackResult" class="small mt-2" style="display:none;"></div>
+                        <hr class="my-3" />
+                        <p class="small text-muted text-center mb-0">
+                            <i class="bi bi-envelope me-1"></i>
+                            Puoi anche scrivere a
+                            <a href="mailto:info@@geostru.ai?subject=Feedback%20@nxAppName">info@@geostru.ai</a>
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

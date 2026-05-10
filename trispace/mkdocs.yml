@@ -1,0 +1,70 @@
+site_name: "Trispace NX"
+site_url: "https://help.nx.geostru.ai/trispace/"
+site_author: GeoStru
+site_description: "Manuale utente di Trispace NX — CAD web 2D/3D + drone."
+copyright: "© GeoStru — <a href='https://www.geostru.eu' target='_blank' rel='noopener'>www.geostru.eu</a>"
+
+# repo_name / repo_url / edit_uri rimossi: il sito è destinato all'utente finale
+# e non vogliamo esporre il repo GitHub dei sorgenti dalla navbar.
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: [it, en]
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.highlight: { anchor_linenums: true }
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.eu
+      name: GeoStru
+  alternate:
+    - name: Italiano
+      link: /trispace/it/
+      lang: it
+
+nav:
+  - Home: it/index.md

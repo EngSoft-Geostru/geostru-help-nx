@@ -100,12 +100,17 @@ jobs:
               const products = [
                 { id: 'gms',           name: 'GMS NX',           desc: 'Rilievo geomeccanico, stereonet, Markland' },
                 { id: 'liquiter',      name: 'LiquiTer NX',      desc: 'Analisi liquefazione (Seed, Boulanger-Idriss)' },
+                { id: 'rsl',           name: 'RSL III',          desc: 'Risposta sismica locale 1D' },
                 { id: 'computo',       name: 'Computo NX',       desc: 'Computo metrico estimativo + AI' },
                 { id: 'trispace',      name: 'Trispace NX',      desc: 'CAD web 2D/3D + drone → GEOROCK3D' },
                 { id: 'hydrogeo',      name: 'Hydrogeo NX',      desc: 'Idrogeologia, pluvio, deflusso' },
                 { id: 'runofflab',     name: 'Runoff Lab NX',    desc: 'Curve di pioggia, IDF' },
                 { id: 'geosection',    name: 'GeoSection NX',    desc: 'Sezioni geologiche' },
-                { id: 'stratigrapher', name: 'Stratigrapher NX', desc: 'Colonne stratigrafiche' }
+                { id: 'stratigrapher', name: 'Stratigrapher NX', desc: 'Colonne stratigrafiche' },
+                { id: 'loadcap',       name: 'Loadcap NX',       desc: 'Capacità portante delle fondazioni' },
+                { id: 'tiranti',       name: 'Tiranti NX',       desc: 'Calcolo tiranti di ancoraggio' },
+                { id: 'maps',          name: 'Maps NX',          desc: 'Mappe GPS e cartografia tecnica' },
+                { id: 'converter',     name: 'Converter NX',     desc: 'Convertitore di unità di misura' }
               ];
               const grid = document.getElementById('grid');
               for (const p of products) {

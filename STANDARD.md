@@ -128,15 +128,65 @@ fa automaticamente con `edit_uri` in `mkdocs.yml`.)
 
 ## Link bidirezionali app ↔ manuale
 
-**Dal modal `?` dell'app NX** ci deve essere un bottone:
+**Dal modal `?` dell'app NX** ci deve essere un bottone CTA prominente verso
+il manuale esterno. Vedi sezione successiva ("Template del modal info NX").
 
-```html
-<a href="https://help.nx.geostru.ai/<prodotto>/<lang>/" target="_blank">
-   📖 Manuale completo
-</a>
+**Dalla home del manuale** un pulsante prominente:
+
+```markdown
+[**Apri l'app**](https://nx.geostru.ai/<slug>/){ .md-button .md-button--primary }
 ```
 
-La `<lang>` viene presa dal cookie `lang` dell'utente.
+## Template del modal info NX
+
+Tutti i prodotti NX (GMS, LiquiTer, RSL III, Computo, Trispace, Hydrogeo,
+Runoff Lab, GeoSection, Stratigrapher, Maps, Loadcap, Tiranti, Converter)
+devono usare lo **stesso modal info** per consistenza UX. Il modal ha 4 tab:
+*Versione · Help · Risorse · Feedback*. Il tab Help in cima ha sempre il
+pulsante CTA al manuale esterno.
+
+### Posizione del pulsante `?`
+
+Il pulsante che apre il modal **deve stare in navbar top-level**, sempre visibile.
+**NON dentro il dropdown utente** (avatar / "Account" / "Le mie applicazioni").
+Questo perché:
+
+- Aiuto deve essere a 1 click, non a 3 (dropdown → menu → voce)
+- Convenzione industry (Google Docs, Notion, GitHub, Slack, Stripe — tutti hanno
+  `?` top-level)
+- Onboarding dei primi 5 minuti: l'utente nuovo deve trovare la guida senza
+  esplorare menu
+- Su mobile/tablet il dropdown utente è scomodo
+
+Posizione canonica: subito a sinistra del language picker, accanto alla
+campanella delle notifiche.
+
+In aggiunta al `?` top-level, **mantenere anche** una voce "Aiuto" dentro il
+dropdown utente (belt & suspenders — utenti che cercano lì la trovano comunque).
+La voce nel dropdown deve aprire lo stesso modal: `data-bs-target="#nxHelpModal"`.
+
+### File template
+
+Il markup canonico è in `_template-nx/_NxHelpModal.cshtml`. Per applicarlo a
+un prodotto:
+
+1. Copia `_template-nx/_NxHelpModal.cshtml` come
+   `<NomeApp>/Pages/Shared/_NxHelpModal.cshtml` e personalizza i 5 segnaposti
+   `[CAMBIA-…]` (slug, nome prodotto, descrizione, link rapidi, riferimenti).
+2. Nel `_Layout.cshtml` dell'app, sostituisci il vecchio modal info con:
+   ```cshtml
+   <partial name="_NxHelpModal" />
+   ```
+3. Aggiungi/sposta il pulsante `?` in navbar top-level (vedi sopra) con
+   `data-bs-toggle="modal" data-bs-target="#nxHelpModal"`.
+4. Se esiste una voce "Aiuto" nel dropdown utente, lasciala ma sostituisci
+   l'`onclick`/`href` con `data-bs-target="#nxHelpModal"`.
+5. Verifica che la variabile `lang` sia definita nel layout (di solito già c'è).
+
+Una volta inserito, il modal:
+- Apre il manuale esterno a `https://help.nx.geostru.ai/<slug>/<lang>/`
+- Mantiene Versione/Risorse/Feedback specifici del prodotto
+- È identico in tutti i prodotti per UX coerente
 
 **Dalla home del manuale** un pulsante prominente:
 
