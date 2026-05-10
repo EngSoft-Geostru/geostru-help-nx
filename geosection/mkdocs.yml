@@ -68,3 +68,6 @@ extra:
 
 nav:
   - Home: it/index.md
+  - Quickstart: it/quickstart.md
+  - Workflow completo: it/workflow.md
+  - FAQ: it/faq.md

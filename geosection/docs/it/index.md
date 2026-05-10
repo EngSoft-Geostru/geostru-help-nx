@@ -1,43 +1,54 @@
-# GeoSection NX
+# GeoSection NX — Sezioni geologiche
 
-**GeoSection NX** — Sezioni geologiche.
+**GeoSection NX** è il software web GeoStru per la creazione di **sezioni
+geologiche** strutturate. A partire da un tracciato di sezione (polilinea su
+mappa) e dai sondaggi disponibili, ricostruisce la sezione 2D con
+stratigrafia, tabelle dei terreni, simbologia geologica standardizzata.
 
-[**Apri l'app**](https://nx.geostru.ai/geosection/){ .md-button .md-button--primary }
-
----
-
-## Manuale in costruzione
-
-Stiamo scrivendo il manuale completo di GeoSection NX. Nel frattempo:
-
-- **Hai bisogno di aiuto subito?** Scrivici a
-  [info@geostru.ai](mailto:info@geostru.ai?subject=Help%20GeoSection NX) — rispondiamo
-  in giornata.
-- **Vuoi proporre un argomento da documentare?** Stesso indirizzo, oggetto
-  *"Manuale GeoSection NX — proposta argomento"*.
-
-## Capitoli previsti
-
-Le pagine in arrivo (in ordine di pubblicazione):
-
-1. **Quickstart** — primo accesso, dati di esempio, primo calcolo
-2. **Workflow completo** — flusso input → calcolo → export
-3. **Dati di input** — descrizione di ogni campo
-4. **Metodi di calcolo** — riferimenti normativi e formule
-5. **Esportazioni** — Word, CSV (e DXF dove applicabile)
-6. **FAQ** — domande frequenti
-
-Quando una pagina sarà online, comparirà in questo elenco con il link.
+[**Apri GeoSection NX**](https://nx.geostru.ai/geosection/){ .md-button .md-button--primary }
+[Quickstart in 5 minuti](quickstart.md){ .md-button }
 
 ---
 
-## Su GeoSection NX
+## Cosa fa, in sintesi
 
-Sezioni geologiche. Parte della suite **GeoStru NX** — applicazioni web professionali
-per geologia, geotecnica, idrologia.
+- **Sezione 2D** lungo polilinea con assi graduati (metri, quote)
+- **Sondaggi** posizionati lungo la sezione con strati colorati
+- **Falda** disegnata come linea blu separata
+- **Tabella terreni** generata automaticamente
+- **Simbologia geologica** ISO/UNI standard
+- **Esportazioni**: SVG, DXF, PDF impaginato
 
-[Apri l'app GeoSection NX](https://nx.geostru.ai/geosection/) · [Scopri tutti i prodotti NX](https://help.nx.geostru.ai/) · [Sito GeoStru](https://www.geostru.eu/)
+## Per chi
+
+- **Geologi** che producono sezioni geologiche per relazioni di sottosuolo
+- **Ingegneri geotecnici** che integrano sezioni in pareri di fondazione
+- **Studi di consulenza** per pareri tecnici di edilizia, opere di sostegno,
+  scavi
+
+## Come iniziare
+
+1. Apri [`nx.geostru.ai/geosection/`](https://nx.geostru.ai/geosection/)
+2. Carica un esempio o crea un nuovo progetto
+3. Disegna la **traccia di sezione** sulla mappa (polilinea)
+4. **Aggiungi sondaggi** con coordinate + stratigrafia
+5. **Genera la sezione** automatica
+6. Esporta in **SVG / DXF / PDF**
+
+[Vedi il workflow completo →](workflow.md)
+
+## Capitoli del manuale
+
+### Iniziare
+
+- [**Quickstart**](quickstart.md) — 5 minuti dal primo accesso alla prima sezione
+- [**Workflow completo**](workflow.md) — sondaggi → traccia → sezione → export
+
+### Riferimento
+
+- [**FAQ**](faq.md) — domande frequenti
 
 ---
 
-*Hai trovato un errore o vuoi suggerire un contenuto? [Scrivici](mailto:info@geostru.ai?subject=Help%20GeoSection NX) — grazie!*
+*Hai trovato un errore o vuoi suggerire un contenuto?
+[Scrivici](mailto:info@geostru.ai?subject=Help%20GeoSection%20NX) — grazie!*

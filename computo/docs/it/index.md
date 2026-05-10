@@ -1,43 +1,60 @@
-# Computo NX
+# Computo NX — Computo metrico estimativo + AI
 
-**Computo NX** — Computo metrico estimativo con AI.
+**Computo NX** è il software web GeoStru per il **computo metrico estimativo**
+con assistente **AI integrato**. Lavora con **prezzari regionali italiani**
+ufficiali (CAL25 e altri), riconosce automaticamente le voci da PDF di
+preventivo, disegni CAD/DXF, foto di disegni tecnici, modelli BIM IFC, e
+restituisce un computo estimativo strutturato pronto per la stampa.
 
-[**Apri l'app**](https://nx.geostru.ai/computo/){ .md-button .md-button--primary }
-
----
-
-## Manuale in costruzione
-
-Stiamo scrivendo il manuale completo di Computo NX. Nel frattempo:
-
-- **Hai bisogno di aiuto subito?** Scrivici a
-  [info@geostru.ai](mailto:info@geostru.ai?subject=Help%20Computo NX) — rispondiamo
-  in giornata.
-- **Vuoi proporre un argomento da documentare?** Stesso indirizzo, oggetto
-  *"Manuale Computo NX — proposta argomento"*.
-
-## Capitoli previsti
-
-Le pagine in arrivo (in ordine di pubblicazione):
-
-1. **Quickstart** — primo accesso, dati di esempio, primo calcolo
-2. **Workflow completo** — flusso input → calcolo → export
-3. **Dati di input** — descrizione di ogni campo
-4. **Metodi di calcolo** — riferimenti normativi e formule
-5. **Esportazioni** — Word, CSV (e DXF dove applicabile)
-6. **FAQ** — domande frequenti
-
-Quando una pagina sarà online, comparirà in questo elenco con il link.
+[**Apri Computo NX**](https://nx.geostru.ai/computo/){ .md-button .md-button--primary }
+[Quickstart in 5 minuti](quickstart.md){ .md-button }
 
 ---
 
-## Su Computo NX
+## Cosa fa, in sintesi
 
-Computo metrico estimativo con AI. Parte della suite **GeoStru NX** — applicazioni web professionali
-per geologia, geotecnica, idrologia.
+- **Prezzari ufficiali**: CAL25 (Calabria), prezzari regionali italiani — sempre aggiornati
+- **AI assistant** integrato: trascina un file in chat e l'AI estrae le voci
+- **Import automatici**:
+  - **PDF** preventivo → estrae voci e mappa al prezzario
+  - **DXF/DWG** disegno → calcola sagomario, peso armature
+  - **JPG/PNG** foto disegno → l'AI legge il disegno e ricava quantità
+  - **IFC** modello BIM → import elementi + anteprima 3D
+  - **Excel** computi esistenti
+- **Catalogo voci** con ricerca testuale e filtri per categoria
+- **Esportazioni**: PDF impaginato, Excel, XPWE (formato standard import)
 
-[Apri l'app Computo NX](https://nx.geostru.ai/computo/) · [Scopri tutti i prodotti NX](https://help.nx.geostru.ai/) · [Sito GeoStru](https://www.geostru.eu/)
+## Per chi
+
+- **Geometri, architetti, ingegneri** che redigono computi metrici per
+  appalti pubblici e privati
+- **Imprese di costruzione** che preparano preventivi a partire da disegni o
+  modelli BIM
+- **Studi tecnici** che gestiscono progetti edilizi multi-fase
+
+## Come iniziare
+
+1. Apri [`nx.geostru.ai/computo/`](https://nx.geostru.ai/computo/)
+2. Clicca sul `?` in alto → **Risorse di esempio** → trascina un PDF / DXF / IFC
+   nella chat AI
+3. L'AI estrae le voci e popola il computo
+4. Rivedi le voci, modifica quantità se serve
+5. Esporta in PDF / Excel / XPWE
+
+[Vedi il workflow completo →](workflow.md)
+
+## Capitoli del manuale
+
+### Iniziare
+
+- [**Quickstart**](quickstart.md) — 5 minuti dal primo accesso al primo computo
+- [**Workflow completo**](workflow.md) — input AI → catalogo → export
+
+### Riferimento
+
+- [**FAQ**](faq.md) — domande frequenti
 
 ---
 
-*Hai trovato un errore o vuoi suggerire un contenuto? [Scrivici](mailto:info@geostru.ai?subject=Help%20Computo NX) — grazie!*
+*Hai trovato un errore o vuoi suggerire un contenuto?
+[Scrivici](mailto:info@geostru.ai?subject=Help%20Computo%20NX) — grazie!*
