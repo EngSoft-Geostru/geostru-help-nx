@@ -41,7 +41,7 @@ I grafici sono PNG embedded a 300 DPI.
 ### Personalizzare il template
 
 Se serve un layout aziendale custom (logo studio, font specifici), contatta
-[info@geostru.eu](mailto:info@geostru.eu) — possiamo configurare un template
+[info@geostru.ai](mailto:info@geostru.ai) — possiamo configurare un template
 dedicato per il tuo studio.
 
 ## CSV — dati grezzi

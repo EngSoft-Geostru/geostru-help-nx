@@ -7,7 +7,7 @@
 Runoff Lab NX è incluso nella suite **GeoStru NX** con piano *freemium*.
 Calcolo base e export CSV nel piano Free; report PDF e AI Import richiedono
 Subscription. Per dettagli aggiornati visita
-[`geostru.eu`](https://www.geostru.eu/).
+[`geostru.ai`](https://www.geostru.ai/).
 
 ### Devo installare qualcosa?
 

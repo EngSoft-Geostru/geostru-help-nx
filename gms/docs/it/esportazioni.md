@@ -44,7 +44,7 @@ Il file generato (`Report_GMS_AAAAMMGG_HHMM.docx`) si apre con:
     Il template usato è in
     `wwwroot/Templates/template_report_gms.docx` sul server. Se
     vuoi un layout aziendale diverso (logo, intestazione, font),
-    contatta info@geostru.eu — possiamo configurare un template
+    contatta info@geostru.ai — possiamo configurare un template
     custom per il tuo studio.
 
 ### Tempo di generazione

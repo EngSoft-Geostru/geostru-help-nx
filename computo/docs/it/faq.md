@@ -7,7 +7,7 @@
 Computo NX è incluso nella suite **GeoStru NX** con piano *freemium*. Comandi
 locali (catalogo, edit voci, export) sono accessibili nel piano Free.
 La **chat AI** consuma crediti per token. Per dettagli aggiornati visita
-[`geostru.eu`](https://www.geostru.eu/).
+[`geostru.ai`](https://www.geostru.ai/).
 
 ### Devo installare qualcosa?
 
@@ -24,12 +24,12 @@ Al momento:
 - **CAL25** (Calabria 2025) — completo, ufficiale
 
 In arrivo: gli altri prezzari regionali italiani principali. Per richieste
-specifiche scrivici a `info@geostru.eu`.
+specifiche scrivici a `info@geostru.ai`.
 
 ### Posso caricare un prezzario custom?
 
 Non al momento via UI — i prezzari sono centralizzati lato server. Per
-prezzari aziendali custom, contatta `info@geostru.eu`: possiamo configurare
+prezzari aziendali custom, contatta `info@geostru.ai`: possiamo configurare
 un prezzario dedicato.
 
 ## Import AI

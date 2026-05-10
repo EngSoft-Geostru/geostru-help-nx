@@ -95,7 +95,7 @@ jobs:
             <h1>Manuali GeoStru NX</h1>
             <p>Documentazione delle applicazioni web della suite <strong>GeoStru NX</strong>.</p>
             <div class="grid" id="grid"></div>
-            <footer>© <script>document.write(new Date().getFullYear())</script> GeoStru — <a href="https://www.geostru.eu">www.geostru.eu</a></footer>
+            <footer>© <script>document.write(new Date().getFullYear())</script> GeoStru — <a href="https://www.geostru.ai">www.geostru.ai</a></footer>
             <script>
               const products = [
                 { id: 'gms',           name: 'GMS NX',           desc: 'Rilievo geomeccanico, stereonet, Markland' },

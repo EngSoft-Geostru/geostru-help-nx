@@ -5,7 +5,7 @@
 ### Stratigrapher NX è gratuito?
 
 Stratigrapher NX è incluso nella suite **GeoStru NX** con piano *freemium*.
-Per dettagli aggiornati visita [`geostru.eu`](https://www.geostru.eu/).
+Per dettagli aggiornati visita [`geostru.ai`](https://www.geostru.ai/).
 
 ### Devo installare qualcosa?
 
@@ -46,7 +46,7 @@ Stratigrapher include la libreria **UNI 11531 / ISO 14689** standard. Se ti
 manca un simbolo specifico per una geologia particolare:
 
 - Usa il simbolo "Generic" + descrizione testuale nelle note
-- Oppure scrivici a `info@geostru.eu` — possiamo aggiungere simboli alla
+- Oppure scrivici a `info@geostru.ai` — possiamo aggiungere simboli alla
   libreria
 
 ## Prove in sito
@@ -102,7 +102,7 @@ in **GeoSection** / **LiquiTer**.
 In arrivo: export per AGS4 (AGS Format Data Transfer Standard),
 LogStrati (formato GeoStru desktop), ASTM D5434.
 
-Per richieste specifiche scrivici a `info@geostru.eu`.
+Per richieste specifiche scrivici a `info@geostru.ai`.
 
 ## Manca la mia domanda
 

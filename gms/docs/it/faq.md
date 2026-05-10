@@ -12,8 +12,8 @@ GMS NX è incluso nella **suite GeoStru NX** con un piano *freemium*:
   AI Import, import nuvole 3D, batch import multi-file, supporto
   prioritario
 
-Per dettagli aggiornati visita [`geostru.eu`](https://www.geostru.eu/)
-o scrivi a info@geostru.eu.
+Per dettagli aggiornati visita [`geostru.ai`](https://www.geostru.ai/)
+o scrivi a info@geostru.ai.
 
 ### Devo installare qualcosa?
 
@@ -253,7 +253,7 @@ Il supporto nativo `.las` / `.e57` è in roadmap.
 
 Per ora il template è centralizzato lato server. Per un template
 custom (logo studio, intestazione personale, font diverso) scrivi a
-info@geostru.eu — possiamo configurare un template dedicato per il
+info@geostru.ai — possiamo configurare un template dedicato per il
 tuo studio.
 
 ---

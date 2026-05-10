@@ -36,7 +36,7 @@ Quando una pagina sarà online, comparirà in questo elenco con il link.
 Calcolo dei tiranti di ancoraggio. Parte della suite **GeoStru NX** — applicazioni web professionali
 per geologia, geotecnica, idrologia.
 
-[Apri l'app Tiranti NX](https://nx.geostru.ai/tiranti/) · [Scopri tutti i prodotti NX](https://help.nx.geostru.ai/) · [Sito GeoStru](https://www.geostru.eu/)
+[Apri l'app Tiranti NX](https://nx.geostru.ai/tiranti/) · [Scopri tutti i prodotti NX](https://help.nx.geostru.ai/) · [Sito GeoStru](https://www.geostru.ai/)
 
 ---
 

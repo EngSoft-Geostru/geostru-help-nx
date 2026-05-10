@@ -7,7 +7,7 @@
 Hydrogeo NX è incluso nella suite **GeoStru NX** con piano *freemium*.
 Ricerca + visualizzazione dati sono accessibili nel piano Free; analisi
 statistica avanzata e export PDF/PLV richiedono Subscription. Per
-dettagli aggiornati visita [`geostru.eu`](https://www.geostru.eu/).
+dettagli aggiornati visita [`geostru.ai`](https://www.geostru.ai/).
 
 ### Devo installare qualcosa?
 
@@ -19,7 +19,7 @@ No — è una web app accessibile da
 ### Mancano stazioni nella mia zona
 
 Il database copre 19 regioni italiane. Per regioni non ancora integrate
-(o per zone con stazioni private), scrivici a `info@geostru.eu` —
+(o per zone con stazioni private), scrivici a `info@geostru.ai` —
 valutiamo l'aggiunta delle fonti.
 
 ### La stazione che ho selezionato non ha dati per durata 1h

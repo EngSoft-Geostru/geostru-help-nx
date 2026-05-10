@@ -88,7 +88,7 @@ alla **bedrock**.
 | **PEER** | NGA-West / NGA-Subduction, archivio mondiale di accelerogrammi |
 | **ITACA** | Italian Accelerometric Archive (INGV, registrazioni italiane) |
 | **CSV / TXT** | header `time, accel` (o `t, a`) — generico |
-| **GeoStru ACC** | export da [Spectra](https://www.geostru.eu/) o altro software GeoStru |
+| **GeoStru ACC** | export da [Spectra](https://www.geostru.ai/) o altro software GeoStru |
 
 ### Cosa serve sapere dell'accelerogramma
 

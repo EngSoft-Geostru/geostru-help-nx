@@ -9,7 +9,7 @@ LiquiTer NX è incluso nella **suite GeoStru NX** con piano *freemium*:
 - **Free**: accesso, calcolo completo, export CSV
 - **Subscription**: report Word, AI Import, batch multi-sito, supporto prioritario
 
-Per dettagli: [`geostru.eu`](https://www.geostru.eu/) o `info@geostru.eu`.
+Per dettagli: [`geostru.ai`](https://www.geostru.ai/) o `info@geostru.ai`.
 
 ### Devo installare qualcosa?
 
@@ -122,7 +122,7 @@ cosa è "verde") e il **conteggio dell'IPL**.
 ### Voglio personalizzare il template Word
 
 Per ora il template è centralizzato. Per un template custom (logo studio,
-font), scrivi a `info@geostru.eu`.
+font), scrivi a `info@geostru.ai`.
 
 ---
 

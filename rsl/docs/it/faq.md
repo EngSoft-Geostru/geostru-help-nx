@@ -5,8 +5,8 @@
 ### RSL III è gratuito?
 
 RSL III è incluso nella **suite GeoStru NX** con piano *freemium*. Per
-dettagli aggiornati visita [`geostru.eu`](https://www.geostru.eu/) o scrivi
-a `info@geostru.eu`.
+dettagli aggiornati visita [`geostru.ai`](https://www.geostru.ai/) o scrivi
+a `info@geostru.ai`.
 
 ### Devo installare qualcosa?
 

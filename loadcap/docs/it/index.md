@@ -36,7 +36,7 @@ Quando una pagina sarà online, comparirà in questo elenco con il link.
 Capacità portante delle fondazioni. Parte della suite **GeoStru NX** — applicazioni web professionali
 per geologia, geotecnica, idrologia.
 
-[Apri l'app Loadcap NX](https://nx.geostru.ai/loadcap/) · [Scopri tutti i prodotti NX](https://help.nx.geostru.ai/) · [Sito GeoStru](https://www.geostru.eu/)
+[Apri l'app Loadcap NX](https://nx.geostru.ai/loadcap/) · [Scopri tutti i prodotti NX](https://help.nx.geostru.ai/) · [Sito GeoStru](https://www.geostru.ai/)
 
 ---
 

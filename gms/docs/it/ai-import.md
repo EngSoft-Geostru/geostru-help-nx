@@ -121,7 +121,7 @@ Le giaciture confermate entrano nella tabella *Discontinuità* di GMS
 L'AI Import usa la **chiave Gemini di GeoStru**, già configurata sul
 server. Non devi fornire la tua. Il limite di utilizzo per utente è
 generoso ma non illimitato — chi ha esigenze massive può richiedere
-un piano custom (info@geostru.eu).
+un piano custom (info@geostru.ai).
 
 Modello in uso: **Gemini 2.5 Flash** con `responseSchema` strutturato
 (estrazione tipata e validata).

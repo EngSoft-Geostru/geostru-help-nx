@@ -2,7 +2,7 @@ site_name: "GMS NX — Geomechanical Survey"
 site_url: "https://help.nx.geostru.ai/gms/"
 site_author: GeoStru
 site_description: "Manuale utente di GMS NX, software web per il rilievo geomeccanico di ammassi rocciosi: stereonet 2D/3D, statistica Fisher, verifica cinematica di Markland, import nuvole di punti 3D, AI Import."
-copyright: "© GeoStru — <a href='https://www.geostru.eu' target='_blank' rel='noopener'>www.geostru.eu</a>"
+copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
 
 # repo_name / repo_url / edit_uri rimossi: il sito è destinato all'utente finale
 # e non vogliamo esporre il repo GitHub dei sorgenti dalla navbar.
@@ -68,7 +68,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/solid/globe
-      link: https://www.geostru.eu
+      link: https://www.geostru.ai
       name: GeoStru
     - icon: fontawesome/brands/github
       link: https://github.com/EngSoft-Geostru

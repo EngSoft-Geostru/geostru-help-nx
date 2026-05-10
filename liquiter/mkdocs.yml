@@ -2,7 +2,7 @@ site_name: "LiquiTer NX"
 site_url: "https://help.nx.geostru.ai/liquiter/"
 site_author: GeoStru
 site_description: "Manuale utente di LiquiTer NX — Analisi della liquefazione dei terreni."
-copyright: "© GeoStru — <a href='https://www.geostru.eu' target='_blank' rel='noopener'>www.geostru.eu</a>"
+copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
 
 # repo_name / repo_url / edit_uri rimossi: il sito è destinato all'utente finale
 # e non vogliamo esporre il repo GitHub dei sorgenti dalla navbar.
@@ -59,7 +59,7 @@ extra:
   generator: false
   social:
     - icon: fontawesome/solid/globe
-      link: https://www.geostru.eu
+      link: https://www.geostru.ai
       name: GeoStru
   alternate:
     - name: Italiano
