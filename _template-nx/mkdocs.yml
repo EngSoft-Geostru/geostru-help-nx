@@ -8,9 +8,9 @@ site_author: GeoStru
 site_description: "[CAMBIA] Manuale utente di [Prodotto] NX, suite GeoStru."
 copyright: "© GeoStru — <a href='https://www.geostru.eu' target='_blank' rel='noopener'>www.geostru.eu</a>"
 
-repo_name: "EngSoft-Geostru/geostru-help-nx"
-repo_url: "https://github.com/EngSoft-Geostru/geostru-help-nx"
-edit_uri: "edit/main/[CAMBIA]/docs/"                 # es. edit/main/gms/docs/
+# Repo GitHub volutamente NON esposto in navbar (utente finale).
+# Riabilita repo_name/repo_url/edit_uri solo se il prodotto è destinato a
+# documentazione tecnica interna o open source dove vuoi il link al repo.
 
 docs_dir: docs
 
@@ -44,7 +44,6 @@ theme:
     - search.suggest
     - search.share
     - content.code.copy
-    - content.action.edit
     - toc.follow
   font:
     text: Inter

@@ -66,4 +66,4 @@ stabilità di Markland (planare · ribaltamento · cuneo).
 
 ---
 
-*Hai trovato un errore in questa pagina? [Segnalacelo](mailto:info@geostru.ai?subject=Help%20GMS%20NX) o apri una [Pull Request](https://github.com/EngSoft-Geostru/geostru-help-nx/edit/main/gms/docs/it/index.md).*
+*Hai trovato un errore in questa pagina? [Segnalacelo](mailto:info@geostru.ai?subject=Help%20GMS%20NX) — grazie!*

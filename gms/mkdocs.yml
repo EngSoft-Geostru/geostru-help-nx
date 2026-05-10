@@ -4,9 +4,8 @@ site_author: GeoStru
 site_description: "Manuale utente di GMS NX, software web per il rilievo geomeccanico di ammassi rocciosi: stereonet 2D/3D, statistica Fisher, verifica cinematica di Markland, import nuvole di punti 3D, AI Import."
 copyright: "© GeoStru — <a href='https://www.geostru.eu' target='_blank' rel='noopener'>www.geostru.eu</a>"
 
-repo_name: "EngSoft-Geostru/geostru-help-nx"
-repo_url: "https://github.com/EngSoft-Geostru/geostru-help-nx"
-edit_uri: "edit/main/gms/docs/"
+# repo_name / repo_url / edit_uri rimossi: il sito è destinato all'utente finale
+# e non vogliamo esporre il repo GitHub dei sorgenti dalla navbar.
 
 docs_dir: docs
 
@@ -37,7 +36,6 @@ theme:
     - search.suggest
     - search.share
     - content.code.copy
-    - content.action.edit
     - toc.follow
   font:
     text: Inter
