@@ -89,7 +89,7 @@ sul tablet.
 
 - **Endpoint**: `POST /api/transfer/upload` riceve il payload JSON e
   ritorna il codice. `GET /api/transfer/{code}` lo restituisce.
-- **Storage**: file system del server con cleanup automatico TTL.
+- **Storage**: file system del server con cleanup automatico TTL
 - **Alfabeto del codice**: `0123456789ABCDEFGHJKMNPQRSTVWXYZ` (32 simboli,
   Crockford), 8 caratteri = 32⁸ ≈ **10¹² combinazioni** (collisioni
   improbabili anche con migliaia di codici contemporanei).
