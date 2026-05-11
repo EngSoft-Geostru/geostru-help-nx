@@ -1,0 +1,104 @@
+site_name: "GDW NX — Muri di sostegno in gabbioni"
+site_url: "https://help.nx.geostru.ai/gdw/"
+site_author: GeoStru
+site_description: "Manuale utente di GDW NX, software web per il calcolo di muri di sostegno in gabbioni: verifiche esterne (ribaltamento, scorrimento, capacità portante), verifiche interne fila per fila, stabilità globale con Bishop, rete a doppia torsione e elettrosaldata, sisma NTC 2018, inclinazione muro/fondazione."
+copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: [it, en]
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
+  - pymdownx.snippets
+  - pymdownx.arithmatex: { generic: true }
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.inlinehilite
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.ai
+      name: GeoStru
+    - icon: fontawesome/brands/github
+      link: https://github.com/EngSoft-Geostru
+      name: GitHub
+  alternate:
+    - name: Italiano
+      link: /gdw/it/
+      lang: it
+    - name: English
+      link: /gdw/en/
+      lang: en
+
+nav:
+  - Home: it/index.md
+  - Quickstart: it/quickstart.md
+  - Workflow completo: it/workflow.md
+  - Geometria:
+    - Muro e gabbioni: it/geometria.md
+    - Inclinazione del muro: it/inclinazione-muro.md
+    - Fondazione: it/fondazione.md
+  - Materiali:
+    - Rete metallica (DT vs ES): it/rete.md
+    - Stratigrafia e terreni: it/geotecnica.md
+  - Carichi:
+    - Sovraccarichi e spinta: it/sovraccarichi.md
+    - Sisma (Mononobe-Okabe): it/sisma.md
+    - Coefficienti NTC 2018: it/coefficienti.md
+  - Verifiche:
+    - Esterne (ribaltamento, scorrimento, q_lim): it/verifiche.md
+    - Interne fila per fila: it/verifiche-interne.md
+    - Stabilità globale (Bishop): it/bishop.md
+  - Riferimento:
+    - Report e disegni: it/report.md
+    - Glossario: it/glossario.md
+    - Formati file: it/formati.md
+    - FAQ: it/faq.md
