@@ -95,50 +95,49 @@ Se senza tirante FS_scorr = 1.2 con F_x = 80 kN/m e R = 96 kN/m:
 - Con tirante: F_x' = 80 − 96.6 = −16.6 kN/m (negativo → coesione/tirante
   annulla la spinta orizzontale → FS_scorr = ∞, GDW segnala "verificato")
 
-## Verifiche interne fila per fila con tiranti
+## Tiranti e verifiche interne
 
-L'ancoraggio del tirante è schematizzato come **forza concentrata al livello
-Y** sulla faccia valle del muro. Per le verifiche interne (giunti orizzontali
-tra file di gabbioni) GDW applica il filtro:
+**I tiranti non entrano nelle verifiche interne fila per fila.** Il loro
+effetto è considerato solo nella **verifica esterna** della stabilità
+complessiva del muro.
 
-> **Un tirante contribuisce al giunto solo se la sua ancoraggio è SOPRA il
-> giunto** (Y_anchor < altezzaParziale_sopra_giunto).
+### Perché
 
-In altre parole:
+La verifica di scorrimento del singolo giunto è una verifica **locale di
+interfaccia gabbione-gabbione**: vuole misurare se l'attrito + la coesione
+apparente c_g lungo quel giunto sono sufficienti a impedire lo scorrimento
+di una porzione di muro sull'altra.
 
-- **Giunti sopra l'ancoraggio**: nessun contributo del tirante (la forza
-  agisce sulla porzione di muro sotto il giunto).
-- **Giunti sotto l'ancoraggio**: il tirante contribuisce con H, V e ΔM_s
-  (la forza è trasmessa attraverso il giunto verso il basso).
+Il tirante:
 
-### Esempio
+- Non agisce **lungo** il giunto: è una forza puntuale applicata in
+  corrispondenza della putrella, distinta dall'interfaccia.
+- È **meccanicamente vincolato** al gabbione che attraversa (barra
+  filettata, bulloni, rete): la modalità di rottura nelle vicinanze
+  dell'ancoraggio non è "scorrimento sul giunto" ma rottura della
+  connessione meccanica (che si verifica separatamente sul dimensionamento
+  del tirante stesso, fuori da GDW).
 
-Muro H=5 m (5 file da h=1 m), tirante ancorato a Y=1.5 m (fra fila 4 e 3
-dall'alto).
+Includere il tirante nell'equilibrio del giunto interno conduce, nei casi
+di gabbione singolo sopra l'ancoraggio, a `F_x` negativo e a un "Verificato
+per trazione" semanticamente fuorviante: l'attrito-coesione del giunto non
+è il meccanismo che impedisce la rottura, l'ancoraggio meccanico lo è.
 
-| Giunto | Posizione | altezzaParziale | Y_anchor < altezzaParziale? | Tirante applicato? |
-|---|---|---|---|---|
-| Sopra fila 5 | 1 m dalla testa | 1.0 m | 1.5 < 1.0 ? **NO** | ✗ |
-| Sopra fila 4 | 2 m dalla testa | 2.0 m | 1.5 < 2.0 ? **SÌ** | ✓ |
-| Sopra fila 3 | 3 m dalla testa | 3.0 m | 1.5 < 3.0 ? **SÌ** | ✓ |
-| Sopra fila 2 | 4 m dalla testa | 4.0 m | 1.5 < 4.0 ? **SÌ** | ✓ |
-| Base (sopra fila 1) | 5 m dalla testa | 5.0 m | 1.5 < 5.0 ? **SÌ** | ✓ |
+### Conseguenze pratiche
 
-→ La fila più alta (#5, sopra l'ancoraggio) **non** beneficia del tirante.
-Le file 4, 3, 2 e la base beneficiano.
+- **FS_rib e FS_scorr per ogni fila** sono calcolati come se i tiranti non
+  ci fossero. Sono indicatori della **frizione interna** del paramento.
+- La **stabilità globale** del muro con tiranti è valutata dalle FS
+  esterne (FS_rib, FS_scorr, FS_q_lim) che invece **includono** il tiro
+  con tutti i suoi contributi (H, V, ΔM_s = H·braccio + V·B).
+- Se un giunto interno risulta non verificato **anche senza tiranti**, è
+  un segnale che il muro andrebbe ridimensionato (più gabbioni, shift
+  inferiore, c_g maggiore), non che basta aggiungere un altro tirante.
 
-> **Nota di modellazione.** Il modello concentra il tiro al livello Y sulla
-> faccia monte del muro. La putrella reale ha un'estensione verticale
-> (tipicamente uno o più gabbioni) che distribuisce il tiro su più giunti;
-> per ottenere questa distribuzione nel modello GDW conviene inserire
-> più tiranti "fittizi" alle diverse quote di contatto con i gabbioni,
-> ognuno con la frazione di Tp che gli compete.
-
-Per il momento `M_s` del giunto interno, il contributo `V·B_giunto` usa la
-larghezza del giunto B_i = blocchi_fila_i · BaseGabbione: questa è
-un'approssimazione che assume che la faccia monte della fila contenente Y
-coincida con la faccia monte del giunto in esame (corretto se non ci sono
-gradoni interposti, conservativo altrimenti).
+> **Dimensionamento del tirante stesso.** GDW non verifica la resistenza
+> della barra/trefolo, della putrella, del bulbo né della connessione alla
+> rete. Sono verifiche da effettuare con strumenti dedicati (Tiranti NX,
+> codici locali).
 
 ## Limitazioni attuali
 
