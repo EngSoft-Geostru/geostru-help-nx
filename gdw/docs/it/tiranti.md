@@ -29,10 +29,12 @@ tirante"** per ogni livello.
 
 ## Modello di calcolo
 
-L'ancoraggio è schematizzato sulla **faccia valle (esterna)** del muro, alla
-quota Y misurata dalla sommità. La barra/trefolo attraversa il muro e si
-inflessa nel terreno a monte con inclinazione β sotto l'orizzontale fino al
-bulbo di ancoraggio.
+L'ancoraggio è schematizzato sulla **faccia monte (interna, lato terreno)**
+del muro, alla quota Y misurata dalla sommità — conformemente alla pratica
+di cantiere dei "gabbioni chiodati", dove **putrelle in acciaio** o piastre
+ripartiscono il tiro sul paramento di monte (faccia verso il terreno).
+La barra/trefolo prosegue nel terreno a monte con inclinazione β sotto
+l'orizzontale fino al bulbo di ancoraggio.
 
 Per ogni tirante con forza per metro lineare `Tp_m = Tp / Interasse`:
 
@@ -46,12 +48,19 @@ $$
 
 ### Effetto sulle azioni
 
+Con ancoraggio sulla **faccia monte (X = B_muro)** rispetto al pivot di
+ribaltamento (lembo valle, X = 0):
+
 | Grandezza | Contributo |
 |---|---|
 | F_x (forza orizzontale agente) | **− H** (favorevole: riduce la spinta) |
 | F_y (peso/verticale stabilizzante) | **+ V** (favorevole) |
-| Momento stabilizzante M_s | **+ H · (H_muro − Y)** (favorevole) |
-| Momento ribaltante M_r | invariato (V applicato a X=0 → braccio nullo) |
+| Momento stabilizzante M_s | **+ H · (H_muro − Y) + V · B_muro** (favorevole) |
+| Momento ribaltante M_r | invariato |
+
+Il contributo `V·B_muro` deriva dal fatto che la putrella applica anche
+la componente verticale alla faccia monte, generando un momento
+stabilizzante rispetto al lembo valle.
 
 ### Effetto sulle verifiche
 
@@ -73,12 +82,13 @@ $$
 
 ## Esempio numerico
 
-Muro H=5 m, tirante con Y=1, β=15°, Interasse=1 m, Tp=100 kN:
+Muro H=5 m, B_muro = 3 m, tirante con Y=1, β=15°, Interasse=1 m, Tp=100 kN:
 
 - Tp_m = 100 / 1 = 100 kN/m
 - H = 100 · cos(15°) = 96.6 kN/m
 - V = 100 · sin(15°) = 25.9 kN/m
-- ΔM_s = 96.6 · (5 − 1) = 386 kNm/m
+- ΔM_s = H · (H_muro − Y) + V · B_muro
+- ΔM_s = 96.6 · (5 − 1) + 25.9 · 3 = 386.4 + 77.7 = **464 kNm/m**
 
 Se senza tirante FS_scorr = 1.2 con F_x = 80 kN/m e R = 96 kN/m:
 
@@ -117,13 +127,18 @@ dall'alto).
 → La fila più alta (#5, sopra l'ancoraggio) **non** beneficia del tirante.
 Le file 4, 3, 2 e la base beneficiano.
 
-> **Nota di modellazione.** Il modello assume che il tirante sia ancorato
-> con **piastra o putrelle di ferro** che redistribuiscono il tiro alla
-> singola fila a quota Y. Per ancoraggi che attraversano più file
-> (putrella alta più gabbioni), il modello distribuisce comunque l'intera
-> forza al livello Y. Per analisi più raffinate (distribuzione su più
-> file) è consigliabile inserire più tiranti "fittizi" alle quote dei
-> diversi punti di contatto della putrella.
+> **Nota di modellazione.** Il modello concentra il tiro al livello Y sulla
+> faccia monte del muro. La putrella reale ha un'estensione verticale
+> (tipicamente uno o più gabbioni) che distribuisce il tiro su più giunti;
+> per ottenere questa distribuzione nel modello GDW conviene inserire
+> più tiranti "fittizi" alle diverse quote di contatto con i gabbioni,
+> ognuno con la frazione di Tp che gli compete.
+
+Per il momento `M_s` del giunto interno, il contributo `V·B_giunto` usa la
+larghezza del giunto B_i = blocchi_fila_i · BaseGabbione: questa è
+un'approssimazione che assume che la faccia monte della fila contenente Y
+coincida con la faccia monte del giunto in esame (corretto se non ci sono
+gradoni interposti, conservativo altrimenti).
 
 ## Limitazioni attuali
 
