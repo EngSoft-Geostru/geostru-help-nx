@@ -85,14 +85,52 @@ Se senza tirante FS_scorr = 1.2 con F_x = 80 kN/m e R = 96 kN/m:
 - Con tirante: F_x' = 80 − 96.6 = −16.6 kN/m (negativo → coesione/tirante
   annulla la spinta orizzontale → FS_scorr = ∞, GDW segnala "verificato")
 
+## Verifiche interne fila per fila con tiranti
+
+L'ancoraggio del tirante è schematizzato come **forza concentrata al livello
+Y** sulla faccia valle del muro. Per le verifiche interne (giunti orizzontali
+tra file di gabbioni) GDW applica il filtro:
+
+> **Un tirante contribuisce al giunto solo se la sua ancoraggio è SOPRA il
+> giunto** (Y_anchor < altezzaParziale_sopra_giunto).
+
+In altre parole:
+
+- **Giunti sopra l'ancoraggio**: nessun contributo del tirante (la forza
+  agisce sulla porzione di muro sotto il giunto).
+- **Giunti sotto l'ancoraggio**: il tirante contribuisce con H, V e ΔM_s
+  (la forza è trasmessa attraverso il giunto verso il basso).
+
+### Esempio
+
+Muro H=5 m (5 file da h=1 m), tirante ancorato a Y=1.5 m (fra fila 4 e 3
+dall'alto).
+
+| Giunto | Posizione | altezzaParziale | Y_anchor < altezzaParziale? | Tirante applicato? |
+|---|---|---|---|---|
+| Sopra fila 5 | 1 m dalla testa | 1.0 m | 1.5 < 1.0 ? **NO** | ✗ |
+| Sopra fila 4 | 2 m dalla testa | 2.0 m | 1.5 < 2.0 ? **SÌ** | ✓ |
+| Sopra fila 3 | 3 m dalla testa | 3.0 m | 1.5 < 3.0 ? **SÌ** | ✓ |
+| Sopra fila 2 | 4 m dalla testa | 4.0 m | 1.5 < 4.0 ? **SÌ** | ✓ |
+| Base (sopra fila 1) | 5 m dalla testa | 5.0 m | 1.5 < 5.0 ? **SÌ** | ✓ |
+
+→ La fila più alta (#5, sopra l'ancoraggio) **non** beneficia del tirante.
+Le file 4, 3, 2 e la base beneficiano.
+
+> **Nota di modellazione.** Il modello assume che il tirante sia ancorato
+> con **piastra o putrelle di ferro** che redistribuiscono il tiro alla
+> singola fila a quota Y. Per ancoraggi che attraversano più file
+> (putrella alta più gabbioni), il modello distribuisce comunque l'intera
+> forza al livello Y. Per analisi più raffinate (distribuzione su più
+> file) è consigliabile inserire più tiranti "fittizi" alle quote dei
+> diversi punti di contatto della putrella.
+
 ## Limitazioni attuali
 
 - **Verifica del tirante stesso** (resistenza barra, bulbo, ancoraggio)
   **non è inclusa** in GDW. Da effettuare separatamente (Tiranti NX).
 - **Stabilità globale Bishop**: i tiranti non concorrono al momento
   resistente. Per analisi rigorose globali, usare un altro strumento.
-- **Verifiche interne fila per fila** con tiranti: l'effetto è applicato al
-  muro completo, non si distribuisce per fila (TBD).
 
 ## Vedi anche
 
