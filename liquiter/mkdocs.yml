@@ -70,15 +70,30 @@ extra:
     - name: Italiano
       link: /liquiter/it/
       lang: it
+    - name: English
+      link: /liquiter/en/
+      lang: en
 
 nav:
-  - Home: it/index.md
-  - Quickstart: it/quickstart.md
-  - Workflow completo: it/workflow.md
-  - Input:
-    - Dati di input: it/dati-input.md
-  - Calcolo:
-    - Metodi di calcolo: it/metodi.md
-  - Output:
-    - Esportazioni: it/esportazioni.md
-  - FAQ: it/faq.md
+  - Italiano:
+    - Home: it/index.md
+    - Quickstart: it/quickstart.md
+    - Workflow completo: it/workflow.md
+    - Input:
+      - Dati di input: it/dati-input.md
+    - Calcolo:
+      - Metodi di calcolo: it/metodi.md
+    - Output:
+      - Esportazioni: it/esportazioni.md
+    - FAQ: it/faq.md
+  - English:
+    - Home: en/index.md
+    - Quickstart: en/quickstart.md
+    - Complete workflow: en/workflow.md
+    - Input:
+      - Input data: en/dati-input.md
+    - Calculation:
+      - Calculation methods: en/metodi.md
+    - Output:
+      - Exports: en/esportazioni.md
+    - FAQ: en/faq.md
