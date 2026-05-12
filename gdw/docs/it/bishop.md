@@ -79,6 +79,51 @@ automaticamente per coerenza geometrica e mostra un messaggio informativo:
 > *"I punti valle/monte sono stati scambiati per coerenza geometrica (valle a
 > sinistra, monte a destra)."*
 
+## Tiranti / ancoraggi attivi
+
+Se nel modello sono presenti tiranti (sezione Carichi → Tiranti), GDW li
+include nel calcolo Bishop secondo la regola geometrica classica:
+
+| Configurazione del tirante rispetto al cerchio | Effetto su FS |
+|---|---|
+| **Tutto dentro il cerchio** (testa e bulbo entrambi interni) | Nessun contributo: il tirante si muove con la massa instabile |
+| **Attraversa il cerchio** (almeno un estremo esterno) | Il tiro T agisce al punto di intersezione tra barra e superficie di scorrimento |
+| **Tutto fuori dal cerchio** | Nessun contributo: il tirante non interagisce con la massa scivolante |
+
+### Formula
+
+Per ogni tirante che attraversa il cerchio, GDW calcola il momento del tiro
+T (per metro lineare di muro = T_p / interasse) attorno al centro O:
+
+$$
+M_{T,i} = T_i \cdot d_i
+$$
+
+dove `d_i` è la distanza perpendicolare tra il centro O e la linea d'azione
+del tirante (direzione testa → bulbo). Il contributo al numeratore di
+Bishop è:
+
+$$
+\Delta N_{tiranti} = \sum_i \frac{|M_{T,i}|}{R}
+$$
+
+→ `FS = (Σ N_conci + Σ ΔN_tiranti) / Σ D_conci`
+
+### Convenzioni e assunzioni
+
+- **Testa del tirante**: posizionata sulla faccia monte del muro, alla quota Y_anchor (misurata dalla testa muro). Approssimazione: si usa la X massima del muro (faccia monte) indipendentemente dai gradoni.
+- **Direzione**: dalla testa verso il bulbo, con inclinazione β sotto l'orizzontale (β = parametro del tirante in input).
+- **Tutti i tiranti sono assunti stabilizzanti**: il segno del momento è ignorato (si prende il valore assoluto). Coerente con l'uso pratico (un tirante è progettato per resistere).
+- **Indipendente dal FS**: il termine `ΔN_tiranti` non dipende da FS (a differenza dei conci che hanno `m_α(FS)`), quindi entra nell'iterazione come costante additiva.
+
+### Cosa NON è verificato
+
+- La **resistenza del tirante** (rottura della barra, sfilamento del bulbo, capacità geotecnica dell'ancoraggio) non è valutata da GDW: deve essere certificata separatamente (Tiranti NX, AGI 2012, EN 1537).
+- La **lunghezza minima di ancoraggio** (LL libera + La di ancoraggio) non è imposta: GDW usa la lunghezza totale L inserita.
+- Se il bulbo cade DENTRO il cerchio, GDW esclude correttamente il tirante; non significa che il dimensionamento sia errato, solo che quel particolare cerchio non beneficia di quel tirante.
+
+> **Best practice**: per esplorare il cerchio critico, modifica i 3 punti del cerchio e ricontrolla se i tiranti vengono inclusi. Un buon dimensionamento deve avere FS ≥ γ_R2 per il cerchio critico SENZA tiranti, oppure tiranti correttamente attivi che lo crossano.
+
 ## Conci
 
 Il cerchio viene discretizzato in **N conci** (default 30, range 4÷200). Più
