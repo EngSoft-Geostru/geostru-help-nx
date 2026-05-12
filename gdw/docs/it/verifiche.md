@@ -20,16 +20,18 @@ M_s = \gamma_W \cdot W \cdot x_g \,+\, \gamma_S \cdot S_y \cdot B_{back} \,+\, S
 $$
 
 $$
-M_r = \gamma_S \cdot S_x \cdot H/3 \,+\, \gamma_E \cdot F_{inerz} \cdot y_g \,+\, \gamma_W \cdot S_{falda} \cdot M_{falda} \,+\, S_{q,x} \cdot H/2
+M_r = \gamma_S \cdot M_{S,x} \,+\, \gamma_E \cdot F_{inerz} \cdot y_g \,+\, \gamma_W \cdot M_{falda} \,+\, S_{q,x} \cdot H/2
 $$
 
 dove:
 
 - `W` = peso muro, `x_g` = baricentro X del muro (dal piede di valle)
-- `S_x`, `S_y` = componenti spinta totale (terreno + falda + sovraccarico)
+- `S_x`, `S_y` = componenti spinta totale (terreno + sovraccarico) orizz. e vert.
 - `S_{q,y}` = contributo verticale del sovraccarico (stabilizzante)
-- `F_inerz` = forza inerziale sismica del muro
-- `H/3` = braccio della spinta (distribuzione triangolare di pressioni)
+- `F_inerz` = forza inerziale sismica del muro, `y_g` = braccio rispetto al piede
+- `M_{S,x}` = momento della spinta orizzontale del terreno (forza × baricentro spinta)
+- `M_{falda}` = momento della spinta dell'acqua (forza × baricentro idrostatico)
+- `S_{q,x}` = componente orizzontale del sovraccarico, braccio H/2
 
 Verifica soddisfatta: **FS_rib ≥ 1.0** (γ_R_rib statico) o **≥ 1.2** (sismico).
 
