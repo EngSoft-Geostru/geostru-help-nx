@@ -52,8 +52,13 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.snippets
+  - pymdownx.arithmatex: { generic: true }
   - pymdownx.highlight: { anchor_linenums: true }
   - toc: { permalink: true, toc_depth: 3 }
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
   generator: false
