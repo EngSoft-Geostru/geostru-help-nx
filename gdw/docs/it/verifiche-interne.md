@@ -32,19 +32,29 @@ Per i > 0 (giunti gabbione-gabbione):
 
 Per i = 0 senza fondazione c.a.: spinta della stratigrafia + parametri del terreno di fondazione all'interfaccia.
 
-## Verifica scorrimento parziale
+## Verifica scorrimento/taglio parziale
+
+Il check di scorrimento al giunto coincide con la verifica di **taglio
+ammissibile** al giunto gabbione-gabbione:
 
 $$
+\tau_{adm} = N \cdot \tan(\varphi_g) + c_g \quad \Rightarrow \quad
 FS_{scorr,i} = \frac{N_i \cdot \tan(\varphi_g) + c_g \cdot B_i}{\gamma_R \cdot F_{x,i}}
 $$
 
 con:
 
 - N_i = peso parziale + componente verticale spinta = F_y,i (favorevole)
-- φ_g = angolo attrito al giunto (per **rete DT** = 45°, per **ES** = formula 25·γ−10°)
+- φ_g = angolo attrito al giunto (per **rete DT** = 45° per default, per **ES** = formula 25·γ−10°)
 - c_g = coesione apparente (per **DT** > 0 dal catalogo, per **ES** = 0)
 - B_i = lunghezza del giunto (= base della fila i+1)
 - F_x,i = forza orizzontale sollecitante
+
+> **φ_g = 45°** è il valore raccomandato di letteratura per la doppia torsione: la
+> coesione apparente già incorpora l'effetto del rivestimento e dell'orditura,
+> quindi l'angolo di taglio interno gabbione-gabbione si assume di 45°
+> indipendentemente dalla pietra. Se serve, è possibile passare alla modalità
+> "manuale" e inserire un valore custom.
 
 ### Confronto DT vs ES
 
@@ -85,20 +95,53 @@ parzializzata).
 
 ## σ_adm (solo per rete a doppia torsione)
 
-Formula empirica del manuale **Maccaferri Gawac**:
+**σ_adm = tensione normale ammissibile al giunto** tra due file di gabbioni.
+Rappresenta il limite oltre il quale la rete metallica al contatto cede
+(snervamento dei fili o apertura della "bocca" della cassa). Dipende da:
+tipo maglia (8×10, 6×8 …), Ø filo, rivestimento, peso specifico del
+riempimento γ_G. Tipicamente per 8×10 Ø 2.7 Zn forte vale 100÷300 kPa
+secondo le tabelle del fornitore.
+
+### Input dell'utente (campo editabile)
+
+σ_adm è un **campo editabile** sotto "Coesione apparente" (visibile solo per
+rete DT). Convenzioni:
+
+| Valore inserito | Comportamento |
+|---|---|
+| **Vuoto** | GDW propone un default empirico (formula sotto) come stima iniziale |
+| **= 0** | Verifica al giunto **omessa** (nessun badge ✓/✗ accanto alla riga σ_v · σ_m) |
+| **> 0** | Valore di progetto, rispettato così com'è |
+
+### Default empirico
+
+Quando σ_adm non è inserito, GDW propone il valore di una formula empirica
+di letteratura tecnica per gabbioni a doppia torsione:
 
 $$
-\sigma_{adm} = 50 \cdot \gamma_G[\text{tf/m}^3] - 30 \quad [\text{kPa}]
+\sigma_{adm}\,[\text{tf/m}^2] = 50 \cdot \gamma_G[\text{tf/m}^3] - 30
 $$
 
-con γ_G in tf/m³ (convertito da kN/m³ via `÷ 9.81`).
+Convertita in kPa moltiplicando per 9.81:
 
-Per γ_G = 16 kN/m³ → γ_G = 1.63 tf/m³ → σ_adm ≈ 51.5 kPa.
+$$
+\sigma_{adm}\,[\text{kPa}] = (50 \cdot \gamma_G[\text{tf/m}^3] - 30) \cdot 9.81
+$$
 
-La verifica è **σ_max = max(σ_v, σ_m) ≤ σ_adm** per ogni giunto.
+Per γ_G = 16 kN/m³ → γ_G = 1.63 tf/m³ → σ_adm ≈ **506 kPa**.
 
-Per rete elettrosaldata σ_adm non è applicabile (la formula Gawac è specifica
-per la DT). GDW mostra `null` (campo vuoto).
+> **Nota storica.** Versioni precedenti di GDW omettevano il fattore 9.81 e
+> producevano σ_adm dell'ordine di 50 kPa, troppo basso e causa di falsi
+> negativi. La formula è stata allineata alla letteratura tecnica (tf/m² → kPa).
+
+### Verifica
+
+$$
+\sigma_{max} = \max(|\sigma_v|, |\sigma_m|) \leq \sigma_{adm}
+$$
+
+Per rete elettrosaldata σ_adm non è applicabile (la formula empirica è specifica
+per la DT). GDW non mostra il badge σ_adm per ES.
 
 [Dettagli sulla rete DT →](rete.md)
 

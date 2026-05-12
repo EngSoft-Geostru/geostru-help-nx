@@ -42,13 +42,13 @@ L'**Inclinazione muro α** (0÷15°) ruota tutto il muro come corpo rigido attor
 
 Sezione **Gabbioni**:
 
-- **Tipologia** dal catalogo Maccaferri (1×1×1, 2×1×1, 1.5×1×1, ecc.) — auto-compila peso specifico e dimensioni
+- **Tipologia** dal catalogo (1×1×1, 2×1×1, 1.5×1×1, ecc.) — auto-compila peso specifico e dimensioni
 - **Modalità angolo attrito**: `auto` (formula 25·γ−10° per ES, fissato 45° per DT) o `manuale`
 
 Sezione **Rete metallica**:
 
 - **Tipologia maglia**:
-    - **Doppia torsione (Maccaferri, default)** — catalogo con 7 modelli (6×8, 8×10, Zn / Zn+PVC). Verifica via σ_adm Gawac.
+    - **Doppia torsione (default)** — catalogo con 7 modelli (6×8, 8×10, Zn / Zn+PVC). Verifica via σ_adm (input utente o default empirico).
     - **Elettrosaldata (rigida)** — verifica classica trazione + punzonamento del filo singolo.
 
 [Dettagli rete →](rete.md)
@@ -103,7 +103,7 @@ Il calcolo esegue:
 3. **Verifiche interne** ad ogni giunto fila-fila:
     - Scorrimento (con c_g per DT, con φ_g e c del terreno per fila 0 senza fondazione)
     - Ribaltamento parziale
-    - σ_max valle/monte vs σ_adm (per DT, formula Gawac)
+    - σ_max valle/monte vs σ_adm (per DT, input utente o formula empirica)
 
 [Dettagli verifiche →](verifiche.md)
 

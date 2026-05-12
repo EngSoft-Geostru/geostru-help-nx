@@ -156,10 +156,10 @@ Esempio:
 ]
 ```
 
-## Catalogo reti a doppia torsione (Maccaferri)
+## Catalogo reti a doppia torsione
 
 `wwwroot/catalogs/reti-doppia-torsione.json` — catalogo JSON con 7 modelli
-Maccaferri (6×8 e 8×10, zincatura forte e con PVC). Letto client-side.
+di rete DT (6×8 e 8×10, zincatura forte e con PVC). Letto client-side.
 
 Esempio:
 
@@ -193,5 +193,5 @@ Attualmente disponibile:
 ## Vedi anche
 
 - [Quickstart](quickstart.md) — caricare e usare i sample
-- [Rete metallica](rete.md) — catalogo Maccaferri DT
+- [Rete metallica](rete.md) — catalogo reti DT
 - [Geometria](geometria.md) — catalogo tipologie gabbioni

@@ -50,7 +50,7 @@ di stabilità globale con metodo di Bishop semplificato.
 
 ### Materiali
 
-- [**Rete metallica**](rete.md) — rete a **doppia torsione Maccaferri** (catalogo: 6×8, 8×10, con/senza PVC) vs rete elettrosaldata; verifiche diverse, σ_adm di Gawac, coesione apparente c_g del gabbione.
+- [**Rete metallica**](rete.md) — rete a **doppia torsione** (catalogo: 6×8, 8×10, con/senza PVC) vs rete elettrosaldata; verifiche diverse, σ_adm editabile, coesione apparente c_g del gabbione.
 - [**Stratigrafia e terreni**](geotecnica.md) — strati multipli, terreno di fondazione, falda, interfaccia base.
 
 ### Carichi
@@ -62,7 +62,7 @@ di stabilità globale con metodo di Bishop semplificato.
 ### Verifiche
 
 - [**Esterne**](verifiche.md) — ribaltamento, scorrimento (con base inclinata β), capacità portante (Brinch-Hansen).
-- [**Interne fila per fila**](verifiche-interne.md) — σ_max ≤ σ_adm Maccaferri Gawac per rete DT, scorrimento e ribaltamento ad ogni giunto.
+- [**Interne fila per fila**](verifiche-interne.md) — σ_max ≤ σ_adm (input utente o default empirico) per rete DT, scorrimento e ribaltamento ad ogni giunto.
 - [**Stabilità globale**](bishop.md) — Bishop semplificato, 3 punti del cerchio editabili, validazione del cerchio sotto fondazione.
 
 ### Riferimento

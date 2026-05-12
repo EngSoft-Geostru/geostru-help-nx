@@ -3,27 +3,28 @@
 GDW supporta **due tipologie di rete** per i gabbioni, con calcoli e verifiche
 diverse:
 
-1. **Rete a doppia torsione (DT) — Maccaferri** (default)
+1. **Rete a doppia torsione (DT)** (default)
 2. **Rete elettrosaldata (ES) — rigida**
 
 La scelta si fa dal combo **Tipologia di maglia** in cima alla sezione Rete.
 
 ## Differenze sostanziali
 
-| Aspetto | DT (Maccaferri) | ES (elettrosaldata) |
+| Aspetto | DT | ES (elettrosaldata) |
 |---|---|---|
 | Filosofia | Maglia esagonale flessibile, intessuta | Pannello rigido, fili saldati ai nodi |
 | Comportamento | Si deforma e si adatta a cedimenti | Rigida; rotture localizzate possibili |
-| Verifica primaria | **σ_max ≤ σ_adm** Maccaferri Gawac | **FS_punzonamento** del filo singolo |
+| Verifica primaria | **σ_max ≤ σ_adm** (input utente / formula empirica) | **FS_punzonamento** del filo singolo |
 | φ_g (attrito gabbione-gabbione) | **45°** fissato | 25·γ−10° (tipicamente 26÷32°) |
 | c_g (coesione apparente) | **> 0** (dalla rete intessuta) | 0 |
-| Cataloghi tipici | Maccaferri (6×8, 8×10, Zn / Zn+PVC) | Reti di produzione locale (5×20, 10×10, ecc.) |
+| Cataloghi tipici | Cataloghi reti DT (6×8, 8×10, Zn / Zn+PVC) | Reti di produzione locale (5×20, 10×10, ecc.) |
 
-## Rete a doppia torsione (Maccaferri)
+## Rete a doppia torsione (DT)
 
 ### Catalogo
 
-GDW include un catalogo con 7 modelli reali dalla scheda tecnica Maccaferri/GSI:
+GDW include un catalogo con 7 modelli reali dalle schede tecniche dei produttori
+di reti a doppia torsione:
 
 | Codice | Maglia | Diametro filo | Rivestimento | Peso (kg/m²) | Resistenza (kN/m) | c_g (kPa) |
 |---|---|---|---|---|---|---|
@@ -38,13 +39,13 @@ GDW include un catalogo con 7 modelli reali dalla scheda tecnica Maccaferri/GSI:
 Selezionare un modello dal combo auto-compila peso unitario, resistenza rete e
 c_g.
 
-Lo **standard pratico** Maccaferri per muri di sostegno è la **8×10 Ø 2.7 mm**
-(filo zincato forte oppure con rivestimento PVC se in ambiente aggressivo).
+Lo **standard pratico** per muri di sostegno è la **8×10 Ø 2.7 mm** (filo
+zincato forte oppure con rivestimento PVC se in ambiente aggressivo).
 
 ### Coesione apparente c_g
 
 La rete a doppia torsione intessuta conferisce al gabbione una **coesione
-apparente** c_g (formula empirica Gawac):
+apparente** c_g (formula empirica di letteratura):
 
 $$
 c_g \approx 0.15 \cdot P_u
@@ -55,21 +56,35 @@ calibrati direttamente (vedi tabella sopra). c_g entra nelle verifiche di
 scorrimento ad ogni **giunto gabbione-gabbione** (i > 0) e all'interfaccia
 muro-fondazione (i = 0 se c'è la fondazione c.a.).
 
-### σ ammissibile (Maccaferri Gawac)
+### σ ammissibile al giunto (campo editabile)
 
-Per ogni fila del muro, la pressione normale massima sulla sezione del giunto
-viene confrontata con un valore ammissibile empirico:
+Per ogni fila la pressione normale massima al giunto è confrontata con la
+**tensione ammissibile al giunto σ_adm** (campo editabile sotto "Coesione
+apparente"). σ_adm rappresenta il limite oltre il quale la rete metallica
+al contatto cede (snervamento dei fili o apertura della cassa).
+
+**Convenzioni:**
+
+- **Vuoto** → GDW propone un default empirico (formula sotto)
+- **= 0** → verifica al giunto **omessa** (nessun badge ✓/✗)
+- **> 0** → valore di progetto (da tabella del produttore), rispettato
+
+**Default empirico (formula di letteratura tecnica):**
 
 $$
-\sigma_{adm} = 50 \cdot \gamma_G[\text{tf/m}^3] - 30 \quad [\text{kPa}]
+\sigma_{adm}\,[\text{kPa}] = (50 \cdot \gamma_G[\text{tf/m}^3] - 30) \cdot 9.81
 $$
 
-con γ_G peso specifico del gabbione. GDW converte automaticamente da kN/m³ a
-tf/m³ (γ_tf = γ_kN/m³ ÷ 9.81). Per γ_G = 16 kN/m³: σ_adm ≈ 51.5 kPa.
+con γ_G peso specifico del gabbione (γ_tf = γ_kN/m³ ÷ 9.81).
+Per γ_G = 16 kN/m³ → σ_adm ≈ **506 kPa**.
 
-La verifica è **σ_max ≤ σ_adm** per ogni fila, con σ_max = max(σ_v, σ_m) delle
-tensioni al lembo valle/monte. Il badge ✓/✗ accanto a "Tensioni fila X" indica
-l'esito.
+La verifica è **σ_max = max(|σ_v|, |σ_m|) ≤ σ_adm** per ogni fila. Il badge
+✓/✗ accanto a "Tensioni fila X" indica l'esito.
+
+> **Best practice.** Usare il valore dalla tabella tecnica del fornitore della
+> rete per il modello specifico. Il default empirico è uno strumento di
+> dimensionamento preliminare; tabelle di catalogo riportano σ_adm distinto
+> per tipo di maglia, Ø filo, rivestimento e classe di pietrame.
 
 ### Punzonamento
 
@@ -115,7 +130,7 @@ GDW assume:
 
 Per **muri di sostegno**:
 
-- **DT** (default GDW): pratica corrente per Maccaferri e simili. Si deforma in caso di cedimenti del terreno → riduce il rischio di collasso fragile. c_g aumenta FS interni.
+- **DT** (default GDW): pratica corrente in opere geotecniche. Si deforma in caso di cedimenti del terreno → riduce il rischio di collasso fragile. c_g aumenta FS interni.
 - **ES**: applicazioni dove la rigidità è richiesta (es. muri sismicamente sensibili dove la deformabilità non è desiderata, oppure produzione locale economica).
 
 Per **opere paramassi**:

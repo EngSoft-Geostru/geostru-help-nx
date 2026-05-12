@@ -94,7 +94,7 @@ scorrere il muro verso valle. F_drive = F_x · cos β − F_y · sin β.
 
 ## Materiali (rete e gabbioni)
 
-**DT — Doppia torsione (Maccaferri)**
+**DT — Doppia torsione**
 Rete metallica esagonale a doppia torsione. Flessibile, intessuta. Conferisce
 al gabbione una coesione apparente c_g.
 
@@ -107,8 +107,8 @@ Peso del gabbione riempito di pietrame per unità di volume.
 Tipico: 14÷18 kN/m³.
 
 **φ_g — Angolo attrito gabbione-gabbione**
-Per **DT**: 45° (Maccaferri Gawac). Per **ES**: 25·γ−10° (formula gabbioni
-elettrosaldati). Range tipico 26÷45°.
+Per **DT**: 45° (valore di letteratura). Per **ES**: 25·γ−10° (formula
+gabbioni elettrosaldati). Range tipico 26÷45°.
 
 **c_g — Coesione apparente del gabbione**
 Resistenza alla trazione/taglio data dalla rete intessuta. Solo DT. Tipico
@@ -117,8 +117,11 @@ Resistenza alla trazione/taglio data dalla rete intessuta. Solo DT. Tipico
 **P_u — Peso unitario rete**
 Peso della rete per unità di superficie sviluppata. Tipico 1.3÷2.2 kg/m².
 
-**σ_adm — Pressione ammissibile (Gawac)**
-σ_adm = 50 · γ_G[tf/m³] − 30 kPa. Formula empirica Maccaferri per rete DT.
+**σ_adm — Tensione ammissibile al giunto**
+Tensione normale massima che il giunto fra due file di gabbioni può
+sopportare prima dello snervamento della rete. Solo per rete DT.
+Input editabile dall'utente, oppure default empirico σ_adm[kPa] =
+(50·γ_G[tf/m³] − 30)·9.81.
 
 ## Coefficienti parziali NTC 2018
 

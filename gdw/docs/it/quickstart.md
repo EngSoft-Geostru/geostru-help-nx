@@ -38,7 +38,7 @@ Toolbar in alto → **Calcola** ⚡
 In pochi secondi vedi:
 
 - **3 FS principali**: ribaltamento, scorrimento (con base inclinata), capacità portante.
-- **Verifiche interne fila per fila**: ribaltamento, scorrimento, e (per rete DT) σ_max ≤ σ_adm Maccaferri.
+- **Verifiche interne fila per fila**: ribaltamento, scorrimento, e (per rete DT) σ_max ≤ σ_adm.
 - **Disegno sezione** con strati, gabbioni, foundazione trapezoidale, diagramma pressioni attive.
 
 !!! tip "Cosa è ogni numero?"

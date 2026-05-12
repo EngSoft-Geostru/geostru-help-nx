@@ -105,7 +105,7 @@ Ragionamenti pratici:
 - **Muri alti (≥ 4 m)**: la battitura è quasi sempre utile (FS_rib migliora notevolmente).
 - **Terreni con φ alto (≥ 35°)**: l'incremento Ka è modesto, S_y stabilizzante domina → benefico.
 - **Terreni con φ basso (≤ 28°)**: l'incremento Ka è più sensibile, ma il muro è più "ribaltabile" → comunque benefico in genere.
-- **Pratica costruttiva tipica Maccaferri**: 5÷8° per muri 3÷5 m.
+- **Pratica costruttiva tipica**: 5÷8° per muri 3÷5 m.
 
 ## Cosa NON viene modificato
 

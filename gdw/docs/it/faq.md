@@ -48,17 +48,18 @@
     Sostanzialmente:
     
     - **DT**: φ_g fissato a 45°, coesione apparente c_g > 0 (entra nelle
-      verifiche di scorrimento interne), verifica σ_max ≤ σ_adm Maccaferri
-      Gawac al posto del punzonamento.
+      verifiche di scorrimento interne), verifica σ_max ≤ σ_adm (input
+      utente o default empirico) al posto del punzonamento.
     - **ES**: φ_g calcolato da formula 25·γ−10° (~26÷32°), c_g = 0, verifica
       classica punzonamento del filo singolo.
     
     [Dettagli completi →](rete.md)
 
-??? question "Posso usare reti non Maccaferri?"
+??? question "Posso usare reti di altri produttori?"
     Per la DT: scegli "Personalizzato" o inserisci a mano i parametri da
-    scheda tecnica del produttore. Per la ES: i parametri vengono già inseriti
-    a mano (non c'è catalogo).
+    scheda tecnica del produttore (peso unitario, c_g, σ_adm, resistenza
+    rete). Per la ES: i parametri vengono già inseriti a mano (non c'è
+    catalogo).
 
 ## Geometria
 
@@ -72,7 +73,7 @@
       riempimento-gabbione).
 
 ??? question "Qual è il range raccomandato per α (inclinazione muro)?"
-    5÷10° per muri 3÷5 m è la pratica standard Maccaferri. Sotto 5°
+    5÷10° per muri 3÷5 m è la pratica standard di letteratura. Sotto 5°
     l'effetto è trascurabile. Sopra 12° serve cautela: la base di scavo
     deve essere effettivamente inclinata e i gabbioni devono essere posati
     con cura per non risultare sghembi.

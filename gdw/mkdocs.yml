@@ -91,6 +91,7 @@ nav:
     - Stratigrafia e terreni: it/geotecnica.md
   - Carichi:
     - Sovraccarichi e spinta: it/sovraccarichi.md
+    - Tiranti e chiodi: it/tiranti.md
     - Sisma (Mononobe-Okabe): it/sisma.md
     - Coefficienti NTC 2018: it/coefficienti.md
   - Verifiche:

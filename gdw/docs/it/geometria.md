@@ -75,7 +75,7 @@ Sezione **Gabbioni**:
 - **Base × altezza × profondità**: dimensioni del singolo gabbione. La profondità è perpendicolare al disegno (z) e si usa per il peso/m. Standard: 1×1×1 m oppure 2×1×1 m.
 - **Modalità angolo attrito gabbioni** (φ_g):
     - `auto` per **ES (elettrosaldata)** → φ_g = 25·γ−10° (formula gabbioni elettrosaldati)
-    - `auto` per **DT (doppia torsione)** → φ_g = **45°** (Maccaferri Gawac)
+    - `auto` per **DT (doppia torsione)** → φ_g = **45°** (valore di letteratura)
     - `manuale` → inserisci il valore sperimentale (tipico 26÷45°)
 
 ## Altezza totale muro
