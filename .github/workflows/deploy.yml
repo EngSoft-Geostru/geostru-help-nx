@@ -106,11 +106,9 @@ jobs:
                 { id: 'hydrogeo',      name: 'Hydrogeo NX',      desc: 'Idrogeologia, pluvio, deflusso' },
                 { id: 'runofflab',     name: 'Runoff Lab NX',    desc: 'Curve di pioggia, IDF' },
                 { id: 'geosection',    name: 'GeoSection NX',    desc: 'Sezioni geologiche' },
-                { id: 'stratigrapher', name: 'Stratigrapher NX', desc: 'Colonne stratigrafiche' },
-                { id: 'loadcap',       name: 'Loadcap NX',       desc: 'Capacità portante delle fondazioni' },
-                { id: 'tiranti',       name: 'Tiranti NX',       desc: 'Calcolo tiranti di ancoraggio' },
-                { id: 'maps',          name: 'Maps NX',          desc: 'Mappe GPS e cartografia tecnica' },
-                { id: 'converter',     name: 'Converter NX',     desc: 'Convertitore di unità di misura' }
+                { id: 'stratigrapher', name: 'Stratigrapher NX', desc: 'Colonne stratigrafiche' }
+                // Nascosti dalla home in attesa di pubblicazione / aggiornamento manuale:
+                // loadcap, tiranti, maps, converter — la doc resta navigabile via URL diretto.
               ];
               const grid = document.getElementById('grid');
               for (const p of products) {
