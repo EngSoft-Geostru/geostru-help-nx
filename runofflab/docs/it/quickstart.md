@@ -58,9 +58,11 @@ Pannello **Curve di pioggia** → "**Aggiungi curva**" → scegli l'elaborazione
 sorgente e il tempo di ritorno (es. **T = 100 anni**).
 
 Il software stima per regressione log-log i due parametri della legge
-\[
+
+$$
 h(t) = a \cdot t^{n}
-\]
+$$
+
 con \(t\) in ore e \(h\) in mm. Tipicamente per il Sud Italia \(n \approx 0.30\text{–}0.45\).
 
 ## 5. Pluviogramma sintetico

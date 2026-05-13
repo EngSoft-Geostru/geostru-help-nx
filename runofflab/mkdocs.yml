@@ -1,7 +1,7 @@
 site_name: "Runoff Lab NX"
 site_url: "https://help.nx.geostru.ai/runofflab/"
 site_author: GeoStru
-site_description: "Manuale utente di Runoff Lab NX — analisi probabilistica delle piogge, curve IDF, pluviogrammi sintetici e idrogrammi SCS-CN."
+site_description: "User manual of Runoff Lab NX — probabilistic rainfall analysis, IDF curves, synthetic hyetographs and SCS-CN hydrographs."
 copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
 
 docs_dir: docs
@@ -65,18 +65,36 @@ extra:
     - icon: fontawesome/solid/globe
       link: https://www.geostru.ai
       name: GeoStru
+  # Linguaggi alternativi: l'utente vede un selector 🌐 nell'header.
+  # La pagina ricaricata mantiene la posizione (path) cambiando solo /it ↔ /en.
   alternate:
     - name: Italiano
       link: /runofflab/it/
       lang: it
+    - name: English
+      link: /runofflab/en/
+      lang: en
 
+# Nav esplicito: una sezione per lingua. La home redirect è gestita lato
+# GitHub Pages → /runofflab/ ridirige a /runofflab/it/ (default).
 nav:
-  - Home: it/index.md
-  - Quickstart: it/quickstart.md
-  - Workflow completo: it/workflow.md
-  - Elaborazioni probabilistiche: it/elaborazioni.md
-  - Curve di pioggia: it/curve.md
-  - Pluviogrammi sintetici: it/pluviogrammi.md
-  - Idrogrammi SCS-CN: it/scs-cn.md
-  - AI Import: it/ai-import.md
-  - FAQ: it/faq.md
+  - 🇮🇹 Italiano:
+    - Home: it/index.md
+    - Quickstart: it/quickstart.md
+    - Workflow completo: it/workflow.md
+    - Elaborazioni probabilistiche: it/elaborazioni.md
+    - Curve di pioggia: it/curve.md
+    - Pluviogrammi sintetici: it/pluviogrammi.md
+    - Idrogrammi SCS-CN: it/scs-cn.md
+    - AI Import: it/ai-import.md
+    - FAQ: it/faq.md
+  - 🇬🇧 English:
+    - Home: en/index.md
+    - Quickstart: en/quickstart.md
+    - Full workflow: en/workflow.md
+    - Probabilistic analyses: en/elaborazioni.md
+    - Rainfall curves: en/curve.md
+    - Synthetic hyetographs: en/pluviogrammi.md
+    - SCS-CN hydrographs: en/scs-cn.md
+    - AI Import: en/ai-import.md
+    - FAQ: en/faq.md

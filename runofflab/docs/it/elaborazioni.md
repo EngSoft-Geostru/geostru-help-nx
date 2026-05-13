@@ -11,11 +11,11 @@ indipendenti di una stessa variabile aleatoria.
 
 La distribuzione di Gumbel a 2 parametri descrive i massimi di campioni grandi:
 
-\[
+$$
 F(h) = \exp\!\left[-\exp\!\left(-\frac{h - \mu}{\beta}\right)\right]
 \qquad
 h(T) = \mu - \beta \ln\!\left[-\ln\!\left(1 - \frac{1}{T}\right)\right]
-\]
+$$
 
 Due stimatori disponibili:
 
@@ -28,18 +28,18 @@ Due stimatori disponibili:
 Famiglia che generalizza Gumbel: include una **shape \(\kappa\)** che permette
 code pesanti (\(\kappa > 0\)) o limitate (\(\kappa < 0\)).
 
-\[
+$$
 F(h) = \exp\!\left[-\left(1 - \kappa\,\frac{h - \xi}{\alpha}\right)^{1/\kappa}\right]
-\]
+$$
 
 I tre parametri \((\xi, \alpha, \kappa)\) sono stimati con i **L-moments**
 (Hosking 1990) — più robusti dei momenti classici per campioni piccoli.
 
 Le altezze h(T):
 
-\[
+$$
 h(T) = \xi + \frac{\alpha}{\kappa}\!\left[1 - \left(-\ln(1 - 1/T)\right)^{\kappa}\right]
-\]
+$$
 
 !!! tip "Quando GEV vs Gumbel?"
     GEV è da preferire se la serie ha pochi anni e valori estremi anomali.
@@ -51,9 +51,9 @@ h(T) = \xi + \frac{\alpha}{\kappa}\!\left[1 - \left(-\ln(1 - 1/T)\right)^{\kappa
 Distribuzione a 3 parametri (\(\bar{h}, s, C_s\) = media, deviazione, asimmetria)
 storicamente popolare nel mondo anglosassone:
 
-\[
+$$
 h(T) = \bar{h} + K_T(C_s) \cdot s
-\]
+$$
 
 con \(K_T\) frequency factor tabulato (formula di Wilson-Hilferty per
 calcolarlo analiticamente).
@@ -66,9 +66,9 @@ Modello regionale per il territorio italiano basato sul programma **VA.PI.**
 (Valutazione delle Piene in Italia, CNR-GNDCI). Distingue **eventi ordinari** e
 **eventi straordinari** ammettendo due componenti EV1 sovrapposte.
 
-\[
+$$
 F(h) = \exp\!\left[-\Lambda_1 e^{-h/\theta_1} - \Lambda_2 e^{-h/\theta_2}\right]
-\]
+$$
 
 I 4 parametri \((\Lambda_1, \theta_1, \Lambda_2, \theta_2)\) sono difficili da
 stimare puntualmente: Runoff Lab NX implementa i **4 livelli** di

@@ -4,11 +4,11 @@ Una **curva di pioggia** (o curva IDF — Intensity-Duration-Frequency) lega
 l'altezza di pioggia attesa \(h\) a una durata \(t\), per un fissato tempo di
 ritorno \(T\):
 
-\[
+$$
 h(t, T) = a(T) \cdot t^{\, n(T)}
 \qquad
 i(t, T) = a(T) \cdot t^{\, n(T) - 1}
-\]
+$$
 
 con:
 
@@ -24,9 +24,11 @@ con:
 2. Per ciascuna durata della stazione viene preso il valore \(h(t_i, T)\) dalla
    distribuzione adattata.
 3. Si applica la regressione lineare in log-log fra \(\ln h\) e \(\ln t\):
-   \[
-   \ln h = \ln a + n \cdot \ln t
-   \]
+
+$$
+\ln h = \ln a + n \cdot \ln t
+$$
+
    ricavando \(a\) e \(n\).
 4. Il pannello mostra:
    - \(a\), \(n\), coefficiente di determinazione \(R^2\);

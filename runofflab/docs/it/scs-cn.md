@@ -12,21 +12,21 @@ bacino. Combina due passaggi:
 Il modello considera che parte della pioggia viene assorbita (perdite
 iniziali \(I_a\)) o si accumula come ritenzione potenziale \(S\):
 
-\[
+$$
 S = \frac{25400}{\text{CN}} - 254
 \qquad
 I_a = 0.2 \cdot S
-\]
+$$
 
 Con \(S\) in mm e CN in \([0, 100]\). Per una pioggia cumulata totale \(P\):
 
-\[
+$$
 P_e =
 \begin{cases}
 0 & \text{se } P \le I_a \\[1mm]
 \dfrac{(P - I_a)^2}{P - I_a + S} & \text{se } P > I_a
 \end{cases}
-\]
+$$
 
 \(P_e\) è la **pioggia netta** cumulata. Le perdite iniziali rappresentano
 intercezione vegetale + invasi superficiali. Sotto \(I_a\) tutto si infiltra.
@@ -64,9 +64,9 @@ L'idrogramma unitario adimensionale SCS è un triangolo con:
 L'idrogramma totale è la **convoluzione** della sequenza \(\Delta P_e(t)\) con
 l'unitario:
 
-\[
+$$
 Q(t) = \sum_{k} \Delta P_e(k) \cdot u(t - k)
-\]
+$$
 
 ## Tempo di lag — \(T_{\text{lag}}\)
 

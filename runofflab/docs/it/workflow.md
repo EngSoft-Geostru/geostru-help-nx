@@ -88,11 +88,11 @@ Dal pannello **Curve** → *Aggiungi*. Seleziona:
 
 Il fitting log-log restituisce:
 
-\[
+$$
 h(t) = a \cdot t^n
 \qquad
 i(t) = a \cdot t^{n-1}
-\]
+$$
 
 con \(t\) in ore. La pagina mostra la curva sovrapposta ai punti
 osservati \((d_i, h(d_i, T))\) per occhio.

@@ -14,11 +14,11 @@ metodo standard per costruire ietogrammi sintetici partendo da una curva IDF.
 L'intensità istantanea ai due lati del picco si ricava direttamente
 dall'inversione della curva IDF:
 
-\[
+$$
 i(t_b) = a \cdot \left(\frac{t_b}{r}\right)^{\!n-1}
 \qquad
 i(t_a) = a \cdot \left(\frac{t_a}{1-r}\right)^{\!n-1}
-\]
+$$
 
 con:
 
