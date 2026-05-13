@@ -149,9 +149,12 @@
                         }
                         <h6 class="mb-2"><i class="bi bi-globe me-1"></i>Risorse online</h6>
                         <div class="d-grid gap-1 small">
-                            <a href="@nxAppHomeUrl" target="_blank" rel="noopener">
-                                <i class="bi bi-box-arrow-up-right"></i> Apri @nxAppName su nx.geostru.ai
-                            </a>
+                            @* NOTA: NON aggiungere un link "Apri @nxAppName su nx.geostru.ai"
+                               qui — il modal è raggiungibile solo da dentro l'app, quindi
+                               l'utente sta già su nx.geostru.ai/<slug>/. Sarebbe auto-referenziale.
+                               Per il link "Scopri @nxAppName su geostru.ai" usare SEMPRE la
+                               home www.geostru.ai/, MAI URL specifici tipo /shop/geotecnica/<slug>/
+                               perché non esistono. *@
                             <a href="https://www.geostru.ai/" target="_blank" rel="noopener">
                                 <i class="bi bi-box-arrow-up-right"></i> Sito GeoStru
                             </a>
