@@ -52,8 +52,13 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.snippets
+  - pymdownx.arithmatex: { generic: true }
   - pymdownx.highlight: { anchor_linenums: true }
   - toc: { permalink: true, toc_depth: 3 }
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
   generator: false
@@ -65,15 +70,30 @@ extra:
     - name: Italiano
       link: /rsl/it/
       lang: it
+    - name: English
+      link: /rsl/en/
+      lang: en
 
 nav:
-  - Home: it/index.md
-  - Quickstart: it/quickstart.md
-  - Workflow completo: it/workflow.md
-  - Input:
-    - Dati di input: it/dati-input.md
-  - Calcolo:
-    - Metodo lineare equivalente: it/metodo.md
-  - Output:
-    - Fattori di amplificazione (ICMS): it/icms.md
-  - FAQ: it/faq.md
+  - Italiano:
+    - Home: it/index.md
+    - Quickstart: it/quickstart.md
+    - Workflow completo: it/workflow.md
+    - Input:
+      - Dati di input: it/dati-input.md
+    - Calcolo:
+      - Metodo lineare equivalente: it/metodo.md
+    - Output:
+      - Fattori di amplificazione (ICMS): it/icms.md
+    - FAQ: it/faq.md
+  - English:
+    - Home: en/index.md
+    - Quickstart: en/quickstart.md
+    - Complete workflow: en/workflow.md
+    - Input:
+      - Input data: en/dati-input.md
+    - Calculation:
+      - Equivalent-linear method: en/metodo.md
+    - Output:
+      - Amplification factors (ICMS): en/icms.md
+    - FAQ: en/faq.md
