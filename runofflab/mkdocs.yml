@@ -1,11 +1,8 @@
 site_name: "Runoff Lab NX"
 site_url: "https://help.nx.geostru.ai/runofflab/"
 site_author: GeoStru
-site_description: "Manuale utente di Runoff Lab NX — Curve di pioggia IDF e deflusso."
+site_description: "Manuale utente di Runoff Lab NX — analisi probabilistica delle piogge, curve IDF, pluviogrammi sintetici e idrogrammi SCS-CN."
 copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
-
-# repo_name / repo_url / edit_uri rimossi: il sito è destinato all'utente finale
-# e non vogliamo esporre il repo GitHub dei sorgenti dalla navbar.
 
 docs_dir: docs
 
@@ -52,8 +49,15 @@ markdown_extensions:
   - pymdownx.details
   - pymdownx.superfences
   - pymdownx.snippets
+  - pymdownx.arithmatex:
+      generic: true
   - pymdownx.highlight: { anchor_linenums: true }
   - toc: { permalink: true, toc_depth: 3 }
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 extra:
   generator: false
@@ -70,4 +74,9 @@ nav:
   - Home: it/index.md
   - Quickstart: it/quickstart.md
   - Workflow completo: it/workflow.md
+  - Elaborazioni probabilistiche: it/elaborazioni.md
+  - Curve di pioggia: it/curve.md
+  - Pluviogrammi sintetici: it/pluviogrammi.md
+  - Idrogrammi SCS-CN: it/scs-cn.md
+  - AI Import: it/ai-import.md
   - FAQ: it/faq.md

@@ -1,48 +1,49 @@
-# Runoff Lab NX — Curve di pioggia & trasformazione afflusso-deflusso
+# Runoff Lab NX — Manuale utente
 
-**Runoff Lab NX** è il software web GeoStru per la **trasformazione afflusso
-→ deflusso**: a partire dai dati pluviometrici (curve IDF, ietogramma di
-progetto) e dalle caratteristiche del bacino (CN, Tlag, area), calcola
-l'**idrogramma di piena** per il dimensionamento di opere idrauliche.
+**Runoff Lab NX** è lo strumento web GeoStru per l'**analisi delle piogge intense**
+e la **trasformazione afflusso-deflusso**. Da una serie pluviometrica annuale per
+durate brevi (60′, 3h, 6h, 12h, 24h) ricavi:
+
+- **Elaborazioni probabilistiche** (Gumbel, GEV, Pearson III, TCEV regionali);
+- **Curve di pioggia IDF** \(h = a \cdot t^n\) per tempo di ritorno;
+- **Pluviogrammi sintetici** (Chicago design storm);
+- **Idrogrammi di piena** con il metodo SCS-CN.
 
 [**Apri Runoff Lab NX**](https://nx.geostru.ai/runofflab/){ .md-button .md-button--primary }
 [Quickstart in 5 minuti](quickstart.md){ .md-button }
 
 ---
 
-## Cosa fa, in sintesi
+## Per chi è pensato
 
-- **Curve di pioggia** (4 tipi):
-  - Curva IDF tradizionale `i = a · d^(n-1)`
-  - VAPI (Valutazione delle Piene in Italia)
-  - Letta da PLV GeoStru (importazione da Hydrogeo NX)
-  - Custom (parametri inseriti a mano)
-- **Studio del bacino**: area, CN (Curve Number SCS), tempo di
-  corrivazione (Tc) e di lag (Tlag)
-- **Wizard CN/Tlag**: stima automatica da geologia, copertura del suolo,
-  pendenza
-- **AI Import**: trascina un PDF di studio idrogeologico, l'AI estrae i
-  parametri del bacino
-- **Trasformazione afflusso-deflusso** con metodi standard (SCS, Cinematico,
-  Idrogramma unitario)
-- **Idrogramma di piena**: portata Q(t) per tempo di ritorno T
-- **Esportazioni**: PDF report, CSV, Excel, PLV
+- **Ingegneri idraulici** che dimensionano fognature, vasche di laminazione, sfioratori, opere di attraversamento.
+- **Geologi** che redigono studi di compatibilità idraulica.
+- **Progettisti** che servono comuni e enti per valutazioni di portata e tempo di ritorno.
 
-## Per chi
+## Cosa puoi fare
 
-- **Ingegneri idraulici** che dimensionano fognature, vasche di
-  laminazione, sfioratori
-- **Geologi** che redigono studi di compatibilità idraulica
-- **Studi tecnici** per pareri di fattibilità idraulica e PSR
+| Funzione | Descrizione |
+|----------|-------------|
+| **Stazione + serie** | Anagrafica stazione + valori annui massimi per durata. |
+| **Elaborazioni** | Stima parametri delle distribuzioni Gumbel, GEV, Pearson III, TCEV (4 livelli). |
+| **Test di adattamento** | Kolmogorov-Smirnov e χ² automatici. |
+| **Curve di pioggia** | \(h = a \cdot t^n\) per ciascun T, con regressione log-log. |
+| **Pluviogrammi** | Chicago design storm da una curva IDF. |
+| **Idrogrammi SCS-CN** | Pioggia netta + idrogramma unitario + convoluzione. |
+| **AI Import** | Estrazione automatica della serie da PDF annuali o tabelle Excel. |
+| **Esempi pronti** | Tre stazioni della Calabria (Cosenza, Rende, Montalto) per esplorare. |
+| **Salvataggio** | File `.hgstudy` (JSON), autosave automatico nel browser. |
+| **Export** | Relazione PDF completa con grafici e tabelle. |
+| **Multilingua** | IT, EN, DE, ES, RO (le elaborazioni TCEV usano dataset VA.PI., solo per l'Italia). |
 
 ## Come iniziare
 
-1. Apri [`nx.geostru.ai/runofflab/`](https://nx.geostru.ai/runofflab/)
-2. **Definisci la curva di pioggia** (4 metodi, vedi sopra)
-3. **Definisci il bacino** (manuale, wizard CN/Tlag, AI Import)
-4. Scegli il **metodo di trasformazione** (SCS, Cinematico, IUH)
-5. **Esegui calcolo** → idrogramma di piena
-6. Esporta il **PDF report**
+1. Apri [`nx.geostru.ai/runofflab/`](https://nx.geostru.ai/runofflab/).
+2. **Stazione**: inserisci l'anagrafica e per ogni durata i valori annuali (h<sub>max</sub> in mm).
+3. **Elaborazioni**: scegli una famiglia (Gumbel / GEV / Pearson III / TCEV) → ottieni h(T) per T = 5, 10, 50, 100, 200 anni.
+4. **Curve**: da un'elaborazione + T, calcola \(a\) e \(n\) della legge \(h = a t^n\).
+5. **Pluviogrammi** / **Idrogrammi**: usa la curva per costruire ietogrammi sintetici e l'idrogramma di piena con SCS-CN.
+6. *File → Esporta relazione PDF* per la documentazione.
 
 [Vedi il workflow completo →](workflow.md)
 
@@ -50,12 +51,20 @@ l'**idrogramma di piena** per il dimensionamento di opere idrauliche.
 
 ### Iniziare
 
-- [**Quickstart**](quickstart.md) — 5 minuti dall'IDF all'idrogramma
-- [**Workflow completo**](workflow.md) — curva → bacino → idrogramma → export
+- [**Quickstart in 5 minuti**](quickstart.md)
+- [**Workflow completo**](workflow.md)
 
-### Riferimento
+### Riferimento dei metodi
 
-- [**FAQ**](faq.md) — domande frequenti
+- [**Elaborazioni probabilistiche**](elaborazioni.md) — Gumbel, GEV, Pearson III, TCEV
+- [**Curve di pioggia**](curve.md) — \(h = a t^n\) e tempo di ritorno
+- [**Pluviogrammi sintetici**](pluviogrammi.md) — Chicago design storm
+- [**Idrogrammi SCS-CN**](scs-cn.md) — Curve Number, Tlag, convoluzione
+
+### Strumenti
+
+- [**AI Import**](ai-import.md) — estrazione serie da PDF/Excel
+- [**FAQ**](faq.md) — gotcha frequenti
 
 ---
 
