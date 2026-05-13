@@ -1,9 +1,8 @@
 # Equivalent-linear method
 
 RSL III implements the **equivalent-linear** method of Idriss-Seed
-(1968, 1970), originally formulated for the SHAKE program and used by
-the industry-standard tools (EERA, STRATA, DEEPSOIL in EQL mode,
-SHAKE2000).
+(1968, 1970), the industry standard for 1D site response analysis in
+the frequency domain.
 
 ## Basic idea
 
@@ -120,7 +119,8 @@ Assumes **vertical propagation** of S waves. Does not capture:
 - **Surface waves** (Rayleigh, Love)
 
 For sites with significant topography or marked basin geometry, pair
-with 2D analysis (FLAC, PLAXIS, OpenSees).
+with 2D analysis using **Geostru RSL 2D**, our dedicated software for
+two-dimensional site response.
 
 ### 4. Horizontal bedrock
 

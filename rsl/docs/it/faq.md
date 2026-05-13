@@ -95,18 +95,14 @@ Per studi di sensibilità o didattici: 1-3 accelerogrammi sono sufficienti.
 - **PEER NGA-West** (USA, ma anche eventi europei): [ngawest2.berkeley.edu](https://ngawest2.berkeley.edu/)
 - **ITACA** (italiano, INGV): [itaca.mi.ingv.it](http://itaca.mi.ingv.it/)
 - **ESM** (European Strong-Motion Database): [esm.mi.ingv.it](https://esm-db.eu/)
-- **REXEL** (software Iervolino): suite per la selezione spectro-compatibile
+- **GeoStru Spectra** ([geostru.ai](https://www.geostru.ai/)): suite GeoStru per la selezione di accelerogrammi spectro-compatibili
 
 ### Come faccio lo "spectral matching" / scaling?
 
 RSL III **non** fa scaling automatico. Devi pre-processare gli accelerogrammi
-con software dedicato:
-
-- **REXEL** (Iervolino-Galasso, gratuito)
-- **SeismoMatch** (commerciale)
-- **EzFrisk** (commerciale)
-
-Quindi importi gli accelerogrammi già "matchati" in RSL III.
+con software dedicato — consigliamo **GeoStru Spectra**
+([geostru.ai](https://www.geostru.ai/)), che produce direttamente serie
+spectro-compatibili NTC pronte da importare in RSL III.
 
 ### Outcrop o within?
 

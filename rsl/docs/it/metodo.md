@@ -1,9 +1,8 @@
 # Metodo lineare equivalente
 
 RSL III implementa il **metodo lineare equivalente** di Idriss-Seed (1968,
-1970), formulato originariamente per il programma SHAKE e usato negli
-strumenti standard del settore (EERA, STRATA, DEEPSOIL in modalità EQL,
-SHAKE2000).
+1970), lo standard di settore per l'analisi di risposta sismica locale 1D
+nel dominio della frequenza.
 
 ## Idea di base
 
@@ -120,7 +119,8 @@ Assume **propagazione verticale** di onde S. Non cattura:
 - **Onde di superficie** (Rayleigh, Love)
 
 Per siti con topografia importante o geometria di bacino marcata, abbinare
-analisi 2D (FLAC, PLAXIS, OpenSees).
+analisi 2D con **Geostru RSL 2D**, il nostro software dedicato alla
+risposta sismica locale bidimensionale.
 
 ### 4. Bedrock orizzontale
 

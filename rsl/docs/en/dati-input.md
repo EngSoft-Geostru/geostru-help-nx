@@ -105,7 +105,7 @@ at the **bedrock**.
   exposed at the surface), choose *"Outcrop"* in the app. RSL III will
   apply spectral deconvolution, halving the amplitude inside the column.
 - If the accelerogram is already defined **inside** the column (e.g.
-  from a previous SHAKE model), choose *"Within"*. No deconvolution.
+  from a previous SRA model), choose *"Within"*. No deconvolution.
 
 For archive recordings (PEER, ITACA): **outcrop** is the right choice
 in 99% of cases.

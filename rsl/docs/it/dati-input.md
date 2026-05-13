@@ -107,7 +107,7 @@ alla **bedrock**.
   esposta in superficie), sceglie *"Outcrop"* nell'app. RSL III applicherà la
   deconvoluzione spettrale dimezzando l'ampiezza all'interno della colonna.
 - Se l'accelerogramma è già definito **all'interno** della colonna (es. da un
-  modello SHAKE precedente), scegli *"Within"*. Nessuna deconvoluzione.
+  altro modello SRA precedente), scegli *"Within"*. Nessuna deconvoluzione.
 
 Per le registrazioni di archivio (PEER, ITACA): **outcrop** è l'opzione
 giusta nel 99% dei casi.
