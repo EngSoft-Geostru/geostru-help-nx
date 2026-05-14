@@ -1,7 +1,7 @@
 site_name: "GeoSection NX"
 site_url: "https://help.nx.geostru.ai/geosection/"
 site_author: GeoStru
-site_description: "Manuale utente di GeoSection NX — Sezioni geologiche."
+site_description: "User manual of GeoSection NX — Geological cross-sections."
 copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
 
 # repo_name / repo_url / edit_uri rimossi: il sito è destinato all'utente finale
@@ -61,13 +61,34 @@ extra:
     - icon: fontawesome/solid/globe
       link: https://www.geostru.ai
       name: GeoStru
+  # Linguaggi alternativi: l'utente vede un selector 🌐 nell'header.
+  # La pagina ricaricata mantiene la posizione (path) cambiando solo /it ↔ /en.
   alternate:
     - name: Italiano
       link: /geosection/it/
       lang: it
+    - name: English
+      link: /geosection/en/
+      lang: en
 
+# Nav esplicito: una sezione per lingua (no plugin i18n esterno).
+# La home redirect è gestita lato GitHub Pages → /geosection/ ridirige a /it/.
 nav:
-  - Home: it/index.md
-  - Quickstart: it/quickstart.md
-  - Workflow completo: it/workflow.md
-  - FAQ: it/faq.md
+  - 🇮🇹 Italiano:
+    - Home: it/index.md
+    - Quickstart: it/quickstart.md
+    - Workflow completo: it/workflow.md
+    - Import: it/import.md
+    - Interpolazione: it/interpolazione.md
+    - Legenda e simbologia: it/legenda.md
+    - Export: it/export.md
+    - FAQ: it/faq.md
+  - 🇬🇧 English:
+    - Home: en/index.md
+    - Quickstart: en/quickstart.md
+    - Full workflow: en/workflow.md
+    - Import: en/import.md
+    - Interpolation: en/interpolazione.md
+    - Legend & symbols: en/legenda.md
+    - Export: en/export.md
+    - FAQ: en/faq.md
