@@ -1,0 +1,103 @@
+site_name: "RockPlane NX — Stabilità di pendii rocciosi a meccanismo planare"
+site_url: "https://help.nx.geostru.ai/rockplane/"
+site_author: GeoStru
+site_description: "Manuale utente di RockPlane NX, software web per la verifica di stabilità di pendii rocciosi soggetti a meccanismo di rottura planare (singola discontinuità persistente daylighting). Normativa NTC 2018 + Eurocodice 7, interventi con chiodi, tiranti e reti."
+copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: [it, en]
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
+  - pymdownx.snippets
+  - pymdownx.arithmatex: { generic: true }
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.inlinehilite
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.ai
+      name: GeoStru
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@GeoStruSoftware
+      name: YouTube
+  alternate:
+    - name: Italiano
+      link: /rockplane/it/
+      lang: it
+    - name: English
+      link: /rockplane/en/
+      lang: en
+
+nav:
+  - Home: it/index.md
+  - Quickstart: it/quickstart.md
+  - Workflow completo: it/workflow.md
+  - Input del modello:
+    - Geometria del cuneo: it/geometria.md
+    - Materiale (Mohr-Coulomb): it/materiale.md
+    - Acque (Hw · Zw · Zt): it/acque.md
+    - Sisma pseudostatico: it/sisma.md
+    - Forza esterna E: it/forze-esterne.md
+  - Interventi:
+    - Chiodi passivi: it/chiodi.md
+    - Tiranti attivi: it/tiranti.md
+    - Reti (R1 corticale · R2 caging): it/reti.md
+  - Calcolo:
+    - Modello teorico: it/modello-teorico.md
+    - Approccio normativo (TA · NTC · EC7): it/verifica.md
+    - α critico (sweep): it/alfa-critico.md
+  - Output:
+    - Esportazione Word/DXF: it/export.md
+    - Formati file (.rockplane): it/formati.md
+  - Glossario: it/glossario.md
+  - FAQ: it/faq.md
