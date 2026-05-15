@@ -51,6 +51,7 @@
 - [Formati file](formati.md) — `.rockplane` (JSON)
 
 ### Reference
+- [Risorse](risorse.md) — file di esempio scaricabili
 - [Glossario](glossario.md) — simboli, terminologia
 - [FAQ](faq.md) — domande frequenti
 

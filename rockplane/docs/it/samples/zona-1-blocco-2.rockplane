@@ -1,0 +1,135 @@
+{
+  "versione": "1.0",
+  "titolo": "Zona 1 — Blocco 2 (esempio SRS Geostru, parete in roccia con TC e 5 file di chiodi)",
+  "committente": "GeoStru NX — esempio didattico",
+  "sito": "Caso didattico: parete rocciosa con tension crack",
+  "data": "2026-05-14",
+  "note": "Caso di confronto con SRS Geostru. Parete in roccia carsica con tension crack subverticale (θ=70°) e altezza acqua spingente nella discontinuità Zw=10 m. Consolidato con 5 file di chiodi passivi (15 chiodi totali, interasse orizzontale 2.66 m). Sisma orizzontale kh=0.08. Area cuneo attesa: 32.6 m². Peso totale atteso: ~5740 kN (B=8 m).",
+  "professionista": {
+    "nome": "",
+    "cognome": "",
+    "email": "",
+    "telefono": "",
+    "partitaIva": ""
+  },
+  "localizzazione": {
+    "latitudine": null,
+    "longitudine": null,
+    "altitudine": null
+  },
+  "immagineSito": "",
+  "geometria": {
+    "h": 11.31,
+    "beta": 70,
+    "alfa": 15,
+    "psi": 0,
+    "b": 8,
+    "conTensionCrack": true,
+    "t": 3,
+    "theta": 70
+  },
+  "materiale": {
+    "gamma": 22,
+    "coesione": 0,
+    "phi": 38
+  },
+  "acqua": {
+    "gammaW": 9.81,
+    "hwPonded": 0,
+    "versantePervious": false,
+    "zwPiano": 10,
+    "distribuzione": 2
+  },
+  "forzaEsterna": {
+    "modulo": 0,
+    "delta": 0,
+    "tipo": 0
+  },
+  "sisma": {
+    "alfaS": 0.08,
+    "omega": 0
+  },
+  "verifica": {
+    "approccio": 0,
+    "fsRichiestoCaratteristico": 1.3
+  },
+  "catalogo": [
+    {
+      "codice": "C1",
+      "descrizione": "Chiodo φ32 — bulbo φ90×9m — fy=826 MPa",
+      "funzionamento": 1,
+      "calcolaCapacitaNTC": true,
+      "tipoNtc": 0,
+      "diametro": 32,
+      "lunghezza": 9,
+      "lunghezzaLibera": 0,
+      "lunghezzaBulbo": 9,
+      "diametroBulbo": 90,
+      "profonditaMediaBulbo": 5.65,
+      "resistenzaArmaturaCalcolo": 826,
+      "tassoLavoroAcciaio": 70,
+      "aderenzaAcciaioCls": 2.69,
+      "ancoraggioInRoccia": true,
+      "resistenzaCompressioneRoccia": 160,
+      "gammaTerrenoAncoraggio": 22,
+      "phiTerrenoAncoraggio": 38,
+      "coesioneTerrenoAncoraggio": 0,
+      "resistenzaCubicaMalta": 32,
+      "coeffAderenzaBarra": 0.5,
+      "inclinazioneRiferimento": 15,
+      "nrProveEstrazione": 0,
+      "gammaRaT": 1,
+      "fsSingoloTirante": 2.16,
+      "capacitaSingola": 325,
+      "calcolata": null
+    }
+  ],
+  "catalogoReti": [],
+  "interventi": [
+    {
+      "tipo": 1,
+      "tipologiaCodice": "C1",
+      "posizione": 3,
+      "passoOrizzontale": 2.66,
+      "inclinazione": 15,
+      "forza": 0,
+      "etichetta": "Fila 1 — Y=3.0m"
+    },
+    {
+      "tipo": 1,
+      "tipologiaCodice": "C1",
+      "posizione": 4.5,
+      "passoOrizzontale": 2.66,
+      "inclinazione": 15,
+      "forza": 0,
+      "etichetta": "Fila 2 — Y=4.5m"
+    },
+    {
+      "tipo": 1,
+      "tipologiaCodice": "C1",
+      "posizione": 6,
+      "passoOrizzontale": 2.66,
+      "inclinazione": 15,
+      "forza": 0,
+      "etichetta": "Fila 3 — Y=6.0m"
+    },
+    {
+      "tipo": 1,
+      "tipologiaCodice": "C1",
+      "posizione": 7.5,
+      "passoOrizzontale": 2.66,
+      "inclinazione": 15,
+      "forza": 0,
+      "etichetta": "Fila 4 — Y=7.5m"
+    },
+    {
+      "tipo": 1,
+      "tipologiaCodice": "C1",
+      "posizione": 9,
+      "passoOrizzontale": 2.66,
+      "inclinazione": 15,
+      "forza": 0,
+      "etichetta": "Fila 5 — Y=9.0m"
+    }
+  ]
+}
