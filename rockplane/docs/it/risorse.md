@@ -50,6 +50,45 @@ Casi di studio pronti da scaricare e aprire nel software (menu **File → Apri d
 
 ---
 
+### Blocco 7 — caso di validazione desktop (Barton-Bandis, 2 file di chiodi)
+
+[**📥 Scarica `blocco-7.rockplane`**](samples/blocco-7.rockplane)
+
+**Caratteristiche del caso**:
+
+| Parametro                | Valore       |
+|--------------------------|--------------|
+| Altezza versante H       | 4.5 m        |
+| Inclinazione fronte β    | 85° (quasi verticale) |
+| Inclin. piano rottura α  | 45°          |
+| Inclin. bench ψ          | 0°           |
+| Profondità blocco B      | 4 m          |
+| Tension crack            | no           |
+| Criterio resistenza      | **Barton-Bandis** |
+| Peso volume γ            | 22 kN/m³     |
+| Coesione c               | 0 kPa        |
+| Angolo d'attrito φ       | 38° (φb=32°) |
+| JRC                      | 8            |
+| JCS                      | 160 MPa      |
+| Sisma kh                 | 0.08         |
+| Acqua                    | nessuna      |
+| Interventi               | 2 file di chiodi passivi φ32 in foro φ90, L=6 m, Δ=15°, passo orizz. 2 m, posizioni Yt=2.5 m e 4.0 m |
+| Capacità singola         | 325 kN (tiro di progetto = η²·fy·A_gross) |
+
+**Origine**: caso preso dalla **Validazione codice di calcolo desktop GeoStru RockPlane**. Riprodotto identicamente in RockPlane NX per il confronto numerico tra il software desktop e la versione web NX.
+
+!!! note "Convenzione 'tirante passivo' nel desktop"
+    Nel disegno del manuale di validazione desktop questi elementi sono etichettati come "tirante passivo", ma i tabulati li trattano come **chiodi** (analisi con chiodi). In RockPlane NX li modelliamo coerentemente come `ChiodoPassivo` con `TipoNtc = Chiodo`, comportamento di funzionamento del soil-nail (Variante A NTC §6.7).
+
+**Output atteso** (dopo aver aperto e ricalcolato):
+- FS ≈ 3.0 — il caso è sovra-dimensionato 2× rispetto al target NTC di 1.3 (margine ampio per geometria conservativa, fronte quasi verticale).
+- I dimensionamenti delle resistenze sul singolo chiodo, se abilitato il calcolo NTC, devono allinearsi a:
+  - **Forza limite ultima fondazione (Ta3)** ≈ 3360 kN (con σc = 30 MPa, π·90·6000·0.1σc / 2.16)
+  - **Sfilamento acciaio-malta (Ta2)** ≈ 1622 kN (con τb = 2.69 N/mm², π·32·6000·τb)
+  - **Resistenza ultima armatura (Ta1)** = 325 kN (= η²·fy·A_gross, con η=0.7, fy=826, D=32)
+
+---
+
 ## Vuoi aggiungere un tuo caso?
 
 Se hai un caso interessante che vuoi condividere come esempio (anonimizzato), scrivici a [info@geostru.ai](mailto:info@geostru.ai?subject=Esempio%20RockPlane%20NX) allegando il file `.rockplane` salvato dal software.
