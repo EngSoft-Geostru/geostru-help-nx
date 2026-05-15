@@ -80,27 +80,53 @@ extra:
       lang: en
 
 nav:
-  - Home: it/index.md
-  - Quickstart: it/quickstart.md
-  - Workflow completo: it/workflow.md
-  - Input del modello:
-    - Geometria del cuneo: it/geometria.md
-    - Materiale (Mohr-Coulomb): it/materiale.md
-    - Acque (Hw · Zw · Zt): it/acque.md
-    - Sisma pseudostatico: it/sisma.md
-    - Forza esterna E: it/forze-esterne.md
-  - Interventi:
-    - Chiodi passivi: it/chiodi.md
-    - Tiranti attivi: it/tiranti.md
-    - Reti (R1 corticale · R2 caging): it/reti.md
-  - Calcolo:
-    - Modello teorico: it/modello-teorico.md
-    - Approccio normativo (TA · NTC · EC7): it/verifica.md
-    - α critico (sweep): it/alfa-critico.md
-  - Output:
-    - Esportazione Word/DXF: it/export.md
-    - Formati file (.rockplane): it/formati.md
-  - Risorse · file di esempio: it/risorse.md
-  - Esempio numerico svolto a mano: it/esempio-numerico.md
-  - Glossario: it/glossario.md
-  - FAQ: it/faq.md
+  - 🇮🇹 Italiano:
+    - Home: it/index.md
+    - Quickstart: it/quickstart.md
+    - Workflow completo: it/workflow.md
+    - Input del modello:
+      - Geometria del cuneo: it/geometria.md
+      - Materiale (Mohr-Coulomb): it/materiale.md
+      - Acque (Hw · Zw · Zt): it/acque.md
+      - Sisma pseudostatico: it/sisma.md
+      - Forza esterna E: it/forze-esterne.md
+    - Interventi:
+      - Chiodi passivi: it/chiodi.md
+      - Tiranti attivi: it/tiranti.md
+      - Reti (R1 corticale · R2 caging): it/reti.md
+    - Calcolo:
+      - Modello teorico: it/modello-teorico.md
+      - Approccio normativo (TA · NTC · EC7): it/verifica.md
+      - α critico (sweep): it/alfa-critico.md
+    - Output:
+      - Esportazione Word/DXF: it/export.md
+      - Formati file (.rockplane): it/formati.md
+    - Risorse · file di esempio: it/risorse.md
+    - Esempio numerico svolto a mano: it/esempio-numerico.md
+    - Glossario: it/glossario.md
+    - FAQ: it/faq.md
+  - 🇬🇧 English:
+    - Home: en/index.md
+    - Quickstart: en/quickstart.md
+    - Full workflow: en/workflow.md
+    - Model input:
+      - Wedge geometry: en/geometria.md
+      - Material: en/materiale.md
+      - Water (Hw · Zw · Zt): en/acque.md
+      - Pseudo-static seismic: en/sisma.md
+      - External load E: en/forze-esterne.md
+    - Reinforcement:
+      - Passive nails: en/chiodi.md
+      - Active anchors: en/tiranti.md
+      - Meshes (R1 drape · R2 cable): en/reti.md
+    - Computation:
+      - Theoretical model: en/modello-teorico.md
+      - Code approach (TA · NTC · EC7): en/verifica.md
+      - Critical α (sweep): en/alfa-critico.md
+    - Output:
+      - Word/DXF export: en/export.md
+      - File formats (.rockplane): en/formati.md
+    - Resources · sample files: en/risorse.md
+    - Hand-worked numerical example: en/esempio-numerico.md
+    - Glossary: en/glossario.md
+    - FAQ: en/faq.md

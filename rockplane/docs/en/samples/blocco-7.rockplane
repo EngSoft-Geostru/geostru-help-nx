@@ -1,0 +1,102 @@
+{
+  "versione": "1.0",
+  "titolo": "Blocco 7 — Caso esempio validazione RockPlane desktop",
+  "committente": "Esempio didattico GeoStru",
+  "sito": "Caso di riferimento per confronto SRS desktop ↔ RockPlane NX (Validazione codice di calcolo)",
+  "data": "2026-05-15",
+  "note": "Caso preso dalla validazione codice di calcolo desktop GeoStru RockPlane. Cuneo H=4.5 m, β=85° (fronte quasi verticale), α=45° (piano di scorrimento a 45°), ψ=0°. Materiale roccia γ=22 kN/m³, c=0, φ=38° con criterio Barton-Bandis: JRC=8, JCS=160 MPa, φb=32° (di base). Sisma kh=0.08 orizzontale (la componente verticale kv=0.04 del desktop non è modellabile come parametro separato in RockPlane NX). Intervento desktop: 2 file di chiodi (φ32 in foro φ90, L=6 m, η=70%, fy=826 N/mm², aderenza τb=2.69 N/mm²) inclinati a 15° con interasse orizzontale 2.0 m, posizionati a Yt=2.5 m e Yt=4.0 m. Capacità singola = 325 kN (= Tiro di progetto desktop, già diviso per FS=2.16 sul singolo elemento). Nel disegno del manuale desktop questi elementi sono etichettati 'tirante passivo' ma i tabulati li trattano come 'chiodi' (analisi con chiodi), quindi qui modellati come ChiodoPassivo (tipo=1). FS atteso ≈ 3.0 (overdesigned 2× rispetto al target 1.3).",
+  "professionista": {
+    "nome": "",
+    "cognome": "",
+    "email": "",
+    "telefono": "",
+    "partitaIva": ""
+  },
+  "localizzazione": {
+    "latitudine": null,
+    "longitudine": null,
+    "altitudine": null
+  },
+  "immagineSito": "",
+  "geometria": {
+    "h": 4.5,
+    "beta": 85,
+    "alfa": 45,
+    "psi": 0,
+    "b": 4,
+    "conTensionCrack": false,
+    "t": 0,
+    "theta": 70
+  },
+  "materiale": {
+    "gamma": 22,
+    "criterio": 1,
+    "coesione": 0,
+    "phi": 38,
+    "phiB": 32,
+    "jrc": 8,
+    "jcs": 160
+  },
+  "acqua": {
+    "gammaW": 9.81,
+    "hwPonded": 0,
+    "versantePervious": false,
+    "zwPiano": 0,
+    "distribuzione": 2
+  },
+  "forzaEsterna": { "modulo": 0, "delta": 0, "tipo": 0 },
+  "sisma": { "alfaS": 0.08, "omega": 0 },
+  "verifica": { "approccio": 0, "fsRichiestoCaratteristico": 1.3 },
+  "catalogo": [
+    {
+      "codice": "B7",
+      "descrizione": "Chiodo passivo φ32 in foro φ90 — L=6m, η=70%, fy=826 N/mm²",
+      "funzionamento": 1,
+      "calcolaCapacitaNTC": false,
+      "tipoNtc": 0,
+      "diametro": 32,
+      "lunghezza": 6,
+      "lunghezzaLibera": 0,
+      "lunghezzaBulbo": 6,
+      "diametroBulbo": 90,
+      "profonditaMediaBulbo": 3,
+      "resistenzaArmaturaCalcolo": 826,
+      "tassoLavoroAcciaio": 70,
+      "aderenzaAcciaioCls": 2.69,
+      "ancoraggioInRoccia": true,
+      "resistenzaCompressioneRoccia": 30,
+      "gammaTerrenoAncoraggio": 22,
+      "phiTerrenoAncoraggio": 38,
+      "coesioneTerrenoAncoraggio": 0,
+      "resistenzaCubicaMalta": 32,
+      "coeffAderenzaBarra": 0.5,
+      "inclinazioneRiferimento": 15,
+      "nrProveEstrazione": 0,
+      "gammaRaT": 1.0,
+      "fsSingoloTirante": 2.16,
+      "capacitaSingola": 325,
+      "calcolata": null
+    }
+  ],
+  "catalogoReti": [],
+  "interventi": [
+    {
+      "tipo": 1,
+      "tipologiaCodice": "B7",
+      "posizione": 2.5,
+      "passoOrizzontale": 2.0,
+      "inclinazione": 15,
+      "forza": 0,
+      "etichetta": "C1"
+    },
+    {
+      "tipo": 1,
+      "tipologiaCodice": "B7",
+      "posizione": 4.0,
+      "passoOrizzontale": 2.0,
+      "inclinazione": 15,
+      "forza": 0,
+      "etichetta": "C2"
+    }
+  ]
+}
