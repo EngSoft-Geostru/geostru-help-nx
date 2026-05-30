@@ -81,45 +81,73 @@ jobs:
             <title>Manuali GeoStru NX</title>
             <meta name="viewport" content="width=device-width,initial-scale=1" />
             <style>
-              body{font-family:Inter,system-ui,sans-serif;max-width:780px;margin:3rem auto;padding:0 1rem;color:#1e293b;background:#f8fafc}
+              *{box-sizing:border-box}
+              body{font-family:Inter,system-ui,sans-serif;max-width:860px;margin:3rem auto;padding:0 1.2rem;color:#1e293b;background:#f8fafc}
               h1{font-weight:800;letter-spacing:-0.02em;color:#1e3a5f}
-              .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;margin-top:2rem}
-              .card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:1.2rem;text-decoration:none;color:inherit;transition:border-color .1s}
-              .card:hover{border-color:#1e3a5f;box-shadow:0 4px 12px rgba(0,0,0,.06)}
-              .card h3{margin:0 0 .3rem;font-size:1rem}
-              .card p{margin:0;color:#64748b;font-size:.85rem}
+              .subtitle{color:#64748b;margin-top:.3rem}
+              .grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1rem;margin-top:2rem}
+              .card{background:#fff;border:1px solid #e2e8f0;border-radius:10px;padding:1.1rem 1.2rem 0.9rem;text-decoration:none;color:inherit;transition:border-color .12s,box-shadow .12s;display:flex;flex-direction:column;gap:.5rem}
+              .card:hover{border-color:#1e3a5f;box-shadow:0 4px 14px rgba(0,0,0,.07)}
+              .card h3{margin:0;font-size:1rem;font-weight:700}
+              .card p{margin:0;color:#64748b;font-size:.84rem;flex:1}
+              .langs{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.15rem}
+              .langs a{font-size:.72rem;font-weight:700;letter-spacing:.04em;padding:1px 6px;border-radius:4px;background:#f1f5f9;color:#475569;text-decoration:none;border:1px solid #e2e8f0;transition:background .1s,color .1s}
+              .langs a:hover{background:#1e3a5f;color:#fff;border-color:#1e3a5f}
               footer{margin-top:3rem;color:#94a3b8;font-size:.8rem;text-align:center}
             </style>
           </head>
           <body>
             <h1>Manuali GeoStru NX</h1>
-            <p>Documentazione delle applicazioni web della suite <strong>GeoStru NX</strong>.</p>
+            <p class="subtitle">Documentazione delle applicazioni web della suite <strong>GeoStru NX</strong>.</p>
             <div class="grid" id="grid"></div>
             <footer>© <script>document.write(new Date().getFullYear())</script> GeoStru — <a href="https://www.geostru.ai">www.geostru.ai</a></footer>
             <script>
+              // langs: array di codici lingua disponibili per il manuale.
+              // Se ha solo 'it', nessun flag viene mostrato (manuale solo italiano).
               const products = [
-                { id: 'gms',           name: 'GMS NX',           desc: 'Rilievo geomeccanico, stereonet, Markland' },
-                { id: 'liquiter',      name: 'LiquiTer NX',      desc: 'Analisi liquefazione (Seed, Boulanger-Idriss)' },
-                { id: 'rsl',           name: 'RSL III',          desc: 'Risposta sismica locale 1D' },
-                { id: 'computo',       name: 'Computo NX',       desc: 'Computo metrico estimativo + AI' },
-                { id: 'trispace',      name: 'Trispace NX',      desc: 'CAD web 2D/3D + drone → GEOROCK3D' },
-                { id: 'hydrogeo',      name: 'Hydrogeo NX',      desc: 'Idrogeologia, pluvio, deflusso' },
-                { id: 'runofflab',     name: 'Runoff Lab NX',    desc: 'Curve di pioggia, IDF' },
-                { id: 'geosection',    name: 'GeoSection NX',    desc: 'Sezioni geologiche' },
-                { id: 'stratigrapher', name: 'Stratigrapher NX', desc: 'Colonne stratigrafiche' },
-                { id: 'rockplane',     name: 'RockPlane NX',     desc: 'Stabilità pendii rocciosi planari (Hoek-Bray)' }
-                // Nascosti dalla home in attesa di pubblicazione / aggiornamento manuale:
-                // loadcap, tiranti, maps, converter — la doc resta navigabile via URL diretto.
+                { id: 'dynprobe',      name: 'Dynamic Probing NX', desc: 'Prove penetrometriche DPL·DPM·DPH·DPSH + SPT in foro', langs: ['it','en','ro','es'] },
+                { id: 'gms',           name: 'GMS NX',              desc: 'Rilievo geomeccanico, stereonet, Markland',            langs: ['it','en'] },
+                { id: 'liquiter',      name: 'LiquiTer NX',         desc: 'Analisi liquefazione (Seed, Boulanger-Idriss)',        langs: ['it'] },
+                { id: 'rsl',           name: 'RSL III',             desc: 'Risposta sismica locale 1D',                          langs: ['it'] },
+                { id: 'computo',       name: 'Computo NX',          desc: 'Computo metrico estimativo + AI',                     langs: ['it'] },
+                { id: 'trispace',      name: 'Trispace NX',         desc: 'CAD web 2D/3D + drone → GEOROCK3D',                  langs: ['it'] },
+                { id: 'hydrogeo',      name: 'Hydrogeo NX',         desc: 'Idrogeologia, pluvio, deflusso',                     langs: ['it'] },
+                { id: 'runofflab',     name: 'Runoff Lab NX',       desc: 'Curve di pioggia, IDF',                              langs: ['it'] },
+                { id: 'geosection',    name: 'GeoSection NX',       desc: 'Sezioni geologiche',                                 langs: ['it'] },
+                { id: 'stratigrapher', name: 'Stratigrapher NX',    desc: 'Colonne stratigrafiche',                             langs: ['it'] },
+                { id: 'rockplane',     name: 'RockPlane NX',        desc: 'Stabilità pendii rocciosi planari (Hoek-Bray)',       langs: ['it','en'] }
+                // Nascosti dalla home in attesa di aggiornamento manuale:
+                // loadcap, tiranti, maps, converter — navigabili via URL diretto.
               ];
+              const langLabel = { it: '🇮🇹 IT', en: '🇬🇧 EN', ro: '🇷🇴 RO', es: '🇪🇸 ES' };
               const grid = document.getElementById('grid');
               for (const p of products) {
                 fetch(p.id + '/it/').then(r => {
                   if (!r.ok) return;
-                  const a = document.createElement('a');
-                  a.className = 'card';
-                  a.href = p.id + '/it/';
-                  a.innerHTML = '<h3>' + p.name + '</h3><p>' + p.desc + '</p>';
-                  grid.appendChild(a);
+                  const card = document.createElement('a');
+                  card.className = 'card';
+                  card.href = p.id + '/it/';
+                  // titolo + descrizione
+                  const h = document.createElement('h3');
+                  h.textContent = p.name;
+                  const desc = document.createElement('p');
+                  desc.textContent = p.desc;
+                  card.appendChild(h);
+                  card.appendChild(desc);
+                  // selector lingua (solo se più di una)
+                  if (p.langs && p.langs.length > 1) {
+                    const row = document.createElement('div');
+                    row.className = 'langs';
+                    for (const l of p.langs) {
+                      const a = document.createElement('a');
+                      a.href = p.id + '/' + l + '/';
+                      a.textContent = langLabel[l] || l.toUpperCase();
+                      a.onclick = e => e.stopPropagation(); // evita che il click sulla card apra /it/
+                      row.appendChild(a);
+                    }
+                    card.appendChild(row);
+                  }
+                  grid.appendChild(card);
                 }).catch(() => {});
               }
             </script>
