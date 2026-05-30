@@ -1,0 +1,81 @@
+site_name: "Dynamic Probing NX — Prove penetrometriche dinamiche"
+site_url: "https://help.nx.geostru.ai/dynprobe/"
+site_author: GeoStru
+site_description: "Manuale utente di Dynamic Probing NX, software web per l'elaborazione di prove penetrometriche dinamiche (DPL · DPM · DPH · DPSH) e prove SPT in foro. Stratigrafia automatica, correlazioni geotecniche, categoria di sottosuolo NTC 2018, portanza di fondazioni, valori caratteristici EC7."
+copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: [it]
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
+  - pymdownx.snippets
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.inlinehilite
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.ai
+      name: GeoStru
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@GeoStruSoftware
+      name: YouTube
+
+nav:
+  - Home: it/index.md
+  - Guida rapida (5 minuti): it/quickstart.md
+  - Strumenti: it/strumenti.md
+  - Stratigrafia interpretata: it/stratigrafia.md
+  - Correlazioni geotecniche: it/correlazioni.md
+  - Categoria di sottosuolo: it/categoria.md
+  - Portanza fondazioni: it/portanze.md
+  - Valori caratteristici EC7 / NTC: it/caratter.md
+  - Esportazione e report: it/export.md
+  - Formato file (.dprobe · .dypx): it/formati.md
+  - Risorse e file di esempio: it/risorse.md
+  - Domande frequenti: it/faq.md
