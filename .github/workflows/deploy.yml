@@ -106,14 +106,14 @@ jobs:
               // Se ha solo 'it', nessun flag viene mostrato (manuale solo italiano).
               const products = [
                 { id: 'dynprobe',      name: 'Dynamic Probing NX', desc: 'Prove penetrometriche DPL·DPM·DPH·DPSH + SPT in foro', langs: ['it','en','ro','es'] },
-                { id: 'gms',           name: 'GMS NX',              desc: 'Rilievo geomeccanico, stereonet, Markland',            langs: ['it','en'] },
-                { id: 'liquiter',      name: 'LiquiTer NX',         desc: 'Analisi liquefazione (Seed, Boulanger-Idriss)',        langs: ['it'] },
-                { id: 'rsl',           name: 'RSL III',             desc: 'Risposta sismica locale 1D',                          langs: ['it'] },
+                { id: 'gms',           name: 'GMS NX',              desc: 'Rilievo geomeccanico, stereonet, Markland',            langs: ['it','en','ro','es'] },
+                { id: 'liquiter',      name: 'LiquiTer NX',         desc: 'Analisi liquefazione (Seed, Boulanger-Idriss)',        langs: ['it','en'] },
+                { id: 'rsl',           name: 'RSL III',             desc: 'Risposta sismica locale 1D',                          langs: ['it','en'] },
                 { id: 'computo',       name: 'Computo NX',          desc: 'Computo metrico estimativo + AI',                     langs: ['it'] },
                 { id: 'trispace',      name: 'Trispace NX',         desc: 'CAD web 2D/3D + drone → GEOROCK3D',                  langs: ['it'] },
                 { id: 'hydrogeo',      name: 'Hydrogeo NX',         desc: 'Idrogeologia, pluvio, deflusso',                     langs: ['it'] },
-                { id: 'runofflab',     name: 'Runoff Lab NX',       desc: 'Curve di pioggia, IDF',                              langs: ['it'] },
-                { id: 'geosection',    name: 'GeoSection NX',       desc: 'Sezioni geologiche',                                 langs: ['it'] },
+                { id: 'runofflab',     name: 'Runoff Lab NX',       desc: 'Curve di pioggia, IDF',                              langs: ['it','en'] },
+                { id: 'geosection',    name: 'GeoSection NX',       desc: 'Sezioni geologiche',                                 langs: ['it','en'] },
                 { id: 'stratigrapher', name: 'Stratigrapher NX',    desc: 'Colonne stratigrafiche',                             langs: ['it'] },
                 { id: 'rockplane',     name: 'RockPlane NX',        desc: 'Stabilità pendii rocciosi planari (Hoek-Bray)',       langs: ['it','en'] }
                 // Nascosti dalla home in attesa di aggiornamento manuale:
