@@ -1,0 +1,135 @@
+site_name: "Rock Mechanics NX — Classificazioni geomeccaniche e stabilità in roccia"
+site_url: "https://help.nx.geostru.ai/rockmechanics/"
+site_author: GeoStru
+site_description: "Manuale utente di Rock Mechanics NX: elaborazione del rilievo geostrutturale ISRM di ammassi rocciosi, classificazioni geomeccaniche (Barton Q, Bieniawski RMR / Romana SMR, Jašarević, Sen, Robertson SRMR, Singh & Goel), verifiche di stabilità per scivolamento planare e a cuneo (Sliding 3D), utility per forza d'impatto di un masso e suscettibilità sismica al crollo."
+copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    - navigation.instant
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: [it, en]
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
+  - pymdownx.snippets
+  - pymdownx.arithmatex: { generic: true }
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.inlinehilite
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  homepage: https://help.nx.geostru.ai/
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.ai
+      name: GeoStru
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@GeoStruSoftware
+      name: YouTube
+  alternate:
+    - name: Italiano
+      link: /rockmechanics/it/
+      lang: it
+    - name: English
+      link: /rockmechanics/en/
+      lang: en
+
+nav:
+  - 🇮🇹 Italiano:
+    - Home: it/index.md
+    - Guida rapida (5 minuti): it/quickstart.md
+    - Workflow completo: it/workflow.md
+    - Classificazioni geomeccaniche:
+      - Panoramica e parametri comuni: it/classificazioni.md
+      - Barton (indice Q): it/barton.md
+      - Bieniawski & Romana (RMR · SMR): it/rmr-romana.md
+      - Jašarević & Kovačević (indice n): it/jasarevic.md
+      - RMR modificato (Sen): it/sen.md
+      - SRMR (Robertson): it/robertson.md
+      - Singh & Goel (indice N): it/singh-goel.md
+    - Verifiche di stabilità:
+      - Scivolamento planare: it/scivolamento-planare.md
+      - Sliding 3D (cuneo): it/sliding-3d.md
+    - Utility:
+      - Forza d'impatto · crollo sismico: it/utility.md
+    - Output:
+      - Esportazione e report: it/export.md
+      - Formati file: it/formati.md
+    - Reference:
+      - Risorse e file di esempio: it/risorse.md
+      - Glossario: it/glossario.md
+      - Bibliografia: it/bibliografia.md
+      - Geoapp: it/geoapp.md
+      - Domande frequenti: it/faq.md
+  - 🇬🇧 English:
+    - Home: en/index.md
+    - Quick start (5 minutes): en/quickstart.md
+    - Full workflow: en/workflow.md
+    - Rock mass classifications:
+      - Overview and shared parameters: en/classificazioni.md
+      - Barton (Q index): en/barton.md
+      - Bieniawski & Romana (RMR · SMR): en/rmr-romana.md
+      - Jašarević & Kovačević (n index): en/jasarevic.md
+      - Modified RMR (Sen): en/sen.md
+      - SRMR (Robertson): en/robertson.md
+      - Singh & Goel (N index): en/singh-goel.md
+    - Stability analyses:
+      - Planar sliding: en/scivolamento-planare.md
+      - Sliding 3D (wedge): en/sliding-3d.md
+    - Utilities:
+      - Block impact · seismic rockfall: en/utility.md
+    - Output:
+      - Export and report: en/export.md
+      - File formats: en/formati.md
+    - Reference:
+      - Resources and sample files: en/risorse.md
+      - Glossary: en/glossario.md
+      - Bibliography: en/bibliografia.md
+      - Geoapp: en/geoapp.md
+      - FAQ: en/faq.md

@@ -115,7 +115,8 @@ jobs:
                 { id: 'runofflab',     name: 'Runoff Lab NX',       desc: 'Curve di pioggia, IDF',                              langs: ['it','en'] },
                 { id: 'geosection',    name: 'GeoSection NX',       desc: 'Sezioni geologiche',                                 langs: ['it','en'] },
                 { id: 'stratigrapher', name: 'Stratigrapher NX',    desc: 'Colonne stratigrafiche',                             langs: ['it'] },
-                { id: 'rockplane',     name: 'RockPlane NX',        desc: 'Stabilità pendii rocciosi planari (Hoek-Bray)',       langs: ['it','en'] }
+                { id: 'rockplane',     name: 'RockPlane NX',        desc: 'Stabilità pendii rocciosi planari (Hoek-Bray)',       langs: ['it','en'] },
+                { id: 'rockmechanics', name: 'Rock Mechanics NX',   desc: 'Classificazioni geomeccaniche (RMR·Q·SMR) + stabilità planare/cuneo', langs: ['it','en'] }
                 // Nascosti dalla home in attesa di aggiornamento manuale:
                 // loadcap, tiranti, maps, converter — navigabili via URL diretto.
               ];
