@@ -26,7 +26,8 @@ theme:
         icon: material/brightness-4
         name: Tema chiaro
   features:
-    - navigation.instant
+    # navigation.instant rimosso: incompatibile con il language switcher
+    # contestuale del plugin i18n (causa warning in build --strict).
     - navigation.tracking
     - navigation.top
     - navigation.footer
@@ -42,6 +43,22 @@ theme:
 plugins:
   - search:
       lang: [it, en]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          name: Italiano
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Workflow completo: Full workflow
+            Interpolazione: Interpolation
+            Legenda e simbologia: Legend & symbols
 
 markdown_extensions:
   - admonition
@@ -62,34 +79,17 @@ extra:
     - icon: fontawesome/solid/globe
       link: https://www.geostru.ai
       name: GeoStru
-  # Linguaggi alternativi: l'utente vede un selector 🌐 nell'header.
-  # La pagina ricaricata mantiene la posizione (path) cambiando solo /it ↔ /en.
-  alternate:
-    - name: Italiano
-      link: /geosection/it/
-      lang: it
-    - name: English
-      link: /geosection/en/
-      lang: en
+  # Lo switcher di lingua è generato automaticamente dal plugin i18n
+  # (reconfigure_material) a partire dall'elenco `languages`.
 
-# Nav esplicito: una sezione per lingua (no plugin i18n esterno).
-# La home redirect è gestita lato GitHub Pages → /geosection/ ridirige a /it/.
+# Nav unico in lingua di default (it/). Il plugin i18n lo replica per ogni
+# lingua scambiando il prefisso it/ → en/ e traducendo i titoli via nav_translations.
 nav:
-  - 🇮🇹 Italiano:
-    - Home: it/index.md
-    - Quickstart: it/quickstart.md
-    - Workflow completo: it/workflow.md
-    - Import: it/import.md
-    - Interpolazione: it/interpolazione.md
-    - Legenda e simbologia: it/legenda.md
-    - Export: it/export.md
-    - FAQ: it/faq.md
-  - 🇬🇧 English:
-    - Home: en/index.md
-    - Quickstart: en/quickstart.md
-    - Full workflow: en/workflow.md
-    - Import: en/import.md
-    - Interpolation: en/interpolazione.md
-    - Legend & symbols: en/legenda.md
-    - Export: en/export.md
-    - FAQ: en/faq.md
+  - Home: it/index.md
+  - Quickstart: it/quickstart.md
+  - Workflow completo: it/workflow.md
+  - Import: it/import.md
+  - Interpolazione: it/interpolazione.md
+  - Legenda e simbologia: it/legenda.md
+  - Export: it/export.md
+  - FAQ: it/faq.md

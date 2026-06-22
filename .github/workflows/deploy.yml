@@ -67,6 +67,17 @@ jobs:
             cd "$product"
             mkdocs build --strict --site-dir "../_site/${product%/}"
             cd ..
+            # Backward-compat: il vecchio URL /<prodotto>/it/ ora redirige alla root
+            # (l'italiano, lingua di default, è servito su /<prodotto>/).
+            if [ ! -e "_site/${product%/}/it" ]; then
+              mkdir -p "_site/${product%/}/it"
+              cat > "_site/${product%/}/it/index.html" <<'REDIR'
+          <!doctype html><html><head><meta charset="utf-8">
+          <meta http-equiv="refresh" content="0;url=../"><link rel="canonical" href="../">
+          <title>Redirect</title></head><body><a href="../">Redirecting…</a>
+          <script>window.location.replace('../')</script></body></html>
+          REDIR
+            fi
             echo "::endgroup::"
           done
 
@@ -123,11 +134,11 @@ jobs:
               const langLabel = { it: '🇮🇹 IT', en: '🇬🇧 EN', ro: '🇷🇴 RO', es: '🇪🇸 ES' };
               const grid = document.getElementById('grid');
               for (const p of products) {
-                fetch(p.id + '/it/').then(r => {
+                fetch(p.id + '/').then(r => {
                   if (!r.ok) return;
                   const card = document.createElement('a');
                   card.className = 'card';
-                  card.href = p.id + '/it/';
+                  card.href = p.id + '/';
                   // titolo + descrizione
                   const h = document.createElement('h3');
                   h.textContent = p.name;
@@ -141,7 +152,8 @@ jobs:
                     row.className = 'langs';
                     for (const l of p.langs) {
                       const a = document.createElement('a');
-                      a.href = p.id + '/' + l + '/';
+                      // L'italiano (lingua di default) è servito sulla root del prodotto.
+                      a.href = l === 'it' ? p.id + '/' : p.id + '/' + l + '/';
                       a.textContent = langLabel[l] || l.toUpperCase();
                       a.onclick = e => e.stopPropagation(); // evita che il click sulla card apra /it/
                       row.appendChild(a);

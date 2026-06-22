@@ -26,7 +26,6 @@ theme:
         icon: material/brightness-4
         name: Tema chiaro
   features:
-    - navigation.instant
     - navigation.tracking
     - navigation.sections
     - navigation.top
@@ -44,6 +43,15 @@ theme:
 plugins:
   - search:
       lang: [it, en]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          name: Italiano
+          default: true
+          build: true
 
 markdown_extensions:
   - admonition
@@ -73,13 +81,6 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/EngSoft-Geostru
       name: GitHub
-  alternate:
-    - name: Italiano
-      link: /gms/it/
-      lang: it
-    - name: English
-      link: /gms/en/
-      lang: en
 
 nav:
   - Home: it/index.md

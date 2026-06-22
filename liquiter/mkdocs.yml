@@ -26,7 +26,8 @@ theme:
         icon: material/brightness-4
         name: Tema chiaro
   features:
-    - navigation.instant
+    # navigation.instant rimosso: incompatibile con il language switcher
+    # contestuale del plugin i18n (causa warning in build --strict).
     - navigation.tracking
     - navigation.top
     - navigation.footer
@@ -42,6 +43,24 @@ theme:
 plugins:
   - search:
       lang: [it, en]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          name: Italiano
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Workflow completo: Complete workflow
+            Dati di input: Input data
+            Calcolo: Calculation
+            Metodi di calcolo: Calculation methods
+            Esportazioni: Exports
 
 markdown_extensions:
   - admonition
@@ -67,34 +86,19 @@ extra:
     - icon: fontawesome/solid/globe
       link: https://www.geostru.ai
       name: GeoStru
-  alternate:
-    - name: Italiano
-      link: /liquiter/it/
-      lang: it
-    - name: English
-      link: /liquiter/en/
-      lang: en
+  # Lo switcher di lingua è generato automaticamente dal plugin i18n
+  # (reconfigure_material) a partire dall'elenco `languages`.
 
+# Nav unico in lingua di default (it/). Il plugin i18n lo replica per ogni
+# lingua scambiando il prefisso it/ → en/ e traducendo i titoli via nav_translations.
 nav:
-  - Italiano:
-    - Home: it/index.md
-    - Quickstart: it/quickstart.md
-    - Workflow completo: it/workflow.md
-    - Input:
-      - Dati di input: it/dati-input.md
-    - Calcolo:
-      - Metodi di calcolo: it/metodi.md
-    - Output:
-      - Esportazioni: it/esportazioni.md
-    - FAQ: it/faq.md
-  - English:
-    - Home: en/index.md
-    - Quickstart: en/quickstart.md
-    - Complete workflow: en/workflow.md
-    - Input:
-      - Input data: en/dati-input.md
-    - Calculation:
-      - Calculation methods: en/metodi.md
-    - Output:
-      - Exports: en/esportazioni.md
-    - FAQ: en/faq.md
+  - Home: it/index.md
+  - Quickstart: it/quickstart.md
+  - Workflow completo: it/workflow.md
+  - Input:
+    - Dati di input: it/dati-input.md
+  - Calcolo:
+    - Metodi di calcolo: it/metodi.md
+  - Output:
+    - Esportazioni: it/esportazioni.md
+  - FAQ: it/faq.md

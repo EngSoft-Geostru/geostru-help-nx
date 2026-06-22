@@ -22,7 +22,6 @@ theme:
         icon: material/brightness-4
         name: Light theme
   features:
-    - navigation.instant
     - navigation.tracking
     - navigation.sections
     - navigation.top
@@ -40,6 +39,62 @@ theme:
 plugins:
   - search:
       lang: [it, en, ro, es]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          name: Italiano
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Guida rapida (5 minuti): Quick start (5 minutes)
+            Strumenti: Equipment
+            Stratigrafia interpretata: Interpreted stratigraphy
+            Correlazioni geotecniche: Geotechnical correlations
+            Categoria di sottosuolo: Subsoil category
+            Portanza fondazioni: Foundation bearing capacity
+            Valori caratteristici EC7 / NTC: Characteristic values EC7 / NTC
+            Esportazione e report: Export and report
+            "Formato file (.dprobe · .dypx)": "File formats (.dprobe · .dypx)"
+            Risorse e file di esempio: Resources and sample files
+            Domande frequenti: FAQ
+        - locale: ro
+          name: Română
+          build: true
+          nav_translations:
+            Home: Acasă
+            Guida rapida (5 minuti): Ghid rapid (5 minute)
+            Strumenti: Echipamente
+            Stratigrafia interpretata: Stratigrafie interpretată
+            Correlazioni geotecniche: Corelații geotehnice
+            Categoria di sottosuolo: Categoria terenului
+            Portanza fondazioni: Capacitate portantă fundații
+            Valori caratteristici EC7 / NTC: Valori caracteristice EC7 / NTC
+            Esportazione e report: Export și raport
+            "Formato file (.dprobe · .dypx)": "Formate fișiere (.dprobe · .dypx)"
+            Risorse e file di esempio: Resurse și fișiere exemplu
+            Domande frequenti: Întrebări frecvente
+        - locale: es
+          name: Español
+          build: true
+          nav_translations:
+            Home: Inicio
+            Guida rapida (5 minuti): Guía rápida (5 minutos)
+            Strumenti: Equipos
+            Stratigrafia interpretata: Estratigrafía interpretada
+            Correlazioni geotecniche: Correlaciones geotécnicas
+            Categoria di sottosuolo: Categoría de subsuelo
+            Portanza fondazioni: Capacidad portante de cimentaciones
+            Valori caratteristici EC7 / NTC: Valores característicos EC7 / NTC
+            Esportazione e report: Exportación e informe
+            "Formato file (.dprobe · .dypx)": "Formatos de archivo (.dprobe · .dypx)"
+            Risorse e file di esempio: Recursos y archivos de ejemplo
+            Domande frequenti: Preguntas frecuentes
 
 markdown_extensions:
   - admonition
@@ -65,70 +120,19 @@ extra:
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/@GeoStruSoftware
       name: YouTube
-  alternate:
-    - name: Italiano
-      link: /dynprobe/it/
-      lang: it
-    - name: English
-      link: /dynprobe/en/
-      lang: en
-    - name: Română
-      link: /dynprobe/ro/
-      lang: ro
-    - name: Español
-      link: /dynprobe/es/
-      lang: es
 
+# Nav unico in lingua di default (it/). Il plugin i18n lo replica per ogni
+# lingua scambiando il prefisso it/ → en/ e traducendo i titoli via nav_translations.
 nav:
-  - 🇮🇹 Italiano:
-    - Home: it/index.md
-    - Guida rapida (5 minuti): it/quickstart.md
-    - Strumenti: it/strumenti.md
-    - Stratigrafia interpretata: it/stratigrafia.md
-    - Correlazioni geotecniche: it/correlazioni.md
-    - Categoria di sottosuolo: it/categoria.md
-    - Portanza fondazioni: it/portanze.md
-    - Valori caratteristici EC7 / NTC: it/caratter.md
-    - Esportazione e report: it/export.md
-    - Formato file (.dprobe · .dypx): it/formati.md
-    - Risorse e file di esempio: it/risorse.md
-    - Domande frequenti: it/faq.md
-  - 🇬🇧 English:
-    - Home: en/index.md
-    - Quick start (5 minutes): en/quickstart.md
-    - Equipment: en/strumenti.md
-    - Interpreted stratigraphy: en/stratigrafia.md
-    - Geotechnical correlations: en/correlazioni.md
-    - Subsoil category: en/categoria.md
-    - Foundation bearing capacity: en/portanze.md
-    - Characteristic values EC7 / NTC: en/caratter.md
-    - Export and report: en/export.md
-    - File formats (.dprobe · .dypx): en/formati.md
-    - Resources and sample files: en/risorse.md
-    - FAQ: en/faq.md
-  - 🇷🇴 Română:
-    - Acasă: ro/index.md
-    - Ghid rapid (5 minute): ro/quickstart.md
-    - Echipamente: ro/strumenti.md
-    - Stratigrafie interpretată: ro/stratigrafia.md
-    - Corelații geotehnice: ro/correlazioni.md
-    - Categoria terenului: ro/categoria.md
-    - Capacitate portantă fundații: ro/portanze.md
-    - Valori caracteristice EC7 / NTC: ro/caratter.md
-    - Export și raport: ro/export.md
-    - Formate fișiere (.dprobe · .dypx): ro/formati.md
-    - Resurse și fișiere exemplu: ro/risorse.md
-    - Întrebări frecvente: ro/faq.md
-  - 🇪🇸 Español:
-    - Inicio: es/index.md
-    - Guía rápida (5 minutos): es/quickstart.md
-    - Equipos: es/strumenti.md
-    - Estratigrafía interpretada: es/stratigrafia.md
-    - Correlaciones geotécnicas: es/correlazioni.md
-    - Categoría de subsuelo: es/categoria.md
-    - Capacidad portante de cimentaciones: es/portanze.md
-    - Valores característicos EC7 / NTC: es/caratter.md
-    - Exportación e informe: es/export.md
-    - Formatos de archivo (.dprobe · .dypx): es/formati.md
-    - Recursos y archivos de ejemplo: es/risorse.md
-    - Preguntas frecuentes: es/faq.md
+  - Home: it/index.md
+  - Guida rapida (5 minuti): it/quickstart.md
+  - Strumenti: it/strumenti.md
+  - Stratigrafia interpretata: it/stratigrafia.md
+  - Correlazioni geotecniche: it/correlazioni.md
+  - Categoria di sottosuolo: it/categoria.md
+  - Portanza fondazioni: it/portanze.md
+  - Valori caratteristici EC7 / NTC: it/caratter.md
+  - Esportazione e report: it/export.md
+  - Formato file (.dprobe · .dypx): it/formati.md
+  - Risorse e file di esempio: it/risorse.md
+  - Domande frequenti: it/faq.md

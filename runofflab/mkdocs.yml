@@ -23,7 +23,8 @@ theme:
         icon: material/brightness-4
         name: Tema chiaro
   features:
-    - navigation.instant
+    # navigation.instant rimosso: incompatibile con il language switcher
+    # contestuale del plugin i18n (causa warning in build --strict).
     - navigation.tracking
     - navigation.top
     - navigation.footer
@@ -39,6 +40,24 @@ theme:
 plugins:
   - search:
       lang: [it, en]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          name: Italiano
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Workflow completo: Full workflow
+            Elaborazioni probabilistiche: Probabilistic analyses
+            Curve di pioggia: Rainfall curves
+            Pluviogrammi sintetici: Synthetic hyetographs
+            Idrogrammi SCS-CN: SCS-CN hydrographs
 
 markdown_extensions:
   - admonition
@@ -65,36 +84,18 @@ extra:
     - icon: fontawesome/solid/globe
       link: https://www.geostru.ai
       name: GeoStru
-  # Linguaggi alternativi: l'utente vede un selector 🌐 nell'header.
-  # La pagina ricaricata mantiene la posizione (path) cambiando solo /it ↔ /en.
-  alternate:
-    - name: Italiano
-      link: /runofflab/it/
-      lang: it
-    - name: English
-      link: /runofflab/en/
-      lang: en
+  # Lo switcher di lingua è generato automaticamente dal plugin i18n
+  # (reconfigure_material) a partire dall'elenco `languages`.
 
-# Nav esplicito: una sezione per lingua. La home redirect è gestita lato
-# GitHub Pages → /runofflab/ ridirige a /runofflab/it/ (default).
+# Nav unico in lingua di default (it/). Il plugin i18n lo replica per ogni
+# lingua scambiando il prefisso it/ → en/ e traducendo i titoli via nav_translations.
 nav:
-  - 🇮🇹 Italiano:
-    - Home: it/index.md
-    - Quickstart: it/quickstart.md
-    - Workflow completo: it/workflow.md
-    - Elaborazioni probabilistiche: it/elaborazioni.md
-    - Curve di pioggia: it/curve.md
-    - Pluviogrammi sintetici: it/pluviogrammi.md
-    - Idrogrammi SCS-CN: it/scs-cn.md
-    - AI Import: it/ai-import.md
-    - FAQ: it/faq.md
-  - 🇬🇧 English:
-    - Home: en/index.md
-    - Quickstart: en/quickstart.md
-    - Full workflow: en/workflow.md
-    - Probabilistic analyses: en/elaborazioni.md
-    - Rainfall curves: en/curve.md
-    - Synthetic hyetographs: en/pluviogrammi.md
-    - SCS-CN hydrographs: en/scs-cn.md
-    - AI Import: en/ai-import.md
-    - FAQ: en/faq.md
+  - Home: it/index.md
+  - Quickstart: it/quickstart.md
+  - Workflow completo: it/workflow.md
+  - Elaborazioni probabilistiche: it/elaborazioni.md
+  - Curve di pioggia: it/curve.md
+  - Pluviogrammi sintetici: it/pluviogrammi.md
+  - Idrogrammi SCS-CN: it/scs-cn.md
+  - AI Import: it/ai-import.md
+  - FAQ: it/faq.md

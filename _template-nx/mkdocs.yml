@@ -33,7 +33,8 @@ theme:
         icon: material/brightness-4
         name: Tema chiaro
   features:
-    - navigation.instant
+    # NB: NON usare navigation.instant con il plugin i18n: lo switcher di lingua
+    # contestuale non è compatibile e fa fallire la build --strict.
     - navigation.tracking
     - navigation.tabs
     - navigation.sections
@@ -54,23 +55,37 @@ plugins:
       lang:
         - it
         - en
-  # Decommenta quando i contenuti EN/ES/RO sono pronti.
-  # - i18n:
-  #     docs_structure: folder
-  #     languages:
-  #       - locale: it
-  #         name: Italiano
-  #         build: true
-  #         default: true
-  #       - locale: en
-  #         name: English
-  #         build: true
-  #       - locale: es
-  #         name: Español
-  #         build: false
-  #       - locale: ro
-  #         name: Română
-  #         build: false
+  # i18n: una build per lingua. La lingua di default (it) è servita sulla ROOT
+  # del prodotto (/prodotto/), le altre sotto /prodotto/<locale>/. Ogni lingua
+  # mostra SOLO il proprio nav/TOC; lo switcher è generato automaticamente.
+  # Struttura docs/: una sottocartella per lingua → docs/it/, docs/en/, ...
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          name: Italiano
+          default: true
+          build: true
+        # Decommenta quando i contenuti della lingua sono pronti (cartella docs/<locale>/).
+        # - locale: en
+        #   name: English
+        #   build: true
+        #   # Traduci le etichette del nav che NON derivano da un H1 di pagina
+        #   # (titoli di gruppo/sezione). Una riga per ogni etichetta da tradurre:
+        #   nav_translations:
+        #     Guida rapida: Quick start
+        # - locale: es
+        #   name: Español
+        #   build: true
+        #   nav_translations:
+        #     Guida rapida: Guía rápida
+        # - locale: ro
+        #   name: Română
+        #   build: true
+        #   nav_translations:
+        #     Guida rapida: Ghid rapid
 
 markdown_extensions:
   - admonition
@@ -105,22 +120,21 @@ extra:
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/@GeoStruSoftware
       name: YouTube
-  alternate:
-    - name: Italiano
-      link: /[CAMBIA]/it/
-      lang: it
-    - name: English
-      link: /[CAMBIA]/en/
-      lang: en
+  # Lo switcher di lingua è generato automaticamente dal plugin i18n
+  # (reconfigure_material) a partire dall'elenco `languages`. NON definire
+  # qui `alternate:` manualmente.
 
-# nav: lo definisci nel mkdocs.yml del singolo prodotto, esempio:
+# nav: UN SOLO albero, in lingua di default, con i path prefissati it/ (la
+# cartella della lingua). Il plugin i18n replica il nav per ogni lingua
+# scambiando it/ → <locale>/ e traducendo le etichette via nav_translations.
+# Esempio:
 # nav:
-#   - Home: index.md
-#   - Quickstart: quickstart.md
-#   - Workflow completo: workflow.md
+#   - Home: it/index.md
+#   - Quickstart: it/quickstart.md
+#   - Workflow completo: it/workflow.md
 #   - Capitoli specifici:
-#     - Stereonet: stereonet.md
-#     - Markland: markland.md
-#   - Glossario: glossario.md
-#   - Formati file: formati.md
-#   - FAQ: faq.md
+#     - Stereonet: it/stereonet.md
+#     - Markland: it/markland.md
+#   - Glossario: it/glossario.md
+#   - Formati file: it/formati.md
+#   - FAQ: it/faq.md

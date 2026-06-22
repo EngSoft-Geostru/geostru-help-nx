@@ -23,7 +23,8 @@ theme:
         icon: material/brightness-4
         name: Tema chiaro
   features:
-    - navigation.instant
+    # navigation.instant rimosso: incompatibile con il language switcher
+    # contestuale del plugin i18n (causa warning in build --strict).
     - navigation.tracking
     - navigation.sections
     - navigation.top
@@ -41,6 +42,38 @@ theme:
 plugins:
   - search:
       lang: [it, en]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          name: Italiano
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Guida rapida (5 minuti): Quick start (5 minutes)
+            Workflow completo: Full workflow
+            Classificazioni geomeccaniche: Rock mass classifications
+            Panoramica e parametri comuni: Overview and shared parameters
+            Barton (indice Q): Barton (Q index)
+            Jašarević & Kovačević (indice n): Jašarević & Kovačević (n index)
+            RMR modificato (Sen): Modified RMR (Sen)
+            Singh & Goel (indice N): Singh & Goel (N index)
+            Verifiche di stabilità: Stability analyses
+            Scivolamento planare: Planar sliding
+            Sliding 3D (cuneo): Sliding 3D (wedge)
+            Utility: Utilities
+            Forza d'impatto · crollo sismico: Block impact · seismic rockfall
+            Esportazione e report: Export and report
+            Formati file: File formats
+            Risorse e file di esempio: Resources and sample files
+            Glossario: Glossary
+            Bibliografia: Bibliography
+            Domande frequenti: FAQ
 
 markdown_extensions:
   - admonition
@@ -71,64 +104,34 @@ extra:
     - icon: fontawesome/brands/youtube
       link: https://www.youtube.com/@GeoStruSoftware
       name: YouTube
-  alternate:
-    - name: Italiano
-      link: /rockmechanics/it/
-      lang: it
-    - name: English
-      link: /rockmechanics/en/
-      lang: en
+  # Lo switcher di lingua è generato automaticamente dal plugin i18n
+  # (reconfigure_material) a partire dall'elenco `languages`.
 
+# Nav unico in lingua di default (it/). Il plugin i18n lo replica per ogni
+# lingua scambiando il prefisso it/ → en/ e traducendo i titoli via nav_translations.
 nav:
-  - 🇮🇹 Italiano:
-    - Home: it/index.md
-    - Guida rapida (5 minuti): it/quickstart.md
-    - Workflow completo: it/workflow.md
-    - Classificazioni geomeccaniche:
-      - Panoramica e parametri comuni: it/classificazioni.md
-      - Barton (indice Q): it/barton.md
-      - Bieniawski & Romana (RMR · SMR): it/rmr-romana.md
-      - Jašarević & Kovačević (indice n): it/jasarevic.md
-      - RMR modificato (Sen): it/sen.md
-      - SRMR (Robertson): it/robertson.md
-      - Singh & Goel (indice N): it/singh-goel.md
-    - Verifiche di stabilità:
-      - Scivolamento planare: it/scivolamento-planare.md
-      - Sliding 3D (cuneo): it/sliding-3d.md
-    - Utility:
-      - Forza d'impatto · crollo sismico: it/utility.md
-    - Output:
-      - Esportazione e report: it/export.md
-      - Formati file: it/formati.md
-    - Reference:
-      - Risorse e file di esempio: it/risorse.md
-      - Glossario: it/glossario.md
-      - Bibliografia: it/bibliografia.md
-      - Geoapp: it/geoapp.md
-      - Domande frequenti: it/faq.md
-  - 🇬🇧 English:
-    - Home: en/index.md
-    - Quick start (5 minutes): en/quickstart.md
-    - Full workflow: en/workflow.md
-    - Rock mass classifications:
-      - Overview and shared parameters: en/classificazioni.md
-      - Barton (Q index): en/barton.md
-      - Bieniawski & Romana (RMR · SMR): en/rmr-romana.md
-      - Jašarević & Kovačević (n index): en/jasarevic.md
-      - Modified RMR (Sen): en/sen.md
-      - SRMR (Robertson): en/robertson.md
-      - Singh & Goel (N index): en/singh-goel.md
-    - Stability analyses:
-      - Planar sliding: en/scivolamento-planare.md
-      - Sliding 3D (wedge): en/sliding-3d.md
-    - Utilities:
-      - Block impact · seismic rockfall: en/utility.md
-    - Output:
-      - Export and report: en/export.md
-      - File formats: en/formati.md
-    - Reference:
-      - Resources and sample files: en/risorse.md
-      - Glossary: en/glossario.md
-      - Bibliography: en/bibliografia.md
-      - Geoapp: en/geoapp.md
-      - FAQ: en/faq.md
+  - Home: it/index.md
+  - Guida rapida (5 minuti): it/quickstart.md
+  - Workflow completo: it/workflow.md
+  - Classificazioni geomeccaniche:
+    - Panoramica e parametri comuni: it/classificazioni.md
+    - Barton (indice Q): it/barton.md
+    - Bieniawski & Romana (RMR · SMR): it/rmr-romana.md
+    - Jašarević & Kovačević (indice n): it/jasarevic.md
+    - RMR modificato (Sen): it/sen.md
+    - SRMR (Robertson): it/robertson.md
+    - Singh & Goel (indice N): it/singh-goel.md
+  - Verifiche di stabilità:
+    - Scivolamento planare: it/scivolamento-planare.md
+    - Sliding 3D (cuneo): it/sliding-3d.md
+  - Utility:
+    - Forza d'impatto · crollo sismico: it/utility.md
+  - Output:
+    - Esportazione e report: it/export.md
+    - Formati file: it/formati.md
+  - Reference:
+    - Risorse e file di esempio: it/risorse.md
+    - Glossario: it/glossario.md
+    - Bibliografia: it/bibliografia.md
+    - Geoapp: it/geoapp.md
+    - Domande frequenti: it/faq.md
