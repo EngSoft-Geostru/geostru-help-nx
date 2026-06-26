@@ -116,7 +116,7 @@ jobs:
               // langs: array di codici lingua disponibili per il manuale.
               // Se ha solo 'it', nessun flag viene mostrato (manuale solo italiano).
               const products = [
-                { id: 'dynprobe',      name: 'Dynamic Probing NX', desc: 'Prove penetrometriche DPL·DPM·DPH·DPSH + SPT in foro', langs: ['it','en','ro','es'] },
+                { id: 'dynprobe',      name: 'Dynamic Probing NX', desc: 'Prove penetrometriche DPL·DPM·DPH·DPSH + SPT in foro', langs: ['it','en','ro','es','fr'] },
                 { id: 'gms',           name: 'GMS NX',              desc: 'Rilievo geomeccanico, stereonet, Markland',            langs: ['it','en','ro','es'] },
                 { id: 'liquiter',      name: 'LiquiTer NX',         desc: 'Analisi liquefazione (Seed, Boulanger-Idriss)',        langs: ['it','en'] },
                 { id: 'rsl',           name: 'RSL III',             desc: 'Risposta sismica locale 1D',                          langs: ['it','en'] },
@@ -131,7 +131,7 @@ jobs:
                 // Nascosti dalla home in attesa di aggiornamento manuale:
                 // loadcap, tiranti, maps, converter — navigabili via URL diretto.
               ];
-              const langLabel = { it: '🇮🇹 IT', en: '🇬🇧 EN', ro: '🇷🇴 RO', es: '🇪🇸 ES' };
+              const langLabel = { it: '🇮🇹 IT', en: '🇬🇧 EN', ro: '🇷🇴 RO', es: '🇪🇸 ES', fr: '🇫🇷 FR' };
               const grid = document.getElementById('grid');
               for (const p of products) {
                 fetch(p.id + '/').then(r => {

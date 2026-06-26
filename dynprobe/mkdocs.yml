@@ -38,7 +38,7 @@ theme:
 
 plugins:
   - search:
-      lang: [it, en, ro, es]
+      lang: [it, en, ro, es, fr]
   - i18n:
       docs_structure: folder
       reconfigure_material: true
@@ -95,6 +95,22 @@ plugins:
             "Formato file (.dprobe · .dypx)": "Formatos de archivo (.dprobe · .dypx)"
             Risorse e file di esempio: Recursos y archivos de ejemplo
             Domande frequenti: Preguntas frecuentes
+        - locale: fr
+          name: Français
+          build: true
+          nav_translations:
+            Home: Accueil
+            Guida rapida (5 minuti): Guide rapide (5 minutes)
+            Strumenti: Équipements
+            Stratigrafia interpretata: Stratigraphie interprétée
+            Correlazioni geotecniche: Corrélations géotechniques
+            Categoria di sottosuolo: Catégorie de sol
+            Portanza fondazioni: Capacité portante des fondations
+            Valori caratteristici EC7 / NTC: Valeurs caractéristiques EC7 / NTC
+            Esportazione e report: Exportation et rapport
+            "Formato file (.dprobe · .dypx)": "Format de fichier (.dprobe · .dypx)"
+            Risorse e file di esempio: Ressources et fichiers d'exemple
+            Domande frequenti: Questions fréquentes
 
 markdown_extensions:
   - admonition
