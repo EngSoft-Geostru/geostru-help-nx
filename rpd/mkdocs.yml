@@ -49,18 +49,17 @@ plugins:
           name: Italiano
           default: true
           build: true
-        # Decommenta quando i contenuti EN sono pronti (docs/en/).
-        # - locale: en
-        #   name: English
-        #   build: true
-        #   nav_translations:
-        #     Guida rapida (5 minuti): Quick start (5 minutes)
-        #     Metodo empirico AASHTO 1993: Empirical method AASHTO 1993
-        #     Metodo razionale di Ivanov (deflessione): Rational method — Ivanov (deflection)
-        #     Metodo razionale di Westergaard (rigida): Rational method — Westergaard (rigid)
-        #     Traffico di progetto (ESAL): Design traffic (ESAL)
-        #     Formati file ed esportazione: File formats and export
-        #     Domande frequenti: FAQ
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Guida rapida (5 minuti): Quick start (5 minutes)
+            Metodo empirico AASHTO 1993: Empirical method AASHTO 1993
+            Metodo razionale di Ivanov (deflessione): Rational method — Ivanov (deflection)
+            Metodo razionale di Westergaard (rigida): Rational method — Westergaard (rigid)
+            Traffico di progetto (ESAL): Design traffic (ESAL)
+            Formati file ed esportazione: File formats and export
+            Domande frequenti: FAQ
 
 markdown_extensions:
   - admonition
