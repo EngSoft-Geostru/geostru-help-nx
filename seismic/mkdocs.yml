@@ -1,0 +1,96 @@
+site_name: "PS Advanced NX — Pericolosità sismica NTC 2018"
+site_url: "https://help.nx.geostru.ai/seismic/"
+site_author: GeoStru
+site_description: "Manuale utente di PS Advanced NX — parametri sismici, spettri di risposta e coefficienti sismici secondo le NTC 2018."
+copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+
+# repo_name / repo_url / edit_uri rimossi: il sito è destinato all'utente finale
+# e non vogliamo esporre il repo GitHub dei sorgenti dalla navbar.
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: [it, en]
+  # i18n: la lingua di default (it) è servita sulla ROOT del prodotto
+  # (/seismic/). Le altre lingue si aggiungeranno sotto /seismic/<locale>/
+  # quando i contenuti tradotti saranno pronti (cartella docs/<locale>/).
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          name: Italiano
+          default: true
+          build: true
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.arithmatex: { generic: true }
+  - pymdownx.highlight: { anchor_linenums: true }
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  homepage: https://help.nx.geostru.ai/
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.ai
+      name: GeoStru
+
+nav:
+  - Home: it/index.md
+  - Quickstart: it/quickstart.md
+  - Workflow completo: it/workflow.md
+  - Input:
+    - Localizzazione del sito: it/localizzazione.md
+    - Vita nominale e classe d'uso: it/vita-nominale.md
+  - Output:
+    - Parametri sismici e stati limite: it/parametri.md
+    - Categorie di sottosuolo e topografia: it/categorie.md
+    - Spettri di risposta: it/spettri.md
+    - Coefficienti sismici: it/coefficienti.md
+  - Formati ed export: it/formati.md
+  - Glossario: it/glossario.md
+  - FAQ: it/faq.md
