@@ -1,0 +1,99 @@
+site_name: "RPD NX — Sovrastrutture stradali"
+site_url: "https://help.nx.geostru.ai/rpd/"
+site_author: GeoStru
+site_description: "Manuale utente di RPD NX — progetto e verifica delle sovrastrutture stradali (pavimentazioni flessibili e rigide) con i metodi AASHTO 1993, Ivanov e Westergaard, anteprima 2D/3D, AI e risultati azionabili."
+copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: [it, en]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          name: Italiano
+          default: true
+          build: true
+        # Decommenta quando i contenuti EN sono pronti (docs/en/).
+        # - locale: en
+        #   name: English
+        #   build: true
+        #   nav_translations:
+        #     Guida rapida (5 minuti): Quick start (5 minutes)
+        #     Metodo empirico AASHTO 1993: Empirical method AASHTO 1993
+        #     Metodo razionale di Ivanov (deflessione): Rational method — Ivanov (deflection)
+        #     Metodo razionale di Westergaard (rigida): Rational method — Westergaard (rigid)
+        #     Traffico di progetto (ESAL): Design traffic (ESAL)
+        #     Formati file ed esportazione: File formats and export
+        #     Domande frequenti: FAQ
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
+  - pymdownx.snippets
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.inlinehilite
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra:
+  homepage: https://help.nx.geostru.ai/
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.ai
+      name: GeoStru
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@GeoStruSoftware
+      name: YouTube
+
+# Nav unico in lingua di default (it/). Il plugin i18n lo replica per ogni lingua.
+nav:
+  - Home: it/index.md
+  - Guida rapida (5 minuti): it/quickstart.md
+  - Metodo empirico AASHTO 1993: it/aashto.md
+  - Metodo razionale di Ivanov (deflessione): it/ivanov.md
+  - Metodo razionale di Westergaard (rigida): it/westergaard.md
+  - Traffico di progetto (ESAL): it/traffico.md
+  - Formati file ed esportazione: it/formati.md
+  - Domande frequenti: it/faq.md
