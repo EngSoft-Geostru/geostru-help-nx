@@ -50,6 +50,22 @@ plugins:
           name: Italiano
           default: true
           build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Guida rapida (5 minuti): Quick start (5 minutes)
+            Fondazione e geometria: Foundation and geometry
+            Stratigrafia e falda: Stratigraphy and water table
+            Carichi e combinazioni: Loads and combinations
+            Azione sismica: Seismic action
+            Capacità portante: Bearing capacity
+            Cedimenti: Settlements
+            Stato tensionale e 3D: Stress state and 3D model
+            Assistente AI: AI assistant
+            Relazione ed esportazioni: Report and exports
+            Progetti di esempio: Example projects
+            Domande frequenti: FAQ
 
 markdown_extensions:
   - admonition
@@ -72,3 +88,15 @@ extra:
 
 nav:
   - Home: it/index.md
+  - Guida rapida (5 minuti): it/quickstart.md
+  - Fondazione e geometria: it/geometria.md
+  - Stratigrafia e falda: it/stratigrafia.md
+  - Carichi e combinazioni: it/carichi.md
+  - Azione sismica: it/sismica.md
+  - Capacità portante: it/carico-limite.md
+  - Cedimenti: it/cedimenti.md
+  - Stato tensionale e 3D: it/stato-tensionale.md
+  - Assistente AI: it/assistente-ai.md
+  - Relazione ed esportazioni: it/relazione.md
+  - Progetti di esempio: it/esempi.md
+  - Domande frequenti: it/faq.md
