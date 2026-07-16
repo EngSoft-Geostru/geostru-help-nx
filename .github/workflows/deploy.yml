@@ -128,7 +128,8 @@ jobs:
                 { id: 'stratigrapher', name: 'Stratigrapher NX',    desc: 'Colonne stratigrafiche',                             langs: ['it'] },
                 { id: 'rockplane',     name: 'RockPlane NX',        desc: 'Stabilità pendii rocciosi planari (Hoek-Bray)',       langs: ['it','en'] },
                 { id: 'rockmechanics', name: 'Rock Mechanics NX',   desc: 'Classificazioni geomeccaniche (RMR·Q·SMR) + stabilità planare/cuneo', langs: ['it','en'] },
-                { id: 'rpd',           name: 'RPD NX',              desc: 'Sovrastrutture stradali (AASHTO 1993, Ivanov, Westergaard)', langs: ['it','en'] }
+                { id: 'rpd',           name: 'RPD NX',              desc: 'Sovrastrutture stradali (AASHTO 1993, Ivanov, Westergaard)', langs: ['it','en'] },
+                { id: 'srs',           name: 'SRS NX',              desc: 'Chiodatura corticale dei versanti (soil nailing) + rete di facciata', langs: ['it','en'] }
                 // Nascosti dalla home in attesa di aggiornamento manuale:
                 // loadcap, tiranti, maps, converter — navigabili via URL diretto.
               ];

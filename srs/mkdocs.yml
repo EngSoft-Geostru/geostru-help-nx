@@ -1,0 +1,97 @@
+site_name: "SRS NX"
+site_url: "https://help.nx.geostru.ai/srs/"
+site_author: GeoStru
+site_description: "Manuale utente di SRS NX — Chiodatura corticale dei versanti (soil nailing) con rete di facciata secondo NTC 2018 / Eurocodici."
+copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: [it, en]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          name: Italiano
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Guida rapida (5 minuti): Quick start (5 minutes)
+            Interfaccia e flusso di lavoro: Interface and workflow
+            Pendio e substrato: Slope and substrate
+            Azione sismica: Seismic action
+            Chiodi e ancoraggi: Nails and anchors
+            Rete di facciata: Facing mesh
+            Verifiche: Design checks
+            Assistente AI: AI assistant
+            Relazione ed esportazioni: Report and exports
+            Progetti di esempio: Example projects
+            Domande frequenti: FAQ
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.snippets
+  - pymdownx.highlight: { anchor_linenums: true }
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra:
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.ai
+      name: GeoStru
+
+nav:
+  - Home: it/index.md
+  - Guida rapida (5 minuti): it/quickstart.md
+  - Interfaccia e flusso di lavoro: it/workflow.md
+  - Pendio e substrato: it/pendio.md
+  - Azione sismica: it/sismica.md
+  - Chiodi e ancoraggi: it/chiodi.md
+  - Rete di facciata: it/rete.md
+  - Verifiche: it/verifiche.md
+  - Assistente AI: it/assistente-ai.md
+  - Relazione ed esportazioni: it/relazione.md
+  - Progetti di esempio: it/esempi.md
+  - Domande frequenti: it/faq.md
