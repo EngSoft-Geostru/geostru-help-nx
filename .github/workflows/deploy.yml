@@ -129,11 +129,12 @@ jobs:
                 { id: 'rockplane',     name: 'RockPlane NX',        desc: 'Stabilità pendii rocciosi planari (Hoek-Bray)',       langs: ['it','en'] },
                 { id: 'rockmechanics', name: 'Rock Mechanics NX',   desc: 'Classificazioni geomeccaniche (RMR·Q·SMR) + stabilità planare/cuneo', langs: ['it','en'] },
                 { id: 'rpd',           name: 'RPD NX',              desc: 'Sovrastrutture stradali (AASHTO 1993, Ivanov, Westergaard)', langs: ['it','en'] },
-                { id: 'srs',           name: 'SRS NX',              desc: 'Chiodatura corticale dei versanti (soil nailing) + rete di facciata', langs: ['it','en'] }
+                { id: 'srs',           name: 'SRS NX',              desc: 'Chiodatura corticale dei versanti (soil nailing) + rete di facciata', langs: ['it','en'] },
+                { id: 'hid',           name: 'HID NX',              desc: 'Invarianza idraulica: dimensionamento dei sistemi di laminazione', langs: ['it','en','de','fr','ro','es','pl'] }
                 // Nascosti dalla home in attesa di aggiornamento manuale:
                 // loadcap, tiranti, maps, converter — navigabili via URL diretto.
               ];
-              const langLabel = { it: '🇮🇹 IT', en: '🇬🇧 EN', ro: '🇷🇴 RO', es: '🇪🇸 ES', fr: '🇫🇷 FR' };
+              const langLabel = { it: '🇮🇹 IT', en: '🇬🇧 EN', ro: '🇷🇴 RO', es: '🇪🇸 ES', fr: '🇫🇷 FR', de: '🇩🇪 DE', pl: '🇵🇱 PL' };
               const grid = document.getElementById('grid');
               for (const p of products) {
                 fetch(p.id + '/').then(r => {

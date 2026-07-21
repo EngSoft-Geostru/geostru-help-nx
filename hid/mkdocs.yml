@@ -1,0 +1,189 @@
+site_name: "HID NX"
+site_url: "https://help.nx.geostru.ai/hid/"
+site_author: GeoStru
+site_description: "Manuale utente di HID NX — Invarianza idraulica e idrologica, dimensionamento dei sistemi di laminazione."
+copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+
+# repo_name / repo_url / edit_uri rimossi: il sito è destinato all'utente finale
+# e non vogliamo esporre il repo GitHub dei sorgenti dalla navbar.
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    # navigation.instant rimosso: incompatibile con il language switcher
+    # contestuale del plugin i18n (causa warning in build --strict).
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  # lunr non ha uno stemmer per il polacco: includerlo qui fa fallire la build.
+  # Il polacco resta comunque navigabile e indicizzato dal motore di default.
+  - search:
+      lang: [it, en, de, fr, ro, es]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          name: Italiano
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Guida rapida: Quick start
+            Workflow completo: Complete workflow
+            Aree e metodi: Areas and methods
+            Curva pluviometrica: Rainfall curve
+            Dimensionamento: Sizing
+            Sistema di scarico: Outlet system
+            Glossario: Glossary
+            Formati file: File formats
+            Domande frequenti: FAQ
+            Input: Input
+            Calcolo: Calculation
+            Riferimenti: Reference
+        - locale: de
+          name: Deutsch
+          build: true
+          nav_translations:
+            Home: Start
+            Guida rapida: Schnelleinstieg
+            Workflow completo: Vollständiger Ablauf
+            Aree e metodi: Flächen und Verfahren
+            Curva pluviometrica: Regenhöhenlinie
+            Dimensionamento: Bemessung
+            Sistema di scarico: Ablaufsystem
+            Glossario: Glossar
+            Formati file: Dateiformate
+            Domande frequenti: Häufige Fragen
+            Input: Eingabe
+            Calcolo: Berechnung
+            Riferimenti: Referenz
+        - locale: fr
+          name: Français
+          build: true
+          nav_translations:
+            Home: Accueil
+            Guida rapida: Démarrage rapide
+            Workflow completo: Déroulé complet
+            Aree e metodi: Surfaces et méthodes
+            Curva pluviometrica: Courbe IDF
+            Dimensionamento: Dimensionnement
+            Sistema di scarico: Système de restitution
+            Glossario: Glossaire
+            Formati file: Formats de fichier
+            Domande frequenti: Questions fréquentes
+            Input: Saisie
+            Calcolo: Calcul
+            Riferimenti: Référence
+        - locale: ro
+          name: Română
+          build: true
+          nav_translations:
+            Home: Acasă
+            Guida rapida: Ghid rapid
+            Workflow completo: Flux complet
+            Aree e metodi: Suprafețe și metode
+            Curva pluviometrica: Curba IDF
+            Dimensionamento: Dimensionare
+            Sistema di scarico: Sistem de evacuare
+            Glossario: Glosar
+            Formati file: Formate de fișier
+            Domande frequenti: Întrebări frecvente
+            Input: Date de intrare
+            Calcolo: Calcul
+            Riferimenti: Referințe
+        - locale: es
+          name: Español
+          build: true
+          nav_translations:
+            Home: Inicio
+            Guida rapida: Guía rápida
+            Workflow completo: Flujo completo
+            Aree e metodi: Superficies y métodos
+            Curva pluviometrica: Curva IDF
+            Dimensionamento: Dimensionamiento
+            Sistema di scarico: Sistema de vertido
+            Glossario: Glosario
+            Formati file: Formatos de archivo
+            Domande frequenti: Preguntas frecuentes
+            Input: Entrada
+            Calcolo: Cálculo
+            Riferimenti: Referencia
+        - locale: pl
+          name: Polski
+          build: true
+          nav_translations:
+            Home: Start
+            Guida rapida: Szybki start
+            Workflow completo: Pełny przebieg
+            Aree e metodi: Powierzchnie i metody
+            Curva pluviometrica: Krzywa IDF
+            Dimensionamento: Wymiarowanie
+            Sistema di scarico: System odpływu
+            Glossario: Słownik
+            Formati file: Formaty plików
+            Domande frequenti: Częste pytania
+            Input: Dane wejściowe
+            Calcolo: Obliczenia
+            Riferimenti: Materiały
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight
+  - pymdownx.arithmatex:
+      generic: true
+
+extra_javascript:
+  - javascripts/mathjax.js
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+nav:
+  - Home: it/index.md
+  - Guida rapida: it/quickstart.md
+  - Workflow completo: it/workflow.md
+  - Input:
+    - Aree e metodi: it/aree-metodi.md
+    - Curva pluviometrica: it/curva-pluviometrica.md
+  - Calcolo:
+    - Dimensionamento: it/dimensionamento.md
+    - Sistema di scarico: it/scarico.md
+  - Riferimenti:
+    - Glossario: it/glossario.md
+    - Formati file: it/formati.md
+    - Domande frequenti: it/faq.md
