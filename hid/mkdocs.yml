@@ -169,6 +169,15 @@ markdown_extensions:
   - pymdownx.arithmatex:
       generic: true
 
+extra:
+  homepage: https://help.nx.geostru.ai/
+  # Rimuove "Made with Material for MkDocs" dal footer, come gli altri manuali NX.
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.ai
+      name: GeoStru
+
 extra_javascript:
   - javascripts/mathjax.js
   - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
