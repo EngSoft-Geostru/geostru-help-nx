@@ -14,12 +14,19 @@ Slope NX verifies stability against three references, selectable in the **Analys
 
 ## Partial factors
 
-The factors are grouped:
+The factors are grouped into three groups.
 
-- **Group M — materials**: reduce the design strength parameters:
-  $$ \tan\varphi'_d = \frac{\tan\varphi'_k}{\gamma_{\varphi'}}, \quad c'_d = \frac{c'_k}{\gamma_{c'}}, \quad c_{u,d} = \frac{c_{u,k}}{\gamma_{cu}} $$
-- **Group R — global resistance**: divides the final FoS ($FoS_d = FoS/\gamma_R$).
-- **Group A — actions**: γ<sub>G</sub> on permanent, γ<sub>Q</sub> on variable.
+**Group M — materials.** Reduce the design strength parameters:
+
+$$
+\tan\varphi'_d = \frac{\tan\varphi'_k}{\gamma_{\varphi'}}, \quad
+c'_d = \frac{c'_k}{\gamma_{c'}}, \quad
+c_{u,d} = \frac{c_{u,k}}{\gamma_{cu}}
+$$
+
+**Group R — global resistance.** Divides the final FoS: FoS<sub>d</sub> = FoS / γ<sub>R</sub>.
+
+**Group A — actions.** γ<sub>G</sub> on permanent, γ<sub>Q</sub> on variable.
 
 ## Single-source principle
 

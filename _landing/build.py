@@ -71,6 +71,14 @@ APPS = {
         'es': 'Soil nailing superficial de taludes + malla de revestimiento',
         'ro': 'Ancorarea de suprafață a versanților (soil nailing) + plasă de fațadă',
         'pl': 'Gwoździowanie powierzchniowe skarp (soil nailing) + siatka okładzinowa'}),
+    'slope': dict(name='Slope NX', langs=['it', 'en'], desc={
+        'it': 'Stabilità dei pendii (LEM): Fellenius, Bishop, Janbu, Spencer, Morgenstern-Price',
+        'en': 'Slope stability (LEM): Fellenius, Bishop, Janbu, Spencer, Morgenstern-Price',
+        'de': 'Böschungsstabilität (LEM): Fellenius, Bishop, Janbu, Spencer, Morgenstern-Price',
+        'fr': 'Stabilité des pentes (LEM) : Fellenius, Bishop, Janbu, Spencer, Morgenstern-Price',
+        'es': 'Estabilidad de taludes (LEM): Fellenius, Bishop, Janbu, Spencer, Morgenstern-Price',
+        'ro': 'Stabilitatea versanților (LEM): Fellenius, Bishop, Janbu, Spencer, Morgenstern-Price',
+        'pl': 'Stateczność skarp (LEM): Fellenius, Bishop, Janbu, Spencer, Morgenstern-Price'}),
     'gms': dict(name='GMS NX', langs=['it'], desc={
         'it': 'Rilievo geomeccanico, stereonet, Markland',
         'en': 'Geomechanical survey, stereonet, Markland',
@@ -156,7 +164,7 @@ APPS = {
 CATEGORIES = [
     ('general', ['computo']),
     ('engineering', ['rpd']),
-    ('geotech', ['gdw', 'liquiter', 'seismic', 'rsl', 'srs']),
+    ('geotech', ['gdw', 'liquiter', 'seismic', 'rsl', 'slope', 'srs']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
     ('hydro', ['hid', 'hydrogeo', 'runofflab']),
     ('insitu', ['dynprobe']),

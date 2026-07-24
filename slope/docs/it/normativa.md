@@ -14,12 +14,19 @@ Slope NX verifica la stabilità secondo tre riferimenti, selezionabili nel panne
 
 ## Coefficienti parziali
 
-I coefficienti sono raggruppati:
+I coefficienti sono raggruppati in tre gruppi.
 
-- **Gruppo M — materiali**: riducono i parametri di resistenza di progetto:
-  $$ \tan\varphi'_d = \frac{\tan\varphi'_k}{\gamma_{\varphi'}}, \quad c'_d = \frac{c'_k}{\gamma_{c'}}, \quad c_{u,d} = \frac{c_{u,k}}{\gamma_{cu}} $$
-- **Gruppo R — resistenza globale**: divide l'FS finale ($FS_d = FS/\gamma_R$).
-- **Gruppo A — azioni**: γ<sub>G</sub> sulle permanenti, γ<sub>Q</sub> sulle accidentali.
+**Gruppo M — materiali.** Riducono i parametri di resistenza di progetto:
+
+$$
+\tan\varphi'_d = \frac{\tan\varphi'_k}{\gamma_{\varphi'}}, \quad
+c'_d = \frac{c'_k}{\gamma_{c'}}, \quad
+c_{u,d} = \frac{c_{u,k}}{\gamma_{cu}}
+$$
+
+**Gruppo R — resistenza globale.** Divide l'FS finale: FS<sub>d</sub> = FS / γ<sub>R</sub>.
+
+**Gruppo A — azioni.** γ<sub>G</sub> sulle permanenti, γ<sub>Q</sub> sulle accidentali.
 
 ## Principio della sorgente unica
 
