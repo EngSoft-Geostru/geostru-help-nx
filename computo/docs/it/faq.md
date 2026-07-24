@@ -28,9 +28,20 @@ specifiche scrivici a `info@geostru.ai`.
 
 ### Posso caricare un prezzario custom?
 
-Non al momento via UI — i prezzari sono centralizzati lato server. Per
-prezzari aziendali custom, contatta `info@geostru.ai`: possiamo configurare
-un prezzario dedicato.
+Sì, con i **[Listini custom](listini-custom.md)**: carichi i tuoi listini
+fornitore e i prezzi storici nei progetti **GeoDropbox** e Computo li usa per
+prezzare, in tempo reale, con priorità sui prezzari regionali. Richiede un
+**abbonamento GeoDropbox attivo**. Vedi la guida dettagliata:
+[**Listini custom**](listini-custom.md).
+
+I prezzari **regionali ufficiali** restano centralizzati lato server e sono
+sempre disponibili anche senza abbonamento.
+
+### I listini custom richiedono un abbonamento?
+
+Sì. I livelli **Fornitore** e **Interno** (i tuoi listini) richiedono un
+**abbonamento GeoDropbox**. Senza abbonamento Computo prezza comunque dai
+**prezzari regionali**. Dettagli: [Listini custom](listini-custom.md).
 
 ## Import AI
 

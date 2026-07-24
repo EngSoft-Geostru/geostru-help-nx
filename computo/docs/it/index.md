@@ -22,6 +22,8 @@ restituisce un computo estimativo strutturato pronto per la stampa.
   - **IFC** modello BIM → import elementi + anteprima 3D
   - **Excel** computi esistenti
 - **Catalogo voci** con ricerca testuale e filtri per categoria
+- **Listini custom** (con abbonamento GeoDropbox): prezza con i tuoi listini
+  fornitore e i prezzi storici, letti in tempo reale — [vedi come](listini-custom.md)
 - **Esportazioni**: PDF impaginato, Excel, XPWE (formato standard import)
 
 ## Per chi
@@ -49,6 +51,11 @@ restituisce un computo estimativo strutturato pronto per la stampa.
 
 - [**Quickstart**](quickstart.md) — 5 minuti dal primo accesso al primo computo
 - [**Workflow completo**](workflow.md) — input AI → catalogo → export
+
+### Funzioni avanzate
+
+- [**Listini custom**](listini-custom.md) — prezza con i tuoi listini fornitore
+  e storici da GeoDropbox *(richiede abbonamento GeoDropbox)*
 
 ### Riferimento
 

@@ -85,6 +85,12 @@ Computo NX include i prezzari regionali italiani:
 voce. Click su una voce → vedi descrizione completa, U.M., prezzo unitario,
 analisi dei prezzi se disponibile.
 
+!!! tip "Listini personali (fornitore + storico)"
+
+    Con un **abbonamento GeoDropbox** puoi prezzare anche con i **tuoi listini**
+    — fornitori e prezzi storici — letti in tempo reale, con priorità sui
+    prezzari regionali. Vedi **[Listini custom](listini-custom.md)**.
+
 ## 3. Computo
 
 Tab principale: la **tabella del computo**. Per ogni voce:
