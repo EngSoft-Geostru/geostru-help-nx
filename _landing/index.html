@@ -34,17 +34,22 @@
     .card h3 a{color:inherit;text-decoration:none}
     .card h3 a::after{content:"";position:absolute;inset:0;border-radius:10px}
     .card:focus-within{border-color:var(--blue)}
-    .card p{margin:0;color:var(--muted);font-size:.84rem;flex:1}
+    .card p{margin:0;color:var(--muted);font-size:.84rem;line-height:1.5;min-height:3em;flex:1}
+    @media (min-width:640px){.card{min-height:168px}}
     .langs{position:relative;z-index:1;display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.15rem}
     .langs a{font-size:.72rem;font-weight:700;letter-spacing:.04em;padding:1px 6px;border-radius:4px;background:#f1f5f9;color:#475569;text-decoration:none;border:1px solid var(--border);transition:background .1s,color .1s}
     .langs a:hover{background:var(--blue);color:#fff;border-color:var(--blue)}
 
-    /* Pannelli GeoDropbox / GDPR */
-    .panel{margin-top:2.6rem;background:var(--tint);border:1px solid var(--border);border-left:4px solid var(--gold);border-radius:10px;padding:1.3rem 1.4rem}
-    .panel h2{margin:0 0 .5rem;font-size:1.05rem;font-weight:800;color:var(--blue)}
-    .panel p{margin:.4rem 0;font-size:.92rem}
-    .panel .links{margin-top:.7rem;display:flex;gap:1.2rem;flex-wrap:wrap}
-    .panel .links a{font-weight:700;font-size:.88rem}
+    /* Sezioni discorsive (GeoDropbox, GDPR) */
+    .sect-p{max-width:52rem;font-size:.92rem;margin:.9rem 0 0}
+    .links{margin-top:1rem;display:flex;gap:1.4rem;flex-wrap:wrap}
+    .links a{font-weight:700;font-size:.88rem}
+    .plan{position:relative;background:var(--card);border:1px solid var(--border);border-radius:10px;padding:1.1rem 1.2rem .9rem;text-decoration:none;color:inherit;transition:border-color .12s,box-shadow .12s;display:flex;flex-direction:column;gap:.3rem}
+    .plan:hover{border-color:var(--blue);box-shadow:0 4px 14px rgba(0,0,0,.07)}
+    .plan h3{margin:0;font-size:1rem;font-weight:700}
+    .plan .size{margin:0;font-weight:700;color:var(--blue);font-size:.9rem}
+    .plan p{margin:0;color:var(--muted);font-size:.84rem;flex:1}
+    .plan .badge{position:absolute;top:-.6rem;right:.8rem;background:var(--gold);color:#fff;font-size:.66rem;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:2px 8px;border-radius:99px}
 
     footer{margin-top:3rem;padding-top:1.2rem;border-top:1px solid var(--border);color:#94a3b8;font-size:.8rem;text-align:center;line-height:1.7}
     footer a{color:var(--blue);font-weight:600}
@@ -138,24 +143,47 @@
     </div>
   </section>
 
-  <section class="panel">
-    <h2>GeoDropbox — i tuoi progetti nel cloud</h2>
-    <p><strong>GeoDropbox</strong> è lo spazio cloud dei progetti GeoStru, integrato nella suite NX: nelle app trovi il
-      pulsante <strong>GeoDropbox</strong> accanto a Salva/Apri, e i progetti si aprono e si salvano direttamente nel
-      cloud — sempre disponibili da qualsiasi postazione, senza scambiare file a mano.</p>
-    <p>In <strong>Computo NX</strong> abilita anche i <strong>Listini custom</strong>: carichi i tuoi listini fornitore e i
-      prezzi storici e l'app li usa per prezzare in tempo reale, con priorità sui prezzari regionali.</p>
-    <div class="links">
-      <a href="computo/listini-custom/">Guida Listini custom →</a>
-      <a href="https://www.geostru.ai/pricing/">Piani storage su geostru.ai →</a>
+  <section class="cat">
+    <div class="cat-head"><h2>GeoDropbox</h2><span class="count">spazio cloud · 3 piani</span></div>
+    <p class="sect-p"><strong>GeoDropbox</strong> è la piattaforma GIS cloud di GeoStru per l'archiviazione di documenti
+      georeferenziati: centinaia di progetti su mappa, colonne stratigrafiche, gestione file e ricerca AI.</p>
+    <p class="sect-p">È integrato nelle app NX: trovi il pulsante <strong>GeoDropbox</strong> accanto a Salva/Apri e i
+      progetti si aprono e si salvano direttamente nel cloud — sempre disponibili da qualsiasi postazione, condivisi con
+      il tuo studio, con interfaccia in 7 lingue. In <strong>Computo NX</strong> abilita anche i
+      <strong>Listini custom</strong>: carichi i tuoi listini fornitore e i prezzi storici e l'app li usa per prezzare in
+      tempo reale, con priorità sui prezzari regionali (<a href="computo/listini-custom/">guida</a>).</p>
+    <p class="sect-p">L'abbonamento copre lo <strong>spazio file</strong> ed è separato dai crediti delle app. Si acquista
+      dalla sezione <em>Piani GeoDropbox</em> della pagina
+      <a href="https://www.geostru.ai/it/pricing/"><strong>geostru.ai/pricing</strong></a> con il pulsante
+      <em>Abbonati</em> del piano scelto:</p>
+    <div class="grid">
+      <a class="plan" href="https://www.geostru.ai/it/pricing/">
+        <h3>Storage Base</h3>
+        <p class="size">25 GB · €12/mese</p>
+        <p>Ideale per il singolo professionista</p>
+      </a>
+      <a class="plan" href="https://www.geostru.ai/it/pricing/">
+        <span class="badge">Consigliato</span>
+        <h3>Storage Plus</h3>
+        <p class="size">150 GB · €39/mese</p>
+        <p>Spazio ampio per studi e team su più progetti</p>
+      </a>
+      <a class="plan" href="https://www.geostru.ai/it/pricing/">
+        <h3>Storage Max</h3>
+        <p class="size">750 GB · €99/mese</p>
+        <p>Massimo spazio per studi strutturati e modelli BIM/IFC</p>
+      </a>
     </div>
   </section>
 
-  <section class="panel">
-    <h2>Privacy e protezione dei dati (GDPR)</h2>
-    <p>Come GeoStru tratta e protegge i dati che usi nelle app NX e in GeoDropbox: hosting in <strong>UE e
-      Svizzera</strong>, cifratura in transito, ruoli GDPR chiari e fornitori selezionati. La sintesi è disponibile in
-      <strong>7 lingue</strong>; il testo completo e vincolante è la Privacy Policy su geostru.ai.</p>
+  <section class="cat">
+    <div class="cat-head"><h2>Privacy e GDPR</h2><span class="count">7 lingue</span></div>
+    <p class="sect-p">Il servizio è fornito da <strong>ENGSOFT SRL</strong>, titolare del trattamento per i dati di
+      account e di utilizzo; dei contenuti che carichi resti titolare tu, e GeoStru li tratta come responsabile
+      (art. 28 GDPR) solo su tua istruzione.</p>
+    <p class="sect-p">I dati sono ospitati in <strong>UE e Svizzera</strong>, cifrati in transito e isolati per cliente;
+      i fornitori che ci supportano (Google, Stripe) operano con propri accordi sul trattamento. La sintesi divulgativa è
+      disponibile in 7 lingue; il testo completo e vincolante è la Privacy Policy ufficiale.</p>
     <div class="links">
       <a href="gdpr/">Sintesi GDPR →</a>
       <a href="https://www.geostru.ai/en/privacy-policy/">Privacy Policy completa →</a>
