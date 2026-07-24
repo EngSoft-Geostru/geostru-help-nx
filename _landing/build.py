@@ -436,9 +436,10 @@ def card_html(slug, lang):
 
 def render(lang):
     s = S[lang]
-    switcher = ''.join(
-        f'<a href="{landing_url(l)}" hreflang="{l}"{" class=\"active\"" if l == lang else ""}>{FLAG[l]} {l.upper()}</a>'
-        for l in LANGS)
+    def sw_link(l):
+        cls = ' class="active"' if l == lang else ''
+        return f'<a href="{landing_url(l)}" hreflang="{l}"{cls}>{FLAG[l]} {l.upper()}</a>'
+    switcher = ''.join(sw_link(l) for l in LANGS)
     alternates = '\n'.join(
         f'  <link rel="alternate" hreflang="{l}" href="https://help.nx.geostru.ai{landing_url(l)}" />'
         for l in LANGS) + '\n  <link rel="alternate" hreflang="x-default" href="https://help.nx.geostru.ai/" />'
