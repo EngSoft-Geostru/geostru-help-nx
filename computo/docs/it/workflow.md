@@ -24,7 +24,7 @@ Drag&drop di un PDF nella chat AI. L'AI:
 
 - Legge il testo del PDF (OCR se è una scansione)
 - Identifica le tabelle di voci (descrizione + quantità + U.M. + prezzo)
-- Mappa ogni voce al **prezzario regionale** scelto (default CAL25)
+- Mappa ogni voce al **prezzario regionale** scelto nel Catalogo
 
 **Limiti**: PDF molto creativi (layout grafico, no tabelle) possono dare
 risultati parziali — verifica sempre la tabella generata.
@@ -76,10 +76,15 @@ nella chat AI. L'AI legge le righe e le mappa al prezzario.
 
 ## 2. Catalogo voci (prezzari)
 
-Computo NX include i prezzari regionali italiani:
+Computo NX include **oltre 500 prezzari ufficiali italiani**, per **tutte le
+regioni**:
 
-- **CAL25** (Calabria 2025) — completo, ufficiale
-- Altri prezzari regionali (in arrivo)
+- **Prezzari regionali OO.PP. / LL.PP.** — edizioni correnti (2025/2026 dove
+  pubblicate) e archivio storico
+- **Prezzari provinciali e CCIAA** — es. prezzari provinciali Toscana,
+  listini camerali
+- **Listini specializzati** — agricoltura, opere forestali, impianti, beni
+  culturali, sicurezza
 
 **Catalog browser**: pagina **Catalogo** → filtra per categoria, opera, gruppo
 voce. Click su una voce → vedi descrizione completa, U.M., prezzo unitario,
@@ -139,7 +144,7 @@ flowchart TD
     B -->|JPG/PNG| E[AI vision + estrazione quantità]
     B -->|IFC| F[AI parse BIM + anteprima 3D]
     B -->|Excel| G[AI lettura righe]
-    C & D & E & F & G --> H[Map al prezzario CAL25]
+    C & D & E & F & G --> H[Map al prezzario regionale scelto]
     H --> I[Tabella computo]
     I --> J[Edit + revisione]
     J --> K[Esporta PDF/Excel/XPWE]

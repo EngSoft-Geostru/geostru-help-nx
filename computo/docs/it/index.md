@@ -1,8 +1,8 @@
 # Computo NX — Computo metrico estimativo + AI
 
 **Computo NX** è il software web GeoStru per il **computo metrico estimativo**
-con assistente **AI integrato**. Lavora con **prezzari regionali italiani**
-ufficiali (CAL25 e altri), riconosce automaticamente le voci da PDF di
+con assistente **AI integrato**. Lavora con **prezzari ufficiali italiani**
+(oltre 500, per tutte le regioni), riconosce automaticamente le voci da PDF di
 preventivo, disegni CAD/DXF, foto di disegni tecnici, modelli BIM IFC, e
 restituisce un computo estimativo strutturato pronto per la stampa.
 
@@ -13,7 +13,7 @@ restituisce un computo estimativo strutturato pronto per la stampa.
 
 ## Cosa fa, in sintesi
 
-- **Prezzari ufficiali**: CAL25 (Calabria), prezzari regionali italiani — sempre aggiornati
+- **Prezzari ufficiali**: oltre 500 listini, tutte le regioni italiane — regionali, provinciali/CCIAA e specializzati, sempre aggiornati
 - **AI assistant** integrato: trascina un file in chat e l'AI estrae le voci
 - **Import automatici**:
   - **PDF** preventivo → estrae voci e mappa al prezzario

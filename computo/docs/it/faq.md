@@ -19,12 +19,19 @@ browser moderno.
 
 ### Quali prezzari sono disponibili?
 
-Al momento:
+Il catalogo comprende **oltre 500 prezzari ufficiali** e copre **tutte le
+regioni italiane**:
 
-- **CAL25** (Calabria 2025) — completo, ufficiale
+- **Prezzari regionali OO.PP. / LL.PP.** — per ogni regione l'edizione più
+  recente pubblicata (2025/2026 dove disponibile) e l'archivio storico delle
+  edizioni precedenti
+- **Prezzari provinciali e CCIAA** — es. i prezzari provinciali della
+  Toscana, i listini delle Camere di Commercio
+- **Listini specializzati** — agricoltura, opere forestali, impianti
+  elettrici e meccanici, beni culturali, sicurezza
 
-In arrivo: gli altri prezzari regionali italiani principali. Per richieste
-specifiche scrivici a `info@geostru.ai`.
+L'elenco completo è nel selettore prezzario del **Catalogo**. Manca un
+prezzario che ti serve? Scrivici a `info@geostru.ai`.
 
 ### Posso caricare un prezzario custom?
 
@@ -72,7 +79,7 @@ media. Per uso intensivo serve l'abbonamento.
 
 ## Calcolo / Output
 
-### Quale formato esporto per l'inviodo all'Ente?
+### Quale formato esporto per l'invio all'Ente?
 
 Dipende dal capitolato della gara/appalto. In generale:
 
