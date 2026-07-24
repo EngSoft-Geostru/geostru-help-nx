@@ -83,8 +83,9 @@ jobs:
 
       - name: Add landing index
         run: |
-          # Landing page: sorgente versionato in _landing/index.html
-          cp _landing/index.html _site/index.html
+          # Landing multilingua: generata da _landing/build.py
+          # (it alla radice + en/de/fr/es/ro/pl in sottocartelle)
+          python3 _landing/build.py _site
 
       - name: Upload artifact
         if: github.ref == 'refs/heads/main'
