@@ -1,0 +1,86 @@
+site_name: "Privacy e protezione dei dati — GeoStru NX"
+site_url: "https://help.nx.geostru.ai/gdpr/"
+site_author: GeoStru
+site_description: "Come GeoStru tratta e protegge i dati nelle app NX e in GeoDropbox — sintesi informativa GDPR."
+copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle: { icon: material/brightness-7, name: Tema scuro }
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle: { icon: material/brightness-4, name: Tema chiaro }
+  features:
+    - navigation.tracking
+    - navigation.top
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - content.code.copy
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  # lunr non ha uno stemmer per il polacco: includerlo qui fa fallire la build.
+  - search:
+      lang: [it, en, de, fr, ro, es]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - { locale: it, name: Italiano, default: true, build: true }
+        - locale: en
+          name: English
+          build: true
+          nav_translations: { "Privacy e GDPR": "Privacy & data protection" }
+        - locale: de
+          name: Deutsch
+          build: true
+          nav_translations: { "Privacy e GDPR": "Datenschutz & DSGVO" }
+        - locale: fr
+          name: Français
+          build: true
+          nav_translations: { "Privacy e GDPR": "Confidentialité & RGPD" }
+        - locale: ro
+          name: Română
+          build: true
+          nav_translations: { "Privacy e GDPR": "Confidențialitate & GDPR" }
+        - locale: es
+          name: Español
+          build: true
+          nav_translations: { "Privacy e GDPR": "Privacidad & RGPD" }
+        - locale: pl
+          name: Polski
+          build: true
+          nav_translations: { "Privacy e GDPR": "Prywatność & RODO" }
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - pymdownx.details
+  - pymdownx.superfences
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra:
+  homepage: https://help.nx.geostru.ai/
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.ai
+      name: GeoStru
+
+nav:
+  - Privacy e GDPR: it/index.md

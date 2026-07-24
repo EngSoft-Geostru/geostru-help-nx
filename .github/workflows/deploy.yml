@@ -111,7 +111,7 @@ jobs:
             <h1>Manuali GeoStru NX</h1>
             <p class="subtitle">Documentazione delle applicazioni web della suite <strong>GeoStru NX</strong>.</p>
             <div class="grid" id="grid"></div>
-            <footer>© <script>document.write(new Date().getFullYear())</script> GeoStru — <a href="https://www.geostru.ai">www.geostru.ai</a></footer>
+            <footer><a href="gdpr/" style="color:#1e3a5f;font-weight:600">Privacy e protezione dei dati (GDPR)</a> · © <script>document.write(new Date().getFullYear())</script> GeoStru — <a href="https://www.geostru.ai">www.geostru.ai</a></footer>
             <script>
               // langs: array di codici lingua disponibili per il manuale.
               // Se ha solo 'it', nessun flag viene mostrato (manuale solo italiano).
