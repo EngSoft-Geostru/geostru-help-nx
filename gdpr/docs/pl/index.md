@@ -3,7 +3,7 @@
 Jak GeoStru przetwarza i chroni dane, których używasz w aplikacjach **GeoStru NX** (takich jak Computo NX) oraz w **GeoStru GeoDropbox**, zgodnie z Rozporządzeniem UE 2016/679 (**RODO**).
 
 !!! info "Podsumowanie informacyjne"
-    Ta strona jest **przystępnym podsumowaniem**. Pełny i wiążący tekst to oficjalna **Polityka prywatności** na [www.geostru.ai](https://www.geostru.ai/). Aby skorzystać ze swoich praw lub poprosić o umowę powierzenia przetwarzania danych, napisz na **[privacy@geostru.ai](mailto:privacy@geostru.ai)**.
+    Ta strona jest **przystępnym podsumowaniem**. Pełny i wiążący tekst to oficjalna **Polityka prywatności** na [geostru.ai/privacy-policy](https://www.geostru.ai/en/privacy-policy/). Aby skorzystać ze swoich praw lub poprosić o umowę powierzenia przetwarzania danych, napisz na **[privacy@geostru.ai](mailto:privacy@geostru.ai)**.
 
 ## Gdzie są Twoje dane
 
@@ -15,12 +15,13 @@ Dane są **odizolowane dla każdego klienta**: tylko Ty i osoby, które upoważn
 
 ## Role w przetwarzaniu
 
+- Usługę świadczy **ENGSOFT SRL** (Str. Sarmisegetuza nr. 17-19, Cluj-Napoca, Rumunia — CUI 30277934, Nr. Reg. Com. J2012001517126), **administrator** danych konta i danych o korzystaniu z platformy.
 - **Pozostajesz administratorem** danych, które przesyłasz (w tym ewentualnych danych Twoich klientów końcowych).
 - **GeoStru działa jako podmiot przetwarzający** (art. 28 RODO): przetwarza te treści **wyłącznie zgodnie z Twoimi instrukcjami**, aby świadczyć usługę.
 
 ## Sztuczna inteligencja
 
-Funkcje sztucznej inteligencji (ekstrakcja pozycji, OCR, asystent) przetwarzają treści za pośrednictwem dostawcy technologii (**Google**) w **planie płatnym**. Zgodnie z obowiązującymi warunkami **Twoje treści nie są wykorzystywane do trenowania modeli sztucznej inteligencji**.
+Funkcje sztucznej inteligencji (ekstrakcja pozycji, OCR, asystent) przetwarzają treści za pośrednictwem dostawcy technologii (**Google**) w **planie płatnym**. Zgodnie z obowiązującymi warunkami **Twoje treści nie są wykorzystywane do trenowania modeli sztucznej inteligencji**. Niektóre operacje przetwarzania przez sztuczną inteligencję mogą odbywać się poza UE (w Stanach Zjednoczonych) na podstawie **standardowych klauzul umownych** zatwierdzonych przez Komisję Europejską.
 
 ## Twoje prawa
 
@@ -43,6 +44,8 @@ Przechowujemy dane tak długo, jak jest to konieczne do świadczenia usługi i w
 
 W przypadku pytań dotyczących przetwarzania Twoich danych lub w celu uzyskania **umowy powierzenia przetwarzania (art. 28 RODO)**: **[privacy@geostru.ai](mailto:privacy@geostru.ai)**.
 
+Wiodącym organem nadzorczym jest **ANSPDCP** ([dataprotection.ro](https://www.dataprotection.ro/)), rumuński organ ochrony danych; skargę możesz też złożyć do swojego organu krajowego (w Polsce — PUODO).
+
 ---
 
-*Ostatnia aktualizacja: lipiec 2026. Pełna polityka prywatności dostępna na [www.geostru.ai](https://www.geostru.ai/).*
+*Ostatnia aktualizacja: lipiec 2026. Pełna polityka prywatności dostępna na [geostru.ai/privacy-policy](https://www.geostru.ai/en/privacy-policy/).*

@@ -3,7 +3,7 @@
 How GeoStru processes and protects the data you use in the **GeoStru NX** applications (such as Computo NX) and in **GeoStru GeoDropbox**, in compliance with EU Regulation 2016/679 (**GDPR**).
 
 !!! info "Informational summary"
-    This page is a **plain-language summary**. The full, binding text is the official **Privacy Policy** at [www.geostru.ai](https://www.geostru.ai/). To exercise your rights or request the data processing agreement, write to **[privacy@geostru.ai](mailto:privacy@geostru.ai)**.
+    This page is a **plain-language summary**. The full, binding text is the official **Privacy Policy** at [geostru.ai/privacy-policy](https://www.geostru.ai/en/privacy-policy/). To exercise your rights or request the data processing agreement, write to **[privacy@geostru.ai](mailto:privacy@geostru.ai)**.
 
 ## Where your data is
 
@@ -15,12 +15,13 @@ Data is **isolated per customer**: only you, and the people you authorise, can a
 
 ## Roles in the processing
 
+- The service is provided by **ENGSOFT SRL** (Str. Sarmisegetuza nr. 17-19, Cluj-Napoca, Romania — CUI 30277934, Nr. Reg. Com. J2012001517126), **data controller** for account and platform-usage data.
 - **You remain the data controller** of the data you upload (including any data of your own end clients).
 - **GeoStru acts as data processor** (Art. 28 GDPR): it processes that content **only on your instructions**, to provide the service.
 
 ## Artificial intelligence
 
-The AI features (item extraction, OCR, assistant) process content through a technology provider (**Google**) on a **paid tier**. Under the applicable terms, **your content is not used to train artificial intelligence models**.
+The AI features (item extraction, OCR, assistant) process content through a technology provider (**Google**) on a **paid tier**. Under the applicable terms, **your content is not used to train artificial intelligence models**. Some AI processing may take place outside the EU (in the United States) on the basis of the **Standard Contractual Clauses** approved by the European Commission.
 
 ## Your rights
 
@@ -43,6 +44,8 @@ We keep data for as long as necessary to provide the service and to meet legal o
 
 For any question about the processing of your data, or to request the **data processing agreement (Art. 28 GDPR)**: **[privacy@geostru.ai](mailto:privacy@geostru.ai)**.
 
+The lead supervisory authority is **ANSPDCP** ([dataprotection.ro](https://www.dataprotection.ro/)), the Romanian data protection authority; you may in any case lodge a complaint with your national authority.
+
 ---
 
-*Last updated: July 2026. For the full privacy policy see [www.geostru.ai](https://www.geostru.ai/).*
+*Last updated: July 2026. For the full privacy policy see [geostru.ai/privacy-policy](https://www.geostru.ai/en/privacy-policy/).*

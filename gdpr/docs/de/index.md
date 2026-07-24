@@ -3,7 +3,7 @@
 Wie GeoStru die Daten verarbeitet und schützt, die Sie in den **GeoStru NX**-Anwendungen (wie Computo NX) und in **GeoStru GeoDropbox** verwenden, gemäß der EU-Verordnung 2016/679 (**DSGVO**).
 
 !!! info "Informative Zusammenfassung"
-    Diese Seite ist eine **allgemein verständliche Zusammenfassung**. Der vollständige, verbindliche Text ist die offizielle **Datenschutzerklärung** unter [www.geostru.ai](https://www.geostru.ai/). Um Ihre Rechte auszuüben oder den Auftragsverarbeitungsvertrag anzufordern, schreiben Sie an **[privacy@geostru.ai](mailto:privacy@geostru.ai)**.
+    Diese Seite ist eine **allgemein verständliche Zusammenfassung**. Der vollständige, verbindliche Text ist die offizielle **Datenschutzerklärung** unter [geostru.ai/privacy-policy](https://www.geostru.ai/en/privacy-policy/). Um Ihre Rechte auszuüben oder den Auftragsverarbeitungsvertrag anzufordern, schreiben Sie an **[privacy@geostru.ai](mailto:privacy@geostru.ai)**.
 
 ## Wo sich Ihre Daten befinden
 
@@ -15,12 +15,13 @@ Die Daten sind **pro Kunde isoliert**: Nur Sie und die von Ihnen autorisierten P
 
 ## Rollen bei der Verarbeitung
 
+- Der Dienst wird von **ENGSOFT SRL** (Str. Sarmisegetuza nr. 17-19, Cluj-Napoca, Rumänien — CUI 30277934, Nr. Reg. Com. J2012001517126) bereitgestellt, **Verantwortlicher** für Konto- und Nutzungsdaten der Plattform.
 - **Sie bleiben Verantwortlicher** für die von Ihnen hochgeladenen Daten (einschließlich etwaiger Daten Ihrer Endkunden).
 - **GeoStru handelt als Auftragsverarbeiter** (Art. 28 DSGVO): Die Inhalte werden **ausschließlich auf Ihre Weisung** verarbeitet, um Ihnen den Dienst bereitzustellen.
 
 ## Künstliche Intelligenz
 
-Die KI-Funktionen (Positionsextraktion, OCR, Assistent) verarbeiten Inhalte über einen Technologieanbieter (**Google**) im **kostenpflichtigen Tarif**. Nach den geltenden Bedingungen **werden Ihre Inhalte nicht zum Training von KI-Modellen verwendet**.
+Die KI-Funktionen (Positionsextraktion, OCR, Assistent) verarbeiten Inhalte über einen Technologieanbieter (**Google**) im **kostenpflichtigen Tarif**. Nach den geltenden Bedingungen **werden Ihre Inhalte nicht zum Training von KI-Modellen verwendet**. Einige KI-Verarbeitungen können außerhalb der EU (in den USA) auf Grundlage der von der Europäischen Kommission genehmigten **Standardvertragsklauseln** erfolgen.
 
 ## Ihre Rechte
 
@@ -43,6 +44,8 @@ Wir bewahren die Daten so lange auf, wie es zur Erbringung des Dienstes und zur 
 
 Bei Fragen zur Verarbeitung Ihrer Daten oder zur Anforderung des **Auftragsverarbeitungsvertrags (Art. 28 DSGVO)**: **[privacy@geostru.ai](mailto:privacy@geostru.ai)**.
 
+Federführende Aufsichtsbehörde ist die **ANSPDCP** ([dataprotection.ro](https://www.dataprotection.ro/)), die rumänische Datenschutzbehörde; Sie können sich jederzeit auch an Ihre nationale Aufsichtsbehörde wenden.
+
 ---
 
-*Letzte Aktualisierung: Juli 2026. Die vollständige Datenschutzerklärung finden Sie unter [www.geostru.ai](https://www.geostru.ai/).*
+*Letzte Aktualisierung: Juli 2026. Die vollständige Datenschutzerklärung finden Sie unter [geostru.ai/privacy-policy](https://www.geostru.ai/en/privacy-policy/).*

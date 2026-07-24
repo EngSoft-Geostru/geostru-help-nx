@@ -3,7 +3,7 @@
 Cum prelucrează și protejează GeoStru datele pe care le utilizezi în aplicațiile **GeoStru NX** (precum Computo NX) și în **GeoStru GeoDropbox**, în conformitate cu Regulamentul UE 2016/679 (**GDPR**).
 
 !!! info "Rezumat informativ"
-    Această pagină este un **rezumat informativ**. Textul complet și obligatoriu este **Politica de confidențialitate** oficială la [www.geostru.ai](https://www.geostru.ai/). Pentru a-ți exercita drepturile sau a solicita acordul de prelucrare a datelor, scrie la **[privacy@geostru.ai](mailto:privacy@geostru.ai)**.
+    Această pagină este un **rezumat informativ**. Textul complet și obligatoriu este **Politica de confidențialitate** oficială la [geostru.ai/privacy-policy](https://www.geostru.ai/en/privacy-policy/). Pentru a-ți exercita drepturile sau a solicita acordul de prelucrare a datelor, scrie la **[privacy@geostru.ai](mailto:privacy@geostru.ai)**.
 
 ## Unde sunt datele tale
 
@@ -15,12 +15,13 @@ Datele sunt **izolate pentru fiecare client**: doar tu și persoanele pe care le
 
 ## Rolurile în prelucrare
 
+- Serviciul este furnizat de **ENGSOFT SRL** (Str. Sarmisegetuza nr. 17-19, Cluj-Napoca, România — CUI 30277934, Nr. Reg. Com. J2012001517126), **operator** pentru datele de cont și de utilizare a platformei.
 - **Tu rămâi operator** al datelor pe care le încarci (inclusiv eventualele date ale clienților tăi finali).
 - **GeoStru acționează ca persoană împuternicită** (art. 28 GDPR): prelucrează acele conținuturi **numai pe baza instrucțiunilor tale**, pentru a-ți furniza serviciul.
 
 ## Inteligență artificială
 
-Funcțiile de inteligență artificială (extragerea articolelor, OCR, asistent) prelucrează conținutul printr-un furnizor tehnologic (**Google**) în **planul cu plată**. Conform termenilor aplicabili, **conținutul tău nu este utilizat pentru antrenarea modelelor de inteligență artificială**.
+Funcțiile de inteligență artificială (extragerea articolelor, OCR, asistent) prelucrează conținutul printr-un furnizor tehnologic (**Google**) în **planul cu plată**. Conform termenilor aplicabili, **conținutul tău nu este utilizat pentru antrenarea modelelor de inteligență artificială**. Unele prelucrări de inteligență artificială pot avea loc în afara UE (în Statele Unite), pe baza **clauzelor contractuale standard** aprobate de Comisia Europeană.
 
 ## Drepturile tale
 
@@ -43,6 +44,8 @@ Păstrăm datele atât timp cât este necesar pentru a furniza serviciul și pen
 
 Pentru orice întrebare privind prelucrarea datelor tale sau pentru a solicita **acordul de prelucrare (art. 28 GDPR)**: **[privacy@geostru.ai](mailto:privacy@geostru.ai)**.
 
+Autoritatea de supraveghere principală este **ANSPDCP** ([dataprotection.ro](https://www.dataprotection.ro/)), autoritatea română pentru protecția datelor; poți depune oricând o plângere și la autoritatea ta națională.
+
 ---
 
-*Ultima actualizare: iulie 2026. Pentru politica de confidențialitate completă, consultă [www.geostru.ai](https://www.geostru.ai/).*
+*Ultima actualizare: iulie 2026. Pentru politica de confidențialitate completă, consultă [geostru.ai/privacy-policy](https://www.geostru.ai/en/privacy-policy/).*
