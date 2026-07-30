@@ -47,6 +47,14 @@ APPS = {
         'es': 'Análisis de licuefacción (Seed, Boulanger-Idriss)',
         'ro': 'Analiza lichefierii (Seed, Boulanger-Idriss)',
         'pl': 'Analiza upłynnienia gruntu (Seed, Boulanger-Idriss)'}),
+    'loadcap': dict(name='Loadcap NX', langs=['it', 'en'], desc={
+        'it': 'Capacità portante e cedimenti delle fondazioni superficiali',
+        'en': 'Bearing capacity and settlement of shallow foundations',
+        'de': 'Tragfähigkeit und Setzungen von Flachgründungen',
+        'fr': 'Capacité portante et tassements des fondations superficielles',
+        'es': 'Capacidad portante y asientos de cimentaciones superficiales',
+        'ro': 'Capacitatea portantă și tasările fundațiilor de suprafață',
+        'pl': 'Nośność i osiadanie fundamentów bezpośrednich'}),
     'seismic': dict(name='PS Advanced NX', langs=['it'], desc={
         'it': 'Pericolosità sismica NTC 2018: parametri, spettri, coefficienti',
         'en': 'Seismic hazard to NTC 2018: parameters, spectra, coefficients',
@@ -164,7 +172,7 @@ APPS = {
 CATEGORIES = [
     ('general', ['computo']),
     ('engineering', ['rpd']),
-    ('geotech', ['gdw', 'liquiter', 'seismic', 'rsl', 'slope', 'srs']),
+    ('geotech', ['gdw', 'liquiter', 'loadcap', 'seismic', 'rsl', 'slope', 'srs']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
     ('hydro', ['hid', 'hydrogeo', 'runofflab']),
     ('insitu', ['dynprobe']),
