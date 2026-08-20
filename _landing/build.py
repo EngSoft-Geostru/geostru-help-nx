@@ -47,6 +47,14 @@ APPS = {
         'es': 'Análisis de licuefacción (Seed, Boulanger-Idriss)',
         'ro': 'Analiza lichefierii (Seed, Boulanger-Idriss)',
         'pl': 'Analiza upłynnienia gruntu (Seed, Boulanger-Idriss)'}),
+    'mre': dict(name='MRE NX', langs=['it'], desc={
+        'it': 'Opere di sostegno in terra rinforzata: verifiche, tieback/compound',
+        'en': 'Reinforced-soil retaining structures: checks, tieback/compound',
+        'de': 'Stützbauwerke aus bewehrter Erde: Nachweise, Tieback/Compound',
+        'fr': 'Ouvrages de soutènement en terre renforcée : vérifications, tieback/compound',
+        'es': 'Estructuras de contención en tierra reforzada: verificaciones, tieback/compound',
+        'ro': 'Lucrări de sprijin din pământ armat: verificări, tieback/compound',
+        'pl': 'Konstrukcje oporowe z gruntu zbrojonego: weryfikacje, tieback/compound'}),
     'loadcap': dict(name='Loadcap NX', langs=['it', 'en'], desc={
         'it': 'Capacità portante e cedimenti delle fondazioni superficiali',
         'en': 'Bearing capacity and settlement of shallow foundations',
@@ -172,7 +180,7 @@ APPS = {
 CATEGORIES = [
     ('general', ['computo']),
     ('engineering', ['rpd']),
-    ('geotech', ['gdw', 'liquiter', 'loadcap', 'seismic', 'rsl', 'slope', 'srs']),
+    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mre', 'seismic', 'rsl', 'slope', 'srs']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
     ('hydro', ['hid', 'hydrogeo', 'runofflab']),
     ('insitu', ['dynprobe']),
