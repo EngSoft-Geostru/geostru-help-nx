@@ -56,6 +56,10 @@ plugins:
         - locale: en
           name: English
           build: true
+          # site_name per-locale: senza, l'header delle pagine EN resta in
+          # italiano ("Terre rinforzate"). Gli altri manuali non ne hanno
+          # bisogno solo perché il loro site_name è già neutro.
+          site_name: "MRE NX — Reinforced soil"
           nav_translations:
             Guida rapida (5 minuti): Quick start (5 minutes)
             Geometria della sezione: Cross-section geometry
