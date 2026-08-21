@@ -13,6 +13,8 @@ sottosuolo e topografica, e calcola per i **muri di sostegno** (NTC §7.11.6.2.1
 - k~h~ = **β~m~** · a~max~/g, con β~m~ = **0,38** (SLV/SLC) e **0,47** (SLO/SLD)
 - k~v~ = ± 0,5 · k~h~
 
+![Card Sisma con i coefficienti e l'import da GeoStru PS](img/04-sisma.png)
+
 Lo **SLV** viene applicato subito; dalla tabellina puoi passare a un altro stato
 limite. Le coordinate del sito vengono riportate nei Dati generali.
 
@@ -21,3 +23,7 @@ limite. Le coordinate del sito vengono riportate nei Dati generali.
 Con k~h~ > 0 il programma genera la combinazione sismica (vedi
 [Normativa e combinazioni](combinazioni.md)); la stabilità globale passa ai
 coefficienti sismici (γ~R2~ = 1,2, M2 unitari).
+
+---
+
+*Hai trovato un errore in questa pagina? [Segnalacelo](mailto:info@geostru.ai?subject=Help%20MRE%20NX) o apri una [Pull Request](https://github.com/EngSoft-Geostru/geostru-help-nx/edit/main/mre/docs/it/sisma.md).*

@@ -47,7 +47,7 @@ APPS = {
         'es': 'Análisis de licuefacción (Seed, Boulanger-Idriss)',
         'ro': 'Analiza lichefierii (Seed, Boulanger-Idriss)',
         'pl': 'Analiza upłynnienia gruntu (Seed, Boulanger-Idriss)'}),
-    'mre': dict(name='MRE NX', langs=['it'], desc={
+    'mre': dict(name='MRE NX', langs=['it', 'en'], desc={
         'it': 'Opere di sostegno in terra rinforzata: verifiche, tieback/compound',
         'en': 'Reinforced-soil retaining structures: checks, tieback/compound',
         'de': 'Stützbauwerke aus bewehrter Erde: Nachweise, Tieback/Compound',

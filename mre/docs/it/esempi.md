@@ -11,3 +11,7 @@ con File → Apri:
   utile per confrontare i risultati col calcolo manuale.
 - **Paramento a 65° con sisma e sovraccarico** — il caso in cui lavorano le verifiche
   interne tieback/compound.
+
+---
+
+*Hai trovato un errore in questa pagina? [Segnalacelo](mailto:info@geostru.ai?subject=Help%20MRE%20NX) o apri una [Pull Request](https://github.com/EngSoft-Geostru/geostru-help-nx/edit/main/mre/docs/it/esempi.md).*

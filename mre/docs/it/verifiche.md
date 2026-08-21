@@ -12,6 +12,8 @@ la striscia in alto dichiara nome e coefficienti di ogni combinazione.
 - **Scorrimento**: resistenza W·tanφ~f~ sul piano di posa contro la spinta.
 - **Capacità portante**: q~lim~ di Hansen contro il carico verticale.
 
+![Card delle verifiche esterne con il FS della combinazione governante](img/09-verifiche.png)
+
 ## Verifiche interne
 
 Per ogni livello di rinforzo: **sfilamento** (la lunghezza efficace è il tratto oltre
@@ -21,3 +23,7 @@ imposta. Se un livello ricade interamente nel cuneo il programma lo segnala.
 
 Il verdetto complessivo («Tutte le verifiche sono soddisfatte») richiede FS ≥ 1 su
 esterne e interne, più stabilità globale e verifiche tieback/compound se calcolate.
+
+---
+
+*Hai trovato un errore in questa pagina? [Segnalacelo](mailto:info@geostru.ai?subject=Help%20MRE%20NX) o apri una [Pull Request](https://github.com/EngSoft-Geostru/geostru-help-nx/edit/main/mre/docs/it/verifiche.md).*

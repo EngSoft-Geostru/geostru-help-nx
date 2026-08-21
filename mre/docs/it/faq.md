@@ -23,3 +23,7 @@ le combinazioni — la lunghezza da mettere in opera.
 **Le figure non compaiono nella relazione.**
 Vengono catturate dalla pagina: esegui il calcolo e apri i tab Sezione 2D / 3D /
 Stabilità prima di generare il documento.
+
+---
+
+*Hai trovato un errore in questa pagina? [Segnalacelo](mailto:info@geostru.ai?subject=Help%20MRE%20NX) o apri una [Pull Request](https://github.com/EngSoft-Geostru/geostru-help-nx/edit/main/mre/docs/it/faq.md).*

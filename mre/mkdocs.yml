@@ -58,12 +58,15 @@ plugins:
           build: true
           nav_translations:
             Guida rapida (5 minuti): Quick start (5 minutes)
-            Flusso di lavoro completo: Full workflow
-            Metodi di calcolo (LEM): Calculation methods (LEM)
-            Normativa e coefficienti parziali: Design code and partial factors
-            Opere di sostegno (muri e gabbioni): Retaining structures (walls and gabions)
+            Geometria della sezione: Cross-section geometry
+            Terreni, sovraccarico e parametri: Soils, surcharge and parameters
+            Normativa e combinazioni: Design code and load combinations
             Azione sismica: Seismic action
-            Formati file ed esportazione: File formats and export
+            Rinforzi e archivio: Reinforcements and archive
+            Verifiche esterne e interne: External and internal checks
+            Stabilità globale, tieback e compound: Global, tieback and compound stability
+            Relazione ed esportazioni: Report and exports
+            Progetti di esempio: Sample projects
             Domande frequenti: FAQ
 
 markdown_extensions:
@@ -78,6 +81,7 @@ markdown_extensions:
   - pymdownx.snippets
   - pymdownx.highlight: { anchor_linenums: true }
   - pymdownx.inlinehilite
+  - pymdownx.tilde          # pedici k~h~, t~ult~, RF~d~ (e ~~barrato~~)
   - pymdownx.arithmatex: { generic: true }
   - toc: { permalink: true, toc_depth: 3 }
 

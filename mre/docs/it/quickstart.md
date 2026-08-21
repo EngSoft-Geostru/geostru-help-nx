@@ -17,6 +17,19 @@
 7. Premi **Calcola** e leggi i risultati nei tab **Verifiche**, **Rinforzi** e
    **Stabilità globale**; genera la **Relazione** in DOCX.
 
+I dati si inseriscono nelle card a sinistra; l'anteprima a destra segue ogni modifica.
+
+![Card Dati generali con l'anteprima della sezione](img/01-parametri.png)
+
+Dopo il calcolo il tab **Verifiche** riassume ribaltamento, scorrimento e capacità
+portante, con il fattore di sicurezza di ogni combinazione.
+
+![Tab Verifiche con i fattori di sicurezza per combinazione](img/09-verifiche.png)
+
 !!! note "Salvataggio"
     Il progetto si salva come file **.mre** (File → Salva) o su **GeoDropbox**;
     lo stato della pagina è comunque conservato in sessione a ogni modifica.
+
+---
+
+*Hai trovato un errore in questa pagina? [Segnalacelo](mailto:info@geostru.ai?subject=Help%20MRE%20NX) o apri una [Pull Request](https://github.com/EngSoft-Geostru/geostru-help-nx/edit/main/mre/docs/it/quickstart.md).*

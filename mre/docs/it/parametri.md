@@ -11,6 +11,8 @@
 Il coefficiente di attrito per scorrimento f~b~ = tan δ / tan φ~t~ è sincronizzato con δ
 (valore cautelativo tipico 0,6).
 
+![Card Parametri geotecnici con i tre terreni](img/03-terreni.png)
+
 ## Sovraccarico
 
 Striscia di carico sul terrapieno definita da q [kN/m²] e ascisse x~in~/x~fin~ misurate
@@ -31,3 +33,7 @@ La **tipologia di sovraccarico** determina i coefficienti di combinazione:
 
 Latitudine, longitudine e altitudine compaiono nella testata della relazione e si
 compilano automaticamente importando un report GeoStru PS.
+
+---
+
+*Hai trovato un errore in questa pagina? [Segnalacelo](mailto:info@geostru.ai?subject=Help%20MRE%20NX) o apri una [Pull Request](https://github.com/EngSoft-Geostru/geostru-help-nx/edit/main/mre/docs/it/parametri.md).*

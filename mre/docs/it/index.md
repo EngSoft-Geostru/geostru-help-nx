@@ -6,6 +6,8 @@ rinforzi (sfilamento e rottura), stabilità globale con Bishop e verifiche inter
 superfici **tieback** e **compound**. Il motore di calcolo deriva da GSRD, il software
 GeoStru di riferimento per le terre rinforzate.
 
+![Interfaccia di MRE NX: i parametri a sinistra, l'anteprima della sezione a destra](img/01-parametri.png)
+
 ## Cosa fa
 
 - **Combinazioni automatiche NTC 2018**: statica A1+M1+R3 e, con sisma attivo, la
@@ -27,3 +29,9 @@ GeoStru di riferimento per le terre rinforzate.
 !!! tip "Assistente AI"
     Il pulsante **Assistente** apre la chat integrata: sa leggere il progetto corrente,
     spiegare i risultati e aprire un ticket di supporto.
+
+![Il pannello dell'assistente AI affiancato al progetto](img/15-assistente.png)
+
+---
+
+*Hai trovato un errore in questa pagina? [Segnalacelo](mailto:info@geostru.ai?subject=Help%20MRE%20NX) o apri una [Pull Request](https://github.com/EngSoft-Geostru/geostru-help-nx/edit/main/mre/docs/it/index.md).*

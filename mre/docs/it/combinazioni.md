@@ -30,3 +30,7 @@ Nel tab **Verifiche** ogni combinazione è dichiarata con nome e coefficienti us
 ogni card riporta il FS di tutte le combinazioni col badge *governante*; nel tab
 **Rinforzi** puoi passare dall'**inviluppo di progetto** alle singole combinazioni.
 La stabilità globale usa il proprio approccio A2+M2+R2.
+
+---
+
+*Hai trovato un errore in questa pagina? [Segnalacelo](mailto:info@geostru.ai?subject=Help%20MRE%20NX) o apri una [Pull Request](https://github.com/EngSoft-Geostru/geostru-help-nx/edit/main/mre/docs/it/combinazioni.md).*
