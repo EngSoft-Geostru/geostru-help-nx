@@ -10,6 +10,9 @@ Scrivi il nome della località o un indirizzo nella barra in alto e premi
 In alto a sinistra sulla mappa ci sono le tre mappe base: **stradale**,
 **satellitare** e **a rilievo**. Puoi cambiarle quando vuoi: il disegno resta.
 
+![Ricerca di una località: la mappa si sposta e si porta allo zoom di dettaglio.](img/02-ricerca-localita.png)
+
+
 ## 2 · Disegna un tracciato
 
 Nella barra laterale scegli **Polilinea**, poi clicca sulla mappa per posare i
@@ -17,6 +20,9 @@ vertici. Mentre disegni un segmento elastico segue il cursore e la barra di stat
 in basso conta i vertici.
 
 Per chiudere: **doppio clic** oppure **Invio**. Per annullare: **Esc**.
+
+![Polilinea in corso di disegno: il segmento elastico segue il cursore e la barra di stato conta i vertici.](img/03-disegno-in-corso.png)
+
 
 !!! tip "Poligoni"
     Con lo strumento **Poligono** il primo vertice diventa bianco: cliccandoci

@@ -43,6 +43,9 @@ This is not decoration: **a section without its provenance cannot be verified**.
 In a report you must be able to state where the elevations came from and at what
 step they were taken.
 
+![The section profile: chainage on the x axis, elevation on the y axis; the title reports length, sampling step and the source of the elevations.](img/05-profilo-sezione.png)
+
+
 ## Exporting the profile
 
 The **Section profile** format, in the export format list, produces the profile

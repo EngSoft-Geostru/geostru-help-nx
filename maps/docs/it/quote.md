@@ -44,6 +44,9 @@ Il servizio quote può non rispondere. In quel caso:
 Se invece è andato tutto bene, non compare alcun popup: il risultato è già nella
 colonna *Quota* e nell'escursione altimetrica in barra laterale.
 
+![Tabella delle coordinate con la colonna Quota compilata; in barra laterale compare l'escursione altimetrica.](img/04-tabella-quote.png)
+
+
 !!! warning "Lo zero è ambiguo"
     Un punto mai quotato mostra `0.00`, esattamente come un punto realmente al
     livello del mare. Se hai un dubbio, ricalcola le quote e leggi il messaggio

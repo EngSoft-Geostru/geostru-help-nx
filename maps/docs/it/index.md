@@ -21,6 +21,9 @@ sulla carta in coordinate, quote e un disegno che il CAD sa aprire.
 - **Genera griglie** di nodi quotati sull'area disegnata.
 - **Esporta** in TXT, CSV, LLE, NEZ (UTM), DXF, GMT e profilo di sezione.
 
+![L'interfaccia di Maps NX: strumenti a sinistra, mappa al centro, tabella delle coordinate nel pannello in basso.](img/01-panoramica.png)
+
+
 ## A chi serve
 
 Geologi e geotecnici, topografi, progettisti di infrastrutture, tecnici di

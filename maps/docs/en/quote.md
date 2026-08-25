@@ -45,6 +45,9 @@ The elevation service may not answer. In that case:
 If everything went well, no pop-up appears at all: the result is already in the
 *Elevation* column and in the elevation range in the sidebar.
 
+![The coordinate table with the Elevation column filled in; the elevation range appears in the sidebar.](img/04-tabella-quote.png)
+
+
 !!! warning "Zero is ambiguous"
     A point that was never sampled shows `0.00`, exactly like a point genuinely
     at sea level. When in doubt, fetch the elevations again and read the status

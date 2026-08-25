@@ -26,6 +26,9 @@ Mentre disegni, un segmento tratteggiato segue il cursore: mostra dove cadrà il
 prossimo lato, e sul poligono anche il lato di chiusura. La barra di stato conta
 i vertici e ricorda come chiudere.
 
+![Tre vertici posati: il primo è bianco perché chiude il poligono, e la barra di stato indica come terminare.](img/03-disegno-in-corso.png)
+
+
 !!! tip "Il doppio clic posa, non scarta"
     Facendo doppio clic su un punto nuovo, quel punto diventa l'ultimo vertice.
     Se invece fai doppio clic **sopra l'ultimo vertice già posato**, la geometria

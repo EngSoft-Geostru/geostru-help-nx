@@ -21,6 +21,9 @@ the map into coordinates, elevations and a drawing your CAD can open.
 - **Generate grids** of elevation nodes over the drawn area.
 - **Export** to TXT, CSV, LLE, NEZ (UTM), DXF, GMT and the section profile.
 
+![The Maps NX interface: tools on the left, map in the centre, coordinate table in the bottom dock.](img/01-panoramica.png)
+
+
 ## Who it's for
 
 Geologists and geotechnical engineers, surveyors, infrastructure designers,

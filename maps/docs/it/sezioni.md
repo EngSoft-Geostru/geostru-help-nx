@@ -42,6 +42,9 @@ Non è un dettaglio estetico: **una sezione senza provenienza non è verificabil
 In relazione bisogna poter dichiarare da dove vengono le quote e con che passo
 sono state prese.
 
+![Profilo della sezione: in ascissa la progressiva, in ordinata la quota; il titolo riporta lunghezza, passo di campionamento e sorgente delle quote.](img/05-profilo-sezione.png)
+
+
 ## Esportare il profilo
 
 Il formato **Profilo Sezione**, nell'elenco dei formati di esportazione, produce

@@ -10,6 +10,9 @@ flies there and zooms in.
 Top left on the map you will find the three base maps: **road**, **satellite**
 and **terrain**. Switch them whenever you like — your drawing stays.
 
+![Searching for a place: the map flies there and zooms in.](img/02-ricerca-localita.png)
+
+
 ## 2 · Draw a track
 
 In the sidebar pick **Polyline**, then click on the map to place the vertices.
@@ -17,6 +20,9 @@ While you draw, an elastic segment follows the cursor and the status bar at the
 bottom counts the vertices.
 
 To close: **double click** or **Enter**. To cancel: **Esc**.
+
+![A polyline being drawn: the elastic segment follows the cursor and the status bar counts the vertices.](img/03-disegno-in-corso.png)
+
 
 !!! tip "Polygons"
     With the **Polygon** tool the first vertex turns white: clicking it closes

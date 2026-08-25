@@ -32,6 +32,9 @@ gradi decimali). Le esportazioni **NEZ** e **DXF** proiettano in **UTM**.
 Scegli il **Formato** nella barra laterale e premi **Esporta**. Il file viene
 prodotto e scaricato.
 
+![Pannello di esportazione nella barra laterale: elenco dei formati e pulsante Esporta.](img/06-esportazione.png)
+
+
 !!! info "Costo e garanzie"
     Ogni esportazione consuma **10 crediti**, qualunque sia il formato.
     Se l'esportazione fallisce **non viene addebitato nulla**: i crediti sono

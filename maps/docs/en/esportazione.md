@@ -31,6 +31,9 @@ decimal degrees). The **NEZ** and **DXF** exports project to **UTM**.
 Choose the **Format** in the sidebar and press **Export**. The file is produced
 and downloaded.
 
+![The export panel in the sidebar: format list and Export button.](img/06-esportazione.png)
+
+
 !!! info "Cost and guarantees"
     Each export consumes **10 credits**, whatever the format.
     If the export fails **nothing is charged**: credits are held first and

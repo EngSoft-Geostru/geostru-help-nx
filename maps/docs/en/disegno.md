@@ -26,6 +26,9 @@ While you draw, a dashed segment follows the cursor: it shows where the next sid
 will fall, and on a polygon the closing side as well. The status bar counts the
 vertices and reminds you how to close.
 
+![Three vertices placed: the first is white because it closes the polygon, and the status bar shows how to finish.](img/03-disegno-in-corso.png)
+
+
 !!! tip "A double click places, it does not discard"
     Double-clicking on a new spot makes that spot the final vertex. Double-click
     **on top of the last vertex you placed** and the geometry closes without
