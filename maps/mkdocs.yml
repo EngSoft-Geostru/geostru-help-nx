@@ -1,7 +1,7 @@
 site_name: "Maps NX"
 site_url: "https://help.nx.geostru.ai/maps/"
 site_author: GeoStru
-site_description: "Manuale utente di Maps NX — Mappe GPS e cartografia tecnica."
+site_description: "Manuale utente di Maps NX — cartografia, quote dal modello del terreno, sezioni ed esportazione CAD."
 copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
 
 # repo_name / repo_url / edit_uri rimossi: il sito è destinato all'utente finale
@@ -50,6 +50,16 @@ plugins:
           name: Italiano
           default: true
           build: true
+        - locale: en
+          name: English
+          build: true
+          nav_translations:
+            Guida rapida (5 minuti): Quick start (5 minutes)
+            Disegnare sulla mappa: Drawing on the map
+            Quote e modello del terreno: Elevations and terrain model
+            Sezioni e profili: Sections and profiles
+            Esportazione e coordinate: Export and coordinates
+            Domande frequenti: FAQ
 
 markdown_extensions:
   - admonition
@@ -59,16 +69,31 @@ markdown_extensions:
   - footnotes
   - pymdownx.details
   - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
   - pymdownx.snippets
+  # pymdownx.tilde serve ai pedici tipo k~h~: non è nel template e senza di esso
+  # online compaiono le tilde letterali (incidente MRE, 2026-08-21).
+  - pymdownx.tilde
   - pymdownx.highlight: { anchor_linenums: true }
   - toc: { permalink: true, toc_depth: 3 }
 
 extra:
+  homepage: https://help.nx.geostru.ai/
   generator: false
   social:
     - icon: fontawesome/solid/globe
       link: https://www.geostru.ai
       name: GeoStru
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@GeoStruSoftware
+      name: YouTube
 
+# Nav unico in lingua di default (it/). Il plugin i18n lo replica per ogni lingua.
 nav:
   - Home: it/index.md
+  - Guida rapida (5 minuti): it/quickstart.md
+  - Disegnare sulla mappa: it/disegno.md
+  - Quote e modello del terreno: it/quote.md
+  - Sezioni e profili: it/sezioni.md
+  - Esportazione e coordinate: it/esportazione.md
+  - Domande frequenti: it/faq.md

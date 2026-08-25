@@ -47,6 +47,14 @@ APPS = {
         'es': 'Análisis de licuefacción (Seed, Boulanger-Idriss)',
         'ro': 'Analiza lichefierii (Seed, Boulanger-Idriss)',
         'pl': 'Analiza upłynnienia gruntu (Seed, Boulanger-Idriss)'}),
+    'maps': dict(name='Maps NX', langs=['it', 'en'], desc={
+        'it': 'Cartografia, quote dal modello del terreno, sezioni ed esportazione CAD',
+        'en': 'Mapping, terrain-model elevations, sections and CAD export',
+        'de': 'Kartografie, Höhen aus dem Geländemodell, Schnitte und CAD-Export',
+        'fr': 'Cartographie, altitudes du modèle de terrain, coupes et export CAO',
+        'es': 'Cartografía, cotas del modelo del terreno, secciones y exportación CAD',
+        'ro': 'Cartografie, cote din modelul terenului, secțiuni și export CAD',
+        'pl': 'Kartografia, wysokości z modelu terenu, przekroje i eksport CAD'}),
     'mre': dict(name='MRE NX', langs=['it', 'en'], desc={
         'it': 'Opere di sostegno in terra rinforzata: verifiche, tieback/compound',
         'en': 'Reinforced-soil retaining structures: checks, tieback/compound',
