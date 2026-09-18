@@ -1,0 +1,127 @@
+site_name: "MP NX — Pali e micropali"
+site_url: "https://help.nx.geostru.ai/mp/"
+site_author: GeoStru
+site_description: "Manuale utente di MP NX — analisi e progetto di pali e micropali di fondazione singoli: carico limite verticale e orizzontale (Broms), resistenze di progetto NTC 2018 ed EN 1997-1, trave su suolo elastico alla Winkler, verifica SLU della sezione circolare, gabbia esecutiva e distinta dei ferri, cedimento di Poulos e Davis, relazione di calcolo."
+copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+repo_name: EngSoft-Geostru/geostru-help-nx
+repo_url: https://github.com/EngSoft-Geostru/geostru-help-nx
+edit_uri: edit/main/mp/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: [it, en]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          name: Italiano
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          # site_name per-locale: senza, l'header delle pagine EN resta in italiano.
+          site_name: "MP NX — Piles and micropiles"
+          # ⚠️ nav_translations è di MP: una voce che non coincide con il nav qui sotto
+          # non dà errori: resta non tradotta e nessuno avvisa. `mkdocs build` deve stampare
+          # «Translated 14 navigation elements» (tutte le voci tranne Home).
+          nav_translations:
+            Guida rapida (5 minuti): Quick start (5 minutes)
+            Palo e fondazione: Pile and footing
+            Micropali: Micropiles
+            Materiali: Materials
+            Stratigrafie e falda: Stratigraphies and water table
+            Carichi, combinazioni e normativa: Loads, combinations and design code
+            Carico limite: Ultimate load
+            Analisi FEM: FEM analysis
+            Sezioni e armature: Sections and reinforcement
+            Cedimenti: Settlements
+            Relazione, esportazioni e assistente: Report, exports and assistant
+            Progetti di esempio: Example projects
+            Validazione del codice: Code validation
+            Domande frequenti: FAQ
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
+  - pymdownx.snippets
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.inlinehilite
+  - pymdownx.tilde          # pedici R~d~, N~q~, K~s~, c~u~, ξ~3~ (e ~~barrato~~)
+  - pymdownx.arithmatex: { generic: true }
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  homepage: https://help.nx.geostru.ai/
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.ai
+      name: GeoStru
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@GeoStruSoftware
+      name: YouTube
+
+# Nav unico in lingua di default (it/). Il plugin i18n lo replica per ogni lingua.
+nav:
+  - Home: it/index.md
+  - Guida rapida (5 minuti): it/quickstart.md
+  - Palo e fondazione: it/palo.md
+  - Micropali: it/micropali.md
+  - Materiali: it/materiali.md
+  - Stratigrafie e falda: it/stratigrafia.md
+  - Carichi, combinazioni e normativa: it/combinazioni.md
+  - Carico limite: it/carico-limite.md
+  - Analisi FEM: it/fem.md
+  - Sezioni e armature: it/armature.md
+  - Cedimenti: it/cedimenti.md
+  - Relazione, esportazioni e assistente: it/relazione.md
+  - Progetti di esempio: it/esempi.md
+  - Validazione del codice: it/validazione.md
+  - Domande frequenti: it/faq.md

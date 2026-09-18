@@ -55,6 +55,14 @@ APPS = {
         'es': 'Cartografía, cotas del modelo del terreno, secciones y exportación CAD',
         'ro': 'Cartografie, cote din modelul terenului, secțiuni și export CAD',
         'pl': 'Kartografia, wysokości z modelu terenu, przekroje i eksport CAD'}),
+    'mp': dict(name='MP NX', langs=['it', 'en'], desc={
+        'it': 'Pali e micropali di fondazione: carico limite, FEM, armature, cedimenti',
+        'en': 'Foundation piles and micropiles: ultimate load, FEM, reinforcement, settlement',
+        'de': 'Gründungspfähle und Mikropfähle: Grenzlast, FEM, Bewehrung, Setzungen',
+        'fr': 'Pieux et micropieux de fondation : charge limite, FEM, armatures, tassements',
+        'es': 'Pilotes y micropilotes de cimentación: carga última, FEM, armaduras, asientos',
+        'ro': 'Piloți și micropiloți de fundare: capacitate portantă, FEM, armare, tasări',
+        'pl': 'Pale i mikropale fundamentowe: nośność graniczna, MES, zbrojenie, osiadanie'}),
     'mre': dict(name='MRE NX', langs=['it', 'en'], desc={
         'it': 'Opere di sostegno in terra rinforzata: verifiche, tieback/compound',
         'en': 'Reinforced-soil retaining structures: checks, tieback/compound',
@@ -188,7 +196,7 @@ APPS = {
 CATEGORIES = [
     ('general', ['computo']),
     ('engineering', ['rpd']),
-    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mre', 'seismic', 'rsl', 'slope', 'srs']),
+    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'slope', 'srs']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
     ('hydro', ['hid', 'hydrogeo', 'runofflab']),
     ('insitu', ['dynprobe']),
