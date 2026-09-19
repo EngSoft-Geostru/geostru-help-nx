@@ -1,0 +1,120 @@
+site_name: "Atlante NX — Base documentale del sito"
+site_url: "https://help.nx.geostru.ai/atlante/"
+site_author: GeoStru
+site_description: "Manuale utente di Atlante NX — la base documentale della relazione da un punto: fonti territoriali pubbliche italiane (ISPRA, IdroGEO, WebMS, INGV, catasto, Copernicus), evidenze con riferimenti, tavole, testo AI, Word, perimetro e indagini PDF. Gratuita con registrazione."
+copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+repo_name: EngSoft-Geostru/geostru-help-nx
+repo_url: https://github.com/EngSoft-Geostru/geostru-help-nx
+edit_uri: edit/main/atlante/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: [it, en]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          name: Italiano
+          default: true
+          build: true
+        - locale: en
+          name: English
+          build: true
+          # site_name per-locale: senza, l'header delle pagine EN resta in
+          # italiano ("Terre rinforzate"). Gli altri manuali non ne hanno
+          # bisogno solo perché il loro site_name è già neutro.
+          site_name: "Atlante NX — Site documentary base"
+          nav_translations:
+            Guida rapida (5 minuti): Quick start (5 minutes)
+            Flusso di lavoro completo: Full workflow
+            Le fonti: The sources
+            Profili della relazione: Report profiles
+            Perimetro del sito: Site perimeter
+            Le tue indagini (PDF): Your surveys (PDF)
+            Tavole: Plates
+            Testo dell'assistente e Word: Assistant text and Word
+            Glossario: Glossary
+            Formati e file: Formats and files
+            Domande frequenti: FAQ
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
+  - pymdownx.snippets
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.inlinehilite
+  - pymdownx.tilde          # pedici k~h~, t~ult~, RF~d~ (e ~~barrato~~)
+  - pymdownx.arithmatex: { generic: true }
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra_javascript:
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+
+extra:
+  homepage: https://help.nx.geostru.ai/
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.ai
+      name: GeoStru
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@GeoStruSoftware
+      name: YouTube
+
+# Nav unico in lingua di default (it/). Il plugin i18n lo replica per ogni lingua.
+nav:
+  - Home: it/index.md
+  - Guida rapida (5 minuti): it/quickstart.md
+  - Flusso di lavoro completo: it/workflow.md
+  - Le fonti: it/fonti.md
+  - Profili della relazione: it/profili.md
+  - Perimetro del sito: it/perimetro.md
+  - Le tue indagini (PDF): it/indagini.md
+  - Tavole: it/tavole.md
+  - Testo dell'assistente e Word: it/relazione.md
+  - Glossario: it/glossario.md
+  - Formati e file: it/formati.md
+  - Domande frequenti: it/faq.md

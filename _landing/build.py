@@ -15,6 +15,14 @@ FLAG = {'it': '🇮🇹', 'en': '🇬🇧', 'de': '🇩🇪', 'fr': '🇫🇷',
 # ---------------------------------------------------------------- app e categorie
 
 APPS = {
+    'atlante': dict(name='Atlante NX', langs=['it', 'en'], desc={
+        'it': 'Base documentale della relazione da un punto: fonti pubbliche, tavole, Word — gratuita',
+        'en': 'Documentary base of a report from a point: public sources, plates, Word — free',
+        'de': 'Dokumentationsgrundlage eines Gutachtens aus einem Punkt: öffentliche Quellen, Karten, Word — kostenlos',
+        'fr': 'Base documentaire du rapport depuis un point : sources publiques, planches, Word — gratuit',
+        'es': 'Base documental del informe a partir de un punto: fuentes públicas, láminas, Word — gratis',
+        'ro': 'Baza documentară a raportului dintr-un punct: surse publice, planșe, Word — gratuit',
+        'pl': 'Baza dokumentacyjna raportu z jednego punktu: źródła publiczne, plansze, Word — bezpłatnie'}),
     'computo': dict(name='Computo NX', langs=['it'], desc={
         'it': 'Computo metrico estimativo + AI',
         'en': 'Bill of quantities and cost estimating + AI',
@@ -194,7 +202,7 @@ APPS = {
 }
 
 CATEGORIES = [
-    ('general', ['computo']),
+    ('general', ['atlante', 'computo']),
     ('engineering', ['rpd']),
     ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'slope', 'srs']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
