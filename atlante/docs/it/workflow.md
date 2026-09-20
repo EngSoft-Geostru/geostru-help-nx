@@ -15,6 +15,15 @@ tratteggiato). Da 500 a 30 000 m.
 **Perimetro (facoltativo).** Disegno a clic o import da file; le fonti che sanno interrogare
 un'area lo usano al posto del punto. Dettagli in [Perimetro del sito](perimetro.md).
 
+**Livelli di rischio.** Il pannello in alto a destra accende sulla mappa la pericolosità PAI
+da frana, idraulica e da valanga (IdroGEO), l'inventario IFFI, il rischio R1–R4 da frana e da
+alluvione (PCN) e il catasto (particelle e fogli, da zoom 15), ciascuno con trasparenza e
+legenda. Serve a guardare il territorio prima di scegliere il sito: sono le stesse fonti che il
+fascicolo interroga poi al punto, con esito e data.
+
+**Trovami (GPS).** Il pulsante col mirino sotto lo zoom mette il segnaposto dove sei: per chi è
+in campo col telefono. Il browser chiede il permesso di geolocalizzazione.
+
 ## Il profilo
 
 Stesse fonti, pesate in modo diverso. Ogni fonte del catalogo dichiara a quali profili serve; il

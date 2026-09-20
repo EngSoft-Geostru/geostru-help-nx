@@ -43,7 +43,11 @@ trovi il **portale** dell'ente dove le stesse carte si consultano.
 | Frane censite (inventario IFFI) | ISPRA — IdroGEO · CC BY 4.0 | Le frane dell'inventario al punto |
 | Tavola pericolosità da frana | ISPRA — IdroGEO · CC BY 4.0 | Tavola 3 km con legenda |
 | Indicatori di rischio del Comune (PAI) | ISPRA — IdroGEO · CC BY 4.0 | Percentuali del territorio comunale nelle classi P1–P3 e popolazione esposta |
+| Pericolosità da valanga (IdroGEO) | ISPRA — IdroGEO · CC BY 4.0 | Le aree a pericolosità da valanga del mosaico PAI (vuota fuori dall'arco alpino) |
+| Rischio da frana PAI (R1–R4) | MASE — Portale Cartografico Nazionale · CC BY 4.0 | La classe di **rischio** (R1 moderato … R4 molto elevato), che incrocia pericolosità ed elementi esposti; con autorità di bacino, piano e delibera |
 | Pericolosità idraulica (mosaico PGRA/PAI) | ISPRA — IdroGEO · CC BY 4.0 | Gli scenari di pericolosità idraulica al punto |
+| Rischio da alluvione PAI (R1–R4) | MASE — Portale Cartografico Nazionale · CC BY 4.0 | La classe di rischio idraulico, come sopra |
+| Bacino idrografico (ISPRA) | ISPRA — Servizio Geologico d'Italia · CC BY 4.0 | Il bacino principale e il sottobacino in cui cade il sito, il corso d'acqua, l'ordine, l'autorità |
 | Tavola pericolosità idraulica | ISPRA — IdroGEO · CC BY 4.0 | Tavola 3 km con legenda |
 
 ## Microzonazione sismica

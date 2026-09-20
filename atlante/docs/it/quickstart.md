@@ -18,7 +18,10 @@ Nella pagina **Nuovo fascicolo**:
 - controlla **latitudine e longitudine** (WGS84) e il **raggio** (metri) dell'intorno che vuoi
   interrogare per gli eventi sismici.
 
-Con i pulsanti in alto a destra passi da **Mappa** a **Satellite**.
+Con i pulsanti in alto a destra passi da **Mappa** a **Satellite**; il pannello **Livelli di
+rischio** accende PAI frane/alluvioni/valanghe, IFFI, rischio R1–R4 e catasto sulla mappa,
+per guardare il territorio prima di decidere. Sul telefono, il pulsante col mirino ti mette
+dove sei.
 
 !!! tip "Perimetro"
     Se conosci il lotto, disegnalo con **Perimetro → Disegna** (o importa un GeoJSON/KML): le
