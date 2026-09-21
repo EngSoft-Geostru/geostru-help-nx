@@ -81,9 +81,11 @@ e tabelle, verifiche da completare, conclusioni (tue), le app NX, le fonti con i
 
 ## GeoDropbox e i tuoi fascicoli
 
-Il pulsante **GeoDropbox** salva nel progetto scelto il Word e il file `.atlante` (fascicolo con
-le tavole dentro), e da lì un `.atlante` si reimporta come nuovo fascicolo. **I miei fascicoli**
-elenca i tuoi con stato, rinomina, rilancio (nuova corsa sulle stesse fonti) ed eliminazione.
+**Invia a GeoDropbox** crea un progetto con il nome dell'incarico e il pin sul sito (o entra in
+uno che hai già vicino) e ci mette PDF, Word e, nella cartella *Atlante NX*, il `.atlante` per
+riaprire il fascicolo altrove: vedi [GeoDropbox](geodropbox.md). **I miei fascicoli** elenca i
+tuoi con stato, collegamento GeoDropbox, rinomina, rilancio (nuova corsa sulle stesse fonti) ed
+eliminazione.
 
 ## Prosegui con le app NX
 

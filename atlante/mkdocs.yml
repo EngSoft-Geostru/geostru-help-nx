@@ -68,6 +68,7 @@ plugins:
             Perimetro del sito: Site perimeter
             Le tue indagini (PDF): Your surveys (PDF)
             Tavole: Plates
+            GeoDropbox: GeoDropbox
             Testo dell'assistente e Word: Assistant text and Word
             Glossario: Glossary
             Formati e file: Formats and files
@@ -115,6 +116,7 @@ nav:
   - Le tue indagini (PDF): it/indagini.md
   - Tavole: it/tavole.md
   - Testo dell'assistente e Word: it/relazione.md
+  - GeoDropbox: it/geodropbox.md
   - Glossario: it/glossario.md
   - Formati e file: it/formati.md
   - Domande frequenti: it/faq.md

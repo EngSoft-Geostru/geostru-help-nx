@@ -6,7 +6,7 @@
 |---|---|---|
 | **Word (`.docx`)** | il fascicolo in forma di relazione: indice, capitoli, tabelle, tavole incorporate, fonti e portali; proprietà con autore e impronta di provenienza | **Scarica Word** nella pagina del fascicolo; anche in GeoDropbox |
 | **Tavole (`.png`)** | 1000 × 1000 px di mappa più pannello, una per fonte cartografica | clic sulla tavola nella pagina del fascicolo |
-| **`.atlante`** | il fascicolo completo (JSON) con le tavole dentro in base64: 5–9 MB | salvato in GeoDropbox insieme al Word; si reimporta come nuovo fascicolo |
+| **`.atlante`** | il fascicolo completo (JSON) con le tavole dentro in base64: 5–9 MB | inviato a GeoDropbox nella cartella *Atlante NX*, accanto a PDF e Word; si reimporta come nuovo fascicolo ([GeoDropbox](geodropbox.md)) |
 | **PDF delle indagini** | i documenti che hai caricato, come sono | dal nome del file nella sezione «Le tue indagini»; visibili solo a te |
 
 ## In entrata
