@@ -2,12 +2,13 @@ site_name: "Privacy e protezione dei dati — GeoStru NX"
 site_url: "https://help.nx.geostru.ai/gdpr/"
 site_author: GeoStru
 site_description: "Come GeoStru tratta e protegge i dati nelle app NX e in GeoDropbox — sintesi informativa GDPR."
-copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tutti i diritti riservati · <a href='https://geostru.ai/it/terms-of-service/' target='_blank' rel='noopener'>Condizioni d'uso</a> · <a href='https://geostru.ai/it/intellectual-property/' target='_blank' rel='noopener'>Proprietà intellettuale</a>"
 
 docs_dir: docs
 
 theme:
   name: material
+  custom_dir: ../_shared/overrides
   language: it
   palette:
     - scheme: default
@@ -41,26 +42,32 @@ plugins:
       languages:
         - { locale: it, name: Italiano, default: true, build: true }
         - locale: en
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. All rights reserved · <a href='https://geostru.ai/en/terms-of-service/' target='_blank' rel='noopener'>Terms of Service</a> · <a href='https://geostru.ai/en/intellectual-property/' target='_blank' rel='noopener'>Intellectual property</a>"
           name: English
           build: true
           nav_translations: { "Privacy e GDPR": "Privacy & data protection" }
         - locale: de
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Alle Rechte vorbehalten · <a href='https://geostru.ai/de/terms-of-service/' target='_blank' rel='noopener'>Nutzungsbedingungen</a> · <a href='https://geostru.ai/de/intellectual-property/' target='_blank' rel='noopener'>Geistiges Eigentum</a>"
           name: Deutsch
           build: true
           nav_translations: { "Privacy e GDPR": "Datenschutz & DSGVO" }
         - locale: fr
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tous droits réservés · <a href='https://geostru.ai/fr/terms-of-service/' target='_blank' rel='noopener'>Conditions d'utilisation</a> · <a href='https://geostru.ai/fr/intellectual-property/' target='_blank' rel='noopener'>Propriété intellectuelle</a>"
           name: Français
           build: true
           nav_translations: { "Privacy e GDPR": "Confidentialité & RGPD" }
         - locale: ro
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Toate drepturile rezervate · <a href='https://geostru.ai/ro/terms-of-service/' target='_blank' rel='noopener'>Termeni și condiții</a> · <a href='https://geostru.ai/ro/intellectual-property/' target='_blank' rel='noopener'>Proprietate intelectuală</a>"
           name: Română
           build: true
           nav_translations: { "Privacy e GDPR": "Confidențialitate & GDPR" }
         - locale: es
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Todos los derechos reservados · <a href='https://geostru.ai/es/terms-of-service/' target='_blank' rel='noopener'>Términos del servicio</a> · <a href='https://geostru.ai/es/intellectual-property/' target='_blank' rel='noopener'>Propiedad intelectual</a>"
           name: Español
           build: true
           nav_translations: { "Privacy e GDPR": "Privacidad & RGPD" }
         - locale: pl
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Wszelkie prawa zastrzeżone · <a href='https://geostru.ai/en/terms-of-service/' target='_blank' rel='noopener'>Regulamin</a> · <a href='https://geostru.ai/en/intellectual-property/' target='_blank' rel='noopener'>Własność intelektualna</a>"
           name: Polski
           build: true
           nav_translations: { "Privacy e GDPR": "Prywatność & RODO" }

@@ -262,6 +262,16 @@ S = {
     gdpr_p1='Il servizio è fornito da <strong>ENGSOFT SRL</strong>, titolare del trattamento per i dati di account e di utilizzo; dei contenuti che carichi resti titolare tu, e GeoStru li tratta come responsabile (art. 28 GDPR) solo su tua istruzione.',
     gdpr_p2='I dati sono ospitati in <strong>UE e Svizzera</strong>, cifrati in transito e isolati per cliente; i fornitori che ci supportano (Google, Stripe) operano con propri accordi sul trattamento. La sintesi divulgativa è disponibile in 7 lingue; il testo completo e vincolante è la Privacy Policy ufficiale.',
     gdpr_link='Sintesi GDPR →', policy_link='Privacy Policy completa →',
+    ip_title='Copyright e uso dei manuali',
+    ip_count='titolare: ENGSOFT SRL',
+    ip_p1="I manuali, i testi, le immagini e gli esempi di questo sito, come le applicazioni che descrivono, sono opere protette dal diritto d'autore. Il titolare dei diritti è <strong>ENGSOFT SRL</strong>, proprietaria del marchio GeoStru.",
+    ip_p2='Puoi consultarli liberamente, citarli indicando la fonte e linkarli. Senza autorizzazione scritta non è consentito copiarli o ripubblicarli in tutto o in parte, tradurli, riprodurre le schermate o la struttura delle applicazioni in prodotti concorrenti, né usare questi contenuti per addestrare o alimentare sistemi di intelligenza artificiale: ENGSOFT SRL riserva espressamente i diritti di estrazione di testo e dati (art. 4 Direttiva UE 2019/790), anche in forma leggibile dalle macchine.',
+    ip_p3='Come ci tuteliamo: codice, testi, interfacce e banche dati sono documentati periodicamente in un dossier con marca temporale elettronica qualificata (Regolamento UE 910/2014, eIDAS), che prova data e contenuto di ogni versione, e i file esportati dalle applicazioni portano un\'impronta di provenienza. Le copie, comprese quelle prodotte con generatori di codice basati sull\'IA, vengono perseguite. Segnalazioni e richieste di autorizzazione: <a href="mailto:office@geostru.eu">office@geostru.eu</a>.',
+    ip_terms="Condizioni d'uso →",
+    ip_link='Proprietà intellettuale →',
+    ip_algo='Algoritmi affidabili →',
+    ip_rights='Tutti i diritti riservati',
+    site_lang='it',
 ),
 'en': dict(
     title='GeoStru NX Manuals',
@@ -285,6 +295,16 @@ S = {
     gdpr_p1='The service is provided by <strong>ENGSOFT SRL</strong>, data controller for account and usage data; you remain the controller of the content you upload, which GeoStru processes as a processor (Art. 28 GDPR) only on your instructions.',
     gdpr_p2='Data is hosted in the <strong>EU and Switzerland</strong>, encrypted in transit and isolated per customer; the providers supporting us (Google, Stripe) operate under their own data processing agreements. The plain-language summary is available in 7 languages; the full, binding text is the official Privacy Policy.',
     gdpr_link='GDPR summary →', policy_link='Full Privacy Policy →',
+    ip_title='Copyright and use of the manuals',
+    ip_count='rights holder: ENGSOFT SRL',
+    ip_p1='The manuals, texts, images and examples on this site, like the applications they describe, are works protected by copyright. The rights holder is <strong>ENGSOFT SRL</strong>, owner of the GeoStru trade mark.',
+    ip_p2='You may read them freely, quote them with attribution and link to them. Without written permission you may not copy or republish them in whole or in part, translate them, reproduce the screens or the structure of the applications in competing products, or use this content to train or feed artificial intelligence systems: ENGSOFT SRL expressly reserves its text and data mining rights (Article 4, Directive (EU) 2019/790), also in machine-readable form.',
+    ip_p3='How we protect our work: code, texts, interfaces and databases are periodically documented in a dossier bearing a qualified electronic time stamp (Regulation (EU) 910/2014, eIDAS), which proves the date and content of every version, and the files exported by the applications carry a provenance fingerprint. Copies, including those produced with AI code generators, are pursued. Reports and permission requests: <a href="mailto:office@geostru.eu">office@geostru.eu</a>.',
+    ip_terms='Terms of Service →',
+    ip_link='Intellectual property →',
+    ip_algo='Reliable algorithms →',
+    ip_rights='All rights reserved',
+    site_lang='en',
 ),
 'de': dict(
     title='GeoStru NX Handbücher',
@@ -308,6 +328,16 @@ S = {
     gdpr_p1='Der Dienst wird von <strong>ENGSOFT SRL</strong> bereitgestellt, Verantwortlicher für Konto- und Nutzungsdaten; für die von Ihnen hochgeladenen Inhalte bleiben Sie Verantwortlicher, GeoStru verarbeitet sie als Auftragsverarbeiter (Art. 28 DSGVO) nur auf Ihre Weisung.',
     gdpr_p2='Die Daten werden in der <strong>EU und der Schweiz</strong> gehostet, bei der Übertragung verschlüsselt und pro Kunde isoliert; die uns unterstützenden Anbieter (Google, Stripe) arbeiten mit eigenen Auftragsverarbeitungsverträgen. Die verständliche Zusammenfassung ist in 7 Sprachen verfügbar; der vollständige, verbindliche Text ist die offizielle Datenschutzerklärung.',
     gdpr_link='DSGVO-Zusammenfassung →', policy_link='Vollständige Datenschutzerklärung →',
+    ip_title='Urheberrecht und Nutzung der Handbücher',
+    ip_count='Rechteinhaber: ENGSOFT SRL',
+    ip_p1='Die Handbücher, Texte, Bilder und Beispiele dieser Website sind wie die beschriebenen Anwendungen urheberrechtlich geschützte Werke. Rechteinhaber ist <strong>ENGSOFT SRL</strong>, Inhaberin der Marke GeoStru.',
+    ip_p2='Sie dürfen sie frei lesen, mit Quellenangabe zitieren und verlinken. Ohne schriftliche Genehmigung dürfen sie weder ganz noch teilweise kopiert oder neu veröffentlicht, übersetzt, die Bildschirme oder die Struktur der Anwendungen in Konkurrenzprodukten nachgebildet noch zum Trainieren oder Speisen von KI-Systemen verwendet werden: ENGSOFT SRL behält sich die Rechte am Text- und Data-Mining ausdrücklich vor (Art. 4 Richtlinie (EU) 2019/790), auch in maschinenlesbarer Form.',
+    ip_p3='So schützen wir unsere Arbeit: Code, Texte, Oberflächen und Datenbanken werden regelmäßig in einem Dossier mit qualifiziertem elektronischen Zeitstempel (Verordnung (EU) 910/2014, eIDAS) dokumentiert, das Datum und Inhalt jeder Version belegt; die von den Anwendungen exportierten Dateien tragen einen Herkunftsnachweis. Kopien, auch mit KI-Codegeneratoren erzeugte, werden verfolgt. Hinweise und Genehmigungsanfragen: <a href="mailto:office@geostru.eu">office@geostru.eu</a>.',
+    ip_terms='Nutzungsbedingungen →',
+    ip_link='Geistiges Eigentum →',
+    ip_algo='Zuverlässige Algorithmen →',
+    ip_rights='Alle Rechte vorbehalten',
+    site_lang='de',
 ),
 'fr': dict(
     title='Manuels GeoStru NX',
@@ -331,6 +361,16 @@ S = {
     gdpr_p1='Le service est fourni par <strong>ENGSOFT SRL</strong>, responsable du traitement pour les données de compte et d\'utilisation ; vous restez responsable des contenus que vous importez, que GeoStru traite en tant que sous-traitant (art. 28 RGPD) uniquement sur vos instructions.',
     gdpr_p2="Les données sont hébergées dans l'<strong>UE et en Suisse</strong>, chiffrées en transit et isolées par client ; les fournisseurs qui nous accompagnent (Google, Stripe) opèrent avec leurs propres accords de traitement. Le résumé de vulgarisation est disponible en 7 langues ; le texte complet et contraignant est la politique de confidentialité officielle.",
     gdpr_link='Résumé RGPD →', policy_link='Politique de confidentialité complète →',
+    ip_title="Droits d'auteur et utilisation des manuels",
+    ip_count='titulaire : ENGSOFT SRL',
+    ip_p1="Les manuels, textes, images et exemples de ce site, comme les applications qu'ils décrivent, sont des œuvres protégées par le droit d'auteur. Le titulaire des droits est <strong>ENGSOFT SRL</strong>, propriétaire de la marque GeoStru.",
+    ip_p2="Vous pouvez les consulter librement, les citer en indiquant la source et y faire des liens. Sans autorisation écrite, il n'est pas permis de les copier ou republier en tout ou partie, de les traduire, de reproduire les écrans ou la structure des applications dans des produits concurrents, ni d'utiliser ces contenus pour entraîner ou alimenter des systèmes d'intelligence artificielle : ENGSOFT SRL réserve expressément ses droits de fouille de textes et de données (art. 4 de la directive (UE) 2019/790), y compris sous forme lisible par machine.",
+    ip_p3='Comment nous nous protégeons : le code, les textes, les interfaces et les bases de données sont documentés périodiquement dans un dossier portant un horodatage électronique qualifié (règlement (UE) 910/2014, eIDAS), qui prouve la date et le contenu de chaque version, et les fichiers exportés par les applications portent une empreinte de provenance. Les copies, y compris celles produites avec des générateurs de code par IA, sont poursuivies. Signalements et demandes d\'autorisation : <a href="mailto:office@geostru.eu">office@geostru.eu</a>.',
+    ip_terms="Conditions d'utilisation →",
+    ip_link='Propriété intellectuelle →',
+    ip_algo='Algorithmes fiables →',
+    ip_rights='Tous droits réservés',
+    site_lang='fr',
 ),
 'es': dict(
     title='Manuales GeoStru NX',
@@ -354,6 +394,16 @@ S = {
     gdpr_p1='El servicio lo presta <strong>ENGSOFT SRL</strong>, responsable del tratamiento de los datos de cuenta y de uso; tú sigues siendo el responsable de los contenidos que subes, que GeoStru trata como encargado (art. 28 RGPD) solo según tus instrucciones.',
     gdpr_p2='Los datos se alojan en la <strong>UE y Suiza</strong>, cifrados en tránsito y aislados por cliente; los proveedores que nos apoyan (Google, Stripe) operan con sus propios acuerdos de tratamiento. El resumen divulgativo está disponible en 7 idiomas; el texto completo y vinculante es la Política de privacidad oficial.',
     gdpr_link='Resumen RGPD →', policy_link='Política de privacidad completa →',
+    ip_title='Derechos de autor y uso de los manuales',
+    ip_count='titular: ENGSOFT SRL',
+    ip_p1='Los manuales, textos, imágenes y ejemplos de este sitio, como las aplicaciones que describen, son obras protegidas por derechos de autor. El titular de los derechos es <strong>ENGSOFT SRL</strong>, propietaria de la marca GeoStru.',
+    ip_p2='Puedes consultarlos libremente, citarlos indicando la fuente y enlazarlos. Sin autorización escrita no está permitido copiarlos o republicarlos total o parcialmente, traducirlos, reproducir las pantallas o la estructura de las aplicaciones en productos competidores, ni usar estos contenidos para entrenar o alimentar sistemas de inteligencia artificial: ENGSOFT SRL se reserva expresamente los derechos de minería de textos y datos (art. 4 de la Directiva (UE) 2019/790), también en forma legible por máquina.',
+    ip_p3='Cómo nos protegemos: el código, los textos, las interfaces y las bases de datos se documentan periódicamente en un dosier con sello de tiempo electrónico cualificado (Reglamento (UE) 910/2014, eIDAS), que prueba la fecha y el contenido de cada versión, y los archivos exportados por las aplicaciones llevan una huella de procedencia. Las copias, incluidas las producidas con generadores de código por IA, se persiguen. Avisos y solicitudes de autorización: <a href="mailto:office@geostru.eu">office@geostru.eu</a>.',
+    ip_terms='Términos del servicio →',
+    ip_link='Propiedad intelectual →',
+    ip_algo='Algoritmos fiables →',
+    ip_rights='Todos los derechos reservados',
+    site_lang='es',
 ),
 'ro': dict(
     title='Manuale GeoStru NX',
@@ -377,6 +427,16 @@ S = {
     gdpr_p1='Serviciul este furnizat de <strong>ENGSOFT SRL</strong>, operator pentru datele de cont și de utilizare; rămâi operator al conținutului pe care îl încarci, pe care GeoStru îl prelucrează ca persoană împuternicită (art. 28 GDPR) numai la instrucțiunile tale.',
     gdpr_p2='Datele sunt găzduite în <strong>UE și Elveția</strong>, criptate în tranzit și izolate per client; furnizorii care ne susțin (Google, Stripe) operează cu propriile acorduri de prelucrare. Rezumatul informativ este disponibil în 7 limbi; textul complet și obligatoriu este Politica de confidențialitate oficială.',
     gdpr_link='Rezumat GDPR →', policy_link='Politica de confidențialitate completă →',
+    ip_title='Drepturi de autor și utilizarea manualelor',
+    ip_count='titular: ENGSOFT SRL',
+    ip_p1='Manualele, textele, imaginile și exemplele de pe acest site, ca și aplicațiile pe care le descriu, sunt opere protejate de dreptul de autor. Titularul drepturilor este <strong>ENGSOFT SRL</strong>, proprietara mărcii GeoStru.',
+    ip_p2='Le poți consulta liber, cita cu indicarea sursei și le poți da link. Fără autorizare scrisă nu este permis să le copiezi sau republici în tot sau în parte, să le traduci, să reproduci ecranele sau structura aplicațiilor în produse concurente, nici să folosești aceste conținuturi pentru a antrena sau alimenta sisteme de inteligență artificială: ENGSOFT SRL își rezervă expres drepturile de extragere a textului și datelor (art. 4 din Directiva (UE) 2019/790), inclusiv în formă citibilă automat.',
+    ip_p3='Cum ne protejăm: codul, textele, interfețele și bazele de date sunt documentate periodic într-un dosar cu marcă temporală electronică calificată (Regulamentul (UE) 910/2014, eIDAS), care dovedește data și conținutul fiecărei versiuni, iar fișierele exportate de aplicații poartă o amprentă de proveniență. Copiile, inclusiv cele produse cu generatoare de cod bazate pe AI, sunt urmărite. Sesizări și cereri de autorizare: <a href="mailto:office@geostru.eu">office@geostru.eu</a>.',
+    ip_terms='Termeni și condiții →',
+    ip_link='Proprietate intelectuală →',
+    ip_algo='Algoritmi de încredere →',
+    ip_rights='Toate drepturile rezervate',
+    site_lang='ro',
 ),
 'pl': dict(
     title='Podręczniki GeoStru NX',
@@ -400,6 +460,16 @@ S = {
     gdpr_p1='Usługę świadczy <strong>ENGSOFT SRL</strong>, administrator danych konta i danych o korzystaniu; pozostajesz administratorem przesyłanych treści, które GeoStru przetwarza jako podmiot przetwarzający (art. 28 RODO) wyłącznie zgodnie z Twoimi instrukcjami.',
     gdpr_p2='Dane są hostowane w <strong>UE i Szwajcarii</strong>, szyfrowane podczas przesyłania i odizolowane dla każdego klienta; wspierający nas dostawcy (Google, Stripe) działają na podstawie własnych umów powierzenia. Przystępne podsumowanie jest dostępne w 7 językach; pełnym i wiążącym tekstem jest oficjalna Polityka prywatności.',
     gdpr_link='Podsumowanie RODO →', policy_link='Pełna Polityka prywatności →',
+    ip_title='Prawa autorskie i korzystanie z podręczników',
+    ip_count='właściciel praw: ENGSOFT SRL',
+    ip_p1='Podręczniki, teksty, obrazy i przykłady w tym serwisie, podobnie jak opisywane aplikacje, są utworami chronionymi prawem autorskim. Właścicielem praw jest <strong>ENGSOFT SRL</strong>, właściciel znaku towarowego GeoStru.',
+    ip_p2='Możesz je swobodnie czytać, cytować z podaniem źródła i linkować. Bez pisemnej zgody nie wolno ich kopiować ani ponownie publikować w całości lub części, tłumaczyć, odtwarzać ekranów lub struktury aplikacji w produktach konkurencyjnych ani wykorzystywać tych treści do trenowania lub zasilania systemów sztucznej inteligencji: ENGSOFT SRL wyraźnie zastrzega sobie prawa do eksploracji tekstów i danych (art. 4 dyrektywy (UE) 2019/790), również w formie nadającej się do odczytu maszynowego.',
+    ip_p3='Jak chronimy naszą pracę: kod, teksty, interfejsy i bazy danych są okresowo dokumentowane w dossier z kwalifikowanym elektronicznym znacznikiem czasu (rozporządzenie (UE) 910/2014, eIDAS), który dowodzi daty i treści każdej wersji, a pliki eksportowane z aplikacji noszą odcisk pochodzenia. Kopie, w tym wytworzone generatorami kodu AI, są ścigane. Zgłoszenia i wnioski o zgodę: <a href="mailto:office@geostru.eu">office@geostru.eu</a>.',
+    ip_terms='Regulamin →',
+    ip_link='Własność intelektualna →',
+    ip_algo='Wiarygodne algorytmy →',
+    ip_rights='Wszelkie prawa zastrzeżone',
+    site_lang='en',
 ),
 }
 
@@ -536,6 +606,9 @@ def render(lang):
   <meta name="viewport" content="width=device-width,initial-scale=1" />
   <meta name="description" content="{s['meta']}" />
 {alternates}
+  <meta name="tdm-reservation" content="1" />
+  <meta name="tdm-policy" content="https://geostru.ai/en/intellectual-property/" />
+  <meta name="copyright" content="ENGSOFT SRL — GeoStru" />
   <style>{CSS}  </style>
 </head>
 <body>
@@ -569,11 +642,25 @@ def render(lang):
     <span class="langs standalone">{gdpr_chips}</span>
   </section>
 
+  <section class="cat">
+    <div class="cat-head"><h2>{s['ip_title']}</h2><span class="count">{s['ip_count']}</span></div>
+    <p class="sect-p">{s['ip_p1']}</p>
+    <p class="sect-p">{s['ip_p2']}</p>
+    <p class="sect-p">{s['ip_p3']}</p>
+    <div class="links">
+      <a href="https://geostru.ai/{s['site_lang']}/terms-of-service/">{s['ip_terms']}</a>
+      <a href="https://geostru.ai/{s['site_lang']}/intellectual-property/">{s['ip_link']}</a>
+      <a href="https://geostru.ai/{s['site_lang']}/reliable-algorithms/">{s['ip_algo']}</a>
+    </div>
+  </section>
+
   <footer>
     <strong>ENGSOFT SRL</strong> · Str. Sarmisegetuza nr. 17-19, Cluj-Napoca, România ·
     CUI 30277934 · Nr. Reg. Com. J2012001517126 · <a href="mailto:info@geostru.ai">info@geostru.ai</a><br>
-    © <script>document.write(new Date().getFullYear())</script> GeoStru —
-    <a href="https://www.geostru.ai">www.geostru.ai</a> · <a href="{gdpr_url}">Privacy (GDPR)</a>
+    © <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. {s['ip_rights']} ·
+    <a href="https://www.geostru.ai">www.geostru.ai</a> · <a href="{gdpr_url}">Privacy (GDPR)</a> ·
+    <a href="https://geostru.ai/{s['site_lang']}/terms-of-service/">{s['ip_terms'].rstrip(' →')}</a> ·
+    <a href="https://geostru.ai/{s['site_lang']}/intellectual-property/">{s['ip_link'].rstrip(' →')}</a>
   </footer>
 </body>
 </html>

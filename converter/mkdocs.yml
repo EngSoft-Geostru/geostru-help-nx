@@ -2,7 +2,7 @@ site_name: "Converter NX"
 site_url: "https://help.nx.geostru.ai/converter/"
 site_author: GeoStru
 site_description: "Manuale utente di Converter NX — Convertitore di unità di misura."
-copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tutti i diritti riservati · <a href='https://geostru.ai/it/terms-of-service/' target='_blank' rel='noopener'>Condizioni d'uso</a> · <a href='https://geostru.ai/it/intellectual-property/' target='_blank' rel='noopener'>Proprietà intellettuale</a>"
 
 # repo_name / repo_url / edit_uri rimossi: il sito è destinato all'utente finale
 # e non vogliamo esporre il repo GitHub dei sorgenti dalla navbar.
@@ -11,6 +11,7 @@ docs_dir: docs
 
 theme:
   name: material
+  custom_dir: ../_shared/overrides
   language: it
   palette:
     - scheme: default
@@ -47,6 +48,7 @@ plugins:
       reconfigure_search: true
       languages:
         - locale: it
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tutti i diritti riservati · <a href='https://geostru.ai/it/terms-of-service/' target='_blank' rel='noopener'>Condizioni d'uso</a> · <a href='https://geostru.ai/it/intellectual-property/' target='_blank' rel='noopener'>Proprietà intellettuale</a>"
           name: Italiano
           default: true
           build: true

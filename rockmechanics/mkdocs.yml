@@ -2,12 +2,13 @@ site_name: "Rock Mechanics NX — Classificazioni geomeccaniche e stabilità in 
 site_url: "https://help.nx.geostru.ai/rockmechanics/"
 site_author: GeoStru
 site_description: "Manuale utente di Rock Mechanics NX: elaborazione del rilievo geostrutturale ISRM di ammassi rocciosi, classificazioni geomeccaniche (Barton Q, Bieniawski RMR / Romana SMR, Jašarević, Sen, Robertson SRMR, Singh & Goel), verifiche di stabilità per scivolamento planare e a cuneo (Sliding 3D), utility per forza d'impatto di un masso e suscettibilità sismica al crollo."
-copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tutti i diritti riservati · <a href='https://geostru.ai/it/terms-of-service/' target='_blank' rel='noopener'>Condizioni d'uso</a> · <a href='https://geostru.ai/it/intellectual-property/' target='_blank' rel='noopener'>Proprietà intellettuale</a>"
 
 docs_dir: docs
 
 theme:
   name: material
+  custom_dir: ../_shared/overrides
   language: it
   palette:
     - scheme: default
@@ -48,10 +49,12 @@ plugins:
       reconfigure_search: true
       languages:
         - locale: it
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tutti i diritti riservati · <a href='https://geostru.ai/it/terms-of-service/' target='_blank' rel='noopener'>Condizioni d'uso</a> · <a href='https://geostru.ai/it/intellectual-property/' target='_blank' rel='noopener'>Proprietà intellettuale</a>"
           name: Italiano
           default: true
           build: true
         - locale: en
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. All rights reserved · <a href='https://geostru.ai/en/terms-of-service/' target='_blank' rel='noopener'>Terms of Service</a> · <a href='https://geostru.ai/en/intellectual-property/' target='_blank' rel='noopener'>Intellectual property</a>"
           name: English
           build: true
           nav_translations:

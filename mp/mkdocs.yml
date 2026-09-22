@@ -2,7 +2,7 @@ site_name: "MP NX — Pali e micropali"
 site_url: "https://help.nx.geostru.ai/mp/"
 site_author: GeoStru
 site_description: "Manuale utente di MP NX — analisi e progetto di pali e micropali di fondazione singoli: carico limite verticale e orizzontale (Broms), resistenze di progetto NTC 2018 ed EN 1997-1, trave su suolo elastico alla Winkler, verifica SLU della sezione circolare, gabbia esecutiva e distinta dei ferri, cedimento di Poulos e Davis, relazione di calcolo."
-copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tutti i diritti riservati · <a href='https://geostru.ai/it/terms-of-service/' target='_blank' rel='noopener'>Condizioni d'uso</a> · <a href='https://geostru.ai/it/intellectual-property/' target='_blank' rel='noopener'>Proprietà intellettuale</a>"
 repo_name: EngSoft-Geostru/geostru-help-nx
 repo_url: https://github.com/EngSoft-Geostru/geostru-help-nx
 edit_uri: edit/main/mp/docs/
@@ -11,6 +11,7 @@ docs_dir: docs
 
 theme:
   name: material
+  custom_dir: ../_shared/overrides
   language: it
   palette:
     - scheme: default
@@ -50,10 +51,12 @@ plugins:
       reconfigure_search: true
       languages:
         - locale: it
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tutti i diritti riservati · <a href='https://geostru.ai/it/terms-of-service/' target='_blank' rel='noopener'>Condizioni d'uso</a> · <a href='https://geostru.ai/it/intellectual-property/' target='_blank' rel='noopener'>Proprietà intellettuale</a>"
           name: Italiano
           default: true
           build: true
         - locale: en
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. All rights reserved · <a href='https://geostru.ai/en/terms-of-service/' target='_blank' rel='noopener'>Terms of Service</a> · <a href='https://geostru.ai/en/intellectual-property/' target='_blank' rel='noopener'>Intellectual property</a>"
           name: English
           build: true
           # site_name per-locale: senza, l'header delle pagine EN resta in italiano.

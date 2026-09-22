@@ -1,0 +1,9 @@
+{#- 22/09/2026 — overrides condivisi da tutti i manuali NX: riserva TDM (art. 4 Direttiva UE 2019/790,
+    protocollo TDMRep) e titolare dei diritti, come sul sito geostru.ai. -#}
+{% extends "base.html" %}
+{% block extrahead %}
+  {{ super() }}
+  <meta name="tdm-reservation" content="1">
+  <meta name="tdm-policy" content="https://geostru.ai/en/intellectual-property/">
+  <meta name="copyright" content="ENGSOFT SRL — GeoStru">
+{% endblock %}

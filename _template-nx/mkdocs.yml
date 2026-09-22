@@ -6,7 +6,7 @@ site_name: "[CAMBIA] Nome Prodotto NX"               # es. "GMS NX — Geomechan
 site_url: "https://help.nx.geostru.ai/[CAMBIA]/"   # es. https://help.nx.geostru.ai/gms/
 site_author: GeoStru
 site_description: "[CAMBIA] Manuale utente di [Prodotto] NX, suite GeoStru."
-copyright: "© GeoStru — <a href='https://www.geostru.ai' target='_blank' rel='noopener'>www.geostru.ai</a>"
+copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tutti i diritti riservati · <a href='https://geostru.ai/it/terms-of-service/' target='_blank' rel='noopener'>Condizioni d'uso</a> · <a href='https://geostru.ai/it/intellectual-property/' target='_blank' rel='noopener'>Proprietà intellettuale</a>"
 
 # Repo GitHub volutamente NON esposto in navbar (utente finale).
 # Riabilita repo_name/repo_url/edit_uri solo se il prodotto è destinato a
@@ -16,6 +16,7 @@ docs_dir: docs
 
 theme:
   name: material
+  custom_dir: ../_shared/overrides
   language: it
   logo: img/logo.svg
   favicon: img/favicon.ico
@@ -65,6 +66,7 @@ plugins:
       reconfigure_search: true
       languages:
         - locale: it
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tutti i diritti riservati · <a href='https://geostru.ai/it/terms-of-service/' target='_blank' rel='noopener'>Condizioni d'uso</a> · <a href='https://geostru.ai/it/intellectual-property/' target='_blank' rel='noopener'>Proprietà intellettuale</a>"
           name: Italiano
           default: true
           build: true
