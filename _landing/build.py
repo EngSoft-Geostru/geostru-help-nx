@@ -550,7 +550,7 @@ def manual_url(slug, lang):
 def card_html(slug, lang):
     app = APPS[slug]
     chips = ''
-    if len(app['langs']) > 1:
+    if app['langs']:
         links = ''.join(
             f'<a href="/{slug}/{l}/" hreflang="{l}">{FLAG[l]} {l.upper()}</a>'
             if l != 'it' else f'<a href="/{slug}/" hreflang="it">{FLAG["it"]} IT</a>'
