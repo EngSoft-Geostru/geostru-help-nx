@@ -15,6 +15,14 @@ FLAG = {'it': '🇮🇹', 'en': '🇬🇧', 'de': '🇩🇪', 'fr': '🇫🇷',
 # ---------------------------------------------------------------- app e categorie
 
 APPS = {
+    'pdm': dict(name='PDM NX', langs=['it'], desc={
+        'it': 'Piano di manutenzione: manuali, controlli, interventi e cronoprogramma',
+        'en': 'Maintenance plans: manuals, inspections, interventions and schedules',
+        'de': 'Instandhaltungspläne: Handbücher, Kontrollen und Maßnahmen',
+        'fr': 'Plans de maintenance : manuels, contrôles et interventions',
+        'es': 'Planes de mantenimiento: manuales, controles e intervenciones',
+        'ro': 'Planuri de întreținere: manuale, controale și intervenții',
+        'pl': 'Plany konserwacji: instrukcje, kontrole i działania'}),
     'atlante': dict(name='Atlante NX', langs=['it', 'en'], desc={
         'it': 'Base documentale della relazione da un punto: fonti pubbliche, tavole, Word — gratuita',
         'en': 'Documentary base of a report from a point: public sources, plates, Word — free',
@@ -202,7 +210,7 @@ APPS = {
 }
 
 CATEGORIES = [
-    ('general', ['atlante', 'computo']),
+    ('general', ['pdm', 'atlante', 'computo']),
     ('engineering', ['rpd']),
     ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'slope', 'srs']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),

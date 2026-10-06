@@ -13,6 +13,7 @@ Sito pubblicato su **https://help.nx.geostru.ai/&lt;prodotto&gt;/**.
 | Prodotto | Cartella | URL pubblicato | App live |
 |---|---|---|---|
 | **Atlante NX** — base documentale della relazione (gratuita) | [`atlante/`](atlante/) | https://help.nx.geostru.ai/atlante/ | https://nx.geostru.ai/atlante/ |
+| **PDM NX** — piano di manutenzione | [`pdm/`](pdm/) | https://help.nx.geostru.ai/pdm/ | https://nx.geostru.ai/pdm/ |
 | **GMS NX** — rilievo geomeccanico | [`gms/`](gms/) | https://help.nx.geostru.ai/gms/ | https://nx.geostru.ai/gms/ |
 | **RockPlane NX** — stabilità pendii rocciosi planari | [`rockplane/`](rockplane/) | https://help.nx.geostru.ai/rockplane/ | https://nx.geostru.ai/rockplane/ |
 | LiquiTer NX — liquefazione | _coming soon_ | — | https://nx.geostru.ai/liquiter/ |
