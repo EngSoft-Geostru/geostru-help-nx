@@ -1,0 +1,123 @@
+site_name: "Downhole NX — Prova sismica in foro"
+site_url: "https://help.nx.geostru.ai/downhole/"
+site_author: GeoStru
+site_description: "Manuale utente di Downhole NX — elaborazione della prova sismica in foro (down-hole): tracce SEG-2 e di testo, scelta dei tempi di primo arrivo delle onde P e S, tempi corretti, dromocrone, metodo diretto e metodo intervallo, Vp, Vs, peso di volume, coefficiente di Poisson, moduli dinamici, Vs,eq (Vs,30), relazione Word e tavole DXF."
+copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tutti i diritti riservati · <a href='https://geostru.ai/it/terms-of-service/' target='_blank' rel='noopener'>Condizioni d'uso</a> · <a href='https://geostru.ai/it/intellectual-property/' target='_blank' rel='noopener'>Proprietà intellettuale</a>"
+repo_name: EngSoft-Geostru/geostru-help-nx
+repo_url: https://github.com/EngSoft-Geostru/geostru-help-nx
+edit_uri: edit/main/downhole/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  custom_dir: ../_shared/overrides
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    # NB: niente navigation.instant con il plugin i18n (lo switcher di lingua fa fallire la build --strict).
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: [it, en]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tutti i diritti riservati · <a href='https://geostru.ai/it/terms-of-service/' target='_blank' rel='noopener'>Condizioni d'uso</a> · <a href='https://geostru.ai/it/intellectual-property/' target='_blank' rel='noopener'>Proprietà intellettuale</a>"
+          name: Italiano
+          default: true
+          build: true
+        - locale: en
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. All rights reserved · <a href='https://geostru.ai/en/terms-of-service/' target='_blank' rel='noopener'>Terms of Service</a> · <a href='https://geostru.ai/en/intellectual-property/' target='_blank' rel='noopener'>Intellectual property</a>"
+          name: English
+          build: true
+          # site_name per-locale: senza, l'header delle pagine EN resta in italiano.
+          site_name: "Downhole NX — Down-hole seismic test"
+          # ⚠️ Queste voci sono di Downhole e devono coincidere, lettera per lettera, con le etichette
+          # del nav qui sotto: una voce che non coincide non dà errori, resta in italiano e nessuno
+          # avvisa. `mkdocs build` deve stampare «Translated 11 navigation elements» (tutte tranne Home).
+          nav_translations:
+            Guida rapida (5 minuti): Quick start (5 minutes)
+            Tracce e scelta dei tempi: Traces and time picking
+            Misure e geometria della prova: Measurements and test geometry
+            Elaborazione, metodo diretto e metodo intervallo: Processing, direct and interval method
+            Stratigrafia: Stratigraphy
+            Relazione, DXF e crediti: Report, DXF and credits
+            Assistente AI: AI assistant
+            File, progetti del desktop e GeoDropbox: Files, desktop projects and GeoDropbox
+            Cenni teorici: Theory
+            Validazione e differenze dal desktop: Validation and differences from the desktop version
+            Domande frequenti: FAQ
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
+  - pymdownx.snippets
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.inlinehilite
+  - pymdownx.tilde          # pedici V~s~, V~p~, T~p~, t~corr~, E~d~, z~0~ (e ~~barrato~~)
+  - pymdownx.arithmatex: { generic: true }
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra:
+  homepage: https://help.nx.geostru.ai/
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.ai
+      name: GeoStru
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@GeoStruSoftware
+      name: YouTube
+
+# Nav unico in lingua di default (it/). Il plugin i18n lo replica per ogni lingua.
+# I nomi dei file sono gli slug a cui punta il modale «?» dell'app (quickstart, tracce,
+# elaborazione, relazione, teoria, validazione): non vanno rinominati.
+nav:
+  - Home: it/index.md
+  - Guida rapida (5 minuti): it/quickstart.md
+  - Tracce e scelta dei tempi: it/tracce.md
+  - Misure e geometria della prova: it/misure.md
+  - Elaborazione, metodo diretto e metodo intervallo: it/elaborazione.md
+  - Stratigrafia: it/stratigrafia.md
+  - Relazione, DXF e crediti: it/relazione.md
+  - Assistente AI: it/assistente.md
+  - File, progetti del desktop e GeoDropbox: it/file.md
+  - Cenni teorici: it/teoria.md
+  - Validazione e differenze dal desktop: it/validazione.md
+  - Domande frequenti: it/faq.md

@@ -111,6 +111,14 @@ APPS = {
         'es': 'Respuesta sísmica local 1D',
         'ro': 'Răspuns seismic local 1D',
         'pl': 'Lokalna odpowiedź sejsmiczna 1D'}),
+    'downhole': dict(name='Downhole NX', langs=['it', 'en'], desc={
+        'it': 'Prova sismica in foro (down-hole): tracce, tempi di arrivo, Vp, Vs, Vs,eq',
+        'en': 'Down-hole seismic test: traces, arrival times, Vp, Vs, Vs,eq',
+        'de': 'Seismische Bohrlochmessung (Downhole): Spuren, Ersteinsätze, Vp, Vs, Vs,eq',
+        'fr': 'Essai sismique en forage (down-hole) : traces, temps d\'arrivée, Vp, Vs, Vs,eq',
+        'es': 'Ensayo sísmico en sondeo (down-hole): trazas, tiempos de llegada, Vp, Vs, Vs,eq',
+        'ro': 'Încercare seismică în foraj (down-hole): trase, timpi de sosire, Vp, Vs, Vs,eq',
+        'pl': 'Badanie sejsmiczne w otworze (down-hole): trasy, czasy wejścia fal, Vp, Vs, Vs,eq'}),
     'srs': dict(name='SRS NX', langs=['it', 'en'], desc={
         'it': 'Chiodatura corticale dei versanti (soil nailing) + rete di facciata',
         'en': 'Slope surface soil nailing + facing mesh',
@@ -212,7 +220,7 @@ APPS = {
 CATEGORIES = [
     ('general', ['pdm', 'atlante', 'computo']),
     ('engineering', ['rpd']),
-    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'slope', 'srs']),
+    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'downhole', 'slope', 'srs']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
     ('hydro', ['hid', 'hydrogeo', 'runofflab']),
     ('insitu', ['dynprobe']),
