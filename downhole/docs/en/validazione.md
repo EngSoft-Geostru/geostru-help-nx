@@ -45,8 +45,10 @@ first-arrival times of P and S waves it computes:
 - It **does not assign the subsoil category**.
 - It applies no correction for borehole deviation or for the elevation of the source
   relative to ground level.
-- It reads SEG-2 and text traces; it does not merge P and S files with different numbers of
-  channels.
+- It reads SEG-2 and text traces and the seismic cone ZIP archives (RAV or SPAS exports); it
+  does not merge P and S files with different numbers of channels. The automatic recognition
+  of the acquisition helps read the files, does not enter the calculation and must be
+  checked on the traces.
 
 ## Theoretical basis
 
@@ -56,9 +58,10 @@ velocity, automatic proposals, rounding.
 
 ## Test cases
 
-Eight cases, repeated automatically at every version of the program. The first five have a
+Nine cases, repeated automatically at every version of the program. The first five have a
 **closed-form** reference that anyone can redo by hand; the sixth is the comparison with the
-desktop program; the seventh covers anomalous inputs; the eighth the automatic proposals.
+desktop program; the seventh covers anomalous inputs; the eighth the automatic proposals; the
+ninth is a real test with its traces, compared with the desktop program.
 
 | Case | Subject | Reference | Outcome |
 |---|---|---|---|
@@ -70,6 +73,7 @@ desktop program; the seventh covers anomalous inputs; the eighth the automatic p
 | 6 | Example of the desktop program | desktop program | see below |
 | 7 | Anomalous inputs | expected behaviour | see below |
 | 8 | Automatic proposals of times and seismic layers | operator's readings, known profiles | see below |
+| 9 | Real test with SEG-2 traces, one file per depth (example `ex-tracce-seg2.dhnx`) | desktop program | see below |
 
 The deviations in cases 1 and 2 are the effect of rounding: corrected times to 4 decimals
 of a millisecond, times at the bases to 2. On a 1 m interval at 1 500 m/s they amount to
@@ -163,10 +167,48 @@ misfit of 0.57 ms; the interpreter had chosen 5.04 – 10.30 – 17.78 – 25.32
 proposed bases lie on the measurement depths, one every metre: the difference is within two
 receivers. V~s,30~ is the same, 242.86 m/s, as it must be (case 5).
 
+### Case 9 — real test with SEG-2 traces
+
+This is the `ex-tracce-seg2.dhnx` example, which you download from the **?** button,
+**Resources** tab: 31 three-channel SEG-2 files (one vertical and two horizontal), one per
+depth from 1 to 31 m, with all shots in the same file and the depth read from the name
+(`1m ps.sg2` … `31m ps.sg2`). Times picked on the traces, d = 1.5 m, automatic unit weight,
+H = 30 m. Direct-method seismic layers with bases 10 – 25 – 31 m, interval-method layers
+with bases 7 – 31 m.
+
+It is a hard case, and that is why it is here: many times do not increase with depth. The
+interval method flags the **decreasing corrected time** at receivers 5, 6, 7, 9, 12, 14, 15,
+17, 19, 20, 24, 28, 30, 31 and gives no velocity there (“--”); the averages per layer use
+only the intervals that can be computed.
+
+| Method | Layer | V~p~ [m/s] | V~s~ [m/s] | γ [kN/m³] | ν | G [MPa] | E~d~ [MPa] | E [MPa] | E~v~ [MPa] |
+|---|---|---|---|---|---|---|---|---|---|
+| direct | 0–10 m | 396.51 | 188.64 | 18.17 | 0.35 | 65.94 | 291.34 | 178.54 | 203.42 |
+| direct | 10–25 m | 1 218.52 | 1 029.51 | 23.64 | -- | 2 554.46 | 3 578.51 | -- | 172.56 |
+| direct | 25–31 m | 335.01 | 1 065.72 | 23.75 | -- | 2 750.94 | 271.84 | -- | -- |
+| interval (averages) | 0–7 m | 324.07 | 173.99 | 18.32 | 0.39 | 68.49 | 362.10 | 224.54 | 344.81 |
+| interval (averages) | 7–31 m | 1 178.20 | 841.46 | 21.31 | 0.46 | 3 162.57 | 1 852.46 | 631.42 | 5 618.78 |
+
+**Direct-method V~s,30~ = 415.10 m/s. Interval-method V~s,30~: not computable.** On the
+measurement intervals there is at least one stretch with no V~s~ (the corrected S-wave time
+does not increase), and V~s,eq~ is not computed by skipping stretches: the app shows “--”.
+In the direct method the same time enters the polyline and V~s,eq~ stays defined. Here H = 30 m
+falls inside the 25–31 m layer, so the value depends on the base at 25 m: with a base at 30 m it
+would be 406.45 m/s, i.e. 30 m divided by the corrected S-wave time at 30 m.
+
+**Comparison with the desktop program** (calculation run on the same data): corrected
+times, values of the 31 intervals, averages per layer of both methods and the two V~s,eq~
+values match to the last digit. An earlier version of the desktop program, with the interval
+method selected, showed a V~s,30~ of about 416 m/s: it was the direct-method value, left in
+the box the two methods shared. Downhole NX always shows the V~s,eq~ of the selected method,
+here “--”.
+
 ### Repeating the cases
 
-Case 6 is repeated by opening the example and reading the tables of the Processing tab; on
-the same example **Propose seismic layers** gives the subdivision of case 8. Cases 1–5 can be redone by hand with the formulas in [Theory](teoria.md): enter the
+Case 6 is repeated by opening the example (**File → Open the example**) and reading the
+tables of the Processing tab; on the same example **Propose seismic layers** gives the
+subdivision of case 8. Case 9 is repeated by opening `ex-tracce-seg2.dhnx` with **File →
+Open…**. Cases 1–5 can be redone by hand with the formulas in [Theory](teoria.md): enter the
 measurements in the Measurements tab and compare.
 
 ## Differences from the desktop program
@@ -207,9 +249,17 @@ than the last one match the desktop program.
 
 ## Version
 
-This page describes Downhole NX from version 2026.1.286 (October 2026), which introduced
-the automatic proposals; cases 1–7 hold from 2026.1.285. The version of the
-app is in the status bar at the bottom and in the **?** button, **Version** tab.
+This page applies to **calculation engine 1.2.0** (October 2026). The engine version is
+separate from the app version: it changes only when a result or the reading of the data can
+change, and it is printed in the **Calculation software** block of every report (see
+[Report](relazione.md#the-calculation-software-block)). The app version is in the status bar
+at the bottom and in the **?** button, **Version** tab.
+
+| Engine | What changed |
+|---|---|
+| 1.0.0 | First release: calculation (cases 1–7) and automatic proposals of times and seismic layers (case 8). |
+| 1.1.0 | Trace reading: seismic cone ZIP archive, depth from the file name (“1m ps”, “12,5 m P”). The interval method gives no V~s,eq~ when an interval has a non-increasing corrected time (case 9). The other results, for the same measurements, do not change. |
+| 1.2.0 | Recognition of the acquisition on upload (P/S1/S2 triplets, P channel, trigger channels, recording direction); a bare number with leading zeros in the name (“001.DAT”) is no longer taken as a depth. The calculation does not change: for the same measurements cases 1–9 give the same numbers. |
 
 ---
 

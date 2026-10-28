@@ -2,23 +2,46 @@
 
 The **Report** tab produces the two deliverables of the test: the **Word report** and the
 **DXF drawings** of the charts. Together with messages to the assistant, these are the
-actions of the app that use credits.
+actions of the app that use credits. The **preview** of the report, on the right, is free.
 
-![Report tab: the five sections that can be switched on, the summary of what the document will contain, the Generate Word button and, on the right, the DXF drawing card](img/21-relazione.png)
+![Report tab: on the left the five sections that can be switched on and the summary of what the document will contain, on the right the paginated preview that opens with the general data](img/21-relazione.png)
 
 ## Before you generate
 
 Check three things, all free:
 
 1. the fields of the **General data** tab (client, site, location, date, operator, person
-   in charge, description, notes, coordinates): they appear on the cover page and in the
-   footer;
+   in charge, description, notes, WGS84 coordinates and altitude): they open the document;
 2. the seismic layers and V~s,eq~ in the [Processing](elaborazione.md) tab;
 3. the **What the report will contain** box: number of measurements, seismic layers of both
    methods, descriptive layers, figures and V~s,eq~ of both methods.
 
+Then look at the **preview**: it is the document as it will come out.
+
 If the measurements are missing or contain errors, **Generate Word** is disabled and a note
 says what to fix.
+
+## The preview
+
+The **Report preview** card shows the document laid out page by page, with the same texts,
+tables and figures as the Word file: the server composes it with the same code. It follows
+the section switches as soon as you change them, even before you save them.
+
+Compared with the Word file only the **page numbers** and the **Calculation software** block
+are missing; the block exists only in the issued document (see below). The preview uses no
+credits.
+
+## How the report is organised
+
+The document has no cover page. In order:
+
+1. **General data** — the table with the fields of the General data tab, including latitude
+   and longitude (WGS84) and altitude in m above sea level. Empty fields are left out; if
+   they are all empty, the document starts from the next chapter;
+2. the chosen **sections** (table below) and the **processing of the measurements**, the
+   table of corrected times, which is always there;
+3. **Calculation software** — the block that identifies the software and the document;
+4. the **contents**, at the end.
 
 ## Report sections
 
@@ -27,13 +50,10 @@ Five switches choose what to include.
 | Section | Content |
 |---|---|
 | **Theoretical notes** | The test, the procedure, the two methods, the elastic parameters, V~s,eq~, the limits and the references. |
-| **Input data** | Geometry, table of measured times, test layout. |
-| **Direct method** | V~s,eq~, seismic layers, parameters per layer, travel-time curves. |
-| **Interval method** | V~s,eq~, parameters per measurement interval, seismic layers and average values, the five profiles (velocity, γ, ν, G·E~d~, E·E~v~). |
-| **Stratigraphy** | Water table, layers and column. Included only if the Stratigraphy tab has at least one layer. |
-
-**Cover page**, **contents**, **processing of the measurements** (the table of corrected
-times) and footer are always there.
+| **Input data (geometry, measurements, test layout)** | Geometry, table of measured times, test layout. |
+| **Direct method (seismic layers, parameters, travel-time curves)** | V~s,eq~, seismic layers, parameters per layer, travel-time curves. |
+| **Interval method (values per receiver, averages, five profiles)** | V~s,eq~, parameters per measurement interval, seismic layers and average values, the five profiles (velocity, γ, ν, G·E~d~, E·E~v~). |
+| **Stratigraphy (water table, layers, column)** | Water table, layers and column. Included only if the Stratigraphy tab has at least one layer. |
 
 The options are saved with the project: press **Save options**, or switch tab and the app
 saves them for you.
@@ -53,6 +73,27 @@ saves them for you.
 The document is an ordinary Word file: you can edit it, add your logo, convert it to PDF
 from your word processor.
 
+### The “Calculation software” block
+
+The last chapter of the report, **Calculation software** (in the Italian report *Codice di
+calcolo (NTC 2018 §10.2)*), is a table written by the software with what section 10.2 of the
+Italian building code asks to state:
+
+- title of the software and producer;
+- app version, version of the **calculation engine** and code revision;
+- licence of use, in the name of whoever generated the document;
+- **document code**, in the form `NX-…-XXXX-XXXX`, and the address where it can be checked;
+- the reference to the [validation](validazione.md) of the engine;
+- the fingerprint of the input data.
+
+The code is registered on geostru.ai when you generate the Word file: anyone who receives
+the report can check, at the address printed in the block, that the document was issued by
+Downhole NX with that version. The check says that the document was **issued**, not that the
+input data are correct: those remain the responsibility of whoever signs.
+
+If the document register does not respond, the report **is not produced** and nothing is
+charged: try again in a few minutes.
+
 ## DXF drawing
 
 In the **DXF drawing** card choose the **Drawing to export** and press **Export DXF**:
@@ -62,8 +103,8 @@ In the **DXF drawing** card choose the **Drawing to export** and press **Export 
 - Interval velocity profile
 - Interval unit weight profile
 - Interval Poisson's ratio profile
-- Interval G and E~d~ moduli profile
-- Interval E and E~v~ moduli profile
+- Interval G and Ed moduli profile
+- Interval E and Ev moduli profile
 - Stratigraphic column
 
 Each export produces **one** drawing, with one layer per role (axes, grid, points,
@@ -87,7 +128,7 @@ app says so and exports nothing.
 
 Uploading traces, picking times, filling in the measurements, processing, inserting and
 moving seismic layers, viewing all charts and tables on screen, filling in the stratigraphy,
-saving and opening the project, opening the example.
+viewing the report preview, saving and opening the project, opening the examples.
 
 ### How much they cost
 
@@ -107,7 +148,7 @@ into:
 - an error while generating the Word or the DXF file;
 - invalid measurements or an empty drawing;
 - expired session: the app says so and neither writes nor charges anything;
-- credit service unreachable: try again in a few minutes;
+- credit service or document register unreachable: try again in a few minutes;
 - assistant not available, or answer not received.
 
 The full conditions (validity of credits, refunds) are in the

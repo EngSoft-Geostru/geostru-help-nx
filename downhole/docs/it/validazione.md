@@ -43,7 +43,10 @@ arrivo delle onde P e S calcola:
 - **Non attribuisce la categoria di sottosuolo**.
 - Non corregge per l'inclinazione del foro né per la quota della sorgente rispetto al piano
   campagna.
-- Legge tracce SEG-2 e di testo; non assembla file P e S con un numero diverso di canali.
+- Legge tracce SEG-2, di testo e gli archivi ZIP del piezocono sismico (esportazioni RAV o
+  SPAS); non assembla file P e S con un numero diverso di canali. Il riconoscimento
+  automatico dell'acquisizione è un aiuto alla lettura dei file, non entra nel calcolo e va
+  controllato sulle tracce.
 
 ## Basi teoriche
 
@@ -53,10 +56,10 @@ volume, velocità equivalente, proposte automatiche, arrotondamenti.
 
 ## Casi di prova
 
-Otto casi, ripetuti in automatico a ogni versione del programma. I primi cinque hanno un
+Nove casi, ripetuti in automatico a ogni versione del programma. I primi cinque hanno un
 riferimento **in forma chiusa**, che chiunque può rifare a mano; il sesto è il confronto
 con il programma desktop; il settimo riguarda gli ingressi anomali; l'ottavo le proposte
-automatiche.
+automatiche; il nono è una prova reale con le tracce, confrontata con il desktop.
 
 | Caso | Oggetto | Riferimento | Esito |
 |---|---|---|---|
@@ -68,6 +71,7 @@ automatiche.
 | 6 | Esempio del programma desktop | programma desktop | vedi sotto |
 | 7 | Ingressi anomali | comportamento atteso | vedi sotto |
 | 8 | Proposte automatiche dei tempi e dei sismostrati | letture dell'operatore, profili noti | vedi sotto |
+| 9 | Prova reale con tracce SEG-2, un file per profondità (esempio `ex-tracce-seg2.dhnx`) | programma desktop | vedi sotto |
 
 Gli scarti dei casi 1 e 2 sono l'effetto degli arrotondamenti: tempi corretti a 4 decimali di
 millisecondo, tempi alle basi a 2. Su un intervallo di 1 m a 1 500 m/s valgono ± 0,2 m/s.
@@ -161,12 +165,49 @@ rumore, senza strati in più.
 stanno sulle profondità di misura, una ogni metro: la differenza è entro due ricezioni. La
 V~s,30~ è la stessa, 242,86 m/s, come deve (caso 5).
 
+### Caso 9 — prova reale con tracce SEG-2
+
+È l'esempio `ex-tracce-seg2.dhnx`, che si scarica dal pulsante **?**, scheda **Risorse**: 31
+file SEG-2 a tre canali (un verticale e due orizzontali), uno per profondità da 1 a 31 m,
+con tutte le battute nello stesso file e la profondità letta dal nome (`1m ps.sg2` …
+`31m ps.sg2`). Tempi scelti sulle tracce, d = 1,5 m, peso di volume automatico, H = 30 m.
+Sismostrati del metodo diretto con basi 10 – 25 – 31 m, del metodo intervallo con basi
+7 – 31 m.
+
+È un caso difficile, ed è per questo che sta qui: molti tempi non crescono con la
+profondità. Il metodo intervallo segnala il **tempo corretto decrescente** alle ricezioni 5,
+6, 7, 9, 12, 14, 15, 17, 19, 20, 24, 28, 30, 31 e lì non dà velocità («--»); le medie per
+strato usano solo gli intervalli calcolabili.
+
+| Metodo | Strato | V~p~ [m/s] | V~s~ [m/s] | γ [kN/m³] | ν | G [MPa] | E~d~ [MPa] | E [MPa] | E~v~ [MPa] |
+|---|---|---|---|---|---|---|---|---|---|
+| diretto | 0–10 m | 396,51 | 188,64 | 18,17 | 0,35 | 65,94 | 291,34 | 178,54 | 203,42 |
+| diretto | 10–25 m | 1 218,52 | 1 029,51 | 23,64 | -- | 2 554,46 | 3 578,51 | -- | 172,56 |
+| diretto | 25–31 m | 335,01 | 1 065,72 | 23,75 | -- | 2 750,94 | 271,84 | -- | -- |
+| intervallo (medie) | 0–7 m | 324,07 | 173,99 | 18,32 | 0,39 | 68,49 | 362,10 | 224,54 | 344,81 |
+| intervallo (medie) | 7–31 m | 1 178,20 | 841,46 | 21,31 | 0,46 | 3 162,57 | 1 852,46 | 631,42 | 5 618,78 |
+
+**V~s,30~ del metodo diretto = 415,10 m/s. V~s,30~ del metodo intervallo: non
+calcolabile.** Sugli intervalli di misura c'è almeno un tratto senza V~s~ (il tempo corretto
+delle S non cresce), e la V~s,eq~ non si calcola saltando i tratti: l'app scrive «--». Nel
+metodo diretto lo stesso tempo entra nella spezzata e la V~s,eq~ resta definita. Qui H = 30 m
+cade dentro lo strato 25–31 m, quindi il valore dipende dalla base a 25 m: con una base a 30 m
+sarebbe 406,45 m/s, cioè 30 m diviso il tempo corretto delle S a 30 m.
+
+**Confronto con il programma desktop** (calcolo eseguito sugli stessi dati): tempi
+corretti, valori dei 31 intervalli, medie per strato dei due metodi e le due V~s,eq~
+coincidono fino all'ultima cifra. Una versione precedente del desktop, con il metodo
+intervallo selezionato, mostrava una V~s,30~ di circa 416 m/s: era il valore del metodo
+diretto, rimasto nella casella che i due metodi condividevano. Downhole NX mostra sempre la
+V~s,eq~ del metodo selezionato, qui «--».
+
 ### Ripetere i casi
 
-Il caso 6 si ripete aprendo l'esempio e leggendo le tabelle della scheda Elaborazione; sullo
-stesso esempio **Proponi sismostrati** dà la suddivisione del caso 8. I
-casi 1–5 si rifanno a mano con le formule dei [Cenni teorici](teoria.md): inserisci le
-misure nella scheda Misure e confronta.
+Il caso 6 si ripete aprendo l'esempio (**File → Apri l'esempio**) e leggendo le tabelle
+della scheda Elaborazione; sullo stesso esempio **Proponi sismostrati** dà la suddivisione
+del caso 8. Il caso 9 si ripete aprendo `ex-tracce-seg2.dhnx` con **File → Apri…**. I casi
+1–5 si rifanno a mano con le formule dei [Cenni teorici](teoria.md): inserisci le misure
+nella scheda Misure e confronta.
 
 ## Differenze dal programma desktop
 
@@ -206,9 +247,17 @@ coincidono con il desktop.
 
 ## Versione
 
-Questa pagina descrive Downhole NX dalla versione 2026.1.286 (ottobre 2026), che ha
-introdotto le proposte automatiche; i casi 1–7 valgono dalla 2026.1.285. La versione
-dell'app è nella barra di stato in basso e nel pulsante **?**, scheda **Versione**.
+Questa pagina vale per il **motore di calcolo 1.2.0** (ottobre 2026). La versione del motore
+è distinta da quella dell'app: cambia solo quando può cambiare un risultato o la lettura dei
+dati, ed è stampata nel blocco **Codice di calcolo** di ogni relazione (vedi
+[Relazione](relazione.md#il-blocco-codice-di-calcolo)). La versione dell'app è nella barra
+di stato in basso e nel pulsante **?**, scheda **Versione**.
+
+| Motore | Che cosa è cambiato |
+|---|---|
+| 1.0.0 | Prima emissione: calcolo (casi 1–7) e proposte automatiche dei tempi e dei sismostrati (caso 8). |
+| 1.1.0 | Lettura delle tracce: archivio ZIP del piezocono sismico, profondità dal nome del file («1m ps», «12,5 m P»). Il metodo intervallo non dà la V~s,eq~ quando un intervallo ha il tempo corretto non crescente (caso 9). Gli altri risultati, a parità di misure, non cambiano. |
+| 1.2.0 | Riconoscimento dell'acquisizione al caricamento (terne P/S1/S2, canale P, canali di trigger, verso della registrazione); un numero nudo con zeri a sinistra nel nome («001.DAT») non è più preso per profondità. Il calcolo non cambia: a parità di misure i casi 1–9 danno gli stessi numeri. |
 
 ---
 

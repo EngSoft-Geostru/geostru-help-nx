@@ -120,12 +120,17 @@ V~s,30~.
 - Nel **metodo diretto** i tratti sono i sismostrati.
 - Nel **metodo intervallo** i tratti sono gli **intervalli di misura**, con o senza
   sismostrati. La media aritmetica delle velocità d'intervallo di uno strato non è la
-  velocità dello strato (che è spessore diviso tempo), e non può entrare nella formula.
+  velocità dello strato (che è spessore diviso tempo), e non può entrare nella formula. Se
+  anche un solo intervallo fra z~0~ e H non ha V~s~, la somma non è definita e la V~s,eq~ del
+  metodo intervallo resta non calcolabile («--»): non si salta il tratto.
 - Se la prova è più corta di H, l'ultimo tratto è prolungato fino a H e l'app lo dichiara.
 
-Una conseguenza utile come controllo: nel metodo diretto Σ h~i~/V~s,i~ è il tempo corretto
-delle onde S alla profondità H. La V~s,eq~ quindi **non dipende da dove si pongono gli
-strati**, e i due metodi danno lo stesso valore, a meno degli arrotondamenti.
+Una conseguenza utile come controllo: nel metodo diretto, **quando H è la base di uno
+strato**, Σ h~i~/V~s,i~ è il tempo corretto delle onde S alla profondità H. Allora la
+V~s,eq~ non dipende da dove si pongono gli strati sopra, e i due metodi danno lo stesso
+valore, a meno degli arrotondamenti. Se invece H cade dentro uno strato, il tratto fino a H
+prende la velocità media di tutto lo strato e la V~s,eq~ del metodo diretto cambia con la
+base di quello strato.
 
 ## Proposte automatiche
 

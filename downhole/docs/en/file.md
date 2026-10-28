@@ -9,18 +9,42 @@ with you is the **`.dhnx`** file: save it before you leave.
 |---|---|
 | **New project** | Empties the project in the session. |
 | **Open…** | Opens a `.dhnx` file, or a `.dwhx` / `.dwh` file of the desktop program. |
-| **Save .dhnx** | Downloads the project to your computer. |
-| **Open the example** | Loads the example project: 30 receivers, 5 seismic layers. |
+| **Save** (Ctrl+S) | Overwrites the file opened or saved last; if there is none, works like **Save as…**. |
+| **Save as…** (Ctrl+Shift+S) | Saves the project to a new `.dhnx` file. |
+| **Open the example** | Loads the desktop example project: 30 receivers, 5 seismic layers. |
 
 New, Open and the example **replace** the project in the session. If there is anything to
 lose, a strip below the bar asks for confirmation: what you have not saved to a file will be
 lost.
 
-![File menu open: New project, Open with the .dhnx .dwhx .dwh extensions, Save .dhnx and Open the example](img/02-menu-file.png)
+![File menu open: New project, Open with the .dhnx .dwhx .dwh extensions, Save with Ctrl+S, Save as with Ctrl+Shift+S and Open the example](img/02-menu-file.png)
+
+### Save and Save as
+
+In browsers that let a page write to a file chosen by the user (Chrome, Edge):
+
+- **Save as…** opens the system dialog with the name proposed by the app (the site, or the
+  client) and writes the file where you choose;
+- from then on the file name shows in the top bar, next to the **File** menu: it is the file
+  **Save** writes to;
+- **Save** overwrites it without asking anything. The first time after a reload the browser
+  may ask for permission to edit the file;
+- **Open…** on a `.dhnx` does the same: the opened file becomes the one of **Save**.
+
+After saving, a strip confirms *“Project saved to …”*.
+
+In other browsers **Save** and **Save as…** download the file to the downloads folder.
+
+The file stays tied to the **project** you opened: if you create a new project, open the
+example or the session expires, the name disappears from the bar and **Save** asks again
+where to save. That way an empty project never overwrites the good file.
+
+A desktop `.dwhx` / `.dwh` opened here does not become the file of **Save**: the first save
+asks for the name of the new `.dhnx`.
 
 ## The .dhnx file
 
-**Save .dhnx** downloads a single file with the whole project:
+The `.dhnx` file holds the whole project:
 
 - general data, geometry and measurement table;
 - options (method, unit weight, depths for V~s,eq~);
@@ -32,7 +56,7 @@ lost.
 Results are not in the file: they are recomputed on opening, always with the current
 version of the program.
 
-Before downloading, the app saves the tab you have on screen: the file includes your latest
+Before saving, the app stores the tab you have on screen: the file includes your latest
 change.
 
 ### Traces in the file
@@ -52,6 +76,20 @@ times are still in place.
     they are the only safe copy of the traces.
 
 A `.dhnx` file can be opened up to 40 MB.
+
+## The example projects
+
+Two examples can be downloaded from the **?** button, **Resources** tab, **Example project**
+heading:
+
+| File | What it holds |
+|---|---|
+| `ExDefault.dhnx` | The example of the desktop program: 30 receivers at 1 m spacing, offset 2.6 m, five seismic layers. No traces. It is the same project as **File → Open the example**. |
+| `ex-tracce-seg2.dhnx` | A real test with the **SEG-2 traces** inside: 31 three-channel files, one per depth from 1 to 31 m, offset 1.5 m, times already picked and seismic layers of both methods. Use it to try the Traces tab. |
+
+Download the file and open it with **File → Open…**.
+
+![Downhole NX help, Resources tab: the features, the two example projects to download, credits and session, online resources](img/35-aiuto-risorse.png)
 
 ## Opening a desktop project
 
@@ -98,8 +136,8 @@ The **GeoDropbox** button, in the top bar, opens your projects in the GeoStru cl
 - it **opens** a `.dhnx`, or a desktop `.dwhx` / `.dwh`, saved there.
 
 That way you find your work from any workstation and share it with your office. As with
-**Save .dhnx**, the app stores the tab on screen first. GeoDropbox is a service separate
-from the app credits.
+**Save**, the app stores the tab on screen first. GeoDropbox is a service separate from the
+app credits.
 
 ## The session
 
@@ -113,8 +151,8 @@ was written or charged”*. Reopen your `.dhnx` and carry on.
 
 Two habits keep you from losing work:
 
-- **save the `.dhnx`** (or to GeoDropbox) every time you finish a step: the picked times,
-  the seismic layers;
+- **save** (Ctrl+S, or to GeoDropbox) every time you finish a step: the picked times, the
+  seismic layers;
 - work on the same project in **one browser tab only**. If the project changes elsewhere,
   the app flags it and does not save what you had on screen: reload the page.
 

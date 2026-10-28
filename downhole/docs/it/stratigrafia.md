@@ -7,13 +7,17 @@ con litologia, descrizione, colore e retino.
 legge**. Velocità, moduli e V~s,eq~ dipendono solo dalle misure e dai sismostrati della
 scheda [Elaborazione](elaborazione.md). Se non ti serve in relazione, puoi lasciarla vuota.
 
-![Scheda Stratigrafia: falda a 6,5 m, cinque strati importati dal metodo diretto e la colonna stratigrafica disegnata a destra](img/20-stratigrafia.png)
+![Scheda Stratigrafia: falda a 6,5 m, cinque strati importati dal metodo diretto con la litologia scelta, e la colonna stratigrafica con la falda disegnata a destra](img/20-stratigrafia.png)
 
 ## Falda
 
 **Profondità della falda** [m] è la profondità dal piano campagna. Con un valore maggiore
-di zero la falda è disegnata sulla colonna e scritta in relazione; con zero la relazione
-riporta «Falda non rilevata entro la profondità indagata».
+di zero la falda è disegnata sulla colonna, con il simbolo ▼ e la quota, e scritta in
+relazione; con zero la relazione riporta «Falda non rilevata entro la profondità indagata».
+
+La colonna a destra si **ridisegna mentre scrivi**: poco dopo che hai cambiato la falda o
+uno strato, l'app salva la scheda in sottofondo e aggiorna il disegno, senza aspettare
+**Salva**.
 
 ## Strati
 
@@ -30,8 +34,9 @@ Una riga per strato:
 Scegliendo la **litologia**, descrizione, retino e colore si precompilano; una descrizione
 che hai scritto a mano non viene toccata.
 
-**Aggiungi strato** crea una riga, la **×** la toglie. Premi **Salva** per registrare: la
-colonna a destra si ridisegna con gli strati in ordine di profondità.
+**Aggiungi strato** crea una riga, la **×** la toglie. **Salva** registra subito; in ogni
+caso la colonna a destra si ridisegna con gli strati in ordine di profondità, e cambiando
+scheda le modifiche in sospeso si salvano da sole.
 
 ## Importare dai sismostrati
 

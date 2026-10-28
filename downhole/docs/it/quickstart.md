@@ -11,16 +11,17 @@ L'app si apre sulla scheda **Dati generali** con un progetto vuoto.
 Apri il menu **File** e scegli **Apri l'esempio**. Se in sessione c'è già un progetto, una
 striscia sotto la barra avvisa che verrà sostituito: premi **Conferma**.
 
-![Menu File aperto: Nuovo progetto, Apri, Salva .dhnx e Apri l'esempio](img/02-menu-file.png)
+![Menu File aperto: Nuovo progetto, Apri, Salva, Salva con nome e Apri l'esempio](img/02-menu-file.png)
 
 ## 2. Guarda le misure
 
 Apri la scheda **Misure**. In alto c'è la **Geometria della prova**: offset della sorgente
 2,6 m, 30 ricezioni, prima misura a 1 m, interdistanza 1 m. Sotto, la tabella **Tempi di
-tragitto** con profondità Z e tempi T~p~ e T~s~ in millisecondi; a destra lo **Schema della
+tragitto** con profondità Z e tempi T~p~ e T~s~ in millisecondi e, accanto, i tempi
+corretti **Tp corr.** e **Ts corr.** che calcola il programma; a destra lo **Schema della
 prova**.
 
-![Scheda Misure dell'esempio: geometria, tabella dei tempi di tragitto e schema della prova](img/10-misure.png)
+![Scheda Misure dell'esempio: geometria, tabella dei tempi di tragitto con i tempi corretti e schema della prova](img/10-misure.png)
 
 ## 3. Leggi l'elaborazione
 
@@ -42,7 +43,7 @@ sismostrati.
    rilascio.
 3. Per toglierla, premi il cestino nella riga e poi **Elimina**.
 
-La V~s,30~ resta 242,86 m/s: nel metodo diretto non dipende da dove metti gli strati. Il
+La V~s,30~ resta 242,86 m/s: H = 30 m è la base dell'ultimo strato, e allora non dipende da dove metti gli strati sopra. Il
 perché è in [Elaborazione](elaborazione.md#velocita-equivalente-vseq).
 
 ## 5. Fai proporre i sismostrati
@@ -66,8 +67,9 @@ alle profondità di misura. Torna a **Diretto** quando hai finito.
 
 ## 7. Genera la relazione
 
-Apri la scheda **Relazione**, lascia attive le sezioni che ti servono e premi **Genera
-Word**. Il browser scarica il documento.
+Apri la scheda **Relazione** e lascia attive le sezioni che ti servono. A destra
+l'**Anteprima della relazione** mostra il documento impaginato, gratis: scorrila. Quando va
+bene, premi **Genera Word** e il browser scarica il documento.
 
 !!! note "Questa azione consuma crediti"
     **Genera Word** ed **Esporta DXF** consumano crediti NX; tutto il resto di questa guida
@@ -75,14 +77,23 @@ Word**. Il browser scarica il documento.
 
 ## 8. Salva il progetto
 
-**File → Salva .dhnx** scarica il progetto sul tuo computer. Fallo prima di chiudere: il
-progetto vive sul server solo per la durata della sessione.
+**File → Salva con nome…** (Ctrl+Maiusc+S) salva il progetto in un file `.dhnx` sul tuo
+computer; da lì in poi **File → Salva** (Ctrl+S) riscrive lo stesso file. Fallo prima di
+chiudere: il progetto vive sul server solo per la durata della sessione.
+
+## Con le tracce
+
+Per provare la scheda Tracce scarica il secondo esempio: pulsante **?**, scheda
+**Risorse**, **Prova con tracce SEG-2 (un file per profondità, 31 m)**. Aprilo con **File →
+Apri…** e vai alla scheda [Tracce](tracce.md): trovi le registrazioni, i tempi già scelti e
+le bandierine sulle tracce.
 
 ## Con i tuoi dati
 
 - **Hai le tracce registrate**: **File → Nuovo progetto**, poi la scheda
-  [Tracce](tracce.md) per caricarle e scegliere i tempi, a mano o partendo da **Proponi i
-  tempi**.
+  [Tracce](tracce.md) per caricarle. Con file SEG-2 l'app riconosce spesso da sola come è
+  stata registrata la prova; poi scegli i tempi, a mano o partendo da **Proponi i tempi**, e
+  portali nella scheda Misure con **Porta i tempi scelti**.
 - **Hai già i tempi** (da un foglio di calcolo o da un rapporto di prova): vai alla scheda
   [Misure](misure.md) e usa **Incolla da foglio di calcolo**.
 - **Hai un progetto del desktop** (`.dwhx` o `.dwh`): **File → Apri…**. Vedi

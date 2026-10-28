@@ -12,15 +12,16 @@ The app opens on the **General data** tab with an empty project.
 Open the **File** menu and choose **Open the example**. If a project is already in the
 session, a strip below the bar warns that it will be replaced: press **Confirm**.
 
-![File menu open: New project, Open, Save .dhnx and Open the example](img/02-menu-file.png)
+![File menu open: New project, Open, Save, Save as and Open the example](img/02-menu-file.png)
 
 ## 2. Look at the measurements
 
 Open the **Measurements** tab. At the top is the **Test geometry**: source offset 2.6 m, 30
 receivers, first measurement at 1 m, spacing 1 m. Below it, the **Travel times** table with
-depth Z and times T~p~ and T~s~ in milliseconds; on the right, the **Test layout**.
+depth Z and times T~p~ and T~s~ in milliseconds and, next to them, the corrected times
+**Tp corr.** and **Ts corr.** computed by the program; on the right, the **Test layout**.
 
-![Measurements tab of the example: geometry, travel-time table and test layout](img/10-misure.png)
+![Measurements tab of the example: geometry, travel-time table with the corrected times and test layout](img/10-misure.png)
 
 ## 3. Read the processing
 
@@ -42,8 +43,8 @@ profile per layer and the seismic-layer column.
    when you release it.
 3. To remove it, press the bin in its row and then **Delete**.
 
-V~s,30~ stays at 242.86 m/s: in the direct method it does not depend on where you put the
-layers. The reason is in [Processing](elaborazione.md#equivalent-velocity-vseq).
+V~s,30~ stays at 242.86 m/s: H = 30 m is the base of the last layer, so it does not depend on
+where you put the layers above. The reason is in [Processing](elaborazione.md#equivalent-velocity-vseq).
 
 ## 5. Have the seismic layers proposed
 
@@ -66,8 +67,9 @@ the measurement depths. Go back to **Direct** when you are done.
 
 ## 7. Generate the report
 
-Open the **Report** tab, leave on the sections you need and press **Generate Word**. The
-browser downloads the document.
+Open the **Report** tab and leave on the sections you need. On the right the **Report
+preview** shows the laid-out document, free of charge: scroll through it. When it is right,
+press **Generate Word** and the browser downloads the document.
 
 !!! note "This action uses credits"
     **Generate Word** and **Export DXF** use NX credits; everything else in this guide is
@@ -75,13 +77,23 @@ browser downloads the document.
 
 ## 8. Save the project
 
-**File → Save .dhnx** downloads the project to your computer. Do it before closing: the
+**File → Save as…** (Ctrl+Shift+S) saves the project to a `.dhnx` file on your computer;
+from then on **File → Save** (Ctrl+S) overwrites the same file. Do it before closing: the
 project lives on the server only for the length of the session.
+
+## With traces
+
+To try the Traces tab download the second example: **?** button, **Resources** tab,
+**Survey with SEG-2 traces (one file per depth, 31 m)**. Open it with **File → Open…** and
+go to the [Traces](tracce.md) tab: you find the recordings, the times already picked and the
+flags on the traces.
 
 ## With your own data
 
 - **You have the recorded traces**: **File → New project**, then the [Traces](tracce.md)
-  tab to upload them and pick the times, by hand or starting from **Propose the times**.
+  tab to upload them. With SEG-2 files the app often recognises by itself how the test was
+  recorded; then pick the times, by hand or starting from **Propose the times**, and bring
+  them into the Measurements tab with **Bring in the picked times**.
 - **You already have the times** (from a spreadsheet or a test report): go to the
   [Measurements](misure.md) tab and use **Paste from spreadsheet**.
 - **You have a desktop project** (`.dwhx` or `.dwh`): **File → Open…**. See

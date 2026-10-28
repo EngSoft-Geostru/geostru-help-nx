@@ -125,12 +125,15 @@ V~s,30~.
 - In the **interval method** the stretches are the **measurement intervals**, with or
   without seismic layers. The arithmetic mean of the interval velocities of a layer is not
   the velocity of the layer (which is thickness divided by time), and cannot go into the
-  formula.
+  formula. If even a single interval between z~0~ and H has no V~s~, the sum is not defined
+  and the interval-method V~s,eq~ stays not computable (“--”): the stretch is not skipped.
 - If the test is shorter than H, the last stretch is extended to H and the app says so.
 
-A consequence that works as a check: in the direct method Σ h~i~/V~s,i~ is the corrected
-S-wave time at depth H. V~s,eq~ therefore **does not depend on where the layers are
-placed**, and the two methods give the same value, apart from rounding.
+A consequence that works as a check: in the direct method, **when H is the base of a
+layer**, Σ h~i~/V~s,i~ is the corrected S-wave time at depth H. V~s,eq~ then does not
+depend on where the layers above are placed, and the two methods give the same value, apart
+from rounding. If H falls inside a layer, the stretch down to H takes the average velocity
+of the whole layer, and the direct-method V~s,eq~ changes with the base of that layer.
 
 ## Automatic proposals
 

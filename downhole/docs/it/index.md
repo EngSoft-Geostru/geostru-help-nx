@@ -19,21 +19,28 @@ dinamici, V~s,eq~ per la caratterizzazione sismica del sito.
 
 Sei schede, da sinistra a destra, seguono l'ordine del lavoro:
 
-1. **Dati generali** — committente, cantiere, data, operatore: i campi della copertina.
-2. **Tracce** — carichi i file registrati (SEG-2 o testo) e scegli sulle tracce il tempo di
+1. **Dati generali** — i **Dati della prova**: committente, cantiere, data, operatore,
+   coordinate WGS84 e altitudine. Aprono la relazione.
+2. **Tracce** — carichi i file registrati (SEG-2, testo o lo ZIP del piezocono sismico),
+   l'app riconosce come è stata registrata la prova, e scegli sulle tracce il tempo di
    primo arrivo delle onde P e S a ogni profondità: a mano, oppure partendo dai tempi che
    l'app propone e che tu controlli. Se hai già i tempi, salti questa scheda.
 3. **Misure** — la geometria della prova e la tabella profondità / T~p~ / T~s~: digitata,
-   incollata da un foglio di calcolo o arrivata dalla scheda Tracce.
+   incollata da un foglio di calcolo o portata dalla scheda Tracce, con i tempi corretti
+   accanto.
 4. **Elaborazione** — tempi corretti, dromocrone, sismostrati inseriti sul grafico o proposti
    dall'app, parametri per strato e per intervallo, V~s,eq~.
 5. **Stratigrafia** — la colonna litologica descrittiva.
-6. **Relazione** — il documento Word e le tavole DXF.
+6. **Relazione** — l'anteprima del documento, il Word e le tavole DXF.
 
 In alto ci sono il menu **File**, il pulsante **?** dell'aiuto, l'**Assistente**,
 **GeoDropbox**, la lingua e il menu utente.
 
-![Finestra di Downhole NX: barra in alto con File, aiuto, Assistente e GeoDropbox, le sei schede e la scheda Dati generali dell'esempio](img/01-finestra-dati-generali.png)
+![Finestra di Downhole NX: barra in alto con File, aiuto, Assistente e GeoDropbox, le sei schede e la scheda Dati generali con la card Dati della prova, le coordinate WGS84 e l'altitudine](img/01-finestra-dati-generali.png)
+
+Nella scheda **Dati generali** latitudine e longitudine si scrivono in **gradi decimali**
+nel sistema WGS84 (per esempio 41.9028 e 12.4964) e l'**altitudine** è la quota del
+boccaforo in m s.l.m. Sono tutti campi descrittivi: nessun calcolo li legge.
 
 ## Che cosa calcola
 
@@ -45,9 +52,11 @@ In alto ci sono il menu **File**, il pulsante **?** dell'aiuto, l'**Assistente**
   E~v~.
 - **V~s,eq~** fra due profondità a tua scelta (V~s,30~ con 0 e 30 m).
 
-Due aiuti non fanno parte del calcolo ma lo preparano: **Proponi i tempi**, che propone i
-primi arrivi sulle tracce e marca quelli dubbi, e **Proponi sismostrati**, che propone le
-basi degli strati sulla dromocrona. Sono proposte: le accetti, le correggi o le scarti.
+Tre aiuti non fanno parte del calcolo ma lo preparano: il **riconoscimento
+dell'acquisizione**, che al caricamento capisce dai segnali come sono organizzati i file;
+**Proponi i tempi**, che propone i primi arrivi sulle tracce e marca quelli dubbi; e
+**Proponi sismostrati**, che propone le basi degli strati sulla dromocrona. Sono proposte: le
+accetti, le correggi o le scarti.
 
 Le formule sono in [Cenni teorici](teoria.md); i casi di prova in
 [Validazione](validazione.md).
@@ -59,7 +68,8 @@ Le formule sono in [Cenni teorici](teoria.md); i casi di prova in
   l'app stessa marca come dubbi.
 - I sismostrati proposti sono la suddivisione che meglio segue i tempi, non
   un'interpretazione geologica.
-- Legge tracce **SEG-2** e **di testo** (TXT, CSV). Non legge altri formati di acquisizione.
+- Legge tracce **SEG-2**, **di testo** (TXT, CSV) e gli **archivi ZIP del piezocono
+  sismico** (esportazioni RAV o SPAS). Non legge altri formati di acquisizione.
 - Assume **percorsi rettilinei** fra sorgente e ricevitore e non corregge per l'inclinazione
   del foro né per la quota della sorgente.
 - I moduli sono **dinamici**, a piccole deformazioni.
@@ -80,8 +90,8 @@ Downhole NX funziona a **crediti NX**. Li consumano solo tre azioni:
 | Ogni **messaggio all'assistente** | pannello Assistente |
 
 Caricare le tracce, scegliere i tempi, far proporre tempi e sismostrati, elaborare, spostare
-i sismostrati, guardare i grafici e salvare il progetto **non costano nulla**. Se un'operazione a crediti non va a buon fine
-non viene addebitato nulla. Il manuale non riporta i prezzi: sono nel listino su
+i sismostrati, guardare i grafici e l'anteprima della relazione, salvare il progetto **non
+costano nulla**. Se un'operazione a crediti non va a buon fine non viene addebitato nulla. Il manuale non riporta i prezzi: sono nel listino su
 [geostru.ai](https://www.geostru.ai/), e il tuo saldo è nel menu utente in alto a destra.
 Dettagli in [Relazione, DXF e crediti](relazione.md#crediti).
 
@@ -96,14 +106,15 @@ Dettagli in [Relazione, DXF e crediti](relazione.md#crediti).
 
 !!! warning "Salva prima di uscire"
     Il progetto vive sul server per la durata della sessione: dopo 30 minuti di inattività
-    non c'è più. Scarica il file con **File → Salva .dhnx** o usa **GeoDropbox**. Vedi
+    non c'è più. Salva il file con **File → Salva** (Ctrl+S) o usa **GeoDropbox**. Vedi
     [File, progetti del desktop e GeoDropbox](file.md).
 
 ## L'aiuto dentro l'app
 
 Il pulsante **?** nella barra in alto apre l'aiuto. La scheda **Guida** riassume i passi e
 porta alle pagine di questo manuale; la scheda **Risorse** elenca le funzioni e fa scaricare
-il progetto di esempio come file `.dhnx`; la scheda **Versione** mostra la versione in uso.
+i due progetti di esempio, `ExDefault.dhnx` e `ex-tracce-seg2.dhnx` (con le tracce SEG-2);
+la scheda **Versione** mostra la versione in uso.
 
 ![Aiuto di Downhole NX, scheda Guida: pulsante per aprire il manuale online, che cos'è, come si usa e collegamenti rapidi alle pagine del manuale](img/23-aiuto-guida.png)
 

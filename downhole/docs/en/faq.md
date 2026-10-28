@@ -3,8 +3,23 @@
 ## Traces and formats
 
 **Which trace files can I upload?**
-SEG-2 (`.sg2`, `.seg2`, `.dat`) and text files with the traces in columns (`.txt`, `.csv`).
-Each file up to 20 MB. See [Traces and time picking](tracce.md#uploading-the-files).
+SEG-2 (`.sg2`, `.seg2`, `.dat`), text files with the traces in columns (`.txt`, `.csv`) and
+the ZIP archive of the seismic cone RAV or SPAS exports. Each file up to 20 MB, the ZIP up to
+60 MB. See [Traces and time picking](tracce.md#uploading-the-files).
+
+**What is the difference between channels and shots?**
+**Channels** are the sensors of the geophone: in a three-component geophone one vertical and
+two horizontal, each on one channel. The **shots** P, S1 and S2 are the blows struck at the
+surface: one vertical for P waves, two horizontal in opposite directions for S waves. Every
+shot records all the channels. **P-wave channel** is the number of the vertical channel;
+**S-wave shots** is how many S shots you struck. See
+[Channels and shots](tracce.md#channels-and-shots-what-they-are).
+
+**My files are called 001.DAT, 002.DAT… How does the app know their depth?**
+Not from the name: a number with leading zeros is the instrument's sequence number. On
+upload the app tries to recognise from the signals the P, S1, S2 triplets and the recording
+direction; then it offers the **Depths: step** row with **Assign**. You give the step. See
+[Recognising the acquisition](tracce.md#recognising-the-acquisition).
 
 **My format is not among them. What do I do?**
 Downhole NX does not read SEG-Y or the proprietary formats of acquisition instruments. Two
@@ -29,12 +44,20 @@ references, and the traces are uploaded again on reopening. Always keep the orig
 See [Files](file.md#traces-in-the-file).
 
 **I uploaded the files but the plot is empty.**
-The depths are missing. Type those of the first two rows in the **Depths and files** card:
-the others take the step.
+The depths are missing. If the recognition strip is there, press **Assign**; otherwise type
+those of the first two rows in the **Depths and files** card: the others take the step.
 
 **The depths assigned to the files are wrong.**
-Grouping follows the order of the names. Check **S-wave shots** (1 or 2), correct the cells
-by hand, or press **Group again** after changing the options.
+Grouping follows the order of the names. Check **S-wave shots** (1 or 2) and **One file per
+depth**, correct the cells by hand, or press **Group again** after changing the options. If
+the recognition changed something wrong, **Undo** in its strip restores the previous
+settings.
+
+**I have a seismic cone test. What do I upload?**
+The ZIP with the RAV or SPAS exports, on its own. The app stacks the shots of each depth,
+assigns S1 and S2 and writes the rows with their depths. The files hold neither the source
+offset nor the trigger delay: check them before the calculation. See
+[Seismic cone](tracce.md#seismic-cone-zip-archive).
 
 **Can I trust the proposed times?**
 As you would a first reading made by someone else: all of them must be looked at again on
@@ -50,7 +73,8 @@ depths, when it does not increase with depth or when the signal is weak: on S wa
 happens often. “Doubtful” does not mean wrong, it means to be looked at.
 
 **How do I remove the “?” from a time I have checked?**
-Pick it yourself: switch on **Tp** or **Ts** and click on the trace, even at the same point.
+Pick it yourself: press **Pick Tp** or **Pick Ts** and click on the trace, even at the same
+point.
 
 **Does having times or seismic layers proposed use credits?**
 No, with the buttons in the tab it is free. If you ask the assistant, you pay for the
@@ -79,6 +103,14 @@ No. In the direct method the sum of the travel times through the layers is the c
 S-wave time at depth H, wherever the bases are. In the interval method V~s,eq~ is computed
 on the measurement intervals. It changes only if the test is shorter than H: there the last
 layer is extended, and its velocity depends on the base just above it. See
+[Processing](elaborazione.md#equivalent-velocity-vseq).
+
+**In the interval method V~s,eq~ is “--”, in the direct method it is not. Why?**
+In the interval method V~s,eq~ is computed on the measurement intervals, and a single
+interval without V~s~ (a corrected S-wave time that does not increase) is enough to make it
+not computable: skipping stretches would give a wrong number. In the direct method only the
+corrected S-wave time at H counts. Check again on the traces the times flagged by the
+*“Decreasing corrected time”* warning. See
 [Processing](elaborazione.md#equivalent-velocity-vseq).
 
 **Are the proposed seismic layers the stratigraphy of the site?**

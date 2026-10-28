@@ -22,8 +22,15 @@ At the top right, **Method** has two positions:
   detail, but is sensitive even to small errors in the times.
 
 Each method has **its own** seismic layers: those of the direct method and those of the
-interval method are two separate lists. Switching method changes the chart on screen and the
-seismic-layer table. The report can include both.
+interval method are two separate lists, and moving a layer in one method does not touch the
+other. Switching method changes the chart on screen and the seismic-layer table, whose title
+says which method it belongs to (**Seismic layers of the direct method**, **Seismic layers
+of the interval method**). The report can include both.
+
+To start the interval method from the layers already defined in the direct method there are
+two buttons: **Import from the direct method** in the chart bar, and **Use those of the
+direct method** when you look at an interval chart from the direct method (see
+[Bringing the direct-method layers into the interval method](#bringing-the-direct-method-layers-into-the-interval-method)).
 
 ## Equivalent velocity V~s,eq~
 
@@ -50,6 +57,13 @@ Three things to know:
   interval method it is computed on the measurement intervals. Both methods give the same
   number, apart from rounding. The exception is a test shorter than H: there the velocity of
   the last layer matters, and it depends on the base just above it.
+
+The value is always the one of the **selected method**. In the interval method, if between
+the two depths there is even a single interval without V~s~ (for instance a corrected S-wave
+time that does not increase), V~s,eq~ **stays “--”** with the note *“Cannot be computed: Vs
+is missing in at least one stretch”*: it is not computed by skipping stretches. In the
+direct method the same time enters the polyline and V~s,eq~ stays defined. The case is
+described in [Validation](validazione.md#case-9-real-test-with-seg-2-traces).
 
 ![The same card for a test that stops at 18 m: Vs,30 with the note that the last layer was extended to 30 m, and the yellow warning below](img/19-elaborazione-avviso-vs-estesa.png)
 
@@ -78,9 +92,24 @@ the top right (for instance “z = 12.02 m · t = 71.5 ms”).
 
 Seismic layers are edited on the charts **of the active method**. If you open a chart of the
 other method you see it read-only, with the **Switch to the direct method** or **Switch to
-the interval method** button.
+the interval method** button. If the interval method has no seismic layers yet, **Use those
+of the direct method** appears as well, and copies them with one click.
+
+![Bar of the Interval velocities chart opened from the direct method: the note that the interval method has no seismic layers yet and the Switch to the interval method and Use those of the direct method buttons](img/34-elaborazione-usa-diretto.png)
 
 ![Interval velocities chart in the interval method: stepped Vp and Vs, the bands of the mean per seismic layer, the profile per layer and the seismic-layer column](img/17-elaborazione-intervallo.png)
+
+### Stretches that cannot be computed
+
+In the five interval profiles an interval without a value is not a gap in the chart: it is a
+**grey band** labelled **Vp n.c.** or **Vs n.c.** (“not computable”), and the legend calls it
+**Interval not computable**. It happens when a receiver has no time or the corrected time
+does not increase with respect to the previous receiver.
+
+![The ex-tracce-seg2 example in the interval method: Vs,30 “--” with the note “Cannot be computed”, the decreasing corrected time warnings and the Interval velocities chart with the grey Vp n.c. and Vs n.c. bands](img/33-elaborazione-non-calcolabile.png)
+
+Averages per seismic layer use only the intervals that can be computed. Many bands in a row,
+as in the example, say that the times should be checked again on the traces.
 
 ## Inserting and editing seismic layers
 
@@ -98,7 +127,7 @@ different straight lines.
 4. You can keep clicking for more layers. Leave with **Esc** or by pressing the button
    again: while the mode is on, lines cannot be dragged.
 
-![Insert seismic layer mode on: the orange guide line at 12.00 m under the pointer and the reading z = 12.02 m at the top right](img/15-elaborazione-inserisci.png)
+![Insert seismic layer mode on: the help line below the bar, the orange guide line at 12.00 m under the pointer and the reading z = 12.02 m · t = 78.0 ms at the top right](img/15-elaborazione-inserisci.png)
 
 ### Inserting by typing the base
 
@@ -116,7 +145,7 @@ way to get an exact base.
 Press the **bin** at the end of the row. The confirmation appears below the row: **Delete**
 or **Cancel**. The two neighbouring layers merge into one.
 
-![Seismic layers of the direct method table with six layers and, below the third, the confirmation to delete the layer with its base at 12.00 m](img/16-elaborazione-sismostrati.png)
+![Seismic layers of the direct method table with six layers and, below the third, the confirmation “Delete the seismic layer with its base at 17.78 m?” with the Delete and Cancel buttons](img/16-elaborazione-sismostrati.png)
 
 ### Where a base can be
 
@@ -140,7 +169,11 @@ interval are there anyway. The bottom layer appears when you define the first ba
 
 In the interval method, **Import from the direct method** copies the bases of the direct
 method, with lithology, description, colour and pattern. The bases are snapped to the
-measurement depths: 10.30 m becomes 10 m, 17.78 m becomes 18 m.
+measurement depths: 10.30 m becomes 10 m, 17.78 m becomes 18 m. **Use those of the direct
+method**, the button that appears when the interval method has no seismic layers and you
+look at one of its charts from the direct method, does the same.
+
+The copy is one-off: afterwards the two lists stay independent.
 
 ### Describing a layer
 
@@ -258,7 +291,7 @@ between 0 and 0.5.
 | *Decreasing corrected time between two consecutive receivers: the interval-method row stays “--” at receivers …* | At that receiver the corrected time is lower than or equal to the previous one: the interval has no velocity. Nearly always a misread time: check it on the traces. |
 | *Seismic layer n has a decreasing intercept: its values copy those of the previous layer (\*)* | Between the two bases the corrected time does not increase: the layer has no velocity of its own. It is marked with an asterisk. Move the base or check the times. |
 | *The test ends at … m: the last layer was extended to … m for Vs,eq* | The final depth is beyond the last measurement. V~s,eq~ assumes the velocity of the last layer carries on down to H. |
-| *Vs,eq cannot be computed: Vs is missing in at least one stretch between the chosen depths* | A stretch has no V~s~ (missing or non-increasing times). |
+| *Vs,eq cannot be computed: Vs is missing in at least one stretch between the chosen depths* | A stretch has no V~s~ (missing or non-increasing times). In the interval method one interval is enough: V~s,eq~ stays “--”. |
 | *The base of a seismic layer (… m) was beyond the last measurement and was brought back to … m* | It happens when opening a desktop project, or after shortening the measurements. |
 | *The final depth for Vs,eq must be greater than the initial one* | Fix the two fields of the first card. |
 

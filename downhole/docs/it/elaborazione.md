@@ -21,8 +21,15 @@ In alto a destra, **Metodo** ha due posizioni:
   metro per metro, ma è sensibile anche a piccoli errori sui tempi.
 
 Ogni metodo ha i **suoi** sismostrati: quelli del metodo diretto e quelli del metodo
-intervallo sono due elenchi separati. Cambiando metodo cambiano il grafico aperto e la
-tabella dei sismostrati. Nella relazione puoi includere entrambi.
+intervallo sono due elenchi separati, e spostare uno strato in un metodo non tocca l'altro.
+Cambiando metodo cambiano il grafico aperto e la tabella dei sismostrati, che nel titolo
+dice di quale metodo è (**Sismostrati del metodo diretto**, **Sismostrati del metodo
+intervallo**). Nella relazione puoi includere entrambi.
+
+Per partire nel metodo intervallo dagli strati già definiti nel diretto ci sono due
+pulsanti: **Importa dal metodo diretto** nella barra del grafico, e **Usa quelli del metodo
+diretto** quando guardi un grafico d'intervallo dal metodo diretto (vedi
+[Portare gli strati del diretto nell'intervallo](#portare-gli-strati-del-diretto-nellintervallo)).
 
 ## Velocità equivalente V~s,eq~
 
@@ -47,8 +54,15 @@ Tre cose da sapere:
 - **I sismostrati non la cambiano.** Nel metodo diretto la somma dei tempi di attraversamento
   degli strati è il tempo corretto delle onde S alla profondità H, dovunque siano le basi.
   Nel metodo intervallo è calcolata sugli intervalli di misura. I due metodi danno lo stesso
-  numero, a meno degli arrotondamenti. Fa eccezione la prova più corta di H: lì conta la velocità dell'ultimo strato, che
-  dipende dalla base che gli sta sopra.
+  numero, a meno degli arrotondamenti. Fa eccezione la prova più corta di H: lì conta la
+  velocità dell'ultimo strato, che dipende dalla base che gli sta sopra.
+
+Il valore è sempre quello del **metodo selezionato**. Nel metodo intervallo, se fra le due
+profondità c'è anche un solo intervallo senza V~s~ (per esempio un tempo corretto delle S
+che non cresce), la V~s,eq~ **resta «--»** con la nota *«Non calcolabile: manca la Vs di
+almeno un tratto»*: non si calcola saltando i tratti. Nel metodo diretto lo stesso tempo
+entra nella spezzata e la V~s,eq~ resta definita. Il caso è descritto in
+[Validazione](validazione.md#caso-9-prova-reale-con-tracce-seg-2).
 
 ![La stessa card per una prova che arriva a 18 m: Vs,30 con la nota «l'ultimo strato è stato esteso fino a 30 m» e l'avviso giallo sotto](img/19-elaborazione-avviso-vs-estesa.png)
 
@@ -77,9 +91,24 @@ Muovendo il puntatore sul grafico, in alto a destra leggi profondità e valore i
 
 I sismostrati si modificano sui grafici **del metodo attivo**. Se apri un grafico dell'altro
 metodo, lo vedi in sola lettura, con il pulsante **Passa al metodo diretto** o **Passa al
-metodo intervallo**.
+metodo intervallo**. Se il metodo intervallo non ha ancora sismostrati, accanto compare
+anche **Usa quelli del metodo diretto**, che li copia con un clic.
+
+![Barra del grafico Velocità d'intervallo aperto dal metodo diretto: la nota che il metodo intervallo non ha ancora sismostrati e i pulsanti Passa al metodo intervallo e Usa quelli del metodo diretto](img/34-elaborazione-usa-diretto.png)
 
 ![Grafico Velocità d'intervallo nel metodo intervallo: Vp e Vs a gradini, le bande della media per sismostrato, il profilo per strato e la colonna dei sismostrati](img/17-elaborazione-intervallo.png)
+
+### I tratti non calcolabili
+
+Nei cinque profili d'intervallo un intervallo senza valore non è un buco nel grafico: è una
+**fascia grigia** con la scritta **Vp n.c.** o **Vs n.c.** («non calcolabile»), e la legenda
+la chiama **Tratto non calcolabile**. Succede quando a una ricezione manca il tempo o il
+tempo corretto non cresce rispetto alla ricezione precedente.
+
+![Esempio ex-tracce-seg2 nel metodo intervallo: Vs,30 «--» con la nota «Non calcolabile», gli avvisi del tempo corretto decrescente e il grafico Velocità d'intervallo con le fasce grigie Vp n.c. e Vs n.c.](img/33-elaborazione-non-calcolabile.png)
+
+Le medie per sismostrato usano solo gli intervalli calcolabili. Molte fasce di seguito, come
+nell'esempio, dicono che i tempi vanno ricontrollati sulle tracce.
 
 ## Inserire e modificare i sismostrati
 
@@ -98,7 +127,7 @@ diverse.
 4. Puoi continuare a fare clic per altri strati. Esci con **Esc** o ripremendo il pulsante:
    finché il modo è attivo le linee non si trascinano.
 
-![Modo Inserisci sismostrato attivo: la linea guida arancio a 12,00 m sotto il puntatore e la lettura z = 12,02 m in alto a destra](img/15-elaborazione-inserisci.png)
+![Modo Inserisci sismostrato attivo: la riga di aiuto sotto la barra, la linea guida arancio a 12,00 m sotto il puntatore e la lettura z = 12,02 m · t = 78,0 ms in alto a destra](img/15-elaborazione-inserisci.png)
 
 ### Inserire scrivendo la base
 
@@ -116,7 +145,7 @@ modo per avere una base esatta.
 Premi il **cestino** in fondo alla riga. Sotto la riga compare la conferma: **Elimina** o
 **Annulla**. I due strati vicini si fondono in uno.
 
-![Tabella Sismostrati del metodo diretto con sei strati e, sotto il terzo, la conferma «Eliminare il sismostrato con base a 12,00 m?»](img/16-elaborazione-sismostrati.png)
+![Tabella Sismostrati del metodo diretto con sei strati e, sotto il terzo, la conferma «Eliminare il sismostrato con base a 17,78 m?» con i pulsanti Elimina e Annulla](img/16-elaborazione-sismostrati.png)
 
 ### Dove può stare una base
 
@@ -140,7 +169,11 @@ comunque. Lo strato di fondo compare quando definisci la prima base.
 
 Nel metodo intervallo, **Importa dal metodo diretto** copia le basi del metodo diretto, con
 litologia, descrizione, colore e retino. Le basi vengono agganciate alle profondità di
-misura: 10,30 m diventa 10 m, 17,78 m diventa 18 m.
+misura: 10,30 m diventa 10 m, 17,78 m diventa 18 m. Lo stesso fa **Usa quelli del metodo
+diretto**, il pulsante che compare quando il metodo intervallo non ha sismostrati e ne guardi
+un grafico dal metodo diretto.
+
+La copia è una tantum: dopo, i due elenchi restano indipendenti.
 
 ### Descrivere uno strato
 
@@ -258,7 +291,7 @@ Gli **avvisi** (striscia gialla) non fermano nulla: dicono come leggere un risul
 | *Tempo corretto decrescente fra due ricezioni consecutive: la riga del metodo intervallo resta «--» alle ricezioni …* | A quella ricezione il tempo corretto è minore o uguale al precedente: l'intervallo non ha una velocità. Quasi sempre è un tempo letto male: ricontrollalo sulle tracce. |
 | *Il sismostrato n ha un'intercetta decrescente: i suoi valori copiano quelli dello strato precedente (\*)* | Fra le due basi il tempo corretto non cresce: lo strato non ha una velocità propria. È marcato con un asterisco. Sposta la base o ricontrolla i tempi. |
 | *La prova finisce a … m: l'ultimo strato è stato esteso fino a … m per la Vs,eq* | La profondità finale supera l'ultima misura. La V~s,eq~ assume che la velocità dell'ultimo strato continui fino a H. |
-| *Vs,eq non calcolabile: manca la Vs di almeno un tratto fra le profondità scelte* | Un tratto non ha V~s~ (tempi mancanti o non crescenti). |
+| *Vs,eq non calcolabile: manca la Vs di almeno un tratto fra le profondità scelte* | Un tratto non ha V~s~ (tempi mancanti o non crescenti). Nel metodo intervallo basta un intervallo: la V~s,eq~ resta «--». |
 | *La base di un sismostrato (… m) era oltre l'ultima misura ed è stata riportata a … m* | Succede aprendo un progetto del desktop, o dopo aver accorciato le misure. |
 | *La profondità finale della Vs,eq deve essere maggiore di quella iniziale* | Correggi i due campi della prima card. |
 

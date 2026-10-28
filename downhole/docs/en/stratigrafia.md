@@ -8,13 +8,18 @@ calculation reads it**. Velocities, moduli and V~s,eq~ depend only on the measur
 on the seismic layers of the [Processing](elaborazione.md) tab. If you do not need it in the
 report, you can leave it empty.
 
-![Stratigraphy tab: water table at 6.5 m, five layers imported from the direct method and the stratigraphic column drawn on the right](img/20-stratigrafia.png)
+![Stratigraphy tab: water table at 6.5 m, five layers imported from the direct method with their lithology chosen, and the stratigraphic column with the water table drawn on the right](img/20-stratigrafia.png)
 
 ## Water table
 
 **Water table depth** [m] is the depth below ground level. With a value greater than zero
-the water table is drawn on the column and written in the report; with zero the report
-states that no water table was found within the investigated depth.
+the water table is drawn on the column, with the ▼ symbol and its depth, and written in the
+report; with zero the report states that no water table was found within the investigated
+depth.
+
+The column on the right is **redrawn as you type**: shortly after you change the water table
+or a layer, the app saves the tab in the background and updates the drawing, without waiting
+for **Save**.
 
 ## Layers
 
@@ -31,8 +36,9 @@ One row per layer:
 Choosing the **lithology** pre-fills description, pattern and colour; a description you
 typed yourself is not touched.
 
-**Add layer** creates a row, **×** removes it. Press **Save** to store: the column on the
-right is redrawn with the layers in depth order.
+**Add layer** creates a row, **×** removes it. **Save** stores right away; in any case the
+column on the right is redrawn with the layers in depth order, and switching tab saves the
+pending changes by itself.
 
 ## Importing from the seismic layers
 

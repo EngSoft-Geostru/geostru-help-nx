@@ -9,18 +9,44 @@ Mentre lavori il progetto vive **sul server, nella tua sessione**. La copia che 
 |---|---|
 | **Nuovo progetto** | Svuota il progetto in sessione. |
 | **Apri…** | Apre un file `.dhnx`, oppure un `.dwhx` / `.dwh` del programma desktop. |
-| **Salva .dhnx** | Scarica il progetto sul tuo computer. |
-| **Apri l'esempio** | Carica il progetto di esempio: 30 ricezioni, 5 sismostrati. |
+| **Salva** (Ctrl+S) | Riscrive il file aperto o salvato per ultimo; se non ce n'è uno, fa come **Salva con nome**. |
+| **Salva con nome…** (Ctrl+Maiusc+S) | Salva il progetto in un nuovo file `.dhnx`. |
+| **Apri l'esempio** | Carica il progetto di esempio del desktop: 30 ricezioni, 5 sismostrati. |
 
 Nuovo, Apri ed esempio **sostituiscono** il progetto in sessione. Se c'è qualcosa da
 perdere, una striscia sotto la barra chiede conferma: ciò che non hai salvato in un file
 andrà perso.
 
-![Menu File aperto: Nuovo progetto, Apri con le estensioni .dhnx .dwhx .dwh, Salva .dhnx e Apri l'esempio](img/02-menu-file.png)
+![Menu File aperto: Nuovo progetto, Apri con le estensioni .dhnx .dwhx .dwh, Salva con Ctrl+S, Salva con nome con Ctrl+Shift+S e Apri l'esempio](img/02-menu-file.png)
+
+### Salva e Salva con nome
+
+Nei browser che permettono a una pagina di scrivere un file scelto dall'utente (Chrome,
+Edge):
+
+- **Salva con nome…** apre la finestra del sistema con il nome proposto dall'app (il
+  cantiere, o il committente) e scrive il file dove scegli;
+- da quel momento il nome del file compare nella barra in alto, accanto al menu **File**:
+  è il file su cui scrive **Salva**;
+- **Salva** lo riscrive senza chiedere nulla. La prima volta dopo una riapertura il browser
+  può chiedere il permesso di modificare il file;
+- **Apri…** di un `.dhnx` fa la stessa cosa: il file aperto diventa quello di **Salva**.
+
+Dopo il salvataggio una striscia conferma *«Progetto salvato in …»*.
+
+Negli altri browser **Salva** e **Salva con nome…** scaricano il file nella cartella dei
+download.
+
+Il file resta legato al **progetto** che hai aperto: se crei un progetto nuovo, apri
+l'esempio o la sessione scade, il nome sparisce dalla barra e **Salva** chiede di nuovo dove
+salvare. Così un progetto vuoto non sovrascrive mai il file buono.
+
+Un `.dwhx` / `.dwh` del desktop aperto qui non diventa il file di **Salva**: il primo
+salvataggio chiede il nome del nuovo `.dhnx`.
 
 ## Il file .dhnx
 
-**Salva .dhnx** scarica un unico file con tutto il progetto:
+Il file `.dhnx` contiene tutto il progetto:
 
 - dati generali, geometria e tabella delle misure;
 - opzioni (metodo, peso di volume, profondità della V~s,eq~);
@@ -32,7 +58,7 @@ andrà perso.
 I risultati non sono nel file: si ricalcolano all'apertura, sempre con la versione corrente
 del programma.
 
-Prima di scaricare, l'app salva la scheda che hai a video: nel file c'è anche l'ultima
+Prima di salvare, l'app registra la scheda che hai a video: nel file c'è anche l'ultima
 modifica.
 
 ### Le tracce nel file
@@ -52,6 +78,20 @@ sono ancora al loro posto.
     sicura delle tracce quando il rilievo è grande.
 
 Un file `.dhnx` si apre fino a 40 MB.
+
+## I progetti di esempio
+
+Due esempi si scaricano dal pulsante **?**, scheda **Risorse**, voce **Progetto di
+esempio**:
+
+| File | Che cosa contiene |
+|---|---|
+| `ExDefault.dhnx` | L'esempio del programma desktop: 30 ricezioni a passo 1 m, offset 2,6 m, cinque sismostrati. Senza tracce. È lo stesso progetto di **File → Apri l'esempio**. |
+| `ex-tracce-seg2.dhnx` | Una prova reale con le **tracce SEG-2** dentro: 31 file a tre canali, uno per profondità da 1 a 31 m, offset 1,5 m, tempi già scelti e sismostrati dei due metodi. Serve a provare la scheda Tracce. |
+
+Scarica il file e aprilo con **File → Apri…**.
+
+![Aiuto di Downhole NX, scheda Risorse: le funzionalità, i due progetti di esempio da scaricare, crediti e sessione, risorse online](img/35-aiuto-risorse.png)
 
 ## Aprire un progetto del desktop
 
@@ -98,8 +138,8 @@ Il pulsante **GeoDropbox**, nella barra in alto, apre i tuoi progetti nel cloud 
 - **apre** un `.dhnx`, o un `.dwhx` / `.dwh` del desktop, salvato lì.
 
 Così ritrovi il lavoro da qualunque postazione e lo condividi con lo studio. Come per
-**Salva .dhnx**, l'app registra prima la scheda a video. GeoDropbox è un servizio separato
-dai crediti delle app.
+**Salva**, l'app registra prima la scheda a video. GeoDropbox è un servizio separato dai
+crediti delle app.
 
 ## La sessione
 
@@ -113,7 +153,7 @@ nulla»*. Riapri il tuo `.dhnx` e prosegui.
 
 Due abitudini evitano di perdere lavoro:
 
-- **salva il `.dhnx`** (o su GeoDropbox) ogni volta che hai finito un passaggio: i tempi
+- **salva** (Ctrl+S, o su GeoDropbox) ogni volta che hai finito un passaggio: i tempi
   scelti, i sismostrati;
 - lavora sullo stesso progetto in **una sola scheda del browser**. Se il progetto cambia
   altrove, l'app lo segnala e non salva ciò che avevi a video: ricarica la pagina.

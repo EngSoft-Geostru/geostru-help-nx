@@ -3,8 +3,23 @@
 ## Tracce e formati
 
 **Quali file di tracce posso caricare?**
-SEG-2 (`.sg2`, `.seg2`, `.dat`) e file di testo con le tracce in colonna (`.txt`, `.csv`).
-Ogni file fino a 20 MB. Vedi [Tracce e scelta dei tempi](tracce.md#caricare-i-file).
+SEG-2 (`.sg2`, `.seg2`, `.dat`), file di testo con le tracce in colonna (`.txt`, `.csv`) e
+l'archivio ZIP delle esportazioni RAV o SPAS del piezocono sismico. Ogni file fino a 20 MB,
+lo ZIP fino a 60 MB. Vedi [Tracce e scelta dei tempi](tracce.md#caricare-i-file).
+
+**Che differenza c'è fra canali e battute?**
+I **canali** sono i sensori del geofono: in un geofono triassiale uno verticale e due
+orizzontali, ciascuno su un canale. Le **battute** P, S1 e S2 sono i colpi dati in
+superficie: uno verticale per le onde P, due orizzontali di verso opposto per le onde S. Ogni
+battuta registra tutti i canali. **Canale onda P** è il numero del canale verticale; **Battute
+onda S** è quante battute S hai dato. Vedi
+[Canali e battute](tracce.md#canali-e-battute-che-cosa-sono).
+
+**I miei file si chiamano 001.DAT, 002.DAT… Come sa l'app a che profondità sono?**
+Non lo sa dal nome: un numero con zeri a sinistra è il progressivo dello strumento. Al
+caricamento l'app prova a riconoscere dai segnali le terne P, S1, S2 e il verso della
+registrazione; poi ti propone la riga **Profondità: passo** con **Assegna**. Il passo lo dai
+tu. Vedi [Il riconoscimento dell'acquisizione](tracce.md#il-riconoscimento-dellacquisizione).
 
 **Il mio formato non è fra quelli. Che cosa faccio?**
 Downhole NX non legge SEG-Y né i formati proprietari degli strumenti di acquisizione. Due
@@ -28,12 +43,21 @@ riferimenti e le tracce si ricaricano alla riapertura. Tieni sempre i file origi
 [File](file.md#le-tracce-nel-file).
 
 **Ho caricato i file ma il grafico è vuoto.**
-Mancano le profondità. Scrivi quella delle prime due righe nella card **Profondità e file**:
-le altre prendono il passo.
+Mancano le profondità. Se c'è la striscia del riconoscimento, premi **Assegna**; altrimenti
+scrivi quella delle prime due righe nella card **Profondità e file**: le altre prendono il
+passo.
 
 **Le profondità assegnate ai file sono sbagliate.**
-Il raggruppamento segue l'ordine dei nomi. Controlla **Battute onda S** (1 o 2), correggi a
-mano le celle, oppure premi **Raggruppa di nuovo** dopo aver cambiato le opzioni.
+Il raggruppamento segue l'ordine dei nomi. Controlla **Battute onda S** (1 o 2) e **Un file
+per profondità**, correggi a mano le celle, oppure premi **Raggruppa di nuovo** dopo aver
+cambiato le opzioni. Se il riconoscimento ha cambiato qualcosa che non va, **Annulla** nella
+sua striscia rimette le impostazioni di prima.
+
+**Ho un piezocono sismico. Che cosa carico?**
+Lo ZIP con le esportazioni RAV o SPAS, da solo. L'app somma le battute di ogni profondità,
+assegna S1 e S2 e scrive le righe con le profondità. Nei file non ci sono né la distanza
+della sorgente né il ritardo del trigger: controllali prima del calcolo. Vedi
+[Piezocono sismico](tracce.md#piezocono-sismico-archivio-zip).
 
 **Posso fidarmi dei tempi proposti?**
 Come di una prima lettura fatta da un altro: vanno riguardati tutti sulle tracce. Sul
@@ -49,7 +73,8 @@ vicine, quando non cresce con la profondità o quando il segnale è debole: sull
 spesso. «Dubbio» non vuol dire sbagliato, vuol dire da guardare.
 
 **Come tolgo il «?» da un tempo che ho controllato?**
-Sceglilo tu: attiva **Tp** o **Ts** e fai clic sulla traccia, anche nello stesso punto.
+Sceglilo tu: premi **Scegli Tp** o **Scegli Ts** e fai clic sulla traccia, anche nello
+stesso punto.
 
 **Far proporre tempi o sismostrati costa crediti?**
 No, con i pulsanti della scheda è gratuito. Se lo chiedi all'assistente, paghi il messaggio.
@@ -77,6 +102,13 @@ No. Nel metodo diretto la somma dei tempi di attraversamento degli strati è il 
 corretto delle onde S alla profondità H, dovunque siano le basi. Nel metodo intervallo la
 V~s,eq~ è calcolata sugli intervalli di misura. Cambia solo se la prova è più corta di H:
 lì l'ultimo strato viene prolungato, e la sua velocità dipende dalla base che gli sta sopra.
+Vedi [Elaborazione](elaborazione.md#velocita-equivalente-vseq).
+
+**Nel metodo intervallo la V~s,eq~ è «--», nel diretto no. Perché?**
+Nel metodo intervallo la V~s,eq~ si calcola sugli intervalli di misura, e basta un intervallo
+senza V~s~ (un tempo corretto delle S che non cresce) per renderla non calcolabile: saltare i
+tratti darebbe un numero sbagliato. Nel metodo diretto conta solo il tempo corretto delle S a
+H. Ricontrolla sulle tracce i tempi segnalati dall'avviso *«Tempo corretto decrescente»*.
 Vedi [Elaborazione](elaborazione.md#velocita-equivalente-vseq).
 
 **I sismostrati proposti sono la stratigrafia del sito?**
