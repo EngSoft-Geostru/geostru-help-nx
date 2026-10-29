@@ -6,6 +6,10 @@ tempi di primo arrivo delle onde P e S, poi tempi corretti, dromocrone, **metodo
 alle tavole DXF. È il programma desktop Downhole di GeoStru portato nel browser, con i
 difetti di calcolo corretti e dichiarati.
 
+Elabora anche la **prova cross-hole** (ASTM D4428/D4428M): sorgente e ricevitori in fori
+diversi, alla stessa quota, con i fori deviati dal rilievo inclinometrico. Vedi
+[Prova cross-hole](crosshole.md).
+
 [**Apri l'app**](https://nx.geostru.ai/downhole/){ .md-button .md-button--primary }
 [Guida rapida](quickstart.md){ .md-button }
 
@@ -51,6 +55,9 @@ boccaforo in m s.l.m. Sono tutti campi descrittivi: nessun calcolo li legge.
   taglio G, modulo edometrico E~d~, modulo di Young E, modulo di compressibilità volumetrica
   E~v~.
 - **V~s,eq~** fra due profondità a tua scelta (V~s,30~ con 0 e 30 m).
+- Nella **prova cross-hole**: distanze vere fra i fori deviati, velocità dirette e
+  d'intervallo per quota, velocità adottata, quote segnate «possibile rifratta» o
+  «incoerente», parametri e V~s,eq~. Vedi [Prova cross-hole](crosshole.md).
 
 Tre aiuti non fanno parte del calcolo ma lo preparano: il **riconoscimento
 dell'acquisizione**, che al caricamento capisce dai segnali come sono organizzati i file;
@@ -70,8 +77,9 @@ Le formule sono in [Cenni teorici](teoria.md); i casi di prova in
   un'interpretazione geologica.
 - Legge tracce **SEG-2**, **di testo** (TXT, CSV) e gli **archivi ZIP del piezocono
   sismico** (esportazioni RAV o SPAS). Non legge altri formati di acquisizione.
-- Assume **percorsi rettilinei** fra sorgente e ricevitore e non corregge per l'inclinazione
-  del foro né per la quota della sorgente.
+- Assume **percorsi rettilinei** fra sorgente e ricevitore. Nel downhole non corregge per
+  l'inclinazione del foro né per la quota della sorgente; nel cross-hole le distanze sono
+  quelle vere fra i fori deviati, se gli dai il rilievo.
 - I moduli sono **dinamici**, a piccole deformazioni.
 - **Non attribuisce la categoria di sottosuolo**: la V~s,eq~ è un numero, la classificazione
   resta al progettista.
@@ -123,6 +131,7 @@ la scheda **Versione** mostra la versione in uso.
 1. [Guida rapida](quickstart.md) — l'esempio, dall'apertura alla relazione.
 2. [Tracce e scelta dei tempi](tracce.md) e [Misure e geometria della prova](misure.md) — i dati.
 3. [Elaborazione](elaborazione.md) e [Stratigrafia](stratigrafia.md) — i risultati.
+   Per la prova fra fori: [Prova cross-hole](crosshole.md).
 4. [Relazione, DXF e crediti](relazione.md), [Assistente AI](assistente.md), [File](file.md).
 5. [Cenni teorici](teoria.md), [Validazione e differenze dal desktop](validazione.md),
    [Domande frequenti](faq.md).

@@ -43,8 +43,11 @@ first-arrival times of P and S waves it computes:
 - The moduli are **dynamic, small-strain** moduli: they are not the moduli for a settlement
   calculation.
 - It **does not assign the subsoil category**.
-- It applies no correction for borehole deviation or for the elevation of the source
-  relative to ground level.
+- In the down-hole test it applies no correction for borehole deviation or for the
+  elevation of the source relative to ground level.
+- In the **cross-hole test**: layers thin compared with the borehole spacing (the refracted
+  wave skips them), non-aligned boreholes in the interval method, boreholes without a survey
+  (taken as vertical), anisotropy not handled. See [Cross-hole test](crosshole.md#limits).
 - It reads SEG-2 and text traces and the seismic cone ZIP archives (RAV or SPAS exports); it
   does not merge P and S files with different numbers of channels. The automatic recognition
   of the acquisition helps read the files, does not enter the calculation and must be
@@ -58,7 +61,8 @@ velocity, automatic proposals, rounding.
 
 ## Test cases
 
-Nine cases, repeated automatically at every version of the program. The first five have a
+Fourteen cases, repeated automatically at every version of the program: the first nine are
+for the down-hole test, cases 10–14 for the [cross-hole test](#the-cross-hole-test-cases-1014). The first five have a
 **closed-form** reference that anyone can redo by hand; the sixth is the comparison with the
 desktop program; the seventh covers anomalous inputs; the eighth the automatic proposals; the
 ninth is a real test with its traces, compared with the desktop program.
@@ -211,6 +215,29 @@ subdivision of case 8. Case 9 is repeated by opening `ex-tracce-seg2.dhnx` with 
 Open…**. Cases 1–5 can be redone by hand with the formulas in [Theory](teoria.md): enter the
 measurements in the Measurements tab and compare.
 
+## The cross-hole test (cases 10–14)
+
+For the cross-hole test there is no desktop program to start from: the validation is built
+from scratch, with **closed forms** solved by hand and a **synthetic test** whose model is
+known (four layers, three deviated boreholes, trigger delay 12.5 ms, depths from 1 to 25 m).
+Real cases will be added in the same way. Technical reference: ASTM D4428/D4428M.
+
+| Case | Subject | By hand | Outcome |
+|---|---|---|---|
+| 10 | Vertical boreholes 3 m apart, V~s~ 200, V~p~ 400 m/s | t~S~ = 15.00 ms, t~P~ = 7.50 ms | V~s~ 200.00, V~p~ 400.00 |
+| 10 | Receiver deviated by 0.60 m at 20 m | d = 3.60 m, t~S~ = 18.00 ms → 200 m/s | 200.00; taken as vertical 166.67 (**−17 %**) |
+| 10 | Boreholes at 3 and 6 m, trigger 10 ms before the shot, times 25 and 40 ms | direct 200, interval 200 | 200.00 and 200.00; without the delay direct 120, interval 200 and depth «inconsistent» |
+| 11 | Two layers 200 / 600 m/s, contact at 4.5 m, boreholes 5 m apart | at 4 m the refracted wave arrives at 13.05 ms against 25.00 for the direct one | 383.22 m/s apparent, depth flagged «possible refracted» (together with 2 and 3 m: one too many, never one too few) |
+| 12 | Complete synthetic test, exact times | known model | adopted velocities within 0.5 m/s at every unflagged depth; every depth where the refracted wave beats the direct one is flagged |
+| 13 | The same test from the 75 SEG-2 files (8 kHz), times proposed by the app | known model | V~s~ within 2·dt/(t~2~ − t~1~) + 1 % (5–9 %); interval V~p~ within 3 % thanks to the cross-correlation between receivers |
+| 14 | Survey by azimuth and inclination | borehole inclined at 2°: at 20 m Δx = 20·sin 2° = 0.698 m; arc of radius 200 m: Δx = 0.99917 m | identical with minimum curvature; balanced tangential within 0.1 mm; on a helix −0.34 mm (known limit of the method) |
+
+Case 10 shows why the deviation survey is needed; case 11 why flagged depths must be looked
+at; case 13 what the automatic time proposal is worth and why P times between close
+boreholes depend on the sampling (the standard asks for 20–50 kHz). Case 14 shows how much
+the choice of the survey method matters: less than a millimetre on the offsets of a
+cross-hole borehole.
+
 ## Differences from the desktop program
 
 Downhole NX **does not reproduce** some behaviours of the Downhole desktop program, because
@@ -249,7 +276,7 @@ than the last one match the desktop program.
 
 ## Version
 
-This page applies to **calculation engine 1.2.0** (October 2026). The engine version is
+This page applies to **calculation engine 1.3.0** (October 2026). The engine version is
 separate from the app version: it changes only when a result or the reading of the data can
 change, and it is printed in the **Calculation software** block of every report (see
 [Report](relazione.md#the-calculation-software-block)). The app version is in the status bar
@@ -259,6 +286,7 @@ at the bottom and in the **?** button, **Version** tab.
 |---|---|
 | 1.0.0 | First release: calculation (cases 1–7) and automatic proposals of times and seismic layers (case 8). |
 | 1.1.0 | Trace reading: seismic cone ZIP archive, depth from the file name (“1m ps”, “12,5 m P”). The interval method gives no V~s,eq~ when an interval has a non-increasing corrected time (case 9). The other results, for the same measurements, do not change. |
+| 1.3.0 | Cross-hole test: deviated boreholes, direct and interval velocities, critical refraction, consistency, parameters and V~s,eq~ by depth; time proposal per receiver with cross-correlation between receivers; survey by azimuth and inclination (cases 10–14). The down-hole test does not change: for the same measurements cases 1–9 give the same numbers. |
 | 1.2.0 | Recognition of the acquisition on upload (P/S1/S2 triplets, P channel, trigger channels, recording direction); a bare number with leading zeros in the name (“001.DAT”) is no longer taken as a depth. The calculation does not change: for the same measurements cases 1–9 give the same numbers. |
 
 ---

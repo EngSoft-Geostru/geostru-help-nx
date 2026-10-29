@@ -41,8 +41,11 @@ arrivo delle onde P e S calcola:
 - I moduli sono **dinamici, a piccole deformazioni**: non sono i moduli di un calcolo di
   cedimenti.
 - **Non attribuisce la categoria di sottosuolo**.
-- Non corregge per l'inclinazione del foro né per la quota della sorgente rispetto al piano
-  campagna.
+- Nel downhole non corregge per l'inclinazione del foro né per la quota della sorgente
+  rispetto al piano campagna.
+- Nella **prova cross-hole**: strati sottili rispetto alla distanza fra i fori (la rifratta
+  li scavalca), fori non allineati nel metodo intervallo, fori senza rilievo (si assumono
+  verticali), anisotropia non trattata. Vedi [Prova cross-hole](crosshole.md#limiti).
 - Legge tracce SEG-2, di testo e gli archivi ZIP del piezocono sismico (esportazioni RAV o
   SPAS); non assembla file P e S con un numero diverso di canali. Il riconoscimento
   automatico dell'acquisizione è un aiuto alla lettura dei file, non entra nel calcolo e va
@@ -56,7 +59,8 @@ volume, velocità equivalente, proposte automatiche, arrotondamenti.
 
 ## Casi di prova
 
-Nove casi, ripetuti in automatico a ogni versione del programma. I primi cinque hanno un
+Quattordici casi, ripetuti in automatico a ogni versione del programma: i primi nove sono
+del downhole, i casi 10–14 della [prova cross-hole](#la-prova-cross-hole-casi-1014). I primi cinque hanno un
 riferimento **in forma chiusa**, che chiunque può rifare a mano; il sesto è il confronto
 con il programma desktop; il settimo riguarda gli ingressi anomali; l'ottavo le proposte
 automatiche; il nono è una prova reale con le tracce, confrontata con il desktop.
@@ -209,6 +213,29 @@ del caso 8. Il caso 9 si ripete aprendo `ex-tracce-seg2.dhnx` con **File → Apr
 1–5 si rifanno a mano con le formule dei [Cenni teorici](teoria.md): inserisci le misure
 nella scheda Misure e confronta.
 
+## La prova cross-hole (casi 10–14)
+
+Per il cross-hole non c'è un programma desktop da cui partire: la validazione si costruisce
+da zero, con **forme chiuse** risolte a mano e una **prova sintetica** di cui si conosce il
+modello (quattro strati, tre fori deviati, ritardo del trigger 12,5 ms, quote da 1 a 25 m).
+I casi reali si aggiungeranno con lo stesso schema. Riferimento tecnico: ASTM D4428/D4428M.
+
+| Caso | Oggetto | A mano | Esito |
+|---|---|---|---|
+| 10 | Fori verticali a 3 m, V~s~ 200, V~p~ 400 m/s | t~S~ = 15,00 ms, t~P~ = 7,50 ms | V~s~ 200,00, V~p~ 400,00 |
+| 10 | Ricevitore deviato di 0,60 m a 20 m | d = 3,60 m, t~S~ = 18,00 ms → 200 m/s | 200,00; creduto verticale 166,67 (**−17 %**) |
+| 10 | Fori a 3 e 6 m, trigger 10 ms prima del colpo, tempi 25 e 40 ms | diretta 200, intervallo 200 | 200,00 e 200,00; senza ritardo diretta 120, intervallo 200 e quota «incoerente» |
+| 11 | Due strati 200 / 600 m/s, contatto a 4,5 m, fori a 5 m | a 4 m la rifratta arriva a 13,05 ms contro 25,00 della diretta | 383,22 m/s apparenti, quota segnata «possibile rifratta» (con 2 e 3 m: una in più, mai una in meno) |
+| 12 | Prova sintetica completa, tempi esatti | modello noto | velocità adottate entro 0,5 m/s su ogni quota non segnata; ogni quota con la rifratta prima della diretta è segnata |
+| 13 | La stessa prova dai 75 file SEG-2 (8 kHz), tempi proposti dall'app | modello noto | V~s~ entro 2·dt/(t~2~ − t~1~) + 1 % (5–9 %); V~p~ d'intervallo entro il 3 % grazie alla correlazione fra ricevitori |
+| 14 | Rilievo per azimut e inclinazione | foro inclinato di 2°: a 20 m Δx = 20·sin 2° = 0,698 m; arco di raggio 200 m: Δx = 0,99917 m | identici con la curvatura minima; tangente bilanciata entro 0,1 mm; su un'elica −0,34 mm (limite noto del metodo) |
+
+Il caso 10 dice perché serve il rilievo di deviazione; il caso 11 perché le quote segnate
+vanno guardate; il caso 13 quanto vale la proposta automatica dei tempi e perché i tempi
+delle P fra fori vicini dipendono dal campionamento (la norma chiede 20–50 kHz). Il caso 14
+dice quanto pesa la scelta del metodo di calcolo del rilievo: meno di un millimetro sugli
+spostamenti di un foro di cross-hole.
+
 ## Differenze dal programma desktop
 
 Downhole NX **non riproduce** alcuni comportamenti del programma desktop Downhole, perché
@@ -247,7 +274,7 @@ coincidono con il desktop.
 
 ## Versione
 
-Questa pagina vale per il **motore di calcolo 1.2.0** (ottobre 2026). La versione del motore
+Questa pagina vale per il **motore di calcolo 1.3.0** (ottobre 2026). La versione del motore
 è distinta da quella dell'app: cambia solo quando può cambiare un risultato o la lettura dei
 dati, ed è stampata nel blocco **Codice di calcolo** di ogni relazione (vedi
 [Relazione](relazione.md#il-blocco-codice-di-calcolo)). La versione dell'app è nella barra
@@ -257,6 +284,7 @@ di stato in basso e nel pulsante **?**, scheda **Versione**.
 |---|---|
 | 1.0.0 | Prima emissione: calcolo (casi 1–7) e proposte automatiche dei tempi e dei sismostrati (caso 8). |
 | 1.1.0 | Lettura delle tracce: archivio ZIP del piezocono sismico, profondità dal nome del file («1m ps», «12,5 m P»). Il metodo intervallo non dà la V~s,eq~ quando un intervallo ha il tempo corretto non crescente (caso 9). Gli altri risultati, a parità di misure, non cambiano. |
+| 1.3.0 | Prova cross-hole: fori deviati, velocità dirette e d'intervallo, rifrazione critica, coerenza, parametri e V~s,eq~ per quota; proposta dei tempi per ricevitore con la correlazione fra ricevitori; rilievo per azimut e inclinazione (casi 10–14). Il downhole non cambia: a parità di misure i casi 1–9 danno gli stessi numeri. |
 | 1.2.0 | Riconoscimento dell'acquisizione al caricamento (terne P/S1/S2, canale P, canali di trigger, verso della registrazione); un numero nudo con zeri a sinistra nel nome («001.DAT») non è più preso per profondità. Il calcolo non cambia: a parità di misure i casi 1–9 danno gli stessi numeri. |
 
 ---

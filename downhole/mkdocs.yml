@@ -64,13 +64,14 @@ plugins:
           site_name: "Downhole NX — Down-hole seismic test"
           # ⚠️ Queste voci sono di Downhole e devono coincidere, lettera per lettera, con le etichette
           # del nav qui sotto: una voce che non coincide non dà errori, resta in italiano e nessuno
-          # avvisa. `mkdocs build` deve stampare «Translated 11 navigation elements» (tutte tranne Home).
+          # avvisa. `mkdocs build` deve stampare «Translated 12 navigation elements» (tutte tranne Home).
           nav_translations:
             Guida rapida (5 minuti): Quick start (5 minutes)
             Tracce e scelta dei tempi: Traces and time picking
             Misure e geometria della prova: Measurements and test geometry
             Elaborazione, metodo diretto e metodo intervallo: Processing, direct and interval method
             Stratigrafia: Stratigraphy
+            Prova cross-hole: Cross-hole test
             Relazione, DXF e crediti: Report, DXF and credits
             Assistente AI: AI assistant
             File, progetti del desktop e GeoDropbox: Files, desktop projects and GeoDropbox
@@ -115,6 +116,7 @@ nav:
   - Misure e geometria della prova: it/misure.md
   - Elaborazione, metodo diretto e metodo intervallo: it/elaborazione.md
   - Stratigrafia: it/stratigrafia.md
+  - Prova cross-hole: it/crosshole.md
   - Relazione, DXF e crediti: it/relazione.md
   - Assistente AI: it/assistente.md
   - File, progetti del desktop e GeoDropbox: it/file.md

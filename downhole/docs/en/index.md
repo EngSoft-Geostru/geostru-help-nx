@@ -6,6 +6,10 @@ method** and the **interval method**, up to the equivalent velocity V~s,eq~ (V~s
 Word report and the DXF drawings. It is the GeoStru Downhole desktop program brought to the
 browser, with its calculation defects fixed and declared.
 
+It also processes the **cross-hole test** (ASTM D4428/D4428M): source and receivers in
+different boreholes, at the same depth, with the boreholes deviated according to the
+inclinometer survey. See [Cross-hole test](crosshole.md).
+
 [**Open the app**](https://nx.geostru.ai/downhole/){ .md-button .md-button--primary }
 [Quick start](quickstart.md){ .md-button }
 
@@ -56,6 +60,9 @@ them.
 - For each layer and interval: unit weight γ, Poisson's ratio ν, shear modulus G,
   constrained modulus E~d~, Young's modulus E, bulk modulus E~v~.
 - **V~s,eq~** between two depths of your choice (V~s,30~ with 0 and 30 m).
+- In the **cross-hole test**: true distances between the deviated boreholes, direct and
+  interval velocities by depth, adopted velocity, depths flagged «possible refracted» or
+  «inconsistent», parameters and V~s,eq~. See [Cross-hole test](crosshole.md).
 
 Three aids are not part of the calculation but prepare it: the **recognition of the
 acquisition**, which on upload works out from the signals how the files are organised;
@@ -75,8 +82,10 @@ The formulas are in [Theory](teoria.md); the test cases in [Validation](validazi
   geological interpretation.
 - It reads **SEG-2** and **text** traces (TXT, CSV) and the **seismic cone ZIP archives**
   (RAV or SPAS exports). It does not read other acquisition formats.
-- It assumes **straight ray paths** between source and receiver and applies no correction
-  for borehole deviation or for the elevation of the source.
+- It assumes **straight ray paths** between source and receiver. In the down-hole test it
+  applies no correction for borehole deviation or for the elevation of the source; in the
+  cross-hole test the distances are the true ones between the deviated boreholes, if you
+  give it the survey.
 - The moduli are **dynamic**, small-strain moduli.
 - It **does not assign the subsoil category**: V~s,eq~ is a number, the classification is
   left to the designer.
@@ -127,6 +136,7 @@ traces); the **Version** tab shows the version in use.
 1. [Quick start](quickstart.md) — the example, from opening it to the report.
 2. [Traces and time picking](tracce.md) and [Measurements and test geometry](misure.md) — the data.
 3. [Processing](elaborazione.md) and [Stratigraphy](stratigrafia.md) — the results.
+   For the test between boreholes: [Cross-hole test](crosshole.md).
 4. [Report, DXF and credits](relazione.md), [AI assistant](assistente.md), [Files](file.md).
 5. [Theory](teoria.md), [Validation and differences from the desktop version](validazione.md),
    [FAQ](faq.md).

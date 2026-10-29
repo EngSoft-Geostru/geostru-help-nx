@@ -98,6 +98,10 @@ le bandierine sulle tracce.
   [Misure](misure.md) e usa **Incolla da foglio di calcolo**.
 - **Hai un progetto del desktop** (`.dwhx` o `.dwh`): **File → Apri…**. Vedi
   [File, progetti del desktop e GeoDropbox](file.md).
+- **Hai una prova cross-hole**: **File → Nuova prova cross-hole**, poi la scheda **Fori**
+  (coordinate, ritardo del trigger, rilievo di deviazione da incollare o importare), le
+  tracce nella vista **Ricevitori** e i tempi per quota nella scheda **Misure**. Vedi
+  [Prova cross-hole](crosshole.md).
 
 ---
 

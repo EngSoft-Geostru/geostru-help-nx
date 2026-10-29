@@ -98,6 +98,10 @@ flags on the traces.
   [Measurements](misure.md) tab and use **Paste from spreadsheet**.
 - **You have a desktop project** (`.dwhx` or `.dwh`): **File → Open…**. See
   [Files, desktop projects and GeoDropbox](file.md).
+- **You have a cross-hole test**: **File → New cross-hole test**, then the **Boreholes** tab
+  (coordinates, trigger delay, deviation survey to paste or import), the traces in the
+  **Receivers** view and the times per depth in the **Measurements** tab. See
+  [Cross-hole test](crosshole.md).
 
 ---
 

@@ -139,6 +139,39 @@ With the switch on it is estimated from a correlation with V~s~ and depth. If yo
 measured values, switch it off and type γ in the table. See
 [Measurements](misure.md#unit-weight-automatic-or-assigned).
 
+## Cross-hole test
+
+**Can I process a cross-hole test?**
+Yes: **File → New cross-hole test**, or change the **Test type** in the General data.
+Boreholes, traces, measurements by depth, processing, report and DXF are in
+[Cross-hole test](crosshole.md).
+
+**My inclinometer survey is in azimuth and inclination. Do I have to convert it?**
+No. In the **Boreholes** tab, **Import or paste the survey**, format **Length;
+inclination; azimuth**: the app computes the points at vertical depths with minimum
+curvature (or balanced tangential) and shows them in a preview. State whether the azimuth is
+from north or from the site x axis. Offsets in millimetres are accepted too. See
+[Importing or pasting the survey](crosshole.md#importing-or-pasting-the-survey).
+
+**My times are in an Excel sheet, one receiver after the other.**
+**Measurements** tab, **Paste from spreadsheet**: columns depth, T~p~ R1, T~s~ R1, T~p~ R2,
+T~s~ R2…, optional γ at the end. The preview shows the rows read and those discarded before
+touching the table.
+
+**What do R·P, R·S, I·P, I·S mean?**
+Depths to look at before using their velocities: **R** = possible wave refracted from a
+faster nearby layer, **I** = velocities of the pairs inconsistent by more than 15 %. See
+[Flagged depths](crosshole.md#flagged-depths).
+
+**I have only one receiver.**
+It is processed anyway, with direct velocities only: the trigger delay then enters the
+velocity in full, so it must be measured well. With two receivers the interval velocity
+removes it.
+
+**What happens without the deviation survey?**
+The borehole is taken as vertical and the report says so. A deviation of a few decimetres at
+20 m changes the distance, and so the velocity, by a few per cent.
+
 ## Desktop version
 
 **I open the same desktop project and the numbers are different. Why?**

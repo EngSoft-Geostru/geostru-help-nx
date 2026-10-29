@@ -137,6 +137,39 @@ Con l'interruttore acceso è stimato da una correlazione con V~s~ e profondità.
 misure, spegnilo e scrivi γ nella tabella. Vedi
 [Misure](misure.md#peso-di-volume-automatico-o-assegnato).
 
+## Prova cross-hole
+
+**Posso elaborare una prova cross-hole?**
+Sì: **File → Nuova prova cross-hole**, oppure cambia il **Tipo di prova** nei Dati generali.
+Fori, tracce, misure per quota, elaborazione, relazione e DXF sono in
+[Prova cross-hole](crosshole.md).
+
+**Il rilievo inclinometrico è in azimut e inclinazione. Devo convertirlo?**
+No. Nella scheda **Fori**, **Importa o incolla il rilievo**, formato **Lunghezza;
+inclinazione; azimut**: l'app calcola i punti alle profondità verticali con la curvatura
+minima (o la tangente bilanciata) e te li mostra in anteprima. Indica se l'azimut è dal nord
+o dall'asse x del sito. Accetta anche spostamenti in millimetri. Vedi
+[Importare o incollare il rilievo](crosshole.md#importare-o-incollare-il-rilievo).
+
+**Ho i tempi in un foglio Excel, un ricevitore dopo l'altro.**
+Scheda **Misure**, **Incolla da foglio di calcolo**: colonne quota, T~p~ R1, T~s~ R1,
+T~p~ R2, T~s~ R2…, γ facoltativa in fondo. L'anteprima mostra le righe lette e quelle
+scartate prima di toccare la tabella.
+
+**Che cosa vogliono dire R·P, R·S, I·P, I·S?**
+Quote da guardare prima di usarne le velocità: **R** = possibile onda rifratta da uno strato
+più veloce vicino, **I** = velocità delle coppie incoerenti oltre il 15 %. Vedi
+[Le quote segnate](crosshole.md#le-quote-segnate).
+
+**Ho un solo ricevitore.**
+Si elabora lo stesso, con le sole velocità dirette: qui il ritardo del trigger entra per
+intero nella velocità, quindi va misurato bene. Con due ricevitori la velocità d'intervallo
+lo elimina.
+
+**Senza il rilievo di deviazione che cosa succede?**
+Il foro si considera verticale e la relazione lo dichiara. Una deviazione di qualche
+decimetro a 20 m cambia la distanza, e quindi la velocità, di qualche punto percentuale.
+
 ## Desktop
 
 **Apro lo stesso progetto del desktop e i numeri sono diversi. Perché?**
