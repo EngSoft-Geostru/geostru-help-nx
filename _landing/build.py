@@ -111,6 +111,14 @@ APPS = {
         'es': 'Respuesta sísmica local 1D',
         'ro': 'Răspuns seismic local 1D',
         'pl': 'Lokalna odpowiedź sejsmiczna 1D'}),
+    'masw': dict(name='MASW NX', langs=['it', 'en'], desc={
+        'it': 'Prova MASW: spettro f-v, picking, inversione, Vs,eq e categoria di sottosuolo',
+        'en': 'MASW survey: f-v spectrum, picking, inversion, Vs,eq and subsoil category',
+        'de': 'MASW-Messung: f-v-Spektrum, Picking, Inversion, Vs,eq und Baugrundklasse',
+        'fr': 'Essai MASW : spectre f-v, pointé, inversion, Vs,eq et catégorie de sol',
+        'es': 'Ensayo MASW: espectro f-v, picking, inversión, Vs,eq y categoría de suelo',
+        'ro': 'Încercare MASW: spectru f-v, picking, inversiune, Vs,eq și categorie de teren',
+        'pl': 'Badanie MASW: widmo f-v, wybór krzywej, inwersja, Vs,eq i kategoria gruntu'}),
     'downhole': dict(name='Downhole NX', langs=['it', 'en'], desc={
         'it': 'Prova sismica in foro (down-hole): tracce, tempi di arrivo, Vp, Vs, Vs,eq',
         'en': 'Down-hole seismic test: traces, arrival times, Vp, Vs, Vs,eq',
@@ -220,7 +228,7 @@ APPS = {
 CATEGORIES = [
     ('general', ['pdm', 'atlante', 'computo']),
     ('engineering', ['rpd']),
-    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'downhole', 'slope', 'srs']),
+    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'downhole', 'masw', 'slope', 'srs']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
     ('hydro', ['hid', 'hydrogeo', 'runofflab']),
     ('insitu', ['dynprobe']),

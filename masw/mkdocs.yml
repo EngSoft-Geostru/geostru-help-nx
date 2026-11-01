@@ -1,0 +1,119 @@
+site_name: "MASW NX — Analisi delle onde di superficie"
+site_url: "https://help.nx.geostru.ai/masw/"
+site_author: GeoStru
+site_description: "Manuale utente di MASW NX — prova MASW attiva: tracce SEG-2, SEG-Y e ASCII, spettro f-v, picking della curva di dispersione, inversione, profilo Vs, Vs,eq e categoria di sottosuolo NTC 2018, relazione Word e tavole DXF."
+copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tutti i diritti riservati · <a href='https://geostru.ai/it/terms-of-service/' target='_blank' rel='noopener'>Condizioni d'uso</a> · <a href='https://geostru.ai/it/intellectual-property/' target='_blank' rel='noopener'>Proprietà intellettuale</a>"
+repo_name: EngSoft-Geostru/geostru-help-nx
+repo_url: https://github.com/EngSoft-Geostru/geostru-help-nx
+edit_uri: edit/main/masw/docs/
+
+docs_dir: docs
+
+theme:
+  name: material
+  custom_dir: ../_shared/overrides
+  language: it
+  palette:
+    - scheme: default
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Tema scuro
+    - scheme: slate
+      primary: blue
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Tema chiaro
+  features:
+    # NB: niente navigation.instant con il plugin i18n (lo switcher di lingua fa fallire la build --strict).
+    - navigation.tracking
+    - navigation.sections
+    - navigation.top
+    - navigation.indexes
+    - navigation.footer
+    - search.highlight
+    - search.suggest
+    - search.share
+    - content.code.copy
+    - content.action.edit
+    - toc.follow
+  font:
+    text: Inter
+    code: JetBrains Mono
+
+plugins:
+  - search:
+      lang: [it, en]
+  - i18n:
+      docs_structure: folder
+      reconfigure_material: true
+      reconfigure_search: true
+      languages:
+        - locale: it
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. Tutti i diritti riservati · <a href='https://geostru.ai/it/terms-of-service/' target='_blank' rel='noopener'>Condizioni d'uso</a> · <a href='https://geostru.ai/it/intellectual-property/' target='_blank' rel='noopener'>Proprietà intellettuale</a>"
+          name: Italiano
+          default: true
+          build: true
+        - locale: en
+          copyright: "© <script>document.write(new Date().getFullYear())</script> ENGSOFT SRL — GeoStru. All rights reserved · <a href='https://geostru.ai/en/terms-of-service/' target='_blank' rel='noopener'>Terms of Service</a> · <a href='https://geostru.ai/en/intellectual-property/' target='_blank' rel='noopener'>Intellectual property</a>"
+          name: English
+          build: true
+          # site_name per-locale: senza, l'header delle pagine EN resta in italiano.
+          site_name: "MASW NX — Surface-wave analysis"
+          # Le voci devono coincidere lettera per lettera con il nav: `mkdocs build` deve stampare «Translated 11 navigation elements».
+          nav_translations:
+            Guida rapida (5 minuti): Quick start (5 minutes)
+            Tracce: Traces
+            Spettri e picking: Spectra and picking
+            Inversione: Inversion
+            Categoria del suolo: Soil category
+            Relazione, DXF e crediti: Report, DXF and credits
+            Assistente AI: AI assistant
+            File, progetti del desktop e GeoDropbox: Files, desktop projects and GeoDropbox
+            Cenni teorici: Theory
+            Validazione e limiti: Validation and limits
+            Domande frequenti: FAQ
+
+markdown_extensions:
+  - admonition
+  - attr_list
+  - md_in_html
+  - tables
+  - footnotes
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed: { alternate_style: true }
+  - pymdownx.snippets
+  - pymdownx.highlight: { anchor_linenums: true }
+  - pymdownx.inlinehilite
+  - pymdownx.tilde          # pedici V~s~, V~p~, E~d~, G~0~ (e ~~barrato~~)
+  - pymdownx.arithmatex: { generic: true }
+  - toc: { permalink: true, toc_depth: 3 }
+
+extra:
+  homepage: https://help.nx.geostru.ai/
+  generator: false
+  social:
+    - icon: fontawesome/solid/globe
+      link: https://www.geostru.ai
+      name: GeoStru
+    - icon: fontawesome/brands/youtube
+      link: https://www.youtube.com/@GeoStruSoftware
+      name: YouTube
+
+# Nav unico in lingua di default (it/). I nomi dei file sono gli slug a cui punta il modale «?» dell'app: non vanno rinominati.
+nav:
+  - Home: it/index.md
+  - Guida rapida (5 minuti): it/quickstart.md
+  - Tracce: it/tracce.md
+  - Spettri e picking: it/spettri.md
+  - Inversione: it/inversione.md
+  - Categoria del suolo: it/categoria.md
+  - Relazione, DXF e crediti: it/relazione.md
+  - Assistente AI: it/assistente.md
+  - File, progetti del desktop e GeoDropbox: it/file.md
+  - Cenni teorici: it/teoria.md
+  - Validazione e limiti: it/validazione.md
+  - Domande frequenti: it/faq.md
