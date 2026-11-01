@@ -12,6 +12,7 @@ Sito pubblicato su **https://help.nx.geostru.ai/&lt;prodotto&gt;/**.
 
 | Prodotto | Cartella | URL pubblicato | App live |
 |---|---|---|---|
+| **MASW NX** — prova MASW (spettro f-v, inversione, Vs,eq) | [`masw/`](masw/) | https://help.nx.geostru.ai/masw/ | https://nx.geostru.ai/masw/ |
 | **Downhole NX** — prova sismica in foro (down-hole) | [`downhole/`](downhole/) | https://help.nx.geostru.ai/downhole/ | https://nx.geostru.ai/downhole/ |
 | **Atlante NX** — base documentale della relazione (gratuita) | [`atlante/`](atlante/) | https://help.nx.geostru.ai/atlante/ | https://nx.geostru.ai/atlante/ |
 | **PDM NX** — piano di manutenzione | [`pdm/`](pdm/) | https://help.nx.geostru.ai/pdm/ | https://nx.geostru.ai/pdm/ |

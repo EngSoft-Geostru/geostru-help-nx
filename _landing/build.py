@@ -119,6 +119,14 @@ APPS = {
         'es': 'Ensayo sísmico en sondeo (down-hole): trazas, tiempos de llegada, Vp, Vs, Vs,eq',
         'ro': 'Încercare seismică în foraj (down-hole): trase, timpi de sosire, Vp, Vs, Vs,eq',
         'pl': 'Badanie sejsmiczne w otworze (down-hole): trasy, czasy wejścia fal, Vp, Vs, Vs,eq'}),
+    'masw': dict(name='MASW NX', langs=['it', 'en'], desc={
+        'it': 'Prova MASW: spettro f-v, picking, inversione del profilo Vs, Vs,eq e categoria di sottosuolo',
+        'en': 'MASW survey: f-v spectrum, picking, Vs profile inversion, Vs,eq and subsoil category',
+        'de': 'MASW-Messung: f-v-Spektrum, Picking, Inversion des Vs-Profils, Vs,eq und Baugrundklasse',
+        'fr': 'Essai MASW : spectre f-v, pointé, inversion du profil Vs, Vs,eq et catégorie de sol',
+        'es': 'Ensayo MASW: espectro f-v, picking, inversión del perfil Vs, Vs,eq y categoría de suelo',
+        'ro': 'Încercare MASW: spectru f-v, picking, inversiunea profilului Vs, Vs,eq și categoria de teren',
+        'pl': 'Badanie MASW: widmo f-v, pikowanie, inwersja profilu Vs, Vs,eq i kategoria podłoża'}),
     'srs': dict(name='SRS NX', langs=['it', 'en'], desc={
         'it': 'Chiodatura corticale dei versanti (soil nailing) + rete di facciata',
         'en': 'Slope surface soil nailing + facing mesh',
@@ -220,7 +228,7 @@ APPS = {
 CATEGORIES = [
     ('general', ['pdm', 'atlante', 'computo']),
     ('engineering', ['rpd']),
-    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'downhole', 'slope', 'srs']),
+    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'downhole', 'masw', 'slope', 'srs']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
     ('hydro', ['hid', 'hydrogeo', 'runofflab']),
     ('insitu', ['dynprobe']),
