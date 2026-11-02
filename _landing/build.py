@@ -119,6 +119,14 @@ APPS = {
         'es': 'Ensayo MASW: espectro f-v, picking, inversión, Vs,eq y categoría de suelo',
         'ro': 'Încercare MASW: spectru f-v, picking, inversiune, Vs,eq și categorie de teren',
         'pl': 'Badanie MASW: widmo f-v, wybór krzywej, inwersja, Vs,eq i kategoria gruntu'}),
+    'hvsr': dict(name='HVSR NX', langs=['it', 'en'], desc={
+        'it': 'Rapporto spettrale H/V: f0, verifiche SESAME, ellitticità, Vs,eq e categoria di sottosuolo',
+        'en': 'H/V spectral ratio: f0, SESAME checks, ellipticity, Vs,eq and subsoil category',
+        'de': 'H/V-Spektralverhältnis: f0, SESAME-Prüfungen, Elliptizität, Vs,eq und Baugrundklasse',
+        'fr': 'Rapport spectral H/V : f0, critères SESAME, ellipticité, Vs,eq et catégorie de sol',
+        'es': 'Cociente espectral H/V: f0, criterios SESAME, elipticidad, Vs,eq y categoría de suelo',
+        'ro': 'Raport spectral H/V: f0, criterii SESAME, elipticitate, Vs,eq și categorie de teren',
+        'pl': 'Stosunek widmowy H/V: f0, kryteria SESAME, eliptyczność, Vs,eq i kategoria gruntu'}),
     'downhole': dict(name='Downhole NX', langs=['it', 'en'], desc={
         'it': 'Prova sismica in foro (down-hole): tracce, tempi di arrivo, Vp, Vs, Vs,eq',
         'en': 'Down-hole seismic test: traces, arrival times, Vp, Vs, Vs,eq',
@@ -228,7 +236,7 @@ APPS = {
 CATEGORIES = [
     ('general', ['pdm', 'atlante', 'computo']),
     ('engineering', ['rpd']),
-    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'downhole', 'masw', 'slope', 'srs']),
+    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'downhole', 'masw', 'hvsr', 'slope', 'srs']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
     ('hydro', ['hid', 'hydrogeo', 'runofflab']),
     ('insitu', ['dynprobe']),
