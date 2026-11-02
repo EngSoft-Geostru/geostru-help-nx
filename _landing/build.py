@@ -111,6 +111,14 @@ APPS = {
         'es': 'Respuesta sísmica local 1D',
         'ro': 'Răspuns seismic local 1D',
         'pl': 'Lokalna odpowiedź sejsmiczna 1D'}),
+    'masw': dict(name='MASW NX', langs=['it', 'en'], desc={
+        'it': 'Prova MASW: spettro f-v, picking, inversione, Vs,eq e categoria di sottosuolo',
+        'en': 'MASW survey: f-v spectrum, picking, inversion, Vs,eq and subsoil category',
+        'de': 'MASW-Messung: f-v-Spektrum, Picking, Inversion, Vs,eq und Baugrundklasse',
+        'fr': 'Essai MASW : spectre f-v, pointé, inversion, Vs,eq et catégorie de sol',
+        'es': 'Ensayo MASW: espectro f-v, picking, inversión, Vs,eq y categoría de suelo',
+        'ro': 'Încercare MASW: spectru f-v, picking, inversiune, Vs,eq și categorie de teren',
+        'pl': 'Badanie MASW: widmo f-v, wybór krzywej, inwersja, Vs,eq i kategoria gruntu'}),
     'downhole': dict(name='Downhole NX', langs=['it', 'en'], desc={
         'it': 'Prova sismica in foro (down-hole): tracce, tempi di arrivo, Vp, Vs, Vs,eq',
         'en': 'Down-hole seismic test: traces, arrival times, Vp, Vs, Vs,eq',
@@ -119,14 +127,6 @@ APPS = {
         'es': 'Ensayo sísmico en sondeo (down-hole): trazas, tiempos de llegada, Vp, Vs, Vs,eq',
         'ro': 'Încercare seismică în foraj (down-hole): trase, timpi de sosire, Vp, Vs, Vs,eq',
         'pl': 'Badanie sejsmiczne w otworze (down-hole): trasy, czasy wejścia fal, Vp, Vs, Vs,eq'}),
-    'masw': dict(name='MASW NX', langs=['it', 'en'], desc={
-        'it': 'Prova MASW: spettro f-v, picking, inversione del profilo Vs, Vs,eq e categoria di sottosuolo',
-        'en': 'MASW survey: f-v spectrum, picking, Vs profile inversion, Vs,eq and subsoil category',
-        'de': 'MASW-Messung: f-v-Spektrum, Picking, Inversion des Vs-Profils, Vs,eq und Baugrundklasse',
-        'fr': 'Essai MASW : spectre f-v, pointé, inversion du profil Vs, Vs,eq et catégorie de sol',
-        'es': 'Ensayo MASW: espectro f-v, picking, inversión del perfil Vs, Vs,eq y categoría de suelo',
-        'ro': 'Încercare MASW: spectru f-v, picking, inversiunea profilului Vs, Vs,eq și categoria de teren',
-        'pl': 'Badanie MASW: widmo f-v, pikowanie, inwersja profilu Vs, Vs,eq i kategoria podłoża'}),
     'srs': dict(name='SRS NX', langs=['it', 'en'], desc={
         'it': 'Chiodatura corticale dei versanti (soil nailing) + rete di facciata',
         'en': 'Slope surface soil nailing + facing mesh',
