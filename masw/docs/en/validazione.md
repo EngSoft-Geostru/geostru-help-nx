@@ -44,8 +44,8 @@ geotechnical parameters.
 ## Theoretical basis
 
 The formulas, with references, are on the [Theory](teoria.md) page: f-v spectrum
-(phase-shift, Park, Miller and Xia), forward problem (Thomson-Haskell-Dunkin, engine derived
-from Geopsy and verified to machine precision), inversion (Nelder and Mead), V~s,eq~ (NTC 2018
+(phase-shift, Park, Miller and Xia), forward problem (Thomson-Haskell-Dunkin, engine
+verified to machine precision against the desktop), inversion (Nelder and Mead), V~s,eq~ (NTC 2018
 §3.2.2), elastic parameters, Ohta and Goto, Jamiolkowski, SH transfer function with 1 %
 damping.
 

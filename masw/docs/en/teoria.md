@@ -77,9 +77,8 @@ It is a proposal: where the fundamental does not form a ridge the picking does n
 Given a model of plane-parallel layers, each with thickness h, V~s~, V~p~ and density ρ,
 over a half-space, the dispersion curves of the Rayleigh modes are computed with the
 **propagator matrix** method of Thomson (1950) and Haskell (1953), in the stable formulation
-of Dunkin (1965). The code is the port of the Geopsy calculation (Wathelet, 2005, open source
-under the LGPL licence), the same engine as Easy-MASW desktop, and matches the desktop library
-to machine precision.
+of Dunkin (1965). The calculation follows the implementation of Wathelet (2005) and is the same engine as
+Easy-MASW desktop: it matches the desktop library to machine precision.
 
 V~p~ is obtained from V~s~ and the layer's Poisson's ratio ν:
 

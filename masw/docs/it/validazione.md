@@ -44,8 +44,8 @@ e parametri geotecnici stimati.
 ## Basi teoriche
 
 Le formule, con la bibliografia, sono nella pagina [Cenni teorici](teoria.md): spettro f-v
-(phase-shift, Park, Miller e Xia), problema diretto (Thomson-Haskell-Dunkin, motore derivato
-da Geopsy e verificato a precisione macchina), inversione (Nelder e Mead), V~s,eq~ (NTC 2018
+(phase-shift, Park, Miller e Xia), problema diretto (Thomson-Haskell-Dunkin, motore
+verificato a precisione macchina sul desktop), inversione (Nelder e Mead), V~s,eq~ (NTC 2018
 §3.2.2), parametri elastici, Ohta e Goto, Jamiolkowski, funzione di trasferimento SH con
 smorzamento dell'1 %.
 

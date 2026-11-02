@@ -79,9 +79,8 @@ Il picking **Automatico** cerca le creste della mappa:
 Dato un modello a strati piano-paralleli, ciascuno con spessore h, V~s~, V~p~ e densità ρ,
 sopra un semispazio, le curve di dispersione dei modi di Rayleigh si calcolano con il metodo
 delle **matrici di propagazione** di Thomson (1950) e Haskell (1953), nella formulazione
-stabile di Dunkin (1965). Il codice è il porting del calcolo di Geopsy (Wathelet, 2005, codice
-aperto con licenza LGPL), lo stesso motore di Easy-MASW desktop, e coincide a precisione
-macchina con la libreria del desktop.
+stabile di Dunkin (1965). Il calcolo segue l'implementazione di Wathelet (2005) ed è lo stesso motore di
+Easy-MASW desktop: coincide a precisione macchina con la libreria del desktop.
 
 V~p~ si ricava da V~s~ e dal coefficiente di Poisson ν dello strato:
 
