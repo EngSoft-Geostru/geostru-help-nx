@@ -127,6 +127,14 @@ APPS = {
         'es': 'Cociente espectral H/V: f0, criterios SESAME, elipticidad, Vs,eq y categoría de suelo',
         'ro': 'Raport spectral H/V: f0, criterii SESAME, elipticitate, Vs,eq și categorie de teren',
         'pl': 'Stosunek widmowy H/V: f0, kryteria SESAME, eliptyczność, Vs,eq i kategoria gruntu'}),
+    'rsl3a': dict(name='RSL III A NX', langs=['it', 'en'], desc={
+        'it': 'Ordinanza 55/2018: spettro MS3 regolarizzato contro spettro semplificato NTC 2018, condizioni ed esito',
+        'en': 'Ordinance 55/2018: regularised MS3 spectrum versus NTC 2018 simplified spectrum, conditions and outcome',
+        'de': 'Verordnung 55/2018: regularisiertes MS3-Spektrum gegen vereinfachtes NTC-2018-Spektrum, Bedingungen und Ergebnis',
+        'fr': 'Ordonnance 55/2018 : spectre MS3 régularisé contre spectre simplifié NTC 2018, conditions et résultat',
+        'es': 'Ordenanza 55/2018: espectro MS3 regularizado frente al espectro simplificado NTC 2018, condiciones y resultado',
+        'ro': 'Ordonanța 55/2018: spectru MS3 regularizat comparat cu spectrul simplificat NTC 2018, condiții și rezultat',
+        'pl': 'Rozporządzenie 55/2018: uregulowane widmo MS3 wobec uproszczonego widma NTC 2018, warunki i wynik'}),
     'downhole': dict(name='Downhole NX', langs=['it', 'en'], desc={
         'it': 'Prova sismica in foro (down-hole): tracce, tempi di arrivo, Vp, Vs, Vs,eq',
         'en': 'Down-hole seismic test: traces, arrival times, Vp, Vs, Vs,eq',
@@ -236,7 +244,7 @@ APPS = {
 CATEGORIES = [
     ('general', ['pdm', 'atlante', 'computo']),
     ('engineering', ['rpd']),
-    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'downhole', 'masw', 'hvsr', 'slope', 'srs']),
+    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'rsl3a', 'downhole', 'masw', 'hvsr', 'slope', 'srs']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
     ('hydro', ['hid', 'hydrogeo', 'runofflab']),
     ('insitu', ['dynprobe']),
