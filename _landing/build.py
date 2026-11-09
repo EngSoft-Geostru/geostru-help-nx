@@ -135,6 +135,14 @@ APPS = {
         'es': 'Ordenanza 55/2018: espectro MS3 regularizado frente al espectro simplificado NTC 2018, condiciones y resultado',
         'ro': 'Ordonanța 55/2018: spectru MS3 regularizat comparat cu spectrul simplificat NTC 2018, condiții și rezultat',
         'pl': 'Rozporządzenie 55/2018: uregulowane widmo MS3 wobec uproszczonego widma NTC 2018, warunki i wynik'}),
+    'mdc': dict(name='MDC NX', langs=['it', 'en'], desc={
+        'it': 'Muri di sostegno: spinte, scorrimento, ribaltamento, carico limite, sisma, sezioni in c.a. e armature',
+        'en': 'Retaining walls: earth pressures, sliding, overturning, bearing capacity, seismic, RC sections and reinforcement',
+        'de': 'Stützmauern: Erddruck, Gleiten, Kippen, Grundbruch, Erdbeben, Stahlbetonquerschnitte und Bewehrung',
+        'fr': 'Murs de soutènement : poussées, glissement, renversement, capacité portante, séisme, sections BA et armatures',
+        'es': 'Muros de contención: empujes, deslizamiento, vuelco, carga de hundimiento, sismo, secciones de HA y armaduras',
+        'ro': 'Ziduri de sprijin: împingeri, lunecare, răsturnare, capacitate portantă, seism, secțiuni din BA și armături',
+        'pl': 'Ściany oporowe: parcie gruntu, przesunięcie, obrót, nośność podłoża, sejsmika, przekroje żelbetowe i zbrojenie'}),
     'downhole': dict(name='Downhole NX', langs=['it', 'en'], desc={
         'it': 'Prova sismica in foro (down-hole): tracce, tempi di arrivo, Vp, Vs, Vs,eq',
         'en': 'Down-hole seismic test: traces, arrival times, Vp, Vs, Vs,eq',
@@ -244,7 +252,7 @@ APPS = {
 CATEGORIES = [
     ('general', ['pdm', 'atlante', 'computo']),
     ('engineering', ['rpd']),
-    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mp', 'mre', 'seismic', 'rsl', 'rsl3a', 'downhole', 'masw', 'hvsr', 'slope', 'srs']),
+    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mdc', 'mp', 'mre', 'seismic', 'rsl', 'rsl3a', 'downhole', 'masw', 'hvsr', 'slope', 'srs']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
     ('hydro', ['hid', 'hydrogeo', 'runofflab']),
     ('insitu', ['dynprobe']),
