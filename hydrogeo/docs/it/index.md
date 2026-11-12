@@ -1,72 +1,67 @@
-# Hydrogeo NX — Pluviometria & analisi idrogeologica
+# Hydrogeo NX — Dati pluviometrici
 
-**Hydrogeo NX** è il software web GeoStru per l'**esplorazione dei dati
-pluviometrici italiani** dagli **Annali Idrologici** ISPRA e dai portali
-regionali. Database integrato con oltre **4.000 stazioni** e **19 regioni**,
-dati dal 1916 ad oggi. Analisi statistica Gumbel EV1 e TCEV, curve IDF
-(Intensità-Durata-Frequenza), export per progettazione idraulica.
+**Hydrogeo NX** raccoglie su una mappa i dati di pioggia italiani pubblicati da **ISPRA**
+negli Annali Idrologici e dai **servizi idrologici regionali**. Trovi le stazioni attorno
+al tuo sito, leggi i **massimi annui di pioggia** da 1 a 24 ore e da 1 a 5 giorni e le
+**precipitazioni mensili**, e porti le serie nel tuo studio o in
+[Runoff Lab NX](https://help.nx.geostru.ai/runofflab/it/) per l'analisi statistica.
 
-[**Apri Hydrogeo NX**](https://nx.geostru.ai/hydrogeo/){ .md-button .md-button--primary }
-[Quickstart in 5 minuti](quickstart.md){ .md-button }
+[**Apri l'app**](https://nx.geostru.ai/hydrogeo/){ .md-button .md-button--primary }
+[Guida rapida](quickstart.md){ .md-button }
 
----
+![Hydrogeo NX: le stazioni pluviometriche del database in tutta Italia, raggruppate sulla mappa](img/01-mappa-stazioni-italia.jpg)
 
-## Cosa fa, in sintesi
+## Il database
 
-- **Database stazioni**: 4 000+ stazioni pluviometriche italiane, dati dal
-  1916
-- **Mappa interattiva**: ricerca per provincia, regione, raggio dal sito
-- **Dati di intensità**: precipitazioni di durata 1, 3, 6, 12, 24 ore (e
-  oltre)
-- **Statistica**: Gumbel EV1, TCEV (Two-Component Extreme Value), Frechet
-- **Curve IDF**: intensità-durata-frequenza per il sito o stazione
-- **Export**: CSV, Excel, PDF report, **PLV GeoStru** (formato standard di
-  interscambio)
+- **Oltre 6.000 stazioni pluviometriche** in tutte e venti le regioni.
+- **Oltre 4.000 stazioni con le serie dei massimi annui** per durata.
+- **Dati dal 1916** all'ultimo anno pubblicato da ciascuna fonte.
+- **Solo fonti ufficiali**: ISPRA e dodici servizi regionali. L'elenco è in
+  [Fonti e limiti dei dati](fonti.md).
 
-## Fonti dati ufficiali
+I numeri esatti del momento sono nel riquadro del pulsante **?** dell'app.
 
-Hydrogeo NX integra:
+## Che cosa fa e che cosa non fa
 
-- **ISPRA** — Annali Idrologici Nazionali (storico 1916-2010+)
-- **Regione Umbria** — Servizio Idrografico
-- **Regione Lombardia** — Open Data Portal
-- **SIAS** — Regione Siciliana
-- **Provincia Autonoma di Bolzano** — Open Data
-- **SIR** — Servizio Idrologico Regionale Toscana
-- altri portali regionali (in arrivo)
+Hydrogeo NX è il **passaggio dei dati**: trova le stazioni, mostra i valori come li ha
+pubblicati la fonte e li esporta.
 
-## Per chi
+**Non esegue elaborazioni statistiche.** Le distribuzioni di probabilità (Gumbel, GEV,
+Pearson III, TCEV), le curve di possibilità pluviometrica h = a·tⁿ, gli ietogrammi e gli
+idrogrammi sono in **Runoff Lab NX**, che importa le serie direttamente da Hydrogeo NX.
+Vedi [Collegamenti con le altre app NX](integrazioni.md).
 
-- **Ingegneri idraulici** che progettano opere di drenaggio (fognature,
-  dispositivi anti-allagamento)
-- **Geologi** che redigono studi di compatibilità idraulica per pareri
-  edilizi
-- **Studi tecnici** che integrano analisi IDF in relazioni di pericolosità
-  idraulica
+## A chi serve
 
-## Come iniziare
+A ingegneri idraulici, geologi, idrologi e consulenti ambientali che hanno bisogno di dati di
+pioggia affidabili per fognature e drenaggio urbano, studi di compatibilità idraulica,
+invarianza idraulica, studi di piena, tombini e vasche di laminazione.
 
-1. Apri [`nx.geostru.ai/hydrogeo/`](https://nx.geostru.ai/hydrogeo/)
-2. **Cerca una stazione** sulla mappa o per nome/provincia
-3. Visualizza i **dati di intensità** della stazione
-4. Lancia l'**analisi statistica** (Gumbel/TCEV)
-5. Genera la **curva IDF** per il tempo di ritorno desiderato
-6. Esporta in **PLV GeoStru** per software di calcolo idraulico
+## Come si lavora
 
-[Vedi il workflow completo →](workflow.md)
+1. **Cerchi le stazioni** chiedendolo all'[assistente](assistente.md): la mappa si apre
+   vuota e si popola con i risultati della ricerca.
+2. **Apri la scheda** di una stazione con un clic sul segnaposto: fonte, posizione, anni di
+   dati, giudizio di rilevanza. Vedi [Mappa e scheda della stazione](mappa.md).
+3. **Sblocchi i dati** e leggi le [tabelle](dati.md): serie brevi, serie lunghe,
+   precipitazioni mensili.
+4. **Esporti** la stazione in CSV, Excel, PDF o PLV. Vedi [Esportazioni e formati](formati.md).
+5. **Porti la serie in Runoff Lab NX** per la statistica.
 
-## Capitoli del manuale
+## Capitoli
 
-### Iniziare
-
-- [**Quickstart**](quickstart.md) — 5 minuti dalla ricerca alla curva IDF
-- [**Workflow completo**](workflow.md) — stazione → analisi → export
-
-### Riferimento
-
-- [**FAQ**](faq.md) — domande frequenti
+- [Guida rapida (5 minuti)](quickstart.md) — dalla ricerca alla prima tabella.
+- [Il lavoro completo](workflow.md) — dal sito del progetto alla curva di possibilità pluviometrica.
+- [Mappa e scheda della stazione](mappa.md)
+- [Tabelle dei dati](dati.md)
+- [Assistente AI](assistente.md)
+- [Esportazioni e formati](formati.md)
+- [Collegamenti con le altre app NX](integrazioni.md) — Atlante, Runoff Lab, HID, GeoDropbox.
+- [Accesso e crediti](crediti.md)
+- [Fonti e limiti dei dati](fonti.md)
+- [Glossario](glossario.md)
+- [Domande frequenti](faq.md)
 
 ---
 
-*Hai trovato un errore o vuoi suggerire un contenuto?
-[Scrivici](mailto:info@geostru.ai?subject=Help%20Hydrogeo%20NX) — grazie!*
+*Hai trovato un errore in questa pagina? [Segnalacelo](mailto:info@geostru.ai?subject=Help%20Hydrogeo%20NX) o apri una [Pull Request](https://github.com/EngSoft-Geostru/geostru-help-nx/edit/main/hydrogeo/docs/it/index.md).*

@@ -1,84 +1,63 @@
-# Quickstart — la tua prima curva IDF in 5 minuti
+# Guida rapida — la prima tabella in 5 minuti
 
-In 5 minuti vedi Hydrogeo NX al lavoro su una stazione pluviometrica reale.
+In cinque minuti trovi una stazione vera, ne leggi la scheda e i massimi annui di pioggia.
 
 ## 1. Apri l'app
 
-Vai su [`nx.geostru.ai/hydrogeo/`](https://nx.geostru.ai/hydrogeo/).
+Vai su [nx.geostru.ai/hydrogeo](https://nx.geostru.ai/hydrogeo/) e accedi con il tuo
+account GeoStru NX. Nella barra in alto trovi **Esporta**, il pulsante **?** dell'aiuto, la
+lingua e il menu utente; in basso a destra il pulsante **Assistente**.
 
-## 2. Cerca una stazione
+La mappa si apre **vuota**: le stazioni compaiono quando le cerchi.
 
-3 modi:
+## 2. Cerca le stazioni
 
-- **Mappa interattiva**: zoom sulla zona di interesse, click sui marker
-  delle stazioni
-- **Filtro per provincia**: dropdown in alto, scegli la provincia
-- **Ricerca per nome**: digita "Roma", "Pisa", "Cosenza"…
+Apri l'**Assistente** e scrivi che cosa ti serve, per esempio:
 
-Ogni stazione ha un **badge** con: codice ISPRA, fonte dati, anni di
-osservazione, numero massimo di durate disponibili.
+```text
+Trova i pluviometri entro 15 km da Terni con almeno 30 anni di dati
+```
 
-## 3. Visualizza i dati di intensità
+L'assistente interroga il database, mette le stazioni sulla mappa e le elenca in una tabella
+con nome, quota, anni di dati e tipo di dati.
 
-Click sulla stazione → si apre il **pannello dati**:
+![L'assistente elenca i pluviometri entro 15 km da Terni con almeno 30 anni di dati e li mostra sulla mappa](img/07-assistente-ricerca.jpg)
 
-- **Tabella delle massime annue** per durata (1h, 3h, 6h, 12h, 24h, …)
-- **Anno** di osservazione + **valore** in mm
-- **Grafico** delle massime annuali nel tempo
+Puoi anche partire da una delle **azioni rapide** dell'assistente, come «Trova stazioni in
+Calabria». Altri esempi in [Assistente AI](assistente.md).
 
-I dati sono presi dagli Annali Idrologici ISPRA o dal portale regionale,
-**senza modifiche**.
+## 3. Apri la scheda
 
-## 4. Statistica: Gumbel EV1
+Fai clic su un segnaposto arancione. Il segnaposto diventa verde e a destra si apre la
+**scheda della stazione**: fonte, regione, provincia, bacino, coordinate, quota,
+strumento, tipi di dati, anni di dati, periodo e **rilevanza**.
 
-Sezione **Analisi statistica** → click **Calcola Gumbel EV1**.
+![Scheda della stazione di Terni: fonte Regione Umbria, 94 anni di dati dal 1921 al 2020, rilevanza buona](img/02-scheda-stazione.jpg)
 
-Hydrogeo:
+Guarda la **rilevanza**: «Buona (≥20 anni)» indica una serie abbastanza lunga per
+un'analisi statistica.
 
-1. Calcola **media** e **scarto quadratico medio** delle massime annue
-2. Stima i **parametri** di Gumbel (α, u)
-3. Calcola le **altezze di pioggia** per i tempi di ritorno standard
-   (T = 2, 5, 10, 20, 50, 100, 200, 500, 1000 anni)
-4. Verifica la **bontà del fit** con test di adattamento (Kolmogorov-Smirnov)
+## 4. Sblocca i dati
 
-Output:
+In fondo alla scheda premi **Sblocca dati**. Lo sblocco usa crediti e include la prima
+tabella; i dettagli sono in [Accesso e crediti](crediti.md).
 
-- **Tabella altezze di pioggia h(d, T)** in mm
-- **Grafico carta probabilistica** (Gumbel paper) con i punti osservati
-- **Stime per T = 100 anni** per ciascuna durata
+## 5. Leggi i massimi annui
 
-## 5. Curva IDF
+Si apre la tabella **Serie Brevi (≤24h)**: per ogni anno l'altezza di pioggia massima in
+1, 3, 6, 12 e 24 ore, in millimetri. Con **Serie Lunghe (1-5gg)** e **Precipitazioni** vedi
+le altre due tabelle.
 
-Sezione **Curva IDF** → seleziona il **tempo di ritorno** (es. T = 100 anni)
-→ click **Genera curva IDF**.
-
-Output:
-
-- **Curva i = a · d^(n-1)** con parametri **a** e **n** stimati per minimi
-  quadrati
-- **Grafico** intensità i (mm/h) vs durata d (h), scala log-log
-- **Tabella valori di i** per durate notevoli
-
-La curva IDF è **l'input principale** per il calcolo idraulico (sfioratori,
-fognature, vasche di laminazione).
-
-## 6. Esporta
-
-Toolbar → **Esporta**:
-
-- **CSV** — tabella altezze di pioggia
-- **Excel** — `.xlsx` con statistica + grafici
-- **PDF** — relazione tecnica impaginata
-- **PLV GeoStru** — formato standard di interscambio per software di
-  calcolo idraulico (Idroclima, RunoffLab, software esterni che leggono PLV)
-
----
+![Massimi annui di pioggia a Terni per 1, 3, 6, 12 e 24 ore](img/04-serie-brevi.png)
 
 ## Prossimi passi
 
-- [**Workflow completo**](workflow.md) — analisi multi-stazione, TCEV, esposizioni
-- [**FAQ**](faq.md) — domande sulle stazioni e i dati
+- **Esporta** la stazione: menu **Esporta** → CSV, Excel, PDF Report o PLV GeoStru. Vedi
+  [Esportazioni e formati](formati.md).
+- **Fai la statistica** in Runoff Lab NX: **Importa → Da Hydrogeo NX…**. Vedi
+  [Collegamenti con le altre app NX](integrazioni.md).
+- **Parti dal sito del progetto** con Atlante NX: vedi [Il lavoro completo](workflow.md).
 
 ---
 
-*Pagina utile? [Scrivici](mailto:info@geostru.ai?subject=Help%20Hydrogeo%20NX%20-%20Quickstart).*
+*Hai trovato un errore in questa pagina? [Segnalacelo](mailto:info@geostru.ai?subject=Help%20Hydrogeo%20NX) o apri una [Pull Request](https://github.com/EngSoft-Geostru/geostru-help-nx/edit/main/hydrogeo/docs/it/quickstart.md).*
