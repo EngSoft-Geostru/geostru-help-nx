@@ -21,7 +21,7 @@ Sito pubblicato su **https://help.nx.geostru.ai/&lt;prodotto&gt;/**.
 | LiquiTer NX — liquefazione | _coming soon_ | — | https://nx.geostru.ai/liquiter/ |
 | Computo NX — computo metrico | _coming soon_ | — | https://nx.geostru.ai/computo/ |
 | Trispace NX — CAD/web | _coming soon_ | — | https://nx.geostru.ai/trispace/ |
-| Hydrogeo NX — idrogeologia | _coming soon_ | — | https://nx.geostru.ai/hydrogeo/ |
+| **Hydrogeo NX** — dati pluviometrici (stazioni, massimi annui, esportazioni) | [`hydrogeo/`](hydrogeo/) | https://help.nx.geostru.ai/hydrogeo/ | https://nx.geostru.ai/hydrogeo/ |
 | Runoff Lab NX — pluviometria | _coming soon_ | — | https://nx.geostru.ai/runofflab/ |
 | GeoSection NX — sezioni | _coming soon_ | — | https://nx.geostru.ai/geosection/ |
 | Stratigrapher NX — colonne | _coming soon_ | — | https://nx.geostru.ai/stratigrapher/ |

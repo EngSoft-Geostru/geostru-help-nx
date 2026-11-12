@@ -1,105 +1,85 @@
-# FAQ — domande frequenti
+# Domande frequenti
 
 ## Generali
 
-### Hydrogeo NX è gratuito?
-
-Hydrogeo NX è incluso nella suite **GeoStru NX** con piano *freemium*.
-Ricerca + visualizzazione dati sono accessibili nel piano Free; analisi
-statistica avanzata e export PDF/PLV richiedono Subscription. Per
-dettagli aggiornati visita [`geostru.ai`](https://www.geostru.ai/).
-
 ### Devo installare qualcosa?
 
-No — è una web app accessibile da
-[`nx.geostru.ai/hydrogeo/`](https://nx.geostru.ai/hydrogeo/).
+No. Hydrogeo NX funziona nel browser all'indirizzo
+[nx.geostru.ai/hydrogeo](https://nx.geostru.ai/hydrogeo/), su Windows, Mac e Linux.
+
+### Perché la mappa è vuota quando apro l'app?
+
+Le stazioni sono più di 6.000: la mappa mostra quelle che cerchi. Apri l'**Assistente** e
+chiedi, per esempio, «Trova stazioni in Calabria». Vedi [Assistente AI](assistente.md).
+
+### Hydrogeo NX calcola Gumbel, TCEV o le curve di possibilità pluviometrica?
+
+No. Hydrogeo NX fornisce i dati; l'analisi statistica è in Runoff Lab NX, che importa le
+serie direttamente. Vedi [Collegamenti con le altre app NX](integrazioni.md).
 
 ## Stazioni
 
-### Mancano stazioni nella mia zona
+### Da dove vengono i dati?
 
-Il database copre 19 regioni italiane. Per regioni non ancora integrate
-(o per zone con stazioni private), scrivici a `info@geostru.ai` —
-valutiamo l'aggiunta delle fonti.
+Da ISPRA (Annali Idrologici) e da dodici servizi regionali. L'elenco è in
+[Fonti e limiti dei dati](fonti.md); ogni stazione indica la sua fonte nella scheda.
 
-### La stazione che ho selezionato non ha dati per durata 1h
+### Non trovo stazioni nella mia zona
 
-Non tutte le stazioni hanno tutte le durate. Le **stazioni storiche
-ISPRA** hanno tipicamente durate "lunghe" (1, 3, 6, 12, 24 h), mentre le
-**stazioni regionali moderne** spesso forniscono anche durate "brevi"
-(15 min, 30 min) utili per il calcolo di fognature urbane.
+Allarga il raggio della ricerca o togli il filtro sugli anni di dati. Ricorda che alcune
+stazioni storiche non hanno coordinate e non compaiono sulla mappa, ma l'assistente le trova
+per nome. Se manca davvero una fonte, scrivici: vedi [Fonti e limiti dei dati](fonti.md).
 
-In assenza di dati per la durata che ti serve:
+### La stazione non ha dati di 1 ora
 
-- Usa la **statistica spaziale** del territorio per estrapolare
-- Usa una stazione vicina con la durata richiesta
-- Considera la **stazione più rappresentativa** entro 30 km
+Non tutte le stazioni hanno tutte le durate. Le stazioni storiche hanno spesso solo il
+massimo di 24 ore; le durate brevi richiedono un pluviografo. Cerca una stazione vicina con
+la voce «Pioggia oraria» in **Tipo dati**.
 
-## Statistica
+### Quanti anni di dati servono?
 
-### Quanti anni servono per Gumbel?
+La [rilevanza](mappa.md#la-rilevanza) aiuta: da 20 anni in su è buona, da 10 a 20 media,
+sotto i 10 bassa. Per un'analisi statistica solida punta ad almeno 20–30 anni, oppure usa una
+stazione vicina con una serie più lunga.
 
-Minimo **15-20 anni** di osservazioni continue. Sotto 15 anni la
-statistica è inaffidabile. Sopra **30 anni** è considerata "buona".
-Sopra 50 anni "ottima".
+### Due stazioni con lo stesso nome: quale scelgo?
 
-Se la stazione ha pochi anni, considera di:
+Sono stazioni diverse, spesso una vecchia stazione degli Annali e una nuova stazione
+regionale. Confronta periodo, anni di dati e fonte nella scheda.
 
-- Usare una stazione vicina con più anni
-- Usare la **distribuzione areale** dei parametri (per zona, non per
-  singola stazione)
+## Dati e crediti
 
-### Gumbel EV1 vs TCEV — quando usare cosa?
+### Ho chiuso il browser: devo sbloccare di nuovo la stazione?
 
-- **Gumbel EV1**: piogge omogenee (un solo regime climatico nel sito).
-  Buono per la maggior parte dei siti italiani.
-- **TCEV**: piogge bimodali (sito influenzato sia da convettive estive
-  che da fronti invernali). Tipico in **zone alpine** o in **siti
-  costieri esposti**.
+Sì. Lo sblocco resta attivo nella scheda del browser in cui l'hai fatto. Esporta i dati che
+ti servono prima di chiudere. Vedi [Accesso e crediti](crediti.md).
 
-Verifica con il **test KS**: se Gumbel non passa il test, prova TCEV.
+### Un'esportazione ripetuta costa due volte?
 
-### Cosa succede per T molto grandi (T = 500, 1000)?
+Se la ripeti identica a breve distanza (nella stessa finestra di 15 minuti), no. Più tardi è
+una nuova esportazione. Un'operazione che non restituisce dati non viene mai addebitata.
 
-L'estrapolazione a T molto grandi è **incerta**:
+### Il PDF è disponibile in inglese?
 
-- Con 30 anni di dati, T = 100 è già un'estrapolazione di 3× → margine
-  di errore 20-30% sull'altezza
-- T = 500-1000 è ai limiti del significato fisico. Per opere con vita
-  utile lunga (dighe, ferrovie), la NTC raccomanda di usare metodi
-  multi-stazione + variabilità areale.
+No, il **PDF Report** è in italiano. Per gli altri usi esporta in CSV o Excel.
 
-## Curve IDF
+## Altre app
 
-### Quale tempo di ritorno scelgo?
+### Come porto i dati in Runoff Lab NX?
 
-Dipende dall'opera:
+In Runoff Lab NX: **Importa → Da Hydrogeo NX…**, cerca la stazione e fai clic. Vedi
+[Collegamenti con le altre app NX](integrazioni.md).
 
-- **Fognature urbane**: T = 5-10 anni (NTC sezione idraulica)
-- **Strade**: T = 25 anni
-- **Ponti**: T = 100-200 anni (a seconda della classe)
-- **Dighe**: T = 1000-10000 anni
+### Il file PLV si apre in Runoff Lab NX?
 
-Verifica sempre il **capitolato** del committente.
+No: Runoff Lab NX importa le stazioni direttamente da Hydrogeo NX, senza file. Il PLV serve
+ai software desktop GeoStru.
 
-## Esportazione
+## Manca la tua domanda?
 
-### Cos'è il formato PLV?
+[Scrivici](mailto:info@geostru.ai?subject=Hydrogeo%20NX%20FAQ) o apri un ticket
+dall'[assistente](assistente.md): la aggiungiamo qui.
 
-PLV = "Pluvio" — formato testuale standard GeoStru per i dati
-pluviometrici. Caricabile da:
+---
 
-- **Runoff Lab NX** (web)
-- **Idroclima** (desktop GeoStru)
-- Software esterni che supportano PLV (alcuni software italiani di
-  calcolo idraulico)
-
-### Posso esportare in formato standard internazionale?
-
-Per ora i formati supportati sono CSV / Excel / PDF / PLV. In arrivo:
-**JSON-LD** schema idrologico, **WaterML** (OGC standard).
-
-## Manca la mia domanda
-
-[Scrivici](mailto:info@geostru.ai?subject=Help%20Hydrogeo%20NX%20-%20FAQ)
-e la aggiungiamo qui.
+*Hai trovato un errore in questa pagina? [Segnalacelo](mailto:info@geostru.ai?subject=Help%20Hydrogeo%20NX) o apri una [Pull Request](https://github.com/EngSoft-Geostru/geostru-help-nx/edit/main/hydrogeo/docs/it/faq.md).*
