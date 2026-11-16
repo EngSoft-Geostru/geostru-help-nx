@@ -63,6 +63,10 @@ plugins:
             Metodo lineare equivalente: Equivalent-linear method
             Fattori di amplificazione (ICMS): Amplification factors (ICMS)
 
+# Toglie i blocchi <!-- riservato --> (solo per l'assistente AI) prima di costruire pagine e indice di ricerca.
+hooks:
+  - ../_shared/hooks/riservato.py
+
 markdown_extensions:
   - admonition
   - attr_list

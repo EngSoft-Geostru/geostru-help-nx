@@ -89,6 +89,10 @@ plugins:
         #   nav_translations:
         #     Guida rapida: Ghid rapid
 
+# Toglie i blocchi <!-- riservato --> (solo per l'assistente AI) prima di costruire pagine e indice di ricerca.
+hooks:
+  - ../_shared/hooks/riservato.py
+
 markdown_extensions:
   - admonition
   - attr_list

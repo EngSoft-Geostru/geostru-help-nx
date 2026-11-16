@@ -77,6 +77,10 @@ plugins:
             Formati e file: Formats and files
             Domande frequenti: FAQ
 
+# Toglie i blocchi <!-- riservato --> (solo per l'assistente AI) prima di costruire pagine e indice di ricerca.
+hooks:
+  - ../_shared/hooks/riservato.py
+
 markdown_extensions:
   - admonition
   - attr_list

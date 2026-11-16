@@ -81,6 +81,10 @@ jobs:
             echo "::endgroup::"
           done
 
+      - name: Check no reserved blocks in site
+        # I blocchi <!-- riservato --> sono solo per l'assistente AI: se un segno arriva nel sito, niente pubblicazione.
+        run: python3 _shared/tools/controlla_riservato.py _site
+
       - name: Add landing index
         run: |
           # Landing multilingua: generata da _landing/build.py

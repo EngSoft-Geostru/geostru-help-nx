@@ -88,6 +88,10 @@ plugins:
             Validazione e limiti: Validation and limits
             Domande frequenti: FAQ
 
+# Toglie i blocchi <!-- riservato --> (solo per l'assistente AI) prima di costruire pagine e indice di ricerca.
+hooks:
+  - ../_shared/hooks/riservato.py
+
 markdown_extensions:
   - admonition
   - attr_list
