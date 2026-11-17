@@ -257,9 +257,10 @@ In a confined aquifer the program also calculates the specific formulas (K from 
 | «L/b − L/2r» | T = Q/(2π·s)·ln((2/L)·(L/2r~w~) + 0.2/b) |
 
 !!! warning "Warning"
-    Four formulas are marked **to be checked** against the reference text and remain as in the desktop program: Muskat (value of
-    ln Γ), Girinski (the L/r~w~ ≤ 5 limit excludes it for any real screen), «L/b − L/2r» (the argument of the logarithm is not
-    dimensionless, so T depends on the unit of measurement) and the ξ/2 term of types B and C. Use them only for comparison.
+    Five formulas are marked **to be checked** against the reference text and remain as in the desktop program: Halek (reconstructed,
+    not compared with the text), Muskat (value of ln Γ), Girinski (the L/r~w~ ≤ 5 limit excludes it for any real screen),
+    «L/b − L/2r» (the argument of the logarithm is not dimensionless, so T depends on the unit of measurement) and the ξ/2 term
+    of types B and C. Use them only for comparison.
 
 ## Cone of depression { #cono-di-depressione }
 

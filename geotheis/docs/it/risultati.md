@@ -294,7 +294,7 @@ Il dettaglio di algoritmi, casi di prova e confronti con il programma desktop è
 - **S dal pozzo di emungimento non è affidabile** (perdite di carico, raggio effettivo incerto): per S servono le letture in un
   piezometro.
 - I metodi della **prova a gradini** sui piezometri e i **pozzi singoli** sono indicativi: usano abbassamenti a fine gradino, non a
-  regime, o un raggio d'azione presunto. Quattro formule dei pozzi incompleti (Muskat, Girinski, «L/b − L/2r», tipi B e C di Chiesa)
+  regime, o un raggio d'azione presunto. Cinque formule dei pozzi incompleti (Halek, Muskat, Girinski, «L/b − L/2r», tipi B e C di Chiesa)
   sono segnate *da verificare*.
 - Non sono modellati: immagazzinamento nel pozzo e skin, derivata dell'abbassamento, drenaggio ritardato in falda libera, limiti
   alimentanti o impermeabili (pozzi immagine), anisotropia, portate variabili diverse dai gradini, interferenza di più pozzi.

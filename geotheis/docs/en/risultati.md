@@ -293,7 +293,7 @@ Details of the algorithms, test cases and comparisons with the desktop program a
 - **Hantush** is calculated only in a leaky aquifer and does not consider storage in the semipermeable layer.
 - **S from the pumping well is not reliable** (head losses, uncertain effective radius): readings in a piezometer are required for S.
 - The **step-drawdown-test** methods on piezometers and the **single-well methods** are indicative: they use end-of-step drawdowns, not
-  steady-state drawdowns, or an assumed radius of influence. Four formulas for partially penetrating wells (Muskat, Girinsky, “L/b − L/2r”, Chiesa
+  steady-state drawdowns, or an assumed radius of influence. Five formulas for partially penetrating wells (Halek, Muskat, Girinsky, “L/b − L/2r”, Chiesa
   types B and C) are marked *to be verified*.
 - Not modeled: wellbore storage and skin, drawdown derivative, delayed drainage in an unconfined aquifer, recharging
   or impermeable boundaries (image wells), anisotropy, variable discharges other than steps, interference among multiple wells.

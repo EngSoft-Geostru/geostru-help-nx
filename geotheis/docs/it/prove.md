@@ -56,6 +56,7 @@ misurati a fine gradino rispetto al livello statico, non l'incremento del solo g
 | **Portata** | unità di **Portate in** | portata del gradino; non negativa |
 | **s pozzo** | m | abbassamento nel pozzo di emungimento a fine gradino |
 | **s** *piezometro* | m | abbassamento nel piezometro a fine gradino (una colonna per piezometro) |
+| **R presunto (m)** | m | facoltativo: raggio d'azione del gradino letto sul grafico s – log r; serve alla distanza-abbassamento sui gradini quando c'è **un solo piezometro**; non segue le unità della tabella |
 
 **Aggiungi gradino** aggiunge una riga; la **×** a destra la toglie. **Incolla da Excel o CSV** apre il pannello descritto più sotto.
 
@@ -109,6 +110,7 @@ La pastiglia accanto al titolo dice lo stato:
 | **Portata della prova** (Q) | unità di **Portate in** | portata costante del pompaggio; non negativa |
 | **Abbassamenti stabilizzati** → **s pozzo** | m | abbassamento a regime nel pozzo |
 | **Abbassamenti stabilizzati** → **s** *piezometro* | m | abbassamento a regime in ciascun piezometro |
+| **Raggio d'azione presunto (m)** | m | per Dupuit-Thiem stazionario **senza piezometri**; con i piezometri non si usa |
 
 Senza **Portata della prova** positiva nessun metodo della portata costante si calcola, anche se le letture ci sono. Gli abbassamenti
 stabilizzati (*a regime, per Dupuit-Thiem*) servono al metodo di Dupuit-Thiem in regime stazionario e al raggio d'azione dalla retta
@@ -206,7 +208,8 @@ le **prime righe come verranno salvate** (tempo in h:mm:ss e nell'unità della t
   nella stessa cella.
 - **Colonne**, dall'intestazione: *portata* (Q, portata, flow… o un'unità come l/s), *tempo* (t, tempo, time, ora, orario, trascorso,
   durata…), *data*, *livello* (livello, profondità, soggiacenza, depth, level…; si trasformano in abbassamenti), altrimenti
-  *abbassamento*. Senza intestazione la prima colonna di numeri è il tempo e le altre sono abbassamenti.
+  *abbassamento*. Senza intestazione la prima colonna di numeri è il tempo e le altre sono abbassamenti. Se una colonna è riconosciuta
+  male, cambiala nell'anteprima con il menu **Contenuto**.
 - **Unità** dall'intestazione: per i tempi s, min, h (anche secondi, minuti, ore); per le portate l/s, m³/h (anche mc/h), l/min,
   m³/s; per gli abbassamenti cm e mm, altrimenti m. Senza unità i tempi sono in **minuti** e le portate in **l/s**, con un avviso.
 - **Ore dell'orologio contro tempi trascorsi** (*da riconoscere*): con una data sono ore dell'orologio; poi decide l'intestazione
@@ -225,8 +228,8 @@ le **prime righe come verranno salvate** (tempo in h:mm:ss e nell'unità della t
     abbassamento già misurato, che non è possibile.
 
 !!! tip "Suggerimento"
-    Incolla sempre la riga d'intestazione con le unità (`t (min)`, `Q (l/s)`, `s P1 (m)`). Senza intestazione e senza colonna di date
-    una colonna di portate non si riconosce e verrebbe letta come abbassamento.
+    Incolla la riga d'intestazione con le unità (`t (min)`, `Q (l/s)`, `s P1 (m)`). Senza intestazione e senza colonna di date una
+    colonna di portate viene letta come abbassamento: nell'anteprima scegli **portata** nel suo menu **Contenuto**.
 
 **Raggruppa le letture in gradini.** Il datalogger registra una lettura per riga. Con la spunta, per ogni tratto a portata costante
 resta l'ultima lettura prima del cambio di portata, come nel programma desktop; i tratti a portata nulla si scartano. Senza spunta

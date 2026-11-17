@@ -135,7 +135,7 @@ The types of partially penetrating well in a confined aquifer (Chiesa): **A** sc
 the top and shorter than the thickness; **C** screen separated from the top and reaching the base.
 
 !!! warning "Warning"
-    Muskat, Girinski, “L/b − L/2r” and the formula for types B and C are marked **to be verified**: these are desktop program formulas not
+    Halek, Muskat, Girinski, “L/b − L/2r” and the formula for types B and C are marked **to be verified**: these are desktop program formulas not
     yet verified against the reference text. Use them as a check, not as a design value.
 
 ## Constant-rate test { #prova-a-portata-costante }

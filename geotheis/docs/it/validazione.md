@@ -87,7 +87,7 @@ numeri possono quindi essere diversi da quelli che leggevi nel desktop.
 | Tabella di Hantush con refusi | integrale numerico |
 | Solo Jacob (n = 2) sulla prova a gradini | in più Rorabaugh (n libero), indicativo |
 
-Restano **come nel desktop**, segnate *da verificare*, quattro formule dei pozzi incompleti (Muskat, Girinski, «L/b − L/2r» e il termine
+Restano **come nel desktop**, segnate *da verificare*, cinque formule dei pozzi incompleti (Halek, Muskat, Girinski, «L/b − L/2r» e il termine
 ξ/2 dei tipi B e C): vedi [Cenni teorici](teoria.md#pozzo-incompleto-pozzo-parzialmente-penetrante).
 
 ## Campo d'impiego e limiti

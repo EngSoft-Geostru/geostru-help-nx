@@ -135,7 +135,7 @@ I tipi del pozzo incompleto in pressione (Chiesa): **A** filtro staccato dal tet
 al tetto e più corto dello spessore; **C** filtro staccato dal tetto che arriva al substrato.
 
 !!! warning "Attenzione"
-    Muskat, Girinski, «L/b − L/2r» e la formula dei tipi B e C sono segnati **da verificare**: sono formule del programma desktop non
+    Halek, Muskat, Girinski, «L/b − L/2r» e la formula dei tipi B e C sono segnati **da verificare**: sono formule del programma desktop non
     ancora verificate sul testo di riferimento. Leggili come controllo, non come valore di progetto.
 
 ## Prova a portata costante

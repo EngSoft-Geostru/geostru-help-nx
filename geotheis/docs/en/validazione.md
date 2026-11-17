@@ -89,7 +89,7 @@ them. With the same data, the numbers may therefore differ from those you saw in
 | Hantush table with typographical errors | numerical integral |
 | Only Jacob (n = 2) for the step-drawdown test | additionally Rorabaugh (free n), indicative |
 
-Four formulas for partially penetrating wells (Muskat, Girinski, “L/b − L/2r”, and the ξ/2 term for types B and C) remain **as in
+Five formulas for partially penetrating wells (Halek, Muskat, Girinski, “L/b − L/2r”, and the ξ/2 term for types B and C) remain **as in
 the desktop version**, marked *to be verified*: see [Theoretical background](teoria.md#pozzo-incompleto-pozzo-parzialmente-penetrante).
 
 ## Scope of application and limitations { #campo-dimpiego-e-limiti }

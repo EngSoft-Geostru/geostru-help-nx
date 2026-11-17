@@ -56,6 +56,7 @@ measured at the end of the step relative to the static water level, not the incr
 | **Discharge** | **Discharges in** unit | step discharge; non-negative |
 | **s well** | m | drawdown in the pumping well at the end of the step |
 | **s** *piezometer* | m | drawdown in the piezometer at the end of the step (one column per piezometer) |
+| **Assumed R (m)** | m | optional: step radius of influence read from the s – log r graph; used by distance-drawdown on steps when there is **only one piezometer**; does not follow the table units |
 
 **Add step** adds a row; the **×** on the right removes it. **Paste from Excel or CSV** opens the panel described below.
 
@@ -108,6 +109,7 @@ The badge next to the title shows the status:
 | **Test discharge** (Q) | **Discharges in** unit | constant pumping discharge; non-negative |
 | **Stabilised drawdowns** → **s well** | m | steady-state drawdown in the well |
 | **Stabilised drawdowns** → **s** *piezometer* | m | steady-state drawdown in each piezometer |
+| **Assumed radius of influence (m)** | m | for steady-state Dupuit-Thiem **without piezometers**; not used when piezometers are present |
 
 Without a positive **Test discharge**, no constant-rate method is calculated, even if readings are present. Stabilised drawdowns
 (*steady state, for Dupuit-Thiem*) are used by the steady-state Dupuit-Thiem method and to derive the radius of influence from Thiem's
@@ -205,7 +207,8 @@ each column, the **first rows as they will be saved** (time in h:mm:ss and in th
   date and time in the same cell.
 - **Columns**, from the header: *discharge* (Q, portata, flow… or a unit such as l/s), *time* (t, tempo, time, ora, orario,
   trascorso, durata…), *date*, *level* (livello, profondità, soggiacenza, depth, level…; converted to drawdowns), otherwise
-  *drawdown*. Without a header, the first numeric column is time and the others are drawdowns.
+  *drawdown*. Without a header, the first numeric column is time and the others are drawdowns. If a column is recognised
+  incorrectly, change it in the preview using the **Content** menu.
 - **Units** from the header: for times s, min, h (also secondi, minuti, ore); for discharges l/s, m³/h (also mc/h), l/min, m³/s; for
   drawdowns cm and mm, otherwise m. Without units, times are in **minutes** and discharges in **l/s**, with a warning.
 - **Clock times versus elapsed times** (*auto-detect*): with a date, they are clock times; then the header decides (*trascorso*,
@@ -224,8 +227,8 @@ each column, the **first rows as they will be saved** (time in h:mm:ss and in th
     measured, which is not possible.
 
 !!! tip "Tip"
-    Always paste the header row with units (`t (min)`, `Q (l/s)`, `s P1 (m)`). Without a header and without a date column, a
-    discharge column is not recognised and would be read as drawdown.
+    Paste the header row with units (`t (min)`, `Q (l/s)`, `s P1 (m)`). Without a header and without a date column, a discharge
+    column is read as drawdown: in the preview, select **discharge** from its **Content** menu.
 
 **Group readings into steps**. The datalogger records one reading per row. With the checkbox selected, for each constant-discharge
 interval the last reading before the discharge change is kept, as in the desktop program; intervals with zero discharge are discarded.

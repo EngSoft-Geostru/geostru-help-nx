@@ -257,7 +257,8 @@ In falda confinata il programma calcola anche le formule specifiche (K da cui T 
 | «L/b − L/2r» | T = Q/(2π·s)·ln((2/L)·(L/2r~w~) + 0,2/b) |
 
 !!! warning "Attenzione"
-    Quattro formule sono segnate **da verificare** sul testo di riferimento e restano come nel programma desktop: Muskat (valore di
+    Cinque formule sono segnate **da verificare** sul testo di riferimento e restano come nel programma desktop: Halek (ricostruita,
+    non confrontata con il testo), Muskat (valore di
     ln Γ), Girinski (il limite L/r~w~ ≤ 5 la esclude per qualunque filtro reale), «L/b − L/2r» (l'argomento del logaritmo non è
     adimensionale, quindi T dipende dall'unità di misura) e il termine ξ/2 dei tipi B e C. Usale solo come confronto.
 
