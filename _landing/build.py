@@ -127,6 +127,14 @@ APPS = {
         'es': 'Cociente espectral H/V: f0, criterios SESAME, elipticidad, Vs,eq y categoría de suelo',
         'ro': 'Raport spectral H/V: f0, criterii SESAME, elipticitate, Vs,eq și categorie de teren',
         'pl': 'Stosunek widmowy H/V: f0, kryteria SESAME, eliptyczność, Vs,eq i kategoria gruntu'}),
+    'geotheis': dict(name='GeoTheis NX', langs=['it', 'en'], desc={
+        'it': 'Prove di emungimento sui pozzi: gradini di portata, portata costante e risalita, Theis, Cooper-Jacob, Hantush, Dupuit-Thiem',
+        'en': 'Pumping tests on water wells: step-drawdown, constant-rate and recovery, Theis, Cooper-Jacob, Hantush, Dupuit-Thiem',
+        'de': 'Pumpversuche an Brunnen: Stufentest, Konstantpumpversuch und Wiederanstieg, Theis, Cooper-Jacob, Hantush, Dupuit-Thiem',
+        'fr': 'Essais de pompage sur puits : paliers de débit, débit constant et remontée, Theis, Cooper-Jacob, Hantush, Dupuit-Thiem',
+        'es': 'Ensayos de bombeo en pozos: escalonados, caudal constante y recuperación, Theis, Cooper-Jacob, Hantush, Dupuit-Thiem',
+        'ro': 'Teste de pompare în puțuri: trepte de debit, debit constant și revenire, Theis, Cooper-Jacob, Hantush, Dupuit-Thiem',
+        'pl': 'Próbne pompowania studni: stopnie wydajności, stała wydajność i odbudowa, Theis, Cooper-Jacob, Hantush, Dupuit-Thiem'}),
     'rsl3a': dict(name='RSL III A NX', langs=['it', 'en'], desc={
         'it': 'Ordinanza 55/2018: spettro MS3 regolarizzato contro spettro semplificato NTC 2018, condizioni ed esito',
         'en': 'Ordinance 55/2018: regularised MS3 spectrum versus NTC 2018 simplified spectrum, conditions and outcome',
@@ -254,7 +262,7 @@ CATEGORIES = [
     ('engineering', ['rpd']),
     ('geotech', ['gdw', 'liquiter', 'loadcap', 'mdc', 'mp', 'mre', 'seismic', 'rsl', 'rsl3a', 'downhole', 'masw', 'hvsr', 'slope', 'srs']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
-    ('hydro', ['hid', 'hydrogeo', 'runofflab']),
+    ('hydro', ['geotheis', 'hid', 'hydrogeo', 'runofflab']),
     ('insitu', ['dynprobe']),
     ('topo', ['trispace']),
     ('geology', ['geosection', 'stratigrapher']),
