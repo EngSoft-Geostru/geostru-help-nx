@@ -268,7 +268,7 @@ APPS = {
 CATEGORIES = [
     ('general', ['pdm', 'atlante', 'computo']),
     ('engineering', ['rpd']),
-    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mdc', 'mp', 'mre', 'seismic', 'rsl', 'rsl3a', 'downhole', 'masw', 'hvsr', 'slope', 'srs']),
+    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mdc', 'mp', 'mre', 'seismic', 'rsl', 'rsl3a', 'downhole', 'masw', 'hvsr', 'slope', 'srs', 'spw']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
     ('hydro', ['geotheis', 'hid', 'hydrogeo', 'runofflab']),
     ('insitu', ['dynprobe']),
