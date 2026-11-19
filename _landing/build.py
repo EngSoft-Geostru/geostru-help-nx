@@ -135,6 +135,14 @@ APPS = {
         'es': 'Ensayos de bombeo en pozos: escalonados, caudal constante y recuperación, Theis, Cooper-Jacob, Hantush, Dupuit-Thiem',
         'ro': 'Teste de pompare în puțuri: trepte de debit, debit constant și revenire, Theis, Cooper-Jacob, Hantush, Dupuit-Thiem',
         'pl': 'Próbne pompowania studni: stopnie wydajności, stała wydajność i odbudowa, Theis, Cooper-Jacob, Hantush, Dupuit-Thiem'}),
+    'spw': dict(name='SPW NX', langs=['it', 'en'], desc={
+        'it': 'Paratie di pali, micropali e diaframmi: tiranti e puntoni, fasi costruttive, LEM e FEM, verifiche NTC 2018 ed EC7, armature',
+        'en': 'Embedded retaining walls of piles, micropiles and diaphragms: anchors and struts, construction stages, LEM and FEM, NTC 2018 and EC7 checks, reinforcement',
+        'de': 'Verbauwände aus Pfählen, Mikropfählen und Schlitzwänden: Anker und Steifen, Bauphasen, LEM und FEM, Nachweise nach NTC 2018 und EC7, Bewehrung',
+        'fr': 'Parois de pieux, micropieux et parois moulées : tirants et butons, phases de construction, LEM et FEM, vérifications NTC 2018 et EC7, ferraillage',
+        'es': 'Pantallas de pilotes, micropilotes y muros pantalla: anclajes y puntales, fases constructivas, LEM y FEM, verificaciones NTC 2018 y EC7, armaduras',
+        'ro': 'Pereți din piloți, micropiloți și diafragme: ancore și șpraițuri, faze de execuție, LEM și FEM, verificări NTC 2018 și EC7, armare',
+        'pl': 'Ściany z pali, mikropali i ściany szczelinowe: kotwy i rozpory, etapy budowy, LEM i MES, sprawdzenia NTC 2018 i EC7, zbrojenie'}),
     'rsl3a': dict(name='RSL III A NX', langs=['it', 'en'], desc={
         'it': 'Ordinanza 55/2018: spettro MS3 regolarizzato contro spettro semplificato NTC 2018, condizioni ed esito',
         'en': 'Ordinance 55/2018: regularised MS3 spectrum versus NTC 2018 simplified spectrum, conditions and outcome',
