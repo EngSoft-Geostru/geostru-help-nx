@@ -143,6 +143,14 @@ APPS = {
         'es': 'Pantallas de pilotes, micropilotes y muros pantalla: anclajes y puntales, fases constructivas, LEM y FEM, verificaciones NTC 2018 y EC7, armaduras',
         'ro': 'Pereți din piloți, micropiloți și diafragme: ancore și șpraițuri, faze de execuție, LEM și FEM, verificări NTC 2018 și EC7, armare',
         'pl': 'Ściany z pali, mikropali i ściany szczelinowe: kotwy i rozpory, etapy budowy, LEM i MES, sprawdzenia NTC 2018 i EC7, zbrojenie'}),
+    'snl': dict(name='SNL NX', langs=['it', 'en'], desc={
+        'it': 'Pareti chiodate (soil nailing): forze nei chiodi, stabilità interna per fasi di scavo, sfilamento, rottura dei chiodi, scorrimento, sisma',
+        'en': 'Soil nail walls: nail forces, internal stability by excavation stage, pull-out, nail tensile failure, sliding, seismic action',
+        'de': 'Vernagelte Wände (Soil Nailing): Nagelkräfte, innere Standsicherheit je Aushubphase, Herausziehen, Nagelbruch, Gleiten, Erdbeben',
+        'fr': 'Parois clouées (soil nailing) : efforts dans les clous, stabilité interne par phase de terrassement, arrachement, rupture des clous, glissement, séisme',
+        'es': 'Muros claveteados (soil nailing): fuerzas en los clavos, estabilidad interna por fases de excavación, arrancamiento, rotura de los clavos, deslizamiento, sismo',
+        'ro': 'Pereți cu ancore pasive (soil nailing): forțe în ancore, stabilitate internă pe faze de excavare, smulgere, rupere, alunecare, seism',
+        'pl': 'Ściany gwoździowane (soil nailing): siły w gwoździach, stateczność wewnętrzna w etapach wykopu, wyrywanie, zerwanie gwoździ, przesunięcie, sejsmika'}),
     'rsl3a': dict(name='RSL III A NX', langs=['it', 'en'], desc={
         'it': 'Ordinanza 55/2018: spettro MS3 regolarizzato contro spettro semplificato NTC 2018, condizioni ed esito',
         'en': 'Ordinance 55/2018: regularised MS3 spectrum versus NTC 2018 simplified spectrum, conditions and outcome',
@@ -268,7 +276,7 @@ APPS = {
 CATEGORIES = [
     ('general', ['pdm', 'atlante', 'computo']),
     ('engineering', ['rpd']),
-    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mdc', 'mp', 'mre', 'seismic', 'rsl', 'rsl3a', 'downhole', 'masw', 'hvsr', 'slope', 'srs', 'spw']),
+    ('geotech', ['gdw', 'liquiter', 'loadcap', 'mdc', 'mp', 'mre', 'seismic', 'rsl', 'rsl3a', 'downhole', 'masw', 'hvsr', 'slope', 'srs', 'spw', 'snl']),
     ('rock', ['gms', 'rockmechanics', 'rockplane']),
     ('hydro', ['geotheis', 'hid', 'hydrogeo', 'runofflab']),
     ('insitu', ['dynprobe']),
