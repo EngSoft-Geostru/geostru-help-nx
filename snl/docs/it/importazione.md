@@ -24,6 +24,8 @@ Il rapporto riporta nome del file, data e versione, e raggruppa le voci in tre g
 
 Il rapporto resta con il progetto anche quando lo salvi come `.snlnx`.
 
+![Rapporto di importazione di un file .snl del desktop: avvisi e informazioni](img/10-importazione.png)
+
 ## Cosa cambia nel modello
 
 ### I risultati si ricalcolano

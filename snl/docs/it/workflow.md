@@ -48,6 +48,8 @@ Se il progetto viene da un file `.snl`, in fondo al passo trovi il **Rapporto di
 
 La sezione **Solo disegno** (lunghezza del tratto a monte e a valle, inclinazione a valle, spessore del rivestimento) serve al disegno e al computo, non al calcolo.
 
+![Disegno della sezione: quote di H e degli interassi, θ, strati, sovraccarico e chiodi](img/11-disegno-sezione.png)
+
 ## 3. Terreno
 
 ### Strati
@@ -59,6 +61,8 @@ Gli strati vanno **dall'alto**, a partire dalla testa della parete. Per ogni str
 - lo strato a cavallo della base, o il primo sotto, è il **terreno di fondazione** della verifica a scorrimento. Lo spessore totale degli strati deve superare H.
 
 Con le frecce sposti uno strato su o giù; il cestino lo elimina dopo una conferma.
+
+![Passo Terreno: elenco degli strati con i parametri e la falda](img/02-terreno.png)
 
 ### Falda
 
@@ -75,6 +79,8 @@ Tre elenchi di carichi a monte, ciascuno con **Descrizione**, **Categoria** (Per
 | **Carichi lineari** | p [kN/m] e **Distanza dalla testa** [m] |
 
 Il coefficiente A di ogni carico si scrive a mano: la categoria lo descrive, non lo imposta.
+
+![Passo Carichi: carico uniforme con categoria, valore e coefficiente A](img/03-carichi.png)
 
 ## 5. Chiodi
 
@@ -99,6 +105,8 @@ Comandi dell'elenco:
 - **Ordina per profondità**.
 
 Il calcolo considera comunque i chiodi in ordine di profondità. Due chiodi alla stessa profondità o un chiodo sotto il piede della parete sono errori.
+
+![Passo Chiodi: interasse orizzontale ed elenco dei chiodi](img/04-chiodi.png)
 
 ## 6. Calcolo
 
@@ -129,6 +137,8 @@ Premi **Calcola**. Il calcolo a video è gratuito. Sopra il pulsante leggi lo st
 
 Gli errori di validazione bloccano il calcolo; gli avvisi no.
 
+![Passo Calcolo dopo il calcolo: risultato aggiornato](img/05-calcolo.png)
+
 ## 7. Risultati
 
 Il passo **Risultati** mostra il risultato dell'ultimo calcolo, se è aggiornato:
@@ -142,6 +152,12 @@ Sopra il disegno, le viste dei risultati mostrano la fase scelta con la superfic
 
 Il pannello **Verifiche** a destra dà il minimo di ogni famiglia con la fase e il chiodo che governano. «Non aggiornata» vuol dire che hai cambiato un dato dopo il calcolo.
 
+![Passo Risultati: verifiche governanti, cursore delle fasi e vista della fase](img/06-risultati-fase.png)
+
+![Vista Fase all'ultima fase: superficie di rottura β, parte efficace Le dei chiodi, forze e fattori di sicurezza](img/12-disegno-fase-finale.png)
+
+![Vista Diagrammi: pressioni sul paramento, taglio e momento nel rivestimento](img/13-disegno-diagrammi.png)
+
 ## 8. Relazione ed export
 
 Con un calcolo aggiornato puoi scaricare:
@@ -150,6 +166,8 @@ Con un calcolo aggiornato puoi scaricare:
 - la **tavola DXF** della sezione, firmata.
 
 Ognuna consuma 10 crediti; un documento non prodotto non si paga. Vedi [Crediti](crediti.md) e [Formati](formati.md).
+
+![Passo Relazione ed export: relazione Word e tavola DXF](img/08-relazione.png)
 
 ---
 

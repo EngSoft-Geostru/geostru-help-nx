@@ -20,6 +20,8 @@ For questions on commands, steps, methods and messages it looks up the manual be
 
 Before changing anything it reads the current data and keeps what you did not ask to change. After writing it reports validation errors and warnings. While it works, changes from the page are suspended; at the end the page reloads if the project or the analysis changed.
 
+![AI assistant panel with the quick actions](img/09-assistente.png)
+
 ## What it does not do
 
 - it does not invent soil parameters, levels, factors or site data;

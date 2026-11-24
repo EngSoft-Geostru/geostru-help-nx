@@ -40,6 +40,8 @@ The method follows the US guidelines FHWA-NHI-14-007 and, for internal stability
 
 Each step is described in the [Workflow](workflow.md).
 
+![SNL NX: the steps on the left, the section drawing in the centre, the checks on the right](img/01-panoramica.png)
+
 ## Free and with credits
 
 Modelling, **analysis**, on-screen drawing and results do not use credits. The Word report and the DXF drawing use **10 credits** each; every message to the assistant uses **3**. A failed operation is not charged. See [Credits](crediti.md).

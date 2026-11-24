@@ -20,6 +20,8 @@ Per le domande su comandi, passi, metodi e messaggi consulta il manuale prima di
 
 Prima di modificare legge i dati correnti e conserva ciò che non hai chiesto di cambiare. Dopo la scrittura riporta gli errori e gli avvisi di validazione. Mentre lavora, le modifiche dalla pagina sono sospese; al termine la pagina si ricarica se il progetto o il calcolo sono cambiati.
 
+![Pannello dell'assistente AI con le azioni rapide](img/09-assistente.png)
+
 ## Cosa non fa
 
 - non inventa parametri del terreno, quote, coefficienti o dati del cantiere;

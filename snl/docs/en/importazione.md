@@ -24,6 +24,8 @@ The report gives the file name, date and version, and groups the items in three 
 
 The report stays with the project also when you save it as `.snlnx`.
 
+![Import report of a desktop .snl file: warnings and information](img/10-importazione.png)
+
 ## What changes in the model
 
 ### Results are recalculated

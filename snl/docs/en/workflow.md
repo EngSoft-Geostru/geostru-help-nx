@@ -48,6 +48,8 @@ If the project comes from a `.snl` file, the **Import report** is at the bottom 
 
 The **Drawing only** section (length of the uphill and downhill stretches, downhill inclination, facing thickness) is used for the drawing and the bill of quantities, not for the analysis.
 
+![Section drawing: dimensions of H and of the spacings, θ, layers, surcharge and nails](img/11-disegno-sezione.png)
+
 ## 3. Soil
 
 ### Layers
@@ -59,6 +61,8 @@ Layers go **from the top**, starting at the top of the wall. For each layer: **N
 - the layer across the base, or the first below it, is the **foundation soil** of the sliding check. The total thickness of the layers must exceed H.
 
 The arrows move a layer up or down; the bin deletes it after a confirmation.
+
+![Soil step: list of layers with their parameters and the water table](img/02-terreno.png)
 
 ### Water table
 
@@ -75,6 +79,8 @@ Three lists of surcharges behind the wall, each with **Description**, **Category
 | **Line loads** | p [kN/m] and **Distance from the top** [m] |
 
 The factor A of each load is typed by hand: the category describes the load, it does not set the factor.
+
+![Loads step: uniform load with category, value and factor A](img/03-carichi.png)
 
 ## 5. Nails
 
@@ -99,6 +105,8 @@ Commands of the list:
 - **Sort by depth**.
 
 The analysis always considers the nails in order of depth. Two nails at the same depth or a nail below the toe of the wall are errors.
+
+![Nails step: horizontal spacing and list of nails](img/04-chiodi.png)
 
 ## 6. Analysis
 
@@ -129,6 +137,8 @@ Press **Calculate**. The on-screen analysis is free. Above the button you read t
 
 Validation errors block the analysis; warnings do not.
 
+![Analysis step after the calculation: result up to date](img/05-calcolo.png)
+
 ## 7. Results
 
 The **Results** step shows the result of the last analysis, if it is up to date:
@@ -142,6 +152,12 @@ Above the drawing, the result views show the chosen stage with the failure surfa
 
 The **Checks** panel on the right gives the minimum of each family with the governing stage and nail. «Out of date» means you changed a value after the analysis.
 
+![Results step: governing checks, stage slider and stage view](img/06-risultati-fase.png)
+
+![Stage view at the last stage: failure surface β, effective length Le of the nails, forces and safety factors](img/12-disegno-fase-finale.png)
+
+![Diagrams view: pressures on the facing, shear and moment in the facing](img/13-disegno-diagrammi.png)
+
 ## 8. Report and export
 
 With an up-to-date analysis you can download:
@@ -150,6 +166,8 @@ With an up-to-date analysis you can download:
 - the signed **DXF drawing** of the section.
 
 Each uses 10 credits; a document that is not produced is not charged. See [Credits](crediti.md) and [Formats](formati.md).
+
+![Report and export step: Word report and DXF drawing](img/08-relazione.png)
 
 ---
 

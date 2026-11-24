@@ -8,6 +8,8 @@ Apri [SNL NX](https://nx.geostru.ai/snl/). Nel menu **File** scegli **Esempi →
 
 Se il progetto a video ha modifiche che non sono in un file, il programma te lo dice prima di sostituirlo. L'esempio prende il posto del progetto corrente.
 
+![Menu File aperto con gli esempi: Parete chiodata d'esempio](img/20-guida-menu-esempi.png)
+
 ## 2. Controlla il modello
 
 Scorri i passi nell'ordine, a sinistra:
@@ -20,6 +22,8 @@ Scorri i passi nell'ordine, a sinistra:
 
 Il disegno al centro si aggiorna a ogni modifica: controlla quote, strati, falda, carichi e chiodi. Un passo con dati mancanti o non validi è segnato nell'elenco a sinistra e i messaggi dicono quale campo correggere.
 
+![Passo Terreno dell'esempio: tre strati e falda a 2 m dalla testa](img/21-guida-terreno.png)
+
 ## 3. Calcola
 
 Apri **Calcolo**. Controlla:
@@ -30,6 +34,8 @@ Apri **Calcolo**. Controlla:
 - **Combinazione e coefficienti**: ξ, A, M e R caricati dalla normativa scelta nel passo Progetto.
 
 Premi **Calcola**. Il calcolo è gratuito e richiede un istante. Se si ferma, il messaggio sopra il pulsante dice perché e in quale passo intervenire.
+
+![Passo Calcolo: teoria della spinta, superficie di rottura, base Bl, coefficienti e pulsante Calcola](img/22-guida-calcolo.png)
 
 ## 4. Leggi le verifiche
 
@@ -42,6 +48,8 @@ Il pannello **Verifiche** a destra riassume le quattro famiglie:
 Nell'esempio guarda in particolare lo scorrimento: con la falda a 2 m dalla testa, la spinta dell'acqua pesa molto sul blocco. Prova ad abbassare la falda o ad allungare i chiodi e ricalcola: il risultato precedente diventa «non aggiornato» appena cambi un dato.
 
 Nel passo **Risultati** trovi i dettagli per fase e per chiodo, lo scorrimento e i diagrammi del rivestimento. Vedi [Flusso di lavoro](workflow.md#7-risultati).
+
+![Risultati dell'esempio: verifiche governanti, fase di scavo e pannello Verifiche con lo scorrimento non soddisfatto](img/23-guida-verifiche.png)
 
 ## 5. Relazione ed export
 

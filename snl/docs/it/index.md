@@ -40,6 +40,8 @@ Il metodo segue le linee guida americane FHWA-NHI-14-007 e, per la verifica inte
 
 Il dettaglio di ogni passo è nel [Flusso di lavoro](workflow.md).
 
+![SNL NX: i passi a sinistra, il disegno della sezione al centro, le verifiche a destra](img/01-panoramica.png)
+
 ## Gratuito e a crediti
 
 Modellazione, **calcolo**, disegno a video e risultati non consumano crediti. La relazione Word e la tavola DXF consumano **10 crediti** ciascuna; ogni messaggio all'assistente ne consuma **3**. Un'operazione fallita non si paga. Vedi [Crediti](crediti.md).

@@ -8,6 +8,8 @@ Open [SNL NX](https://nx.geostru.ai/snl/). In the **File** menu choose **Example
 
 If the project on screen has changes that are not in a file, the program tells you before replacing it. The example takes the place of the current project.
 
+![File menu open with the examples: Soil nailing example](img/20-guida-menu-esempi.png)
+
 ## 2. Check the model
 
 Go through the steps in order, on the left:
@@ -20,6 +22,8 @@ Go through the steps in order, on the left:
 
 The drawing in the centre is updated at every change: check levels, layers, water table, loads and nails. A step with missing or invalid data is flagged in the list on the left and the messages tell you which field to fix.
 
+![Soil step of the example: three layers and water table 2 m below the top](img/21-guida-terreno.png)
+
 ## 3. Calculate
 
 Open **Analysis**. Check:
@@ -30,6 +34,8 @@ Open **Analysis**. Check:
 - **Combination and factors**: ξ, A, M and R loaded from the code chosen in the Project step.
 
 Press **Calculate**. The analysis is free and takes a moment. If it stops, the message above the button says why and which step to fix.
+
+![Analysis step: thrust theory, failure surface, base Bl, factors and the Calculate button](img/22-guida-calcolo.png)
 
 ## 4. Read the checks
 
@@ -42,6 +48,8 @@ The **Checks** panel on the right summarises the four families:
 In the example look in particular at sliding: with the water table 2 m below the top, the water thrust weighs heavily on the block. Try lowering the water table or lengthening the nails and calculate again: the previous result becomes «out of date» as soon as you change a value.
 
 The **Results** step shows the details by stage and by nail, sliding and the facing diagrams. See [Workflow](workflow.md#7-results).
+
+![Example results: governing checks, excavation stage and Checks panel with sliding not satisfied](img/23-guida-verifiche.png)
 
 ## 5. Report and export
 
